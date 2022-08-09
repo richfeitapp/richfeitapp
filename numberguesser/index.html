@@ -1,1 +1,167 @@
+<html>
+    <head>
+        
+        <title class="title">
+            
+            Number Guesser 
+        </title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+               
+            }
+
+            .mainText {
+                text-shadow: 100px;
+                margin-left: 200px;
+                visibility: visible;
+                margin-bottom: 300px;
+                display: inline;
+            }
+            .sideImage {
+                width: 200px;
+            }
+            @media screen and (max-width: 1100px) {
+                .sideImage {
+                    width: 70px;
+                }   
+            }
+            @media screen and (max-width: 750px) {
+                .sideImage {
+                    display:none;
+                }   
+            }
+
+            #leftImage {
+                float: left;
+                margin-right: 100px;
+            }
+            #penguin {
+                margin-right: 100px;
+                width: 100px;
+            }
+            #guess {
+                visibility: hidden;
+            }
+            #rightImage {
+                float:right;
+            }
+            .nonWrap {
+                display: inline-block;
+            }
+            #PenguinWaving {
+                width: 190px
+                
+                
+            }
+            #sucker {
+                visibility: hidden;
+            }
+            #yay {
+                visibility: hidden;
+                float:right
+            }
+            #balloons {
+                visibility: hidden;
+            }
+            #everything {
+                visibility: visible;
+            }
+            #title {
+                margin-left: 200px;
+            }
+            #oof {
+                margin-left: 220px;
+                display: none;
+            }
+            #countDown {
+                visibility: hidden;
+            }
+        </style>
+        <script src="numbers.js"></script>
+    </head>
+    <body style="background-color:rgb(252, 252, 252)">
+        <div>
+           
+            <div id="leftImage">
+                <img class="sideImage" src="numbers.png" id="numbers">
+            </div>
+            <div id="rightImage">
+                <img class="sideImage" src="numbers.png" id="numbers">
+            </div>
+            <div id="everything">
+                    <div class="nonWrap">
+                        <h1 id="title">Number Guesser </h1>
+                        <img class="sideImage" src="Penguin waving.png" id="PenguinWaving">
+                    <div id="oof">
+                        Uh oh! One of us made an mistake!
+                        <br>
+                        <br>
+                       The magical pengie says enter your number here and we will see who is mistaken. 
+                       <br>
+                       <input tabindex="1" autofocus type="text" id="final_number">
+                        <button onclick="enterFinalNumber()">
+                            enter
+                        </button>
+                        <br>
+                        <br>
+                        <span id="wrongClick"></span>
+                    </div>
+                    <div class="mainText" id="main_text">
+                        <br>
+                    <div id="everythingAll">
+                        <div id="twoNumbers">
+                            Welcome to number guesser!
+                            To get started pick a range of numbers. 
+                                
+                            <br>
+                            <br>
+                            Numbers 1 through
+                        
+                            <input tabindex="1" autofocus type="text" id="whatNumber">
+                            <button onclick="go()">
+                                Go
+                            </button>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <div id="guess">
+                            Is your number higher or lower than <span id="compute_guess"></span>?
+                            <br>
+                            <button onclick="add()" id="higher">
+                                Higher
+                            </button>
+                            <button onclick="subtract()" id="subtract">
+                                Lower
+                            </button>
+                            <button onclick="IGuessedIt()" id="answer">
+                                That's the answer!
+                            </button>
+                        </div>
+                        <div id="sucker">
+                            <br>
+                            <br>
+                            Your number is <span id="got_it_number"></span>?
+                        </div>
+                        <div id="number_guesses">
+                            <br>
+                            <br>
+                        </div>
+                        <div id="countDown">
+                            I am going to guess your number in <span id="number_of_guesses"></span> guesses
+                        </div>
+                    </div>
+                </div>
+                    <div id="yay">
+                        <img src="balloons.jpeg">
+                        <br>
+                        <br>
+                        I got it!
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
 
