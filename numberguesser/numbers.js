@@ -7,10 +7,10 @@ function getErrorMessage(item, finalNumber) {
       }
     }
     if (finalNumber > halfNumber) {
-     return "You said lower when I asked you if it was higher or lower than " + halfNumber;
+     return "You said lower when I asked you if it was higher or lower than " + halfNumber + "!";
     }
     if (item.up) {
-      return "You said higher when I asked you if it was higher or lower than " + halfNumber;
+      return "You said higher when I asked you if it was higher or lower than " + halfNumber + "!";
     }
     return null;
 }
