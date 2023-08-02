@@ -1,0 +1,28 @@
+<html>
+  <head>
+  <title>
+    Chat (Home)
+  </title>
+  <link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon_chat_r2.ico" type="image/x-icon">
+  <script>
+    if (localStorage.getItem('do_redirect') === 'true') {
+      window.location.href = 'https://chat.google.com';
+    }
+
+    function setRedirect() {
+      localStorage.setItem('do_redirect', 'true');
+      window.alert('Done.');
+    }
+  </script>
+  <body>
+    <h1>Chat (home)</h1>
+    This is to allow creation of a separate Chrome app shortcut for home Chat.
+    <br>
+    <br>
+    Once you've bookmarked this page or created a Chrome app shortcut for it,
+    click the button below to make it redirect to chat.google.com from now on.
+    <br>
+    <br>
+    <button onclick="setRedirect()">Set redirect</button>
+  </body>
+</html>
