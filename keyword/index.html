@@ -49,18 +49,20 @@
           error.innerText = '';
           const value = inputs[i].value;
           if (!value) {
-            error.innerText = 'Fill in a word (use underscore or dash for the blank letter).';
+            error.innerText =
+                'Fill in a word (use underscore or dash or dot for the blank letter).';
             result = false;
           } else {
-            const blanksMatch = value.match(/([_-])/g);
+            const blanksMatch = value.match(/([_.-])/g);
             if (!blanksMatch) {
-              error.innerText = 'Use an underscore or dash for the blank letter (like C_T).';
+              error.innerText = 'Use an underscore or dash or dot for the blank letter (like C.T).';
               result = false;
             } else if (blanksMatch.length !== 1) {
               error.innerText = 'Only one blank letter is allowed.';
               result = false;
-            } else if (!value.match(/^[A-Za-z_-]+$/)) {
-              error.innerText = 'Only letters and blanks (underscores or dashes) are allowed.';
+            } else if (!value.match(/^[A-Za-z_.-]+$/)) {
+              error.innerText =
+                  'Only letters and blanks (underscores or dashes or dots) are allowed.';
               result = false;
             } else if (value.length > MAX_WORD_LEN) {
               error.innerText = `Maximum of ${MAX_WORD_LEN} letters.`;
@@ -205,7 +207,7 @@
       Solves <a href="https://www.washingtonpost.com/games/keyword/">Keyword</a>.
       Just for fun. NO CHEATING. 😠
       <br>
-      Use underscore (_) or dash (-) to represent the blank letter.
+      Use underscore (_) or dash (-) or dot ('.') to represent the blank letter.
       <br>
       <br>
     </div>

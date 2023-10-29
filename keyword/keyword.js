@@ -60,7 +60,7 @@ function findMatch(guesses, guessesLeft, dictSet, allPrefixes, debug, allAnswers
 }
 
 function getGuesses(wordPattern, dict) {
-  wordPattern = wordPattern.toUpperCase().replaceAll(/[_-]/g, '(.)');
+  wordPattern = wordPattern.toUpperCase().replaceAll(/[_.-]/g, '(.)');
   return dict
       .map(word => word.match(new RegExp(`^${wordPattern}$`)))
       .filter(match => match)
