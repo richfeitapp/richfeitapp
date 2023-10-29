@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Keyword Solver</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
     <link rel="icon" href="icon.png">
     <script src="dict.js"></script>
     <script src="keyword.js"></script>
@@ -99,6 +100,9 @@
               li.className = 'answerWord';
               document.getElementById('words').appendChild(li);
             });
+
+            document.getElementById('button_section').style.display = 'none';
+            document.getElementById('reset_section').style.display = 'block';
           }
         }
       }
@@ -152,7 +156,11 @@
         display: none;
       }
 
-      #submit_button {
+      #reset_section {
+        display: none;
+      }
+
+      .submitButton {
         display: inline-block;
         outline: none;
         cursor: pointer;
@@ -178,7 +186,7 @@
         color: red;
       }
 
-      #button_section {
+      .buttonSection {
         margin-top: 20px;
         margin-bottom: 30px;
         width: 276px;
@@ -191,7 +199,7 @@
     </style>
   </head>
   <body onload="init()">
-    <h1>Keyword Solver</h1>
+    <h2>Keyword Solver</h2>
 
     <div id="intro">
       Solves <a href="https://www.washingtonpost.com/games/keyword/">Keyword</a>.
@@ -203,8 +211,12 @@
 
     <div id="patterns"></div>
 
-    <div id="button_section">
-      <button id="submit_button" onclick="submit()">Submit</button>
+    <div id="button_section" class="buttonSection">
+      <button id="submit_button" class="submitButton" onclick="submit()">Submit</button>
+    </div>
+
+    <div id="reset_section" class="buttonSection">
+      <button id="reset_button" class="submitButton" onclick="document.location.reload()">Reset</button>
     </div>
 
     <div id="results_section">
