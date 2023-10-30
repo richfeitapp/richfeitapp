@@ -19,10 +19,7 @@ function solveIt(patterns, dict) {
     });
   }
 
-  //patterns = ['PO_T', 'TA_ER', 'ST_VE', 'R_OT', 'HUS_Y', 'T_PE' ];
-  //patterns = ['_ANDY', '_UR', 'F_IEND', '_AFFLE', 'C_ASTER', 'IMP_INT'];
-
-  const guessesLeft = patterns.map(wordPattern => getGuesses(wordPattern, dict));
+  const guessesLeft = getAllGuesses(patterns, dict);
   
   const debug = false;
   debugLog(debug, 'All guesses', guessesLeft);
@@ -30,6 +27,10 @@ function solveIt(patterns, dict) {
   const allAnswers = [];
   findMatch([], guessesLeft, dictSet, allPrefixes, debug, allAnswers);
   return allAnswers;
+}
+
+function getAllGuesses(patterns, dict) {
+  return patterns.map(wordPattern => getGuesses(wordPattern, dict));
 }
 
 function findMatch(guesses, guessesLeft, dictSet, allPrefixes, debug, allAnswers) {

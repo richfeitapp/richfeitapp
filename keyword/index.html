@@ -82,17 +82,51 @@
         return result;
       }
 
-      function submit() {
+      function resetSections() {
         document.getElementById('results_section').style.display = 'none';
         document.getElementById('too_many_section').style.display = 'none';
         document.getElementById('failed_section').style.display = 'none';
         document.getElementById('words').innerHTML = '';
+      }
+
+      function hint() {
+        resetSections();
         
         if (!validate()) {
           return;
         }
 
-        //const patterns = ['PO_T', 'TA_ER', 'ST_VE', 'R_OT', 'HUS_Y', 'T_PE' ];
+        const patterns = inputs.map(input => input.value.toUpperCase());
+        const allGuesses = getAllGuesses(patterns, dict);
+        const min = allGuesses
+            .map(guesses => guesses.length)
+            .reduce((min, len) => {
+              return !min || len < min ? len : min;
+            });
+        const max = allGuesses
+            .map(guesses => guesses.length)
+            .reduce((max, len) => {
+              return len > max ? len : max;
+            }, 0);
+        allGuesses.forEach((guesses, index) => {
+          const len = guesses.length;
+          let hint = `${len} ${len === 1 ? 'possibility' : 'possibilities'}`;
+          if (len === min) {
+            hint += ' - KEYWORD!';
+          } else if (len === max) {
+            hint += ' - WORST!';
+          }
+          errors[index].innerText = hint;
+        });
+      }
+
+      function submit() {
+        resetSections();
+        
+        if (!validate()) {
+          return;
+        }
+
         const patterns = inputs.map(input => input.value.toUpperCase());
         const results = solveIt(patterns, dict);
         if (!results.length) {
@@ -223,6 +257,7 @@
     <div id="patterns"></div>
 
     <div id="button_section" class="buttonSection">
+      <button id="hint_button" class="submitButton" onclick="hint()">Hint</button>
       <button id="submit_button" class="submitButton" onclick="submit()">Submit</button>
     </div>
 
