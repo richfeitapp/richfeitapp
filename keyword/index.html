@@ -13,6 +13,11 @@
       let errors = [];
 
       function init() {
+        const wordsMatch = window.location.href.match(/[?&]words=([^&]+)/);
+        let initWord = null;
+        if (wordsMatch) {
+          initWord = wordsMatch[1].split(',');
+        }
         const div = document.getElementById('patterns');
         for (let i = 0; i < NUM_WORDS; i++) {
           const section = document.createElement('DIV');
@@ -27,6 +32,9 @@
           const input = document.createElement('INPUT');
           input.type = 'text';
           input.className = 'input';
+          if (initWord) {
+            input.value = initWord[i];
+          }
           section.appendChild(input);
           inputs.push(input);
 
