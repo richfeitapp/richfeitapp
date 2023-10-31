@@ -83,10 +83,10 @@
       }
 
       function resetSections() {
-        document.getElementById('results_section').style.display = 'none';
+        document.querySelectorAll('.results_section').forEach(x => x.style.display = 'none');
+        document.querySelectorAll('words').forEach(x => x.innerHTML = '');
         document.getElementById('too_many_section').style.display = 'none';
         document.getElementById('failed_section').style.display = 'none';
-        document.getElementById('words').innerHTML = '';
       }
 
       function hint() {
@@ -132,17 +132,19 @@
         if (!results.length) {
           document.getElementById('failed_section').style.display = 'block';
         } else {
-          if (results.length > 1) {
+          if (results.length > 3) {
             document.getElementById('too_many_section').style.display = 'block';
           } else {
-            const result = results[0];
-            document.getElementById('results_section').style.display = 'block';
-            document.getElementById('answer').innerText = result.resultWord;
-            result.words.forEach(word => {
-              const li = document.createElement('LI');
-              li.innerText = word;
-              li.className = 'answerWord';
-              document.getElementById('words').appendChild(li);
+            results.forEach((result, index) => {
+              const num = index + 1;
+              document.getElementById(`results_section${num}`).style.display = 'block';
+              document.getElementById(`answer${num}`).innerText = result.resultWord;
+              result.words.forEach(word => {
+                const li = document.createElement('LI');
+                li.innerText = word;
+                li.className = 'answerWord';
+                document.getElementById(`words${num}`).appendChild(li);
+              });
             });
 
             document.getElementById('button_section').style.display = 'none';
@@ -185,7 +187,7 @@
         margin-left: 10px;
       }
 
-      #results_section {
+      .results_section {
         margin-top: 20px;
         display: none;
       }
@@ -202,6 +204,9 @@
 
       #reset_section {
         display: none;
+      }
+
+      words {
       }
 
       .submitButton {
@@ -225,7 +230,7 @@
         }
       }
 
-      #answer {
+      .answer {
         font-weight: bold;
         color: red;
       }
@@ -265,15 +270,21 @@
       <button id="reset_button" class="submitButton" onclick="document.location.reload()">Reset</button>
     </div>
 
-    <div id="results_section">
-      <hr></hr>
+    <div id="results_section1" class="results_section">
+      <hr></hr>The answer is <span id="answer1" class="answer"></span>.<br><br>
+      The words are: <ol id="words1" class="words"></ol>
+    </div>
 
-      The answer is <span id="answer"></span>.
-      <br>
-      <br>
-      The words are:
-      <ol id="words">
-      </ol>
+    <div id="results_section2" class="results_section">
+      <hr></hr><h3>Alternative #1</h3>
+      The answer is <span id="answer2" class="answer"></span>.<br><br>
+      The words are: <ol id="words2" class="words"></ol>
+    </div>
+
+    <div id="results_section3" class="results_section">
+      <hr></hr><h2>Alternative #2</h2>
+      The answer is <span id="answer3" class="answer"></span>.<br><br>
+      The words are: <ol id="words3" class="words"></ol>
     </div>
 
     <div id="failed_section">
@@ -281,7 +292,7 @@
     </div>
 
     <div id="too_many_section">
-      There were multiple results. I don't know how to show that yet.
+      There were more than 3 results. I don't know how to show that yet.
     </div>
   </body>
 </html>
