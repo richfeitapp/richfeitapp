@@ -1,6 +1,7 @@
 <html>
   <head>
-    <title>Search Google Without AI!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Without AI!</title>
     <style>
       body {
         font-family: Roboto,Arial,sans-serif;
@@ -10,9 +11,10 @@
       input[type="text"] {
         border-radius: 25px;
         border-width: thin;
-        font-size: 20px;
+        font-size: 1.4em;
         padding: 10px 20px 10px 20px;
-        width: 500px;
+        width: 90%;
+        max-width: 600px;
         border-color: lightgray;
         display: block;
         margin-left: auto;
@@ -25,7 +27,7 @@
         border: 1px solid #f8f9fa;
         border-radius: 4px;
         color: #3c4043;
-        font-size: 14px;
+        font-size: .9em;
         margin: 11px 4px;
         padding: 0 16px;
         line-height: 27px;
@@ -54,16 +56,22 @@
       }
 
       h1 {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         color: #7f7f7f;
-        font-size: 35px;
+        font-size: 2em;
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          font-size: 2em;
+        }
       }
     </style>
   </head>
   <body>
 
     <div>
-      <h1>Search Google Without AI!</h1>
+      <h1>Google Without AI!</h1>
       <form action="https://www.google.com/search" method="GET">
         <input type="text" name="q" autofocus>
         <input type="hidden" name="udm" value="14">
