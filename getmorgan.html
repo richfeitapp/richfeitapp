@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Vertical Scroller - Spider-Man vs. Cowboy Morgan</title>
+    <title>Get Morgan</title> 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -71,7 +71,7 @@
 <body>
     <div class="game-container">
         <div class="info mb-4">
-            <h1 class="text-3xl font-bold">Spider-Scroller: Web Slinger</h1>
+            <h1 class="text-3xl font-bold">Get Morgan</h1> 
             <p>Score: <span id="score">0</span></p>
             <p>Lives: <span id="lives">3</span></p>
         </div>
@@ -193,7 +193,7 @@
         let civilianSpawnInterval = 160; 
         const civilianBaseSpeed = 1.2;
         const civilianAngrySpeedBoost = 0.5; 
-        const civilianHomingStrength = 0.02; // How strongly they adjust towards player's X
+        const civilianHomingStrength = 0.02; 
 
         // --- Background Stars ---
         const stars = [];
@@ -454,19 +454,17 @@
             for(let i=civilians.length-1; i>=0; i--){
                 const civilian = civilians[i];
                 
-                if (civilian.isAngry) { // MODIFIED: Continuously update targetX if angry
-                    civilian.targetX = player.x + player.width / 2; // Update target to current player X
+                if (civilian.isAngry) { 
+                    civilian.targetX = player.x + player.width / 2; 
                     const dxToTarget = civilian.targetX - (civilian.x + civilian.width / 2);
                     
-                    // Adjust horizontal position
-                    civilian.x += dxToTarget * civilianHomingStrength; // Use a homing strength factor
+                    civilian.x += dxToTarget * civilianHomingStrength;
 
-                    civilian.y += civilian.speed + civilianAngrySpeedBoost; // Move down faster
+                    civilian.y += civilian.speed + civilianAngrySpeedBoost; 
                 } else {
-                    civilian.y += civilian.speed; // Normal downward movement
+                    civilian.y += civilian.speed; 
                 }
-
-                // Boundary check for civilian X (optional, to keep them on screen if homing too aggressively)
+ 
                 civilian.x = Math.max(0, Math.min(civilian.x, canvasWidth - civilian.width));
 
 
@@ -646,8 +644,7 @@
                             civilian.y += (dyToPlayer / distance) * pullStrength;
                         }
                         civilian.isAngry = true; 
-                        // civilian.targetX is now set continuously in updateCivilians if angry
-
+                        // civilian.targetX will be updated in updateCivilians
                         webs.splice(i,1); webRemoved = true;
                         break;
                     }
@@ -752,6 +749,40 @@
             resizeCanvas(); 
             resetGame(); 
             
+            // Create and add favicon
+            const faviconCanvas = document.createElement('canvas');
+            faviconCanvas.width = 32;
+            faviconCanvas.height = 32;
+            const favCtx = faviconCanvas.getContext('2d');
+
+            // Simplified Cowboy Head for Favicon
+            const favHatColor = cowboy.colors.hat;
+            const favSkinColor = cowboy.colors.skin;
+            const favW = faviconCanvas.width;
+            const favH = faviconCanvas.height;
+
+            // Hat Crown
+            favCtx.fillStyle = favHatColor;
+            favCtx.fillRect(favW * 0.15, favH * 0.1, favW * 0.7, favH * 0.4);
+            // Hat Brim
+            favCtx.beginPath();
+            favCtx.moveTo(favW * 0.05, favH * 0.5);
+            favCtx.quadraticCurveTo(favW * 0.5, favH * 0.5 + favH * 0.2, favW * 0.95, favH * 0.5);
+            favCtx.quadraticCurveTo(favW * 0.5, favH * 0.5 - favH * 0.2, favW * 0.05, favH * 0.5);
+            favCtx.fill();
+            // Head
+            favCtx.fillStyle = favSkinColor;
+            favCtx.beginPath();
+            favCtx.arc(favW / 2, favH * 0.65, favH * 0.25, 0, Math.PI * 2);
+            favCtx.fill();
+
+            const link = document.createElement('link');
+            link.type = 'image/x-icon'; 
+            link.rel = 'shortcut icon'; 
+            link.href = faviconCanvas.toDataURL('image/png');
+            document.getElementsByTagName('head')[0].appendChild(link);
+
+
             showMessage("Spider-Man: Web Slinger!","Help Spidey catch Morgan! Use Arrows or ADWS to move. Spacebar to shoot. Avoid hitting civilians and Morgan's bullets!", false);
             restartButton.classList.add("hidden"); 
             messageButton.textContent="Let's Swing!";
