@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Vertical Scroller - Spider-Man vs. Cowboy Morgan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #e2e8f0; /* Tailwind's gray-300 (Light background) */
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; 
+        }
+        #gameCanvas {
+            background-color: #ffffff; /* White canvas background */
+            border: 2px solid #a0aec0; /* Tailwind's gray-500 for border */
+            border-radius: 0.5rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem; 
+        }
+        .controls, .info {
+            color: #2d3748; /* Tailwind's gray-800 (Dark text for light bg) */
+            text-align: center;
+            background-color: #edf2f7; /* Tailwind's gray-200 (Light container bg) */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .info h1 { /* Targeting the h1 within .info for specific color */
+            color: #2b6cb0; /* Tailwind's blue-700 (Darker blue for title) */
+        }
+        button {
+            background-color: #3182ce; /* Tailwind's blue-600 */
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; 
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2b6cb0; /* Tailwind's blue-700 */
+        }
+        #messageBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(26, 32, 44, 0.95); /* Tailwind's gray-900 with opacity (Dark message box) */
+            color: #e2e8f0; /* Light text for dark message box */
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            z-index: 100;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="info mb-4">
+            <h1 class="text-3xl font-bold">Spider-Scroller: Web Slinger</h1>
+            <p>Score: <span id="score">0</span></p>
+            <p>Lives: <span id="lives">3</span></p>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls mt-4">
+            <p>Arrows/ADWS: Move | Spacebar: Shoot Web</p>
+            <button id="restartButton" class="mt-2 hidden">Restart Game</button>
+        </div>
+    </div>
+
+    <div id="messageBox" class="hidden">
+        <h2 id="messageTitle" class="text-2xl font-bold mb-2">Game Over!</h2>
+        <p id="messageText" class="mb-4">Your final score is 0.</p>
+        <button id="messageButton">OK</button>
+    </div>
+
+    <script>
+        // --- Game Setup ---
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreDisplay = document.getElementById('score');
+        const livesDisplay = document.getElementById('lives');
+        const restartButton = document.getElementById('restartButton');
+        
+        const messageBox = document.getElementById('messageBox');
+        const messageTitle = document.getElementById('messageTitle');
+        const messageText = document.getElementById('messageText');
+        const messageButton = document.getElementById('messageButton');
+
+        let canvasWidth = 400;
+        let canvasHeight = 600;
+
+        // --- Game State Variables ---
+        let score = 0;
+        let lives = 3;
+        let gameSpeed = 1.5; 
+        let gameOver = false;
+        let animationFrameId = null; 
+        let frameCount = 0; 
+        let gameIsPaused = false; 
+        const pullStrength = 25; 
+
+        // --- Player Object (Spider-Man) ---
+        const player = {
+            width: 32, height: 50,
+            x: canvasWidth / 2 - 16, 
+            y: canvasHeight - 70,
+            speed: 5, 
+            dx: 0, 
+            dy: 0, 
+            colors: { primary: '#e53e3e', secondary: '#3b82f6', accent: '#1a202c' },
+            originalPrimaryColor: '#e53e3e',
+            canShoot: true,
+            shootCooldown: 400,
+            minY: canvasHeight / 2, 
+            maxY: canvasHeight - 70 
+        };
+
+        // --- Cowboy Object (Morgan) ---
+        const cowboy = {
+            width: 45, height: 60,
+            x: canvasWidth / 2 - 22, y: 30,
+            initialY: 30, 
+            isReturningToTop: false, 
+            pullReturnSpeed: 0.7, 
+            initialSpeed: 1.2, 
+            speed: 1.2, 
+            dx: 1.2,    
+            speedIncreaseOnHit: 0.15, 
+            maxSpeed: player.speed - 0.5, 
+            colors: { hat: '#8B4513', shirt: '#006400', pants: '#00008B', skin: '#DEB887', originalShirt: '#006400', hitColor: '#FFD700' },
+            labelColor: '#1A202C',
+            canShoot: true,
+            shootTimer: 0, 
+            initialMinShootInterval: 180, 
+            initialMaxShootInterval: 300,  
+            minShootInterval: 180, 
+            maxShootInterval: 300,
+            shootIntervalDecreaseOnHit: 10, 
+            minPossibleShootInterval: 60,
+            directionChangeTimer: 0, 
+            initialMinDirChangeInterval: 90, 
+            initialMaxDirChangeInterval: 180, 
+            minDirectionChangeInterval: 90, 
+            maxDirectionChangeInterval: 180,
+            directionChangeIntervalDecreaseOnHit: 8, 
+            minPossibleDirChangeInterval: 30, 
+            randomChangeProbability: 0.5 
+        };
+
+        // --- Webs (Player's projectiles) ---
+        const webs = [];
+        const webSpeed = 8;
+        const webRadius = 6; 
+        const webColor = '#CBD5E0'; 
+
+        // --- Cowboy Bullets ---
+        const cowboyBullets = [];
+        const bulletSpeed = 4;
+        const bulletWidth = 6;
+        const bulletHeight = 10;
+        const bulletColor = '#454545'; 
+
+        // --- Obstacles ---
+        const obstacles = [];
+        const obstacleWidth = 50; let initialObstacleHeight = 20; 
+        const obstacleColor = '#22c55e'; 
+        let obstacleSpawnInterval = 100;
+
+        // --- Civilians ---
+        const civilians = [];
+        const civilianWidth = 30; const civilianHeight = 40;
+        const civilianColors = { 
+            body: ['#718096', '#a0aec0', '#cbd5e0'], 
+            head: ['#4a5568', '#2d3748'],
+            hitColor: '#f97316', 
+            angryFaceColor: '#DC2626' 
+        };
+        let civilianSpawnInterval = 160; 
+        const civilianBaseSpeed = 1.2;
+        const civilianAngrySpeedBoost = 0.5; 
+        const civilianHomingStrength = 0.02; // How strongly they adjust towards player's X
+
+        // --- Background Stars ---
+        const stars = [];
+        const starCount = 80; const starSpeed = 0.8;
+        const starColor = '#A0AEC0'; 
+
+        // --- Input Handling ---
+        const keys = { 
+            ArrowLeft: false, ArrowRight: false, 
+            ArrowUp: false, ArrowDown: false, 
+            Space: false 
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (gameIsPaused && e.code !== 'Space') return; 
+
+            if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') keys.ArrowLeft = true;
+            if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'd') keys.ArrowRight = true;
+            if (e.key === 'ArrowUp' || e.key.toLowerCase() === 'w') keys.ArrowUp = true;
+            if (e.key === 'ArrowDown' || e.key.toLowerCase() === 's') keys.ArrowDown = true;
+
+            if (e.code === 'Space' && !gameOver) {
+                 if (!gameIsPaused && player.canShoot) { 
+                    spawnWeb();
+                    player.canShoot = false;
+                    setTimeout(() => { player.canShoot = true; }, player.shootCooldown);
+                 }
+                 e.preventDefault(); 
+            }
+        });
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') keys.ArrowLeft = false;
+            if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'd') keys.ArrowRight = false;
+            if (e.key === 'ArrowUp' || e.key.toLowerCase() === 'w') keys.ArrowUp = false;
+            if (e.key === 'ArrowDown' || e.key.toLowerCase() === 's') keys.ArrowDown = false;
+        });
+
+        restartButton.addEventListener('click', () => {
+            resetGame();
+            gameLoop(); 
+        });
+        
+        const genericMessageButtonHandler = () => {
+            hideMessage();
+            if (gameIsPaused && !gameOver) {
+                gameIsPaused = false;
+                gameLoop(); 
+            } else if (gameOver) {
+                restartButton.classList.remove('hidden');
+            }
+        };
+        
+        // --- DRAW FUNCTIONS ---
+        function drawPlayer() {
+            const p = player; const x = p.x; const y = p.y; const w = p.width; const h = p.height;
+            const headRadius = h / 6; const torsoTopY = y + headRadius * 2; const torsoH = h / 2;
+            const torsoBottomY = torsoTopY + torsoH; const shoulderW = w; const waistW = w / 2;
+            ctx.fillStyle = p.colors.secondary; const legW = w / 2.2; const legTopDrawY = torsoBottomY - 5;
+            const legActualH = (y + h) - legTopDrawY;
+            if (legActualH > 0) {
+                const legSpacing = (w - 2 * legW) / 3;
+                ctx.fillRect(x + legSpacing, legTopDrawY, legW, legActualH);
+                ctx.fillRect(x + legSpacing * 2 + legW, legTopDrawY, legW, legActualH);
+            }
+            const armH = h / 1.8; const armW = w / 4; const armTopDrawY = torsoTopY + torsoH * 0.1;
+            ctx.fillRect(x, armTopDrawY, armW, armH); ctx.fillRect(x + w - armW, armTopDrawY, armW, armH);
+            ctx.fillStyle = p.colors.primary; ctx.beginPath(); ctx.moveTo(x, torsoTopY);
+            ctx.lineTo(x + shoulderW, torsoTopY); ctx.lineTo(x + shoulderW / 2 + waistW / 2, torsoBottomY);
+            ctx.lineTo(x + shoulderW / 2 - waistW / 2, torsoBottomY); ctx.closePath(); ctx.fill();
+            ctx.fillStyle = p.colors.primary; ctx.beginPath();
+            ctx.arc(x + w / 2, y + headRadius, headRadius, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = p.colors.accent; const symbolX = x + w / 2; const symbolY = torsoTopY + torsoH / 2.5;
+            const symbolMainSize = w / 3.5; const symbolThickness = w / 8;
+            ctx.fillRect(symbolX - symbolThickness / 2, symbolY - symbolMainSize / 2, symbolThickness, symbolMainSize);
+            ctx.fillRect(symbolX - symbolMainSize / 2, symbolY - symbolThickness / 2, symbolMainSize, symbolThickness);
+        }
+
+        function drawCowboy() { 
+            const c = cowboy; const x = c.x; const y = c.y; const w = c.width; const h = c.height;
+            const hatH = h / 2.5; const headRadius = h / 8; const headY = y + hatH - headRadius / 2;
+            const bodyY = headY + headRadius; const bodyH = h - (bodyY - y);
+            ctx.fillStyle = c.colors.shirt; const armW = w / 4; const armH = bodyH * 0.6;
+            ctx.fillRect(x - armW/4, bodyY, armW, armH); ctx.fillRect(x + w - armW * 0.75, bodyY, armW, armH);
+            ctx.fillStyle = c.colors.shirt; ctx.fillRect(x, bodyY, w, bodyH / 2);
+            ctx.fillStyle = c.colors.pants; ctx.fillRect(x, bodyY + bodyH / 2, w, bodyH / 2);
+            ctx.fillStyle = c.colors.skin; ctx.beginPath();
+            ctx.arc(x + w / 2, headY, headRadius, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = c.colors.hat; ctx.beginPath(); const brimH = hatH * 0.3; const crownH = hatH * 0.7;
+            ctx.moveTo(x - 5, y + crownH); ctx.quadraticCurveTo(x + w / 2, y + crownH + brimH, x + w + 5, y + crownH);
+            ctx.quadraticCurveTo(x + w / 2, y + crownH - brimH, x - 5, y + crownH); ctx.fill();
+            ctx.beginPath(); ctx.fillRect(x + w * 0.1, y, w * 0.8, crownH); ctx.fill();
+            ctx.fillStyle = cowboy.labelColor; 
+            ctx.font = '14px "Inter", sans-serif'; ctx.textAlign = 'center';
+            ctx.fillText("Morgan", x + w / 2, y - 8);
+        }
+
+        function drawWebs() {
+            ctx.fillStyle = webColor;
+            ctx.strokeStyle = webColor; 
+            ctx.lineWidth = 1.5; 
+
+            webs.forEach(web => {
+                const centerX = web.x + webRadius; 
+                const centerY = web.y + webRadius; 
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, webRadius / 2, 0, Math.PI * 2);
+                ctx.fill();
+                for (let i = 0; i < 6; i++) { 
+                    const angle = (Math.PI * 2 / 6) * i;
+                    const endX = centerX + Math.cos(angle) * webRadius * 1.5; 
+                    const endY = centerY + Math.sin(angle) * webRadius * 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.lineTo(endX, endY);
+                    ctx.stroke();
+                }
+            });
+        }
+        
+        function drawCowboyBullets() {
+            ctx.fillStyle = bulletColor;
+            cowboyBullets.forEach(bullet => {
+                ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+            });
+        }
+
+        function drawObstacles(){
+            obstacles.forEach(obstacle =>{
+                ctx.fillStyle = obstacleColor;
+                ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height); 
+            });
+        }
+        
+        function drawCivilians(){
+            civilians.forEach(civilian => {
+                ctx.fillStyle = civilian.isAngry ? civilianColors.hitColor : civilian.currentColor.body; 
+                ctx.fillRect(civilian.x, civilian.y + civilian.height / 4, civilian.width, civilian.height * 0.75);
+                
+                const headCenterX = civilian.x + civilian.width / 2;
+                const headCenterY = civilian.y + civilian.height / 4;
+                const headRadius = civilian.width / 3;
+
+                ctx.fillStyle = civilian.currentColor.head;
+                ctx.beginPath();
+                ctx.arc(headCenterX, headCenterY, headRadius, 0, Math.PI * 2);
+                ctx.fill();
+
+                if (civilian.isAngry) {
+                    ctx.strokeStyle = civilianColors.angryFaceColor; 
+                    ctx.lineWidth = 1.5;
+                    const eyeLX1 = headCenterX - headRadius * 0.5;
+                    const eyeLY1 = headCenterY - headRadius * 0.3;
+                    const eyeLX2 = headCenterX - headRadius * 0.1;
+                    const eyeLY2 = headCenterY + headRadius * 0.1;
+                    ctx.beginPath(); ctx.moveTo(eyeLX1, eyeLY1); ctx.lineTo(eyeLX2, eyeLY2); ctx.stroke();
+
+                    const eyeRX1 = headCenterX + headRadius * 0.5;
+                    const eyeRY1 = headCenterY - headRadius * 0.3;
+                    const eyeRX2 = headCenterX + headRadius * 0.1;
+                    const eyeRY2 = headCenterY + headRadius * 0.1;
+                    ctx.beginPath(); ctx.moveTo(eyeRX1, eyeRY1); ctx.lineTo(eyeRX2, eyeRY2); ctx.stroke();
+                }
+            });
+        }
+        
+        function drawStars(){
+            stars.forEach(star =>{
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = starColor; 
+                ctx.fill();
+            });
+        }
+        
+        // --- UPDATE FUNCTIONS ---
+        function updatePlayer() {
+            player.dx = 0; player.dy = 0; 
+            if (keys.ArrowLeft) player.dx = -player.speed; if (keys.ArrowRight) player.dx = player.speed;
+            if (keys.ArrowUp) player.dy = -player.speed; if (keys.ArrowDown) player.dy = player.speed; 
+            player.x += player.dx; player.y += player.dy;
+            if (player.x < 0) player.x = 0; if (player.x + player.width > canvasWidth) player.x = canvasWidth - player.width;
+            if (player.y < player.minY) player.y = player.minY; if (player.y > player.maxY) player.y = player.maxY; 
+        }
+
+        function updateCowboy(){
+            if (cowboy.isReturningToTop) {
+                const dyToReturn = cowboy.initialY - cowboy.y;
+                const distanceToReturn = Math.abs(dyToReturn);
+
+                if (distanceToReturn > cowboy.pullReturnSpeed) {
+                    cowboy.y += (dyToReturn / distanceToReturn) * cowboy.pullReturnSpeed;
+                } else {
+                    cowboy.y = cowboy.initialY;
+                    cowboy.isReturningToTop = false;
+                }
+                cowboy.x += cowboy.dx;
+                 if(cowboy.x <= 0 || cowboy.x + cowboy.width >= canvasWidth) {
+                    cowboy.dx *= -1;
+                    cowboy.x = Math.max(0, Math.min(cowboy.x, canvasWidth - cowboy.width));
+                }
+
+            } else {
+                cowboy.x += cowboy.dx;
+                if(cowboy.x <= 0 || cowboy.x + cowboy.width >= canvasWidth) {
+                    cowboy.dx *= -1;
+                    cowboy.x = Math.max(0, Math.min(cowboy.x, canvasWidth - cowboy.width));
+                }
+                cowboy.directionChangeTimer--;
+                if (cowboy.directionChangeTimer <= 0) {
+                    if (Math.random() < cowboy.randomChangeProbability) {
+                        cowboy.dx *= -1; 
+                    }
+                    const currentMinDir = Math.max(cowboy.minDirectionChangeInterval, cowboy.minPossibleDirChangeInterval);
+                    const currentMaxDir = Math.max(cowboy.maxDirectionChangeInterval, currentMinDir);
+                    cowboy.directionChangeTimer = Math.random() * (currentMaxDir - currentMinDir) + currentMinDir;
+                }
+            }
+
+            cowboy.shootTimer--;
+            if (cowboy.shootTimer <= 0 && cowboy.canShoot && !gameOver) {
+                spawnCowboyBullet();
+                const currentMin = Math.max(cowboy.minShootInterval, cowboy.minPossibleShootInterval);
+                const currentMax = Math.max(cowboy.maxShootInterval, currentMin); 
+                cowboy.shootTimer = Math.random() * (currentMax - currentMin) + currentMin;
+            }
+        }
+
+        function updateWebs(){
+            for(let i=webs.length-1; i>=0; i--){
+                const web = webs[i];
+                web.y -= webSpeed;
+                if(web.y + webRadius * 2 < 0) { 
+                    webs.splice(i,1);
+                }
+            }
+        }
+        
+        function updateCowboyBullets() {
+            for (let i = cowboyBullets.length - 1; i >= 0; i--) {
+                const bullet = cowboyBullets[i];
+                bullet.y += bulletSpeed;
+                if (bullet.y > canvasHeight) {
+                    cowboyBullets.splice(i, 1);
+                    continue;
+                }
+                if (checkCollision(player, bullet)) {
+                    cowboyBullets.splice(i, 1); 
+                    handlePlayerHitByBullet();
+                    break; 
+                }
+            }
+        }
+
+        function updateObstacles(){if(frameCount%Math.floor(obstacleSpawnInterval)===0)spawnObstacle();for(let c=obstacles.length-1;c>=0;c--){const a=obstacles[c];a.y+=gameSpeed;if(a.y>canvasHeight)obstacles.splice(c,1);if(checkCollision(player,a))handlePlayerCollision(a)}}
+        
+        function updateCivilians(){
+            if(frameCount%Math.floor(civilianSpawnInterval)===0)spawnCivilian();
+            for(let i=civilians.length-1; i>=0; i--){
+                const civilian = civilians[i];
+                
+                if (civilian.isAngry) { // MODIFIED: Continuously update targetX if angry
+                    civilian.targetX = player.x + player.width / 2; // Update target to current player X
+                    const dxToTarget = civilian.targetX - (civilian.x + civilian.width / 2);
+                    
+                    // Adjust horizontal position
+                    civilian.x += dxToTarget * civilianHomingStrength; // Use a homing strength factor
+
+                    civilian.y += civilian.speed + civilianAngrySpeedBoost; // Move down faster
+                } else {
+                    civilian.y += civilian.speed; // Normal downward movement
+                }
+
+                // Boundary check for civilian X (optional, to keep them on screen if homing too aggressively)
+                civilian.x = Math.max(0, Math.min(civilian.x, canvasWidth - civilian.width));
+
+
+                if(civilian.y > canvasHeight) civilians.splice(i,1);
+                if(checkCollision(player,civilian)) handlePlayerCollision(civilian, true);
+            }
+        }
+
+        function updateStars(){stars.forEach(c=>{c.y+=starSpeed*(gameSpeed/2);if(c.y>canvasHeight){c.y=0;c.x=Math.random()*canvasWidth}})}
+        
+        // --- Game Logic & Spawning Functions ---
+        function spawnWeb(){
+            webs.push({
+                x: player.x + player.width / 2 - webRadius, 
+                y: player.y - webRadius,                     
+                radius: webRadius 
+            });
+        }
+        
+        function spawnCowboyBullet() {
+            cowboyBullets.push({
+                x: cowboy.x + cowboy.width / 2 - bulletWidth / 2,
+                y: cowboy.y + cowboy.height, 
+                width: bulletWidth,
+                height: bulletHeight
+            });
+        }
+
+        function spawnObstacle(){
+            const x=Math.random()*(canvasWidth-obstacleWidth);
+            obstacles.push({x:x,y:-initialObstacleHeight,width:obstacleWidth,height:initialObstacleHeight}); 
+        }
+
+        function spawnCivilian(){
+            const x=Math.random()*(canvasWidth-civilianWidth);
+            const bodyColor = civilianColors.body[Math.floor(Math.random()*civilianColors.body.length)];
+            const headColor = civilianColors.head[Math.floor(Math.random()*civilianColors.head.length)];
+            civilians.push({
+                x:x,y:-civilianHeight,
+                width:civilianWidth,height:civilianHeight,
+                speed:civilianBaseSpeed+(Math.random()*.5-.25),
+                currentColor:{body:bodyColor,head:headColor},
+                originalColor:{body:bodyColor,head:headColor},
+                isAngry: false, 
+                targetX: undefined 
+            });
+        }
+        
+        function checkCollision(rect1, rect2) { 
+            let r1x, r1y, r1w, r1h;
+            if (rect1.radius) { 
+                r1x = rect1.x; 
+                r1y = rect1.y; 
+                r1w = rect1.radius * 2; 
+                r1h = rect1.radius * 2; 
+            } else { 
+                r1x = rect1.x;
+                r1y = rect1.y;
+                r1w = rect1.width;
+                r1h = rect1.height;
+            }
+            return r1x < rect2.x + rect2.width &&
+                   r1x + r1w > rect2.x &&
+                   r1y < rect2.y + rect2.height &&
+                   r1y + r1h > rect2.y;
+        }
+        
+        function handlePlayerHitByBullet() {
+            if (gameOver) return; 
+            lives--;
+            updateLivesDisplay();
+            player.colors.primary = "#facc15"; 
+            setTimeout(() => { player.colors.primary = player.originalPrimaryColor; }, 200);
+            
+            if (lives <= 0) {
+                endGame();
+            } else {
+                showMessage("Hit!", `Spider-Man was shot by Morgan! ${lives} lives remaining.`, false);
+            }
+        }
+
+        function handlePlayerCollision(collidedObject, isCivilian = false) {
+            if (gameOver) return;
+            lives--;
+            updateLivesDisplay();
+            player.colors.primary="#facc15";
+            setTimeout(()=>{player.colors.primary=player.originalPrimaryColor},200);
+            
+            let messageTitleText = "Thwack!";
+            let messageDetailText = `Spider-Man hit an obstacle! ${lives} lives remaining.`;
+            if(isCivilian){
+                score-=50; updateScoreDisplay();
+                messageTitleText = "Oh No!";
+                messageDetailText = `Spider-Man bumped into a civilian! -50 points. ${lives} lives remaining.`;
+            }
+            
+            const obsIndex=obstacles.indexOf(collidedObject);if(obsIndex>-1)obstacles.splice(obsIndex,1);
+            const civIndex=civilians.indexOf(collidedObject);if(civIndex>-1)civilians.splice(civIndex,1);
+            
+            if(lives<=0){
+                endGame();
+            } else {
+                showMessage(messageTitleText, messageDetailText, false);
+            }
+        }
+        
+        function handleWebCollisions(){
+            for(let i=webs.length-1; i>=0; i--){
+                const web = webs[i];
+                const webBoundingBox = {
+                    x: web.x, 
+                    y: web.y, 
+                    width: web.radius * 2,
+                    height: web.radius * 2
+                };
+                let webRemoved = false;
+
+                if(checkCollision(webBoundingBox, cowboy)){
+                    score+=50; updateScoreDisplay();
+                    webs.splice(i,1); webRemoved = true;
+                    
+                    const dxToPlayer = (player.x + player.width/2) - (cowboy.x + cowboy.width/2);
+                    const dyToPlayer = (player.y + player.height/2) - (cowboy.y + cowboy.height/2);
+                    const distance = Math.sqrt(dxToPlayer * dxToPlayer + dyToPlayer * dyToPlayer);
+                    if (distance > 0) {
+                        cowboy.x += (dxToPlayer / distance) * pullStrength;
+                        cowboy.y += (dyToPlayer / distance) * pullStrength;
+                    }
+                    cowboy.isReturningToTop = true; 
+
+                    cowboy.speed += cowboy.speedIncreaseOnHit;
+                    cowboy.speed = Math.min(cowboy.speed, cowboy.maxSpeed); 
+                    cowboy.dx = cowboy.speed * Math.sign(cowboy.dx); 
+
+                    cowboy.minShootInterval -= cowboy.shootIntervalDecreaseOnHit;
+                    cowboy.maxShootInterval -= cowboy.shootIntervalDecreaseOnHit;
+                    cowboy.minShootInterval = Math.max(cowboy.minShootInterval, cowboy.minPossibleShootInterval);
+                    cowboy.maxShootInterval = Math.max(cowboy.maxShootInterval, cowboy.minShootInterval); 
+
+                    cowboy.minDirectionChangeInterval -= cowboy.directionChangeIntervalDecreaseOnHit;
+                    cowboy.maxDirectionChangeInterval -= cowboy.directionChangeIntervalDecreaseOnHit;
+                    cowboy.minDirectionChangeInterval = Math.max(cowboy.minDirectionChangeInterval, cowboy.minPossibleDirChangeInterval);
+                    cowboy.maxDirectionChangeInterval = Math.max(cowboy.maxDirectionChangeInterval, cowboy.minDirectionChangeInterval);
+
+                    cowboy.colors.shirt = cowboy.colors.hitColor;
+                    setTimeout(()=>{cowboy.colors.shirt = cowboy.colors.originalShirt},200);
+                    continue; 
+                }
+
+                for(let j=obstacles.length-1; j>=0; j--){
+                    if(webRemoved) break;
+                    const obstacle = obstacles[j];
+                    if(checkCollision(webBoundingBox, obstacle)){
+                        const dxToPlayer = (player.x + player.width/2) - (obstacle.x + obstacle.width/2);
+                        const dyToPlayer = (player.y + player.height/2) - (obstacle.y + obstacle.height/2);
+                        const distance = Math.sqrt(dxToPlayer*dxToPlayer + dyToPlayer*dyToPlayer);
+                        if(distance > 0){
+                            obstacle.x += (dxToPlayer / distance) * pullStrength;
+                            obstacle.y += (dyToPlayer / distance) * pullStrength;
+                        }
+                        webs.splice(i,1); webRemoved = true;
+                        break; 
+                    }
+                }
+                if(webRemoved) continue;
+
+                for(let k=civilians.length-1; k>=0; k--){
+                    if(webRemoved) break;
+                    const civilian = civilians[k];
+                    if(checkCollision(webBoundingBox, civilian)){
+                        score-=25; updateScoreDisplay();
+                        const dxToPlayer = (player.x + player.width/2) - (civilian.x + civilian.width/2);
+                        const dyToPlayer = (player.y + player.height/2) - (civilian.y + civilian.height/2);
+                        const distance = Math.sqrt(dxToPlayer*dxToPlayer + dyToPlayer*dyToPlayer);
+                        if(distance > 0){
+                            civilian.x += (dxToPlayer / distance) * pullStrength;
+                            civilian.y += (dyToPlayer / distance) * pullStrength;
+                        }
+                        civilian.isAngry = true; 
+                        // civilian.targetX is now set continuously in updateCivilians if angry
+
+                        webs.splice(i,1); webRemoved = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        function increaseDifficulty(){
+            if(obstacleSpawnInterval > 40) obstacleSpawnInterval -= 0.03;
+            if(civilianSpawnInterval > 60) civilianSpawnInterval -= 0.02;
+        }
+        
+        function resetGame(){
+            gameOver=false; 
+            gameIsPaused = false; 
+            if(animationFrameId) cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+
+            score=0;lives=3;gameSpeed=1.5;
+            player.x=canvasWidth/2-player.width/2; player.y=canvasHeight-70; 
+            player.maxY = canvasHeight - 70; player.minY = canvasHeight / 2;   
+            player.colors.primary=player.originalPrimaryColor; player.canShoot=!0;
+            
+            cowboy.x=canvasWidth/2-cowboy.width/2; 
+            cowboy.y = cowboy.initialY; 
+            cowboy.isReturningToTop = false; 
+            cowboy.colors.shirt=cowboy.colors.originalShirt;
+            cowboy.speed = cowboy.initialSpeed; 
+            cowboy.dx = cowboy.speed * (Math.random() < 0.5 ? 1 : -1) ; 
+            cowboy.shootTimer = cowboy.initialMinShootInterval; 
+            cowboy.minShootInterval = cowboy.initialMinShootInterval; 
+            cowboy.maxShootInterval = cowboy.initialMaxShootInterval; 
+            cowboy.minDirectionChangeInterval = cowboy.initialMinDirChangeInterval; 
+            cowboy.maxDirectionChangeInterval = cowboy.initialMaxDirChangeInterval; 
+            cowboy.directionChangeTimer = Math.random() * (cowboy.maxDirectionChangeInterval - cowboy.minDirectionChangeInterval) + cowboy.minDirectionChangeInterval; 
+            
+            obstacles.length=0;webs.length=0;civilians.length=0; cowboyBullets.length = 0; 
+            frameCount=0;
+            obstacleSpawnInterval=100;civilianSpawnInterval=160;
+            updateScoreDisplay();updateLivesDisplay();initStars();
+            restartButton.classList.add("hidden");hideMessage(); 
+        }
+
+        function endGame(){
+            gameOver=true; 
+            gameIsPaused = false; 
+            if(animationFrameId) cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+            showMessage("Game Over!",`Morgan might have gotten away... Your final score: ${score}.`,true);
+        }
+
+        function resizeCanvas(){
+            const c=500,a=700,b=5/7;let d=window.innerWidth*.8,e=window.innerHeight*.6;
+            d/e>b?d=e*b:e=d/b;d=Math.min(d,c);e=Math.min(e,a);
+            canvas.width=Math.floor(d);canvas.height=Math.floor(e);
+            canvasWidth=canvas.width;canvasHeight=canvas.height;
+            player.x=canvasWidth/2-player.width/2; 
+            player.maxY = canvasHeight - 70; 
+            player.minY = canvasHeight / 2; player.y = Math.max(player.minY, Math.min(player.y, player.maxY)); 
+            cowboy.x=canvasWidth/2-cowboy.width/2; 
+            cowboy.initialY = 30; 
+            initStars();
+        }
+        function initStars(){stars.length=0;for(let c=0;c<starCount;c++)stars.push({x:Math.random()*canvasWidth,y:Math.random()*canvasHeight,radius:Math.random()*1.2+.3,opacity:Math.random()*.4+.3})}
+        
+        function updateScoreDisplay(){scoreDisplay.textContent=score}
+        function updateLivesDisplay(){livesDisplay.textContent=lives}
+        
+        function showMessage(title, text, isGameOverMessage = true) {
+            if (!gameOver && animationFrameId) { 
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+                gameIsPaused = true;
+            }
+            messageTitle.textContent = title;
+            messageText.textContent = text;
+            messageBox.classList.remove("hidden");
+            messageButton.textContent = isGameOverMessage ? "View Score & Restart" : "Continue";
+        }
+        function hideMessage(){messageBox.classList.add("hidden")}
+        function clearCanvas(){ctx.clearRect(0,0,canvasWidth,canvasHeight)}
+
+        function gameLoop(){
+            if(gameOver || gameIsPaused) return; 
+            
+            animationFrameId = requestAnimationFrame(gameLoop); 
+
+            frameCount++;
+            clearCanvas();
+            updateStars();drawStars();
+            updateCowboy();drawCowboy();
+            updatePlayer();drawPlayer();
+            updateWebs();drawWebs();
+            updateCowboyBullets(); drawCowboyBullets(); 
+            updateObstacles();drawObstacles();
+            updateCivilians();drawCivilians();
+            handleWebCollisions();
+            increaseDifficulty();
+        }
+        
+        function initializeGame(){
+            resizeCanvas(); 
+            resetGame(); 
+            
+            showMessage("Spider-Man: Web Slinger!","Help Spidey catch Morgan! Use Arrows or ADWS to move. Spacebar to shoot. Avoid hitting civilians and Morgan's bullets!", false);
+            restartButton.classList.add("hidden"); 
+            messageButton.textContent="Let's Swing!";
+            
+            const initialMessageButtonHandler = () => {
+                hideMessage();
+                gameIsPaused = false; 
+                if(animationFrameId) cancelAnimationFrame(animationFrameId); 
+                animationFrameId = null;
+                gameLoop(); 
+                messageButton.removeEventListener('click', initialMessageButtonHandler); 
+                messageButton.addEventListener('click', genericMessageButtonHandler); 
+            };
+            messageButton.addEventListener('click', initialMessageButtonHandler);
+        }
+        
+        initializeGame();
+
+    </script>
+</body>
+</html>
