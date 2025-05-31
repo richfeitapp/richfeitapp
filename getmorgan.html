@@ -29,19 +29,31 @@
             align-items: center;
             gap: 1rem; 
         }
-        .controls, .info {
-            color: #2d3748; /* Tailwind's gray-800 (Dark text for light bg) */
+        .controls, .info, .speed-control-container { 
+            color: #2d3748; 
             text-align: center;
-            background-color: #edf2f7; /* Tailwind's gray-200 (Light container bg) */
+            background-color: #edf2f7; 
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 90%;
+            max-width: 400px; 
         }
-        .info h1 { /* Targeting the h1 within .info for specific color */
-            color: #2b6cb0; /* Tailwind's blue-700 (Darker blue for title) */
+        .info h1 { 
+            color: #2b6cb0; 
+        }
+        .speed-control-container label {
+            margin-right: 0.5rem;
+        }
+        .speed-control-container input[type="number"] { 
+            vertical-align: middle;
+            width: 60px; 
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            border: 1px solid #cbd5e0; 
         }
         button {
-            background-color: #3182ce; /* Tailwind's blue-600 */
+            background-color: #3182ce; 
             color: white;
             font-weight: bold;
             padding: 0.5rem 1rem;
@@ -51,15 +63,15 @@
             transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #2b6cb0; /* Tailwind's blue-700 */
+            background-color: #2b6cb0; 
         }
         #messageBox {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(26, 32, 44, 0.95); /* Tailwind's gray-900 with opacity (Dark message box) */
-            color: #e2e8f0; /* Light text for dark message box */
+            background-color: rgba(26, 32, 44, 0.95); 
+            color: #e2e8f0; 
             padding: 2rem;
             border-radius: 0.5rem;
             text-align: center;
@@ -79,6 +91,11 @@
         <div class="controls mt-4">
             <p>Arrows/ADWS: Move | Spacebar: Shoot Web</p>
             <button id="restartButton" class="mt-2 hidden">Restart Game</button>
+        </div>
+        <div class="speed-control-container mt-4"> 
+            <label for="gameSpeedInput">Game Speed:</label>
+            <input type="number" id="gameSpeedInput" min="0.1" max="3.0" step="0.1" value="0.5"> {/* MODIFIED: Default value changed */}
+            <span id="gameSpeedValueDisplay">(Current: 0.5)</span> {/* MODIFIED: Default display changed */}
         </div>
     </div>
 
@@ -101,13 +118,16 @@
         const messageText = document.getElementById('messageText');
         const messageButton = document.getElementById('messageButton');
 
+        const gameSpeedInput = document.getElementById('gameSpeedInput'); 
+        const gameSpeedValueDisplay = document.getElementById('gameSpeedValueDisplay');
+
         let canvasWidth = 400;
         let canvasHeight = 600;
 
         // --- Game State Variables ---
         let score = 0;
         let lives = 3;
-        let gameSpeed = 1.5; 
+        let gameSpeed = 0.5; // MODIFIED: Initial game speed set to 0.5
         let gameOver = false;
         let animationFrameId = null; 
         let frameCount = 0; 
@@ -119,7 +139,8 @@
             width: 32, height: 50,
             x: canvasWidth / 2 - 16, 
             y: canvasHeight - 70,
-            speed: 5, 
+            baseSpeed: 3.5, 
+            speed: 0, 
             dx: 0, 
             dy: 0, 
             colors: { primary: '#e53e3e', secondary: '#3b82f6', accent: '#1a202c' },
@@ -136,12 +157,14 @@
             x: canvasWidth / 2 - 22, y: 30,
             initialY: 30, 
             isReturningToTop: false, 
-            pullReturnSpeed: 0.7, 
-            initialSpeed: 1.2, 
-            speed: 1.2, 
-            dx: 1.2,    
-            speedIncreaseOnHit: 0.15, 
-            maxSpeed: player.speed - 0.5, 
+            basePullReturnSpeed: 0.5, 
+            pullReturnSpeed: 0,       
+            baseSpeed: 0.8,           
+            speed: 0,                 
+            dx: 0,                    
+            baseSpeedIncreaseOnHit: 0.1, 
+            maxSpeedFactor: player.baseSpeed - 0.3, 
+            maxSpeed: 0, 
             colors: { hat: '#8B4513', shirt: '#006400', pants: '#00008B', skin: '#DEB887', originalShirt: '#006400', hitColor: '#FFD700' },
             labelColor: '#1A202C',
             canShoot: true,
@@ -164,13 +187,13 @@
 
         // --- Webs (Player's projectiles) ---
         const webs = [];
-        const webSpeed = 8;
+        const webSpeed = 8; 
         const webRadius = 6; 
         const webColor = '#CBD5E0'; 
 
         // --- Cowboy Bullets ---
         const cowboyBullets = [];
-        const bulletSpeed = 4;
+        const bulletSpeed = 4; 
         const bulletWidth = 6;
         const bulletHeight = 10;
         const bulletColor = '#454545'; 
@@ -179,7 +202,7 @@
         const obstacles = [];
         const obstacleWidth = 50; let initialObstacleHeight = 20; 
         const obstacleColor = '#22c55e'; 
-        let obstacleSpawnInterval = 100;
+        let obstacleSpawnInterval = 300; // MODIFIED: Increased interval for fewer obstacles
 
         // --- Civilians ---
         const civilians = [];
@@ -191,14 +214,25 @@
             angryFaceColor: '#DC2626' 
         };
         let civilianSpawnInterval = 160; 
-        const civilianBaseSpeed = 1.2;
-        const civilianAngrySpeedBoost = 0.5; 
-        const civilianHomingStrength = 0.02; 
+        const civilianBaseSpeedFactor = 0.8; 
+        const civilianBaseAngrySpeedBoost = 0.3; 
+        const civilianBaseHomingStrength = 0.02; 
 
         // --- Background Stars ---
         const stars = [];
-        const starCount = 80; const starSpeed = 0.8;
+        const starCount = 80; const starBaseSpeed = 0.8; 
         const starColor = '#A0AEC0'; 
+
+        // --- Function to update all game-speed dependent variables ---
+        function updateAllDynamicSpeeds() {
+            player.speed = player.baseSpeed * gameSpeed;
+            
+            cowboy.speed = cowboy.baseSpeed * gameSpeed;
+            cowboy.dx = cowboy.speed * Math.sign(cowboy.dx || 1);
+            cowboy.pullReturnSpeed = cowboy.basePullReturnSpeed * gameSpeed;
+            cowboy.maxSpeed = cowboy.maxSpeedFactor * gameSpeed;
+        }
+
 
         // --- Input Handling ---
         const keys = { 
@@ -208,7 +242,8 @@
         };
 
         document.addEventListener('keydown', (e) => {
-            if (gameIsPaused && e.code !== 'Space') return; 
+            if (gameIsPaused && e.code !== 'Space' && e.target !== gameSpeedInput) return; 
+            if (e.target === gameSpeedInput) return; 
 
             if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') keys.ArrowLeft = true;
             if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'd') keys.ArrowRight = true;
@@ -225,6 +260,8 @@
             }
         });
         document.addEventListener('keyup', (e) => {
+            if (e.target === gameSpeedInput) return;
+
             if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') keys.ArrowLeft = false;
             if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'd') keys.ArrowRight = false;
             if (e.key === 'ArrowUp' || e.key.toLowerCase() === 'w') keys.ArrowUp = false;
@@ -245,6 +282,21 @@
                 restartButton.classList.remove('hidden');
             }
         };
+
+        gameSpeedInput.value = gameSpeed.toFixed(1);
+        gameSpeedValueDisplay.textContent = `(Current: ${gameSpeed.toFixed(1)})`;
+        gameSpeedInput.addEventListener('change', (e) => { 
+            let newSpeed = parseFloat(e.target.value);
+            if (isNaN(newSpeed)) { 
+                newSpeed = 0.5; // MODIFIED: Default back to new default
+                e.target.value = newSpeed.toFixed(1);
+            }
+            newSpeed = Math.max(parseFloat(gameSpeedInput.min), Math.min(newSpeed, parseFloat(gameSpeedInput.max)));
+            gameSpeed = newSpeed; 
+            e.target.value = gameSpeed.toFixed(1); 
+            gameSpeedValueDisplay.textContent = `(Current: ${gameSpeed.toFixed(1)})`;
+            updateAllDynamicSpeeds(); 
+        });
         
         // --- DRAW FUNCTIONS ---
         function drawPlayer() {
@@ -371,32 +423,37 @@
         // --- UPDATE FUNCTIONS ---
         function updatePlayer() {
             player.dx = 0; player.dy = 0; 
-            if (keys.ArrowLeft) player.dx = -player.speed; if (keys.ArrowRight) player.dx = player.speed;
-            if (keys.ArrowUp) player.dy = -player.speed; if (keys.ArrowDown) player.dy = player.speed; 
+            const currentMovementSpeed = player.speed; 
+            if (keys.ArrowLeft) player.dx = -currentMovementSpeed; 
+            if (keys.ArrowRight) player.dx = currentMovementSpeed;
+            if (keys.ArrowUp) player.dy = -currentMovementSpeed; 
+            if (keys.ArrowDown) player.dy = currentMovementSpeed; 
             player.x += player.dx; player.y += player.dy;
             if (player.x < 0) player.x = 0; if (player.x + player.width > canvasWidth) player.x = canvasWidth - player.width;
             if (player.y < player.minY) player.y = player.minY; if (player.y > player.maxY) player.y = player.maxY; 
         }
 
         function updateCowboy(){
+            const currentPullReturnSpeed = cowboy.pullReturnSpeed; 
+
             if (cowboy.isReturningToTop) {
                 const dyToReturn = cowboy.initialY - cowboy.y;
                 const distanceToReturn = Math.abs(dyToReturn);
 
-                if (distanceToReturn > cowboy.pullReturnSpeed) {
-                    cowboy.y += (dyToReturn / distanceToReturn) * cowboy.pullReturnSpeed;
+                if (distanceToReturn > currentPullReturnSpeed) {
+                    cowboy.y += (dyToReturn / distanceToReturn) * currentPullReturnSpeed;
                 } else {
                     cowboy.y = cowboy.initialY;
                     cowboy.isReturningToTop = false;
                 }
-                cowboy.x += cowboy.dx;
+                cowboy.x += cowboy.dx; 
                  if(cowboy.x <= 0 || cowboy.x + cowboy.width >= canvasWidth) {
                     cowboy.dx *= -1;
                     cowboy.x = Math.max(0, Math.min(cowboy.x, canvasWidth - cowboy.width));
                 }
 
             } else {
-                cowboy.x += cowboy.dx;
+                cowboy.x += cowboy.dx; 
                 if(cowboy.x <= 0 || cowboy.x + cowboy.width >= canvasWidth) {
                     cowboy.dx *= -1;
                     cowboy.x = Math.max(0, Math.min(cowboy.x, canvasWidth - cowboy.width));
@@ -424,7 +481,7 @@
         function updateWebs(){
             for(let i=webs.length-1; i>=0; i--){
                 const web = webs[i];
-                web.y -= webSpeed;
+                web.y -= webSpeed; 
                 if(web.y + webRadius * 2 < 0) { 
                     webs.splice(i,1);
                 }
@@ -434,7 +491,7 @@
         function updateCowboyBullets() {
             for (let i = cowboyBullets.length - 1; i >= 0; i--) {
                 const bullet = cowboyBullets[i];
-                bullet.y += bulletSpeed;
+                bullet.y += bulletSpeed; 
                 if (bullet.y > canvasHeight) {
                     cowboyBullets.splice(i, 1);
                     continue;
@@ -447,33 +504,47 @@
             }
         }
 
-        function updateObstacles(){if(frameCount%Math.floor(obstacleSpawnInterval)===0)spawnObstacle();for(let c=obstacles.length-1;c>=0;c--){const a=obstacles[c];a.y+=gameSpeed;if(a.y>canvasHeight)obstacles.splice(c,1);if(checkCollision(player,a))handlePlayerCollision(a)}}
+        function updateObstacles(){
+            if(frameCount%Math.floor(obstacleSpawnInterval)===0)spawnObstacle();
+            for(let c=obstacles.length-1;c>=0;c--){
+                const a=obstacles[c];
+                a.y += gameSpeed; 
+                if(a.y>canvasHeight)obstacles.splice(c,1);
+                if(checkCollision(player,a))handlePlayerCollision(a);
+            }
+        }
         
         function updateCivilians(){
             if(frameCount%Math.floor(civilianSpawnInterval)===0)spawnCivilian();
             for(let i=civilians.length-1; i>=0; i--){
                 const civilian = civilians[i];
-                
+                const currentCivilianSpeed = civilian.baseSpeed * gameSpeed;
+                const currentAngryBoost = civilianBaseAngrySpeedBoost * gameSpeed;
+                const currentHomingStrength = civilianBaseHomingStrength; 
+
                 if (civilian.isAngry) { 
                     civilian.targetX = player.x + player.width / 2; 
                     const dxToTarget = civilian.targetX - (civilian.x + civilian.width / 2);
                     
-                    civilian.x += dxToTarget * civilianHomingStrength;
-
-                    civilian.y += civilian.speed + civilianAngrySpeedBoost; 
+                    civilian.x += dxToTarget * currentHomingStrength;
+                    civilian.y += currentCivilianSpeed + currentAngryBoost; 
                 } else {
-                    civilian.y += civilian.speed; 
+                    civilian.y += currentCivilianSpeed; 
                 }
  
                 civilian.x = Math.max(0, Math.min(civilian.x, canvasWidth - civilian.width));
-
 
                 if(civilian.y > canvasHeight) civilians.splice(i,1);
                 if(checkCollision(player,civilian)) handlePlayerCollision(civilian, true);
             }
         }
 
-        function updateStars(){stars.forEach(c=>{c.y+=starSpeed*(gameSpeed/2);if(c.y>canvasHeight){c.y=0;c.x=Math.random()*canvasWidth}})}
+        function updateStars(){
+            stars.forEach(c=>{
+                c.y += starBaseSpeed * (gameSpeed / 1.5); 
+                if(c.y>canvasHeight){c.y=0;c.x=Math.random()*canvasWidth}
+            });
+        }
         
         // --- Game Logic & Spawning Functions ---
         function spawnWeb(){
@@ -505,7 +576,8 @@
             civilians.push({
                 x:x,y:-civilianHeight,
                 width:civilianWidth,height:civilianHeight,
-                speed:civilianBaseSpeed+(Math.random()*.5-.25),
+                baseSpeed: civilianBaseSpeedFactor, 
+                speed: civilianBaseSpeedFactor * gameSpeed + (Math.random() * 0.3 - 0.15), 
                 currentColor:{body:bodyColor,head:headColor},
                 originalColor:{body:bodyColor,head:headColor},
                 isAngry: false, 
@@ -595,7 +667,7 @@
                     }
                     cowboy.isReturningToTop = true; 
 
-                    cowboy.speed += cowboy.speedIncreaseOnHit;
+                    cowboy.speed += cowboy.baseSpeedIncreaseOnHit * gameSpeed; 
                     cowboy.speed = Math.min(cowboy.speed, cowboy.maxSpeed); 
                     cowboy.dx = cowboy.speed * Math.sign(cowboy.dx); 
 
@@ -644,7 +716,6 @@
                             civilian.y += (dyToPlayer / distance) * pullStrength;
                         }
                         civilian.isAngry = true; 
-                        // civilian.targetX will be updated in updateCivilians
                         webs.splice(i,1); webRemoved = true;
                         break;
                     }
@@ -663,7 +734,16 @@
             if(animationFrameId) cancelAnimationFrame(animationFrameId);
             animationFrameId = null;
 
-            score=0;lives=3;gameSpeed=1.5;
+            let initialSpeedFromInput = parseFloat(gameSpeedInput.value);
+            if(isNaN(initialSpeedFromInput) || initialSpeedFromInput < parseFloat(gameSpeedInput.min) || initialSpeedFromInput > parseFloat(gameSpeedInput.max)) {
+                initialSpeedFromInput = 0.5; // MODIFIED: Default if input is bad
+                gameSpeedInput.value = initialSpeedFromInput.toFixed(1);
+            }
+            gameSpeed = initialSpeedFromInput;
+            gameSpeedValueDisplay.textContent = `(Current: ${gameSpeed.toFixed(1)})`;
+            updateAllDynamicSpeeds(); 
+
+            score=0;lives=3;
             player.x=canvasWidth/2-player.width/2; player.y=canvasHeight-70; 
             player.maxY = canvasHeight - 70; player.minY = canvasHeight / 2;   
             player.colors.primary=player.originalPrimaryColor; player.canShoot=!0;
@@ -672,7 +752,6 @@
             cowboy.y = cowboy.initialY; 
             cowboy.isReturningToTop = false; 
             cowboy.colors.shirt=cowboy.colors.originalShirt;
-            cowboy.speed = cowboy.initialSpeed; 
             cowboy.dx = cowboy.speed * (Math.random() < 0.5 ? 1 : -1) ; 
             cowboy.shootTimer = cowboy.initialMinShootInterval; 
             cowboy.minShootInterval = cowboy.initialMinShootInterval; 
@@ -683,7 +762,8 @@
             
             obstacles.length=0;webs.length=0;civilians.length=0; cowboyBullets.length = 0; 
             frameCount=0;
-            obstacleSpawnInterval=100;civilianSpawnInterval=160;
+            obstacleSpawnInterval=300; // MODIFIED: Reset to new, slower interval
+            civilianSpawnInterval=160;
             updateScoreDisplay();updateLivesDisplay();initStars();
             restartButton.classList.add("hidden");hideMessage(); 
         }
@@ -706,6 +786,7 @@
             player.minY = canvasHeight / 2; player.y = Math.max(player.minY, Math.min(player.y, player.maxY)); 
             cowboy.x=canvasWidth/2-cowboy.width/2; 
             cowboy.initialY = 30; 
+            updateAllDynamicSpeeds(); 
             initStars();
         }
         function initStars(){stars.length=0;for(let c=0;c<starCount;c++)stars.push({x:Math.random()*canvasWidth,y:Math.random()*canvasHeight,radius:Math.random()*1.2+.3,opacity:Math.random()*.4+.3})}
@@ -748,40 +829,32 @@
         function initializeGame(){
             resizeCanvas(); 
             resetGame(); 
+            updateAllDynamicSpeeds(); 
             
-            // Create and add favicon
             const faviconCanvas = document.createElement('canvas');
             faviconCanvas.width = 32;
             faviconCanvas.height = 32;
             const favCtx = faviconCanvas.getContext('2d');
-
-            // Simplified Cowboy Head for Favicon
             const favHatColor = cowboy.colors.hat;
             const favSkinColor = cowboy.colors.skin;
             const favW = faviconCanvas.width;
             const favH = faviconCanvas.height;
-
-            // Hat Crown
             favCtx.fillStyle = favHatColor;
             favCtx.fillRect(favW * 0.15, favH * 0.1, favW * 0.7, favH * 0.4);
-            // Hat Brim
             favCtx.beginPath();
             favCtx.moveTo(favW * 0.05, favH * 0.5);
             favCtx.quadraticCurveTo(favW * 0.5, favH * 0.5 + favH * 0.2, favW * 0.95, favH * 0.5);
             favCtx.quadraticCurveTo(favW * 0.5, favH * 0.5 - favH * 0.2, favW * 0.05, favH * 0.5);
             favCtx.fill();
-            // Head
             favCtx.fillStyle = favSkinColor;
             favCtx.beginPath();
             favCtx.arc(favW / 2, favH * 0.65, favH * 0.25, 0, Math.PI * 2);
             favCtx.fill();
-
             const link = document.createElement('link');
             link.type = 'image/x-icon'; 
             link.rel = 'shortcut icon'; 
             link.href = faviconCanvas.toDataURL('image/png');
             document.getElementsByTagName('head')[0].appendChild(link);
-
 
             showMessage("Spider-Man: Web Slinger!","Help Spidey catch Morgan! Use Arrows or ADWS to move. Spacebar to shoot. Avoid hitting civilians and Morgan's bullets!", false);
             restartButton.classList.add("hidden"); 
