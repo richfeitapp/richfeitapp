@@ -275,7 +275,7 @@
                 this.x = Math.random() * (canvas.width - this.radius * 2) + this.radius;
                 this.y = -this.radius;
                 this.speed = gameSpeed + Math.random() * 0.5;
-                this.color = this.isPrime ? '#68d391' : '#fc8181'; // green-400 or red-400
+                this.color = '#a0aec0'; // A neutral color for all numbers
                 this.font = '20px "Roboto Mono"';
             }
             generateNumber() {
@@ -421,6 +421,12 @@
         }
         
         function createSadGraphic(x, y) {
+            // Use a different color for the sad graphic to distinguish it from the prime explosion
+            const sadColors = ['#fc8181', '#f56565', '#e53e3e', '#f6e05e'];
+            for (let i = 0; i < 15; i++) {
+                 const color = sadColors[Math.floor(Math.random() * sadColors.length)];
+                 particles.push(new Particle(x, y, color));
+            }
             particles.push(new SadFace(x,y));
         }
 
