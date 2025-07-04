@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Shooter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            overflow: hidden;
+        }
+        .font-pixel {
+            font-family: 'Press Start 2P', cursive;
+        }
+        canvas {
+            background-color: #1a202c; /* bg-gray-800 */
+            display: block;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            padding: 1rem;
+            height: 100vh;
+        }
+        .settings-panel, .game-info {
+            background-color: #2d3748; /* bg-gray-700 */
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            color: #e2e8f0; /* text-gray-300 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #4a5568; /* bg-gray-600 */
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+        input[type="range"]:hover {
+            opacity: 1;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4299e1; /* bg-blue-500 */
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4299e1; /* bg-blue-500 */
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #2d3748;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            color: white;
+            border: 2px solid #4a5568;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div class="game-container">
+        <!-- Game Canvas and Info -->
+        <div class="flex flex-col gap-4 items-center">
+            <div class="game-info w-full grid grid-cols-3 gap-4 text-center">
+                <div>
+                    <h2 class="text-lg text-gray-400">SCORE</h2>
+                    <p id="score" class="text-3xl font-bold font-pixel">0</p>
+                </div>
+                <div>
+                    <h2 class="text-lg text-gray-400">LEVEL</h2>
+                    <p id="level" class="text-3xl font-bold font-pixel">1</p>
+                </div>
+                <div>
+                    <h2 class="text-lg text-gray-400">LIVES</h2>
+                    <p id="lives" class="text-3xl font-bold font-pixel">3</p>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel w-80">
+            <h2 class="text-2xl font-bold mb-6 text-center font-pixel">Settings</h2>
+            
+            <div class="mb-4">
+                <label for="difficultySpeed" class="block mb-2 text-sm font-medium text-gray-300">Difficulty Curve</label>
+                <input id="difficultySpeed" type="range" min="100" max="1000" value="500" class="w-full">
+                <div class="text-xs text-gray-400 mt-1 flex justify-between"><span>Easier</span><span>Harder</span></div>
+            </div>
+            
+            <div class="mb-4">
+                <label for="spawnRate" class="block mb-2 text-sm font-medium text-gray-300">Number Spawn Rate</label>
+                <input id="spawnRate" type="range" min="500" max="3000" value="1500" class="w-full">
+                 <div class="text-xs text-gray-400 mt-1 flex justify-between"><span>Fast</span><span>Slow</span></div>
+            </div>
+
+            <div class="mb-4">
+                <label for="livesCount" class="block mb-2 text-sm font-medium text-gray-300">Starting Lives (<span id="livesCountValue">3</span>)</label>
+                <input id="livesCount" type="range" min="1" max="10" value="3" class="w-full">
+            </div>
+
+            <div class="mb-4">
+                <label for="primePoints" class="block mb-2 text-sm font-medium text-gray-300">Points per Prime (<span id="primePointsValue">10</span>)</label>
+                <input id="primePoints" type="range" min="1" max="50" value="10" class="w-full">
+            </div>
+
+            <div class="mb-4">
+                <label for="nonPrimePenalty" class="block mb-2 text-sm font-medium text-gray-300">Penalty for Non-Prime (<span id="nonPrimePenaltyValue">5</span>)</label>
+                <input id="nonPrimePenalty" type="range" min="1" max="50" value="5" class="w-full">
+            </div>
+            
+            <button id="restartButton" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg mt-4 transition duration-300 font-pixel text-sm">
+                Restart Game
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content font-pixel">
+            <h2 class="text-4xl mb-4 text-red-500">GAME OVER</h2>
+            <p class="text-xl mb-2">Final Score: <span id="finalScore">0</span></p>
+            <p class="text-xl mb-6">Level Reached: <span id="finalLevel">1</span></p>
+            <button id="modalRestartButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                Play Again
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Canvas & Context Setup ---
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // --- DOM Elements ---
+        const scoreEl = document.getElementById('score');
+        const livesEl = document.getElementById('lives');
+        const levelEl = document.getElementById('level');
+        const gameOverModal = document.getElementById('gameOverModal');
+        const finalScoreEl = document.getElementById('finalScore');
+        const finalLevelEl = document.getElementById('finalLevel');
+        
+        // --- Game Settings Elements ---
+        const difficultySpeedInput = document.getElementById('difficultySpeed');
+        const spawnRateInput = document.getElementById('spawnRate');
+        const livesCountInput = document.getElementById('livesCount');
+        const primePointsInput = document.getElementById('primePoints');
+        const nonPrimePenaltyInput = document.getElementById('nonPrimePenalty');
+        const restartButton = document.getElementById('restartButton');
+        const modalRestartButton = document.getElementById('modalRestartButton');
+        
+        // --- Value Display Spans ---
+        const livesCountValueEl = document.getElementById('livesCountValue');
+        const primePointsValueEl = document.getElementById('primePointsValue');
+        const nonPrimePenaltyValueEl = document.getElementById('nonPrimePenaltyValue');
+
+        // --- Game State & Configuration ---
+        let score, lives, level, maxNumber, gameSpeed, numberSpawnInterval;
+        let player, projectiles, numbers, particles, floatingTexts;
+        let keys = {};
+        let lastSpawnTime = 0;
+        let gameOver = false;
+        
+        // --- Settings Variables (initialized in init) ---
+        let settings = {
+            difficultySpeed: 500,
+            spawnRate: 1500,
+            livesCount: 3,
+            primePoints: 10,
+            nonPrimePenalty: 5
+        };
+
+        // --- Game Object Classes ---
+
+        // Player (Cannon)
+        class Player {
+            constructor() {
+                this.width = 60;
+                this.height = 20;
+                this.x = canvas.width / 2 - this.width / 2;
+                this.y = canvas.height - this.height - 10;
+                this.speed = 8;
+                this.color = '#4299e1'; // bg-blue-500
+                this.barrelWidth = 10;
+                this.barrelHeight = 20;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                // Base
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+                // Barrel
+                ctx.fillRect(
+                    this.x + this.width / 2 - this.barrelWidth / 2,
+                    this.y - this.barrelHeight + this.height / 2,
+                    this.barrelWidth,
+                    this.barrelHeight
+                );
+            }
+            update() {
+                if (keys['ArrowLeft'] && this.x > 0) {
+                    this.x -= this.speed;
+                }
+                if (keys['ArrowRight'] && this.x < canvas.width - this.width) {
+                    this.x += this.speed;
+                }
+                this.draw();
+            }
+            shoot() {
+                projectiles.push(new Projectile(this.x + this.width / 2, this.y));
+            }
+        }
+
+        // Projectile
+        class Projectile {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.radius = 5;
+                this.color = '#f6e05e'; // yellow-300
+                this.velocity = { x: 0, y: -10 };
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.closePath();
+            }
+            update() {
+                this.y += this.velocity.y;
+                this.draw();
+            }
+        }
+
+        // Falling Number
+        class FallingNumber {
+            constructor() {
+                this.value = this.generateNumber();
+                this.isPrime = isPrime(this.value);
+                this.radius = 30;
+                this.x = Math.random() * (canvas.width - this.radius * 2) + this.radius;
+                this.y = -this.radius;
+                this.speed = gameSpeed + Math.random() * 0.5;
+                this.color = this.isPrime ? '#68d391' : '#fc8181'; // green-400 or red-400
+                this.font = '20px "Roboto Mono"';
+            }
+            generateNumber() {
+                // Generate a number up to the current max, with a bias towards primes
+                const shouldBePrime = Math.random() > 0.4; // 60% chance to try for a prime
+                if (shouldBePrime) {
+                    // Find a prime within a range
+                    for(let i=0; i<10; i++) { // try 10 times
+                        const num = Math.floor(Math.random() * maxNumber) + 1;
+                        if(isPrime(num)) return num;
+                    }
+                }
+                // Fallback to any number
+                return Math.floor(Math.random() * maxNumber) + 1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.fillStyle = '#1a202c';
+                ctx.font = this.font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(this.value, this.x, this.y);
+            }
+            update() {
+                this.y += this.speed;
+                this.draw();
+            }
+        }
+
+        // Particle for explosions
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.radius = Math.random() * 3 + 1;
+                this.color = color;
+                this.velocity = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.friction = 0.98;
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+            update() {
+                this.velocity.x *= this.friction;
+                this.velocity.y *= this.friction;
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+                this.alpha -= 0.02;
+                this.draw();
+            }
+        }
+        
+        // Floating Text for score/penalty feedback
+        class FloatingText {
+            constructor(x, y, text, color) {
+                this.x = x;
+                this.y = y;
+                this.text = text;
+                this.color = color;
+                this.alpha = 1;
+                this.velocity = { y: -1 };
+                this.font = '20px "Press Start 2P"';
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.font = this.font;
+                ctx.textAlign = 'center';
+                ctx.fillText(this.text, this.x, this.y);
+                ctx.restore();
+            }
+            update() {
+                this.y += this.velocity.y;
+                this.alpha -= 0.02;
+                this.draw();
+            }
+        }
+        
+        // Sad Face graphic for hitting non-prime
+        class SadFace {
+             constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.alpha = 1;
+                this.size = 20;
+                this.velocity = { y: 0.5 };
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.strokeStyle = '#f6e05e'; // yellow-300
+                ctx.lineWidth = 3;
+                ctx.font = `${this.size}px "Press Start 2P"`;
+                
+                // Sad face text
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(':(', this.x, this.y);
+
+                ctx.restore();
+            }
+            update() {
+                this.y += this.velocity.y;
+                this.alpha -= 0.02;
+                this.draw();
+            }
+        }
+
+
+        // --- Utility Functions ---
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+            if (num % 2 === 0 || num % 3 === 0) return false;
+            for (let i = 5; i * i <= num; i = i + 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        function createExplosion(x, y) {
+            for (let i = 0; i < 30; i++) {
+                const colors = ['#68d391', '#48bb78', '#38a169', '#f6e05e'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                particles.push(new Particle(x, y, color));
+            }
+        }
+        
+        function createSadGraphic(x, y) {
+            particles.push(new SadFace(x,y));
+        }
+
+        // --- Game Initialization ---
+        function init() {
+            // Read settings from inputs
+            settings.difficultySpeed = parseInt(difficultySpeedInput.value);
+            settings.spawnRate = parseInt(spawnRateInput.value);
+            settings.livesCount = parseInt(livesCountInput.value);
+            settings.primePoints = parseInt(primePointsInput.value);
+            settings.nonPrimePenalty = parseInt(nonPrimePenaltyInput.value);
+
+            // Reset game state
+            score = 0;
+            lives = settings.livesCount;
+            level = 1;
+            maxNumber = 10;
+            gameSpeed = 1;
+            numberSpawnInterval = settings.spawnRate;
+            gameOver = false;
+            
+            // Set canvas size based on window
+            const container = document.querySelector('.game-container');
+            const settingsWidth = document.querySelector('.settings-panel').offsetWidth;
+            const availableWidth = window.innerWidth - settingsWidth - 100; // Adjust for padding/gaps
+            const availableHeight = window.innerHeight - 150; // Adjust for header/padding
+            
+            canvas.width = Math.min(800, availableWidth);
+            canvas.height = Math.min(600, availableHeight);
+
+            // Initialize game objects
+            player = new Player();
+            projectiles = [];
+            numbers = [];
+            particles = [];
+            floatingTexts = [];
+
+            // Update UI
+            updateUI();
+            
+            // Hide modal
+            gameOverModal.style.display = 'none';
+        }
+
+        // --- UI Update Function ---
+        function updateUI() {
+            scoreEl.textContent = score;
+            livesEl.textContent = lives;
+            levelEl.textContent = level;
+            
+            // Update settings display values
+            livesCountValueEl.textContent = livesCountInput.value;
+            primePointsValueEl.textContent = primePointsInput.value;
+            nonPrimePenaltyValueEl.textContent = nonPrimePenaltyInput.value;
+        }
+        
+        // --- Game Loop ---
+        function animate(timestamp) {
+            if (gameOver) {
+                finalScoreEl.textContent = score;
+                finalLevelEl.textContent = level;
+                gameOverModal.style.display = 'flex';
+                return;
+            };
+
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Update player
+            player.update();
+
+            // Update projectiles
+            projectiles.forEach((p, index) => {
+                p.update();
+                if (p.y + p.radius < 0) {
+                    projectiles.splice(index, 1);
+                }
+            });
+
+            // Spawn new numbers
+            if (timestamp - lastSpawnTime > numberSpawnInterval) {
+                numbers.push(new FallingNumber());
+                lastSpawnTime = timestamp;
+            }
+
+            // Update numbers
+            numbers.forEach((num, numIndex) => {
+                num.update();
+
+                // Check collision with bottom
+                if (num.y - num.radius > canvas.height) {
+                    if (num.isPrime) {
+                        lives--;
+                        updateUI();
+                        if (lives <= 0) {
+                            gameOver = true;
+                        }
+                    }
+                    numbers.splice(numIndex, 1);
+                }
+
+                // Check collision with projectiles
+                projectiles.forEach((proj, projIndex) => {
+                    const dist = Math.hypot(proj.x - num.x, proj.y - num.y);
+                    if (dist - num.radius - proj.radius < 1) {
+                        if (num.isPrime) {
+                            score += settings.primePoints;
+                            createExplosion(num.x, num.y);
+                            floatingTexts.push(new FloatingText(num.x, num.y, `+${settings.primePoints}`, '#68d391'));
+                        } else {
+                            score = Math.max(0, score - settings.nonPrimePenalty);
+                            createSadGraphic(num.x, num.y);
+                            floatingTexts.push(new FloatingText(num.x, num.y, `-${settings.nonPrimePenalty}`, '#fc8181'));
+                        }
+                        
+                        // Remove both after collision
+                        setTimeout(() => {
+                            numbers.splice(numIndex, 1);
+                            projectiles.splice(projIndex, 1);
+                        }, 0);
+                        
+                        updateUI();
+                    }
+                });
+            });
+            
+            // Update particles and floating texts
+            [...particles, ...floatingTexts].forEach((p, index) => {
+                p.update();
+                if (p.alpha <= 0) {
+                    (p instanceof FloatingText ? floatingTexts : particles).splice(index, 1);
+                }
+            });
+            
+            // Increase difficulty over time
+            const scoreForNextLevel = level * (settings.difficultySpeed / 50);
+            if (score > scoreForNextLevel) {
+                level++;
+                maxNumber += 5 + Math.floor(level / 2); // Increase number range
+                gameSpeed += 0.1; // Increase fall speed
+                numberSpawnInterval = Math.max(200, numberSpawnInterval * 0.95); // Increase spawn rate
+                updateUI();
+            }
+        }
+
+        // --- Event Listeners ---
+        window.addEventListener('keydown', (e) => {
+            keys[e.key] = true;
+            if (e.key === ' ' || e.key === 'Spacebar') {
+                e.preventDefault(); // Prevent page scrolling
+                player.shoot();
+            }
+        });
+
+        window.addEventListener('keyup', (e) => {
+            keys[e.key] = false;
+        });
+        
+        function handleRestart() {
+            init();
+            animate(0);
+        }
+
+        restartButton.addEventListener('click', handleRestart);
+        modalRestartButton.addEventListener('click', handleRestart);
+        
+        // Update settings display when sliders are moved
+        [livesCountInput, primePointsInput, nonPrimePenaltyInput].forEach(input => {
+            input.addEventListener('input', updateUI);
+        });
+        
+        // Handle window resizing
+        window.addEventListener('resize', () => {
+            if(!gameOver) {
+                init(); // Re-initialize to adjust canvas size
+            }
+        });
+
+        // --- Start Game ---
+        init();
+        animate(0);
+
+    </script>
+</body>
+</html>
