@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# Runs the server without `npm run`.
+# Runs the server locally in the deployment directory. Useful for local testing before pushing to
+# github.
 
 . "$HOME/shared-bin/richbash.sh"
 
