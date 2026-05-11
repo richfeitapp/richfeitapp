@@ -130,3 +130,5 @@ h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px 0; }
 .btn-got { color: var(--green-soft); border-color: var(--green-border); background: var(--green-bg); }
 .btn-missed { color: var(--pink-deep); border-color: var(--pink-soft); background: #fff0f5; }
 .kbd-row { text-align: center; color: #c39ba9; font-size: 11px; margin-top: 8px; }
+
+.txticon { font-size: 18px; }
