@@ -1,0 +1,2414 @@
+{
+  "chapter": "ch1",
+  "chapterTitle": "Equations and Inequalities",
+  "problems": [
+    {
+      "topic": "solving quadratic equations by factoring",
+      "problem": "Solve for $x$ by factoring: $$2x^2 + x - 15 = 0$$",
+      "answer": "-3, 5/2",
+      "solution": "1. Identify $a=2$, $b=1$, $c=-15$; compute $ac = 2(-15) = -30$.\n2. Find two integers that multiply to $-30$ and add to $1$: $6$ and $-5$.\n3. Rewrite the middle term: $2x^2 + 6x - 5x - 15 = 0$.\n4. Factor by grouping: $2x(x+3) - 5(x+3) = 0$.\n5. Factor out the common binomial: $(2x-5)(x+3) = 0$.\n6. Apply the Zero-Product Property:\n   $$2x - 5 = 0 \\implies x = \\frac{5}{2}, \\qquad x + 3 = 0 \\implies x = -3$$",
+      "meta": {
+        "generatedAt": "2026-05-06T15:02:32.154Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, 5/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, 5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-003"
+    },
+    {
+      "topic": "solving linear equations in one variable",
+      "problem": "Solve for $x$: $3(2x - 5) + 4 = 2(x + 3) - 7$",
+      "answer": "5/2",
+      "solution": "1. Distribute on both sides:\n$$6x - 15 + 4 = 2x + 6 - 7$$\n2. Simplify each side:\n$$6x - 11 = 2x - 1$$\n3. Subtract $2x$ from both sides:\n$$4x - 11 = -1$$\n4. Add $11$ to both sides:\n$$4x = 10$$\n5. Divide both sides by $4$:\n$$x = \\dfrac{10}{4} = \\dfrac{5}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-06T15:03:00.883Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5/2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-004"
+    },
+    {
+      "topic": "solving quadratic equations using the quadratic formula",
+      "problem": "Solve using the quadratic formula: $$2x^2 - 4x - 3 = 0$$",
+      "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+      "solution": "Identify $a = 2$, $b = -4$, $c = -3$.\n\nQuadratic formula: $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$\n\nCompute the discriminant:\n$$b^2 - 4ac = (-4)^2 - 4(2)(-3) = 16 + 24 = 40$$\n\nSubstitute:\n$$x = \\frac{4 \\pm \\sqrt{40}}{4} = \\frac{4 \\pm 2\\sqrt{10}}{4} = \\frac{2 \\pm \\sqrt{10}}{2}$$\n\nThe two solutions are:\n$$x = \\frac{2 - \\sqrt{10}}{2} \\approx -0.58 \\qquad \\text{and} \\qquad x = \\frac{2 + \\sqrt{10}}{2} \\approx 2.58$$",
+      "meta": {
+        "generatedAt": "2026-05-06T15:03:22.483Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-005"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "**1.** Factor the right-hand denominator: $x^2-4=(x-2)(x+2)$. Excluded values: $x\neq 2,\\,-2$.\n\n**2.** Multiply every term by the LCD $(x-2)(x+2)$:\n$$3(x+2)+1(x-2)=8$$\n\n**3.** Expand:\n$$3x+6+x-2=8$$\n\n**4.** Combine like terms:\n$$4x+4=8$$\n\n**5.** Solve:\n$$4x=4\\implies x=1$$\n\n**6.** Check: $x=1$ is not an excluded value. Substituting: $\\dfrac{3}{-1}+\\dfrac{1}{3}=\\dfrac{-9+1}{3}=\\dfrac{-8}{3}$ and $\\dfrac{8}{1-4}=\\dfrac{8}{-3}=\\dfrac{-8}{3}$. ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:41:16.764Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-006"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A woman invests $\\$12{,}000$, part at $5\\%$ annual simple interest and the remainder at $8\\%$ annual simple interest. After one year, the total interest earned is $\\$780$. How much was invested at $5\\%$?",
+      "answer": "6000",
+      "solution": "Let $x$ = the amount invested at $5\\%$, so $12000 - x$ = the amount invested at $8\\%$.\n\nTotal interest equation:\n$$0.05x + 0.08(12000 - x) = 780$$\n\nDistribute:\n$$0.05x + 960 - 0.08x = 780$$\n\nCombine like terms:\n$$-0.03x + 960 = 780$$\n\nSubtract $960$ from both sides:\n$$-0.03x = -180$$\n\nDivide by $-0.03$:\n$$x = 6000$$\n\n$\\$6{,}000$ was invested at $5\\%$ and $\\$6{,}000$ at $8\\%$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:42:58.973Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-007"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "1. Factor the right-side denominator: $x^2-4=(x-2)(x+2)$. Note $x\neq 2$ and $x\neq -2$.\n2. Multiply every term by $(x-2)(x+2)$:\n$$3(x+2)+1(x-2)=8$$\n3. Expand and combine:\n$$3x+6+x-2=8 \\implies 4x+4=8$$\n4. Solve: $4x=4 \\implies x=1$.\n5. Check: $x=1$ is not an excluded value. Verify: $\\dfrac{3}{-1}+\\dfrac{1}{3}=-\\dfrac{8}{3}$ and $\\dfrac{8}{1-4}=-\\dfrac{8}{3}$. ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:43:01.626Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-008"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve by substitution (quadratic in form):\n\n$$x^4 - 13x^2 + 36 = 0$$",
+      "answer": "-3, -2, 2, 3",
+      "solution": "**1.** Let $u = x^2$, so $u^2 = x^4$. The equation becomes:\n$$u^2 - 13u + 36 = 0$$\n\n**2.** Factor:\n$$(u - 9)(u - 4) = 0$$\n\n**3.** Solve for $u$:\n$$u = 9 \\quad \\text{or} \\quad u = 4$$\n\n**4.** Back-substitute $u = x^2$:\n\n- $x^2 = 9 \\;\\Rightarrow\\; x = \\pm 3$\n- $x^2 = 4 \\;\\Rightarrow\\; x = \\pm 2$\n\n**5.** All four values satisfy the original equation (no extraneous solutions introduced).\n\n$$\\boxed{x = -3,\\; -2,\\; 2,\\; 3}$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:43:39.872Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, -2, 2, 3",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, -2, 2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-009"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A rectangular garden has a perimeter of 84 feet. The length is 6 feet more than twice the width. Find the dimensions of the garden (width and length, in feet).",
+      "answer": "12, 30",
+      "solution": "Let $w$ = width (ft); then length $= 2w + 6$.\n\nWrite the perimeter equation:\n$$2w + 2(2w + 6) = 84$$\n\nDistribute and combine like terms:\n$$2w + 4w + 12 = 84$$\n$$6w + 12 = 84$$\n\nSolve:\n$$6w = 72 \\implies w = 12$$\n\nFind the length:\n$$\\ell = 2(12) + 6 = 30$$\n\nThe garden is **12 ft wide** and **30 ft long**.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:43:40.379Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12, 30",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12, 30",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch1-010"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve by factoring: $$2x^2 - 5x - 3 = 0$$",
+      "answer": "-1/2, 3",
+      "solution": "**1. Factor the trinomial.**\n\nLook for two binomials $(ax + b)(cx + d)$ with $ac = 2$ and $bd = -3$:\n$$2x^2 - 5x - 3 = (2x + 1)(x - 3)$$\n\nCheck: $(2x)(x) + (2x)(-3) + (1)(x) + (1)(-3) = 2x^2 - 6x + x - 3 = 2x^2 - 5x - 3$ ✓\n\n**2. Apply the Zero-Product Property.**\n$$2x + 1 = 0 \\quad \\text{or} \\quad x - 3 = 0$$\n\n**3. Solve each linear equation.**\n$$x = -\\frac{1}{2} \\qquad \\text{or} \\qquad x = 3$$\n\nThe solution set is $\\left\\{-\\dfrac{1}{2},\\ 3\\right\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:44:23.975Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-011"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find the $x$-intercepts of the graph of $y = x^2 - x - 6$.",
+      "answer": "-2, 3",
+      "solution": "To find $x$-intercepts, set $y = 0$:\n$$x^2 - x - 6 = 0$$\nFactor the left side:\n$$(x + 2)(x - 3) = 0$$\nApply the Zero-Product Property:\n$$x + 2 = 0 \\implies x = -2 \\qquad x - 3 = 0 \\implies x = 3$$\nThe $x$-intercepts are $(-2,\\,0)$ and $(3,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:44:24.635Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 3",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-012"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A chemist needs to prepare $60$ mL of a $30\\%$ acid solution by mixing a $20\\%$ acid solution with a $50\\%$ acid solution. How many milliliters of the $20\\%$ acid solution should be used?",
+      "answer": "40",
+      "solution": "Let $x$ = milliliters of the $20\\%$ solution, so $60 - x$ = milliliters of the $50\\%$ solution.\n\nThe total amount of pure acid must equal $30\\%$ of $60$ mL:\n$$0.20x + 0.50(60 - x) = 0.30(60)$$\n\n1. Distribute: $0.20x + 30 - 0.50x = 18$\n2. Combine like terms: $-0.30x + 30 = 18$\n3. Subtract $30$ from both sides: $-0.30x = -12$\n4. Divide by $-0.30$: $x = 40$\n\nUse $40$ mL of the $20\\%$ solution (and $60 - 40 = 20$ mL of the $50\\%$ solution).",
+      "meta": {
+        "generatedAt": "2026-05-08T05:44:54.977Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "40",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "40",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-013"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation: $$|2x - 5| \\leq 9$$",
+      "answer": "[-2, 7]",
+      "solution": "Rewrite the absolute value inequality as a compound inequality:\n$$-9 \\leq 2x - 5 \\leq 9$$\nAdd $5$ to all three parts:\n$$-4 \\leq 2x \\leq 14$$\nDivide all three parts by $2$:\n$$-2 \\leq x \\leq 7$$\nSolution in interval notation: $[-2,\\, 7]$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:45:24.759Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 7]",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-014"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A chemist needs to prepare $90$ mL of a $30\\%$ acid solution by mixing a $20\\%$ acid solution with a $50\\%$ acid solution. How many milliliters of the $20\\%$ solution are needed?",
+      "answer": "60",
+      "solution": "Let $x$ = mL of the 20% solution, so $90 - x$ = mL of the 50% solution.\n\nThe acid content equation:\n$$0.20x + 0.50(90 - x) = 0.30(90)$$\n\nDistribute:\n$$0.20x + 45 - 0.50x = 27$$\n\nCombine like terms:\n$$-0.30x = -18$$\n\nDivide:\n$$x = 60$$\n\nThe chemist needs $60$ mL of the $20\\%$ solution and $90 - 60 = 30$ mL of the $50\\%$ solution.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:45:33.684Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "60",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "60",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-015"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "1. Factor the right-side denominator: $x^2-4=(x-2)(x+2)$, so the LCD is $(x-2)(x+2)$, with restrictions $x\neq 2,\\,-2$.\n2. Multiply every term by $(x-2)(x+2)$:\n$$3(x+2)+1(x-2)=8$$\n3. Expand: $3x+6+x-2=8$\n4. Combine like terms: $4x+4=8\\;\\Rightarrow\\;4x=4\\;\\Rightarrow\\;x=1$\n5. Check: $x=1$ is not an excluded value, so the solution is valid.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:45:36.207Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-016"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$-intercepts of the graph of $y = x^3 - 4x$.",
+      "answer": "-2, 0, 2",
+      "solution": "Set $y = 0$ and solve for $x$:\n$$x^3 - 4x = 0$$\nFactor out $x$:\n$$x(x^2 - 4) = 0$$\nFactor the difference of squares:\n$$x(x - 2)(x + 2) = 0$$\nApply the zero-product property:\n$$x = -2, \\quad x = 0, \\quad x = 2$$\nThe $x$-intercepts are $(-2,\\,0)$, $(0,\\,0)$, and $(2,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:45:56.985Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 0, 2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 0, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-017"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve using the quadratic formula: $$2x^2 - 4x - 3 = 0$$",
+      "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+      "solution": "1. Identify coefficients: $a = 2$, $b = -4$, $c = -3$.\n2. Apply the quadratic formula: $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$\n3. Compute the discriminant: $b^2 - 4ac = (-4)^2 - 4(2)(-3) = 16 + 24 = 40$\n4. Substitute: $x = \\dfrac{4 \\pm \\sqrt{40}}{4}$\n5. Simplify $\\sqrt{40} = 2\\sqrt{10}$: $x = \\dfrac{4 \\pm 2\\sqrt{10}}{4} = \\dfrac{2 \\pm \\sqrt{10}}{2}$\n\nThe two solutions are $x = \\dfrac{2 - \\sqrt{10}}{2}$ and $x = \\dfrac{2 + \\sqrt{10}}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:46:00.558Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-018"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the absolute value inequality and express your answer in interval notation: $$|2x - 5| \\leq 9$$",
+      "answer": "[-2, 7]",
+      "solution": "An absolute value inequality $|u| \\leq c$ (with $c > 0$) is equivalent to $-c \\leq u \\leq c$.\n\n**Step 1.** Rewrite without absolute value:\n$$-9 \\leq 2x - 5 \\leq 9$$\n\n**Step 2.** Add $5$ to all three parts:\n$$-4 \\leq 2x \\leq 14$$\n\n**Step 3.** Divide all three parts by $2$:\n$$-2 \\leq x \\leq 7$$\n\nSolution set: $[-2,\\; 7]$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:46:02.646Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 7]",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-019"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find the $x$-intercepts of the graph of $y = x^2 - 5x + 6$.",
+      "answer": "2, 3",
+      "solution": "Set $y = 0$ and solve for $x$:\n$$0 = x^2 - 5x + 6$$\nFactor the right side:\n$$0 = (x - 2)(x - 3)$$\nApply the Zero-Product Property:\n$$x - 2 = 0 \\quad \\Rightarrow \\quad x = 2$$\n$$x - 3 = 0 \\quad \\Rightarrow \\quad x = 3$$\nThe $x$-intercepts are the points $(2,\\, 0)$ and $(3,\\, 0)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:46:45.030Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2, 3",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-020"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for $x$: $$\\sqrt{2x+3}+\\sqrt{x-2}=4$$",
+      "answer": "3",
+      "solution": "Isolate one radical: $\\sqrt{2x+3}=4-\\sqrt{x-2}$\nSquare both sides: $2x+3=16-8\\sqrt{x-2}+(x-2)$\nSimplify: $x-11=-8\\sqrt{x-2}$\nSquare again: $(x-11)^2=64(x-2)$\nExpand: $x^2-22x+121=64x-128$\nRearrange: $x^2-86x+249=0$\nQuadratic formula: $x=\\dfrac{86\\pm\\sqrt{86^2-4(249)}}{2}=\\dfrac{86\\pm\\sqrt{6400}}{2}=\\dfrac{86\\pm 80}{2}$, giving $x=83$ or $x=3$\nCheck $x=83$: $\\sqrt{169}+\\sqrt{81}=13+9=22\neq 4$ — extraneous\nCheck $x=3$: $\\sqrt{9}+\\sqrt{1}=3+1=4$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:46:47.283Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-021"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A total of $\\$8{,}000$ is split between two simple-interest accounts. One account earns $4\\%$ annual interest and the other earns $6\\%$ annual interest. After one year the combined interest is $\\$420$. How much (in dollars) was invested at $4\\%$?",
+      "answer": "3000",
+      "solution": "Let $x$ = amount invested at $4\\%$; then $8000 - x$ = amount at $6\\%$.\n\nSet up the interest equation:\n$$0.04x + 0.06(8000 - x) = 420$$\n\nDistribute:\n$$0.04x + 480 - 0.06x = 420$$\n\nCombine like terms:\n$$-0.02x + 480 = 420$$\n\nSubtract $480$ from both sides:\n$$-0.02x = -60$$\n\nDivide both sides by $-0.02$:\n$$x = 3000$$\n\nSo $\\$3{,}000$ was invested at $4\\%$ (and $\\$5{,}000$ at $6\\%$).",
+      "meta": {
+        "generatedAt": "2026-05-08T05:46:47.602Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-022"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "1. Factor the right-side denominator: $x^2-4=(x-2)(x+2)$. Excluded values: $x\neq 2,\\, x\neq -2$.\n2. Multiply every term by the LCD $(x-2)(x+2)$:\n$$3(x+2)+1(x-2)=8$$\n3. Expand: $3x+6+x-2=8$\n4. Combine like terms: $4x+4=8$\n5. Subtract 4: $4x=4$\n6. Divide by 4: $x=1$\n7. Check: $x=1$ is not an excluded value. Substituting: $\\dfrac{3}{-1}+\\dfrac{1}{3}=\\dfrac{8}{-3}$ $\\Rightarrow$ $-3+\\tfrac{1}{3}=-\\tfrac{8}{3}$ $\\Rightarrow$ $-\\tfrac{8}{3}=-\\tfrac{8}{3}$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:06.203Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-023"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for $x$: $\\sqrt{3x+1} = x - 1$",
+      "answer": "5",
+      "solution": "1. The radical is already isolated. Square both sides:\n$$3x + 1 = (x-1)^2 = x^2 - 2x + 1$$\n2. Rearrange:\n$$x^2 - 5x = 0$$\n3. Factor:\n$$x(x - 5) = 0 \\implies x = 0 \\text{ or } x = 5$$\n4. Check for extraneous solutions (squaring can introduce them).\n   - $x = 0$: $\\sqrt{1} = 1$, but $0 - 1 = -1$. Fails — extraneous.\n   - $x = 5$: $\\sqrt{16} = 4$ and $5 - 1 = 4$. ✓\n\nThe solution is $x = 5$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:18.543Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-024"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve for $x$: $$2x^2 - 5x - 3 = 0$$",
+      "answer": "-1/2, 3",
+      "solution": "1. The equation is already in standard form $ax^2 + bx + c = 0$.\n2. Factor the left side by finding two numbers that multiply to $2 \\cdot (-3) = -6$ and add to $-5$: those are $-6$ and $1$.\n$$2x^2 - 6x + x - 3 = 0$$\n$$2x(x - 3) + 1(x - 3) = 0$$\n$$(2x + 1)(x - 3) = 0$$\n3. Apply the Zero-Product Property:\n$$2x + 1 = 0 \\implies x = -\\dfrac{1}{2}$$\n$$x - 3 = 0 \\implies x = 3$$\n4. Solution set: $\\left\\{-\\dfrac{1}{2},\\ 3\\right\\}$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:23.939Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-025"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A student has $\\$8{,}000$ to invest. She places part of the money in an account earning $3.5\\%$ annual simple interest and the remainder in an account earning $5\\%$ annual simple interest. After one year, the total interest earned is $\\$355$. How much did she invest at $3.5\\%$?",
+      "answer": "3000",
+      "solution": "Let $x$ = amount (in dollars) invested at $3.5\\%$; then $8000 - x$ = amount invested at $5\\%$.\nSimple-interest equation (Interest = Principal × Rate × Time, $t = 1$ yr):\n$$0.035x + 0.05(8000 - x) = 355$$\nDistribute:\n$$0.035x + 400 - 0.05x = 355$$\nCombine like terms:\n$$-0.015x = -45$$\nDivide both sides by $-0.015$:\n$$x = 3000$$\nShe invested $\\$3{,}000$ at $3.5\\%$ (and the remaining $\\$5{,}000$ at $5\\%$).",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:27.799Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-026"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality $|2x - 5| < 9$ and express the solution set in interval notation.",
+      "answer": "(-2, 7)",
+      "solution": "An absolute value inequality $|u| < c$ (with $c > 0$) is equivalent to $-c < u < c$.\n\n**Step 1.** Rewrite as a compound inequality:\n$$-9 < 2x - 5 < 9$$\n\n**Step 2.** Add $5$ to all three parts:\n$$-9 + 5 < 2x < 9 + 5$$\n$$-4 < 2x < 14$$\n\n**Step 3.** Divide all three parts by $2$:\n$$-2 < x < 7$$\n\nThe solution set is $(-2,\\, 7)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:28.650Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 7)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 7)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-027"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+1}=\\frac{7}{(x-2)(x+1)}$$",
+      "answer": "3/2",
+      "solution": "1. **Restrictions:** denominators are zero when $x=2$ or $x=-1$; these values are excluded.\n2. **Multiply both sides** by the LCD $(x-2)(x+1)$:\n$$3(x+1)+1(x-2)=7$$\n3. **Expand:**\n$$3x+3+x-2=7$$\n4. **Combine like terms:**\n$$4x+1=7$$\n5. **Solve:**\n$$4x=6 \\implies x=\\frac{3}{2}$$\n6. **Check:** $x=\\dfrac{3}{2}$ is not an excluded value, so it is valid. $\\checkmark$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:50.470Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-028"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find the $x$-intercepts of the graph of $y = 2x^2 + x - 6$.",
+      "answer": "-2, 3/2",
+      "solution": "1. Set $y = 0$: $2x^2 + x - 6 = 0$\n2. Factor: $(2x - 3)(x + 2) = 0$\n3. Zero-Product Property:\n   $$2x - 3 = 0 \\implies x = \\frac{3}{2}$$\n   $$x + 2 = 0 \\implies x = -2$$\n4. The $x$-intercepts are $\\left(-2,\\, 0\\right)$ and $\\left(\\dfrac{3}{2},\\, 0\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:56.659Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 3/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 3/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-029"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A rectangular garden has a perimeter of 84 feet. The length is 6 feet more than twice the width. Find the dimensions of the garden (width and length, in feet).",
+      "answer": "12, 30",
+      "solution": "Let $w$ = the width (in feet), so the length is $2w + 6$.\n\nUse the perimeter formula $P = 2l + 2w$:\n$$2(2w + 6) + 2w = 84$$\n\n$$4w + 12 + 2w = 84$$\n\n$$6w = 72$$\n\n$$w = 12$$\n\nLength: $2(12) + 6 = 30$\n\nThe garden is **12 feet wide** and **30 feet long**.\n\nCheck: $2(30) + 2(12) = 60 + 24 = 84$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:47:56.812Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12, 30",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12, 30",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-030"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A student invests a total of $\\$8{,}000$ in two accounts. One account earns $4\\%$ annual simple interest and the other earns $6\\%$ annual simple interest. After one year, the total interest earned is $\\$400$. How much was invested in the $4\\%$ account?",
+      "answer": "4000",
+      "solution": "Let $x$ = amount invested at $4\\%$, so $8000 - x$ = amount invested at $6\\%$.\n\nSet up the interest equation:\n$$0.04x + 0.06(8000 - x) = 400$$\n\nDistribute:\n$$0.04x + 480 - 0.06x = 400$$\n\nCombine like terms:\n$$-0.02x + 480 = 400$$\n\nSubtract $480$ from both sides:\n$$-0.02x = -80$$\n\nDivide by $-0.02$:\n$$x = 4000$$\n\n$\\$4{,}000$ was invested at $4\\%$ (and $\\$4{,}000$ at $6\\%$).",
+      "meta": {
+        "generatedAt": "2026-05-08T05:48:04.309Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-031"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation: $$|2x - 5| \\leq 9$$",
+      "answer": "[-2, 7]",
+      "solution": "**1.** Since $|2x-5| \\leq 9$ is of the form $|u| \\leq c$ with $c > 0$, rewrite as a compound inequality:\n$$-9 \\leq 2x - 5 \\leq 9$$\n**2.** Add $5$ to all three parts:\n$$-9 + 5 \\leq 2x \\leq 9 + 5 \\implies -4 \\leq 2x \\leq 14$$\n**3.** Divide all parts by $2$:\n$$-2 \\leq x \\leq 7$$\n**Solution:** $[-2,\\, 7]$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:48:34.682Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 7]",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-032"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve for $x$ using the quadratic formula: $2x^2 - 4x - 3 = 0$.",
+      "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+      "solution": "Identify $a = 2$, $b = -4$, $c = -3$.\nCompute the discriminant:\n$$b^2 - 4ac = (-4)^2 - 4(2)(-3) = 16 + 24 = 40$$\nApply the quadratic formula:\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{4 \\pm \\sqrt{40}}{4} = \\frac{4 \\pm 2\\sqrt{10}}{4} = \\frac{2 \\pm \\sqrt{10}}{2}$$\nThe two solutions are $x = \\dfrac{2 - \\sqrt{10}}{2}$ and $x = \\dfrac{2 + \\sqrt{10}}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:48:37.017Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-033"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve: $\\sqrt{2x+3} + \\sqrt{x-2} = 4$",
+      "answer": "3",
+      "solution": "**Step 1.** Isolate one radical:\n$$\\sqrt{2x+3} = 4 - \\sqrt{x-2}$$\n**Step 2.** Square both sides:\n$$2x+3 = 16 - 8\\sqrt{x-2} + (x-2)$$\n**Step 3.** Simplify and isolate the remaining radical:\n$$x - 11 = -8\\sqrt{x-2}$$\n**Step 4.** Square both sides again and expand:\n$$(x-11)^2 = 64(x-2)$$\n$$x^2 - 22x + 121 = 64x - 128$$\n$$x^2 - 86x + 249 = 0$$\n**Step 5.** Apply the quadratic formula:\n$$x = \\frac{86 \\pm \\sqrt{86^2 - 4(249)}}{2} = \\frac{86 \\pm \\sqrt{6400}}{2} = \\frac{86 \\pm 80}{2}$$\nSo $x = 83$ or $x = 3$.\n**Step 6.** Check for extraneous roots (squaring can introduce them).\n- $x = 83$: $\\sqrt{169} + \\sqrt{81} = 13 + 9 = 22 \neq 4$ ✗ (extraneous)\n- $x = 3$: $\\sqrt{9} + \\sqrt{1} = 3 + 1 = 4$ ✓\n\nThe solution set is $\\{3\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:48:39.290Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-034"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$-intercepts of the graph of $y = x^2 - 4x - 5$.",
+      "answer": "-1, 5",
+      "solution": "Set $y = 0$ and solve for $x$:\n$$x^2 - 4x - 5 = 0$$\nFactor:\n$$(x - 5)(x + 1) = 0$$\nApply the zero-product property:\n$$x - 5 = 0 \\implies x = 5$$\n$$x + 1 = 0 \\implies x = -1$$\nThe $x$-intercepts are $x = -1$ and $x = 5$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:48:40.028Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-035"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "1. Factor the right-side denominator: $x^2-4=(x-2)(x+2)$, so the LCD is $(x-2)(x+2)$.\n2. Restrict the domain: $x\neq 2$ and $x\neq -2$.\n3. Multiply every term by the LCD:\n$$3(x+2)+1(x-2)=8$$\n4. Expand: $3x+6+x-2=8$, so $4x+4=8$.\n5. Solve: $4x=4 \\Rightarrow x=1$.\n6. Check: $x=1$ is not an excluded value, so it is valid.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:01.452Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-036"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve for $x$: $$2x^2 - 5x - 3 = 0$$",
+      "answer": "-1/2, 3",
+      "solution": "1. The equation is already in standard form $ax^2 + bx + c = 0$ with $a=2$, $b=-5$, $c=-3$.\n2. Factor: find two numbers whose product is $ac = -6$ and whose sum is $b = -5$. Those numbers are $-6$ and $1$.\n3. Rewrite and factor by grouping:\n$$2x^2 - 6x + x - 3 = 2x(x-3) + 1(x-3) = (2x+1)(x-3) = 0$$\n4. Apply the Zero-Product Property:\n$$2x + 1 = 0 \\quad \\Rightarrow \\quad x = -\\tfrac{1}{2}$$\n$$x - 3 = 0 \\quad \\Rightarrow \\quad x = 3$$\n5. Solution set: $\\left\\{-\\dfrac{1}{2},\\, 3\\right\\}$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:06.176Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-037"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A passenger train leaves a station traveling at $60$ mph. Two hours later, an express train leaves the same station on a parallel track traveling at $90$ mph in the same direction. How many hours after the express train departs will it overtake the passenger train?",
+      "answer": "4",
+      "solution": "Let $t$ = hours elapsed after the express train departs.\n\n1. Distance traveled by passenger train: $60(t + 2)$\n2. Distance traveled by express train: $90t$\n3. Set distances equal (trains are at the same location when the express overtakes): $$60(t+2) = 90t$$\n4. Expand: $60t + 120 = 90t$\n5. Subtract $60t$: $120 = 30t$\n6. Divide: $t = 4$\n\nThe express train overtakes the passenger train **4 hours** after it departs.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:06.634Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-038"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A salesperson earns a base monthly salary of $\\$2{,}400$ plus a $6\\%$ commission on total sales. In a particular month, the salesperson's total earnings were $\\$3{,}768$. Find the total sales for that month.",
+      "answer": "22800",
+      "solution": "Let $s$ = total sales (in dollars).\n1. Write the equation: $2400 + 0.06s = 3768$\n2. Subtract 2400 from both sides: $0.06s = 1368$\n3. Divide both sides by $0.06$: $s = \\dfrac{1368}{0.06} = 22800$\n\nThe total sales for the month were $\\$22{,}800$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:35.499Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "22800",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "22800",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-039"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for $x$: $\\sqrt{x+5} - \\sqrt{x-3} = 2$",
+      "answer": "4",
+      "solution": "1. Isolate one radical: $\\sqrt{x+5} = 2 + \\sqrt{x-3}$\n2. Square both sides: $x+5 = 4 + 4\\sqrt{x-3} + (x-3)$\n3. Simplify the right side: $x+5 = x+1+4\\sqrt{x-3}$\n4. Isolate the remaining radical: $4 = 4\\sqrt{x-3}$, so $\\sqrt{x-3} = 1$\n5. Square both sides: $x-3 = 1$, giving $x = 4$\n6. Check: $\\sqrt{4+5} - \\sqrt{4-3} = \\sqrt{9} - \\sqrt{1} = 3 - 1 = 2$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:39.114Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-040"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "The midpoint of a line segment is $M(2,\\,-3)$ and one endpoint is $A(-1,\\,5)$. Find the other endpoint $B$.",
+      "answer": "(5, -11)",
+      "solution": "Apply the Midpoint Formula: if $B = (x, y)$, then\n$$\\frac{-1 + x}{2} = 2 \\quad \\text{and} \\quad \\frac{5 + y}{2} = -3$$\n\n**x-coordinate:**\n$$-1 + x = 4 \\implies x = 5$$\n\n**y-coordinate:**\n$$5 + y = -6 \\implies y = -11$$\n\nTherefore $B = (5,\\,-11)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:44.062Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(5, -11)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(5, -11)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-041"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality $|3x + 2| \\geq 8$ and write the solution set in interval notation.",
+      "answer": "(-infinity, -10/3] U [2, infinity)",
+      "solution": "For $|u| \\geq c$ with $c > 0$, the solution is $u \\leq -c$ **or** $u \\geq c$.\n\nApply the rule with $u = 3x+2$ and $c = 8$:\n$$3x + 2 \\leq -8 \\qquad \\text{or} \\qquad 3x + 2 \\geq 8$$\n\n**Left inequality:**\n$$3x \\leq -10 \\implies x \\leq -\\dfrac{10}{3}$$\n\n**Right inequality:**\n$$3x \\geq 6 \\implies x \\geq 2$$\n\nSolution set: $\\left(-\\infty,\\,-\\dfrac{10}{3}\\right] \\cup [2,\\,\\infty)$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:49:45.591Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -10/3] U [2, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -10/3] U [2, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-042"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "1. Note $x^2-4=(x-2)(x+2)$, so $x\neq 2$ and $x\neq -2$.\n2. Multiply every term by the LCD $(x-2)(x+2)$:\n$$3(x+2)+1(x-2)=8$$\n3. Expand:\n$$3x+6+x-2=8$$\n4. Combine like terms:\n$$4x+4=8$$\n5. Solve:\n$$4x=4\\implies x=1$$\n6. Check: $x=1$ is not an excluded value. Verify:\n$$\\frac{3}{1-2}+\\frac{1}{1+2}=-3+\\frac{1}{3}=-\\frac{8}{3}\\quad\\text{and}\\quad\\frac{8}{1-4}=-\\frac{8}{3}\\checkmark$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:50:02.854Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-043"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve the quadratic equation: $$2x^2 - 3x - 5 = 0$$",
+      "answer": "-1, 5/2",
+      "solution": "1. The equation is already in standard form: $2x^2 - 3x - 5 = 0$\n2. Factor the left side by finding two numbers that multiply to $2 \\cdot (-5) = -10$ and add to $-3$: those are $-5$ and $2$.\n   $$2x^2 + 2x - 5x - 5 = 0$$\n   $$2x(x + 1) - 5(x + 1) = 0$$\n   $$(2x - 5)(x + 1) = 0$$\n3. Apply the Zero-Product Property:\n   $$2x - 5 = 0 \\implies x = \\frac{5}{2}$$\n   $$x + 1 = 0 \\implies x = -1$$\n4. Solution set: $\\left\\{-1,\\ \\dfrac{5}{2}\\right\\}$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:50:17.215Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 5/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-044"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "Two cyclists start from the same point at the same time and ride in opposite directions. One cyclist rides 4 miles per hour faster than the other. After 3 hours, they are 78 miles apart. Find the speed of the slower cyclist.",
+      "answer": "11",
+      "solution": "Let $r$ = speed of the slower cyclist (mph), so $r + 4$ = speed of the faster cyclist (mph).\n→ After 3 hours: slower travels $3r$ miles; faster travels $3(r+4)$ miles.\n→ Riding in opposite directions, their distances add to 78 miles:\n$$3r + 3(r + 4) = 78$$\n→ $3r + 3r + 12 = 78$\n→ $6r = 66$\n→ $r = 11$\n\nThe slower cyclist rides at $\\mathbf{11}$ mph.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:50:41.656Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "11",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "11",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-045"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A person invests $\\$8000$, part at $5\\%$ annual interest and the remainder at $8\\%$ annual interest. If the total interest earned after one year is $\\$505$, how much was invested at $5\\%$?",
+      "answer": "4500",
+      "solution": "Let $x$ = the amount invested at $5\\%$, so $8000 - x$ = the amount invested at $8\\%$.\n\nSet up the interest equation:\n$$0.05x + 0.08(8000 - x) = 505$$\n\nDistribute:\n$$0.05x + 640 - 0.08x = 505$$\n\nCombine like terms:\n$$-0.03x + 640 = 505$$\n\nSubtract $640$ from both sides:\n$$-0.03x = -135$$\n\nDivide by $-0.03$:\n$$x = 4500$$\n\nSo $\\$4500$ was invested at $5\\%$ and $\\$3500$ was invested at $8\\%$.\n\n**Check:** $0.05(4500) + 0.08(3500) = 225 + 280 = 505$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:50:49.394Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4500",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4500",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-046"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve the rational equation: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{10}{x^2-4}$$",
+      "answer": "3/2",
+      "solution": "**1.** Factor the denominator on the right: $x^2-4=(x-2)(x+2)$. Restrictions: $x\neq 2,\\; x\neq -2$.\n\n**2.** Multiply every term by the LCD $(x-2)(x+2)$:\n$$3(x+2)+1(x-2)=10$$\n\n**3.** Expand:\n$$3x+6+x-2=10$$\n\n**4.** Combine like terms:\n$$4x+4=10$$\n\n**5.** Solve:\n$$4x=6 \\implies x=\\dfrac{3}{2}$$\n\n**6.** Check: $x=\\tfrac{3}{2}$ is not an excluded value, so the solution is valid. $\\checkmark$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:46:26.974Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-047"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find the exact distance between the points $(-1,\\,3)$ and $(4,\\,-9)$.",
+      "answer": "13",
+      "solution": "Apply the distance formula with $(x_1,y_1)=(-1,3)$ and $(x_2,y_2)=(4,-9)$:\n$$d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$\n$$= \\sqrt{(4-(-1))^2+(-9-3)^2}$$\n$$= \\sqrt{5^2+(-12)^2}$$\n$$= \\sqrt{25+144}$$\n$$= \\sqrt{169}$$\n$$= 13$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:46:35.667Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-048"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "Sarah invests a total of $\\$12{,}000$ in two accounts. One account earns $4\\%$ annual simple interest and the other earns $6\\%$ annual simple interest. After one year, the combined interest earned is $\\$620$. How much was invested in the account earning $4\\%$?",
+      "answer": "5000",
+      "solution": "Let $x$ = amount invested at $4\\%$, so $12000 - x$ = amount invested at $6\\%$.\n\nSet up the interest equation:\n$$0.04x + 0.06(12000 - x) = 620$$\nDistribute:\n$$0.04x + 720 - 0.06x = 620$$\nCombine like terms:\n$$-0.02x + 720 = 620$$\nSubtract $720$ from both sides:\n$$-0.02x = -100$$\nDivide by $-0.02$:\n$$x = 5000$$\n\nSarah invested $\\$5{,}000$ at $4\\%$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:46:45.750Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-049"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A chemist needs to mix a 20% acid solution with a 50% acid solution to obtain 60 liters of a 30% acid solution. How many liters of the 20% solution should be used?",
+      "answer": "40",
+      "solution": "Let $x$ = liters of the 20% solution, so $60 - x$ = liters of the 50% solution.\n\nThe acid-content equation is:\n$$0.20x + 0.50(60 - x) = 0.30(60)$$\n\n1. Distribute: $0.20x + 30 - 0.50x = 18$\n2. Combine like terms: $-0.30x + 30 = 18$\n3. Subtract 30 from both sides: $-0.30x = -12$\n4. Divide by $-0.30$: $x = 40$\n\nUse **40 liters** of the 20% solution (and $60 - 40 = 20$ liters of the 50% solution).",
+      "meta": {
+        "generatedAt": "2026-05-09T18:46:47.495Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "40",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "40",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-050"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve using the quadratic formula:\n$$2x^2 - 6x - 3 = 0$$",
+      "answer": "(3 - sqrt(15))/2, (3 + sqrt(15))/2",
+      "solution": "1. Identify coefficients: $a = 2,\\ b = -6,\\ c = -3$.\n2. Compute the discriminant:\n$$b^2 - 4ac = (-6)^2 - 4(2)(-3) = 36 + 24 = 60$$\n3. Apply the quadratic formula:\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{6 \\pm \\sqrt{60}}{4}$$\n4. Simplify $\\sqrt{60} = 2\\sqrt{15}$:\n$$x = \\frac{6 \\pm 2\\sqrt{15}}{4} = \\frac{3 \\pm \\sqrt{15}}{2}$$\n5. The two solutions are $\\dfrac{3 - \\sqrt{15}}{2}$ and $\\dfrac{3 + \\sqrt{15}}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:46:53.410Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3 - sqrt(15))/2, (3 + sqrt(15))/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3 - sqrt(15))/2, (3 + sqrt(15))/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-051"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for $x$: $$x^4 - 13x^2 + 36 = 0$$",
+      "answer": "-3, -2, 2, 3",
+      "solution": "**Substitution (quadratic in form):**\n\nLet $u = x^2$. Then $x^4 = u^2$, so the equation becomes:\n$$u^2 - 13u + 36 = 0$$\n\n**Factor:**\n$$(u - 4)(u - 9) = 0$$\n$$u = 4 \\quad \\text{or} \\quad u = 9$$\n\n**Back-substitute $u = x^2$:**\n- $x^2 = 4 \\Rightarrow x = \\pm 2$\n- $x^2 = 9 \\Rightarrow x = \\pm 3$\n\n**Check all four values** in the original equation:\n- $(\\pm 2)^4 - 13(\\pm 2)^2 + 36 = 16 - 52 + 36 = 0$ ✓\n- $(\\pm 3)^4 - 13(\\pm 3)^2 + 36 = 81 - 117 + 36 = 0$ ✓\n\n**Solution set:** $\\{-3,\\,-2,\\,2,\\,3\\}$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:47:04.660Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, -2, 2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, -2, 2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-052"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "**Step 1.** Factor the right-hand denominator: $x^2-4=(x-2)(x+2)$.\nThe LCD is $(x-2)(x+2)$; note the restrictions $x\neq 2,\\,-2$.\n\n**Step 2.** Multiply every term by the LCD:\n$$3(x+2)+1(x-2)=8$$\n\n**Step 3.** Expand:\n$$3x+6+x-2=8$$\n\n**Step 4.** Combine like terms:\n$$4x+4=8$$\n\n**Step 5.** Solve:\n$$4x=4\\implies x=1$$\n\n**Step 6.** Check: $x=1$ makes no denominator zero ($x-2=-1\neq 0$, $x+2=3\neq 0$), so $x=1$ is valid.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:47:24.071Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-053"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$-intercepts of the graph of $$y = x^3 - 9x$$",
+      "answer": "-3, 0, 3",
+      "solution": "Set $y = 0$:\n$$x^3 - 9x = 0$$\nFactor out $x$:\n$$x(x^2 - 9) = 0$$\nFactor the difference of squares:\n$$x(x-3)(x+3) = 0$$\nZero-product property gives $x = -3,\\ 0,\\ 3$.\nThe $x$-intercepts are $(-3,\\,0)$, $(0,\\,0)$, and $(3,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:47:27.871Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, 0, 3",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, 0, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-054"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A student invests a total of $\\$8000$, part at $4\\%$ annual simple interest and the remainder at $6\\%$ annual simple interest. After one year, the total interest earned is $\\$380$. How much was invested at $4\\%$?",
+      "answer": "5000",
+      "solution": "Let $x$ = the amount (in dollars) invested at $4\\%$. Then $8000 - x$ = the amount invested at $6\\%$.\n\nSet up the interest equation:\n$$0.04x + 0.06(8000 - x) = 380$$\n\nDistribute:\n$$0.04x + 480 - 0.06x = 380$$\n\nCombine like terms:\n$$-0.02x + 480 = 380$$\n\nSubtract $480$ from both sides:\n$$-0.02x = -100$$\n\nDivide by $-0.02$:\n$$x = 5000$$\n\nSo $\\$5000$ was invested at $4\\%$ and $\\$8000 - \\$5000 = \\$3000$ was invested at $6\\%$.\n\nCheck: $0.04(5000) + 0.06(3000) = 200 + 180 = 380$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-09T18:47:33.246Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-055"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation: $$|3x - 4| \\leq 11$$",
+      "answer": "[-7/3, 5]",
+      "solution": "An absolute value inequality $|u| \\leq k$ (with $k > 0$) is equivalent to $-k \\leq u \\leq k$.\n\n**Step 1.** Rewrite without absolute value:\n$$-11 \\leq 3x - 4 \\leq 11$$\n\n**Step 2.** Add $4$ to all three parts:\n$$-7 \\leq 3x \\leq 15$$\n\n**Step 3.** Divide all three parts by $3$:\n$$-\\tfrac{7}{3} \\leq x \\leq 5$$\n\n**Solution:** $\\left[-\\dfrac{7}{3},\\ 5\\right]$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:47:41.572Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-7/3, 5]",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-7/3, 5]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-056"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A pharmacist needs to prepare 8 liters of a 35% alcohol solution. She has a 20% alcohol solution and a 50% alcohol solution on hand. How many liters of the 50% alcohol solution should she use?",
+      "answer": "4",
+      "solution": "Let $x$ = liters of 50% solution needed, so $8 - x$ = liters of 20% solution.\n\nSet up the mixture equation (alcohol in + alcohol in = alcohol out):\n$$0.50x + 0.20(8 - x) = 0.35(8)$$\n\nDistribute:\n$$0.50x + 1.6 - 0.20x = 2.8$$\n\nCombine like terms:\n$$0.30x = 1.2$$\n\nDivide:\n$$x = 4$$\n\nShe should use **4 liters** of the 50% solution (and $8 - 4 = 4$ liters of the 20% solution).",
+      "meta": {
+        "generatedAt": "2026-05-09T18:47:54.555Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-057"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for all real values of $x$:\n$$(x^2 - 3)^2 + 2(x^2 - 3) - 8 = 0$$",
+      "answer": "-sqrt(5), sqrt(5)",
+      "solution": "Let $u = x^2 - 3$. The equation becomes:\n$$u^2 + 2u - 8 = 0$$\n\nFactor:\n$$(u + 4)(u - 2) = 0$$\n$$u = -4 \\quad \\text{or} \\quad u = 2$$\n\nBack-substitute $u = x^2 - 3$:\n\n**Case 1:** $x^2 - 3 = -4 \\;\\Rightarrow\\; x^2 = -1$\nNo real solutions.\n\n**Case 2:** $x^2 - 3 = 2 \\;\\Rightarrow\\; x^2 = 5 \\;\\Rightarrow\\; x = \\pm\\sqrt{5}$\n\nCheck $x = \\pm\\sqrt{5}$: $u = 5 - 3 = 2$, so $(2)^2 + 2(2) - 8 = 4 + 4 - 8 = 0$ ✓\n\nSolution set: $\\{-\\sqrt{5},\\, \\sqrt{5}\\}$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:03.479Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-sqrt(5), sqrt(5)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-sqrt(5), sqrt(5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-058"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality and express your answer in interval notation:\n$$|2x - 5| \\leq 9$$",
+      "answer": "[-2, 7]",
+      "solution": "An absolute value inequality $|u| \\leq k$ (with $k > 0$) is equivalent to $-k \\leq u \\leq k$.\n\n**Step 1.** Rewrite without absolute value:\n$$-9 \\leq 2x - 5 \\leq 9$$\n\n**Step 2.** Add $5$ to all three parts:\n$$-4 \\leq 2x \\leq 14$$\n\n**Step 3.** Divide all three parts by $2$:\n$$-2 \\leq x \\leq 7$$\n\n**Answer:** $[-2,\\; 7]$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:03.484Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-059"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Use the quadratic formula to solve: $$2x^2 + 3x - 4 = 0$$",
+      "answer": "(-3 - sqrt(41))/4, (-3 + sqrt(41))/4",
+      "solution": "Identify $a = 2$, $b = 3$, $c = -4$.\n\nCompute the discriminant:\n$$b^2 - 4ac = 3^2 - 4(2)(-4) = 9 + 32 = 41$$\n\nApply the quadratic formula:\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-3 \\pm \\sqrt{41}}{4}$$\n\nThe two solutions are:\n$$x = \\frac{-3 - \\sqrt{41}}{4} \\approx -2.35 \\qquad \\text{and} \\qquad x = \\frac{-3 + \\sqrt{41}}{4} \\approx 0.85$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:06.092Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-3 - sqrt(41))/4, (-3 + sqrt(41))/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-3 - sqrt(41))/4, (-3 + sqrt(41))/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-060"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$-intercepts of the graph of $y = x^2 - 2x - 8$.",
+      "answer": "-2, 4",
+      "solution": "Set $y = 0$ and solve for $x$:\n$$x^2 - 2x - 8 = 0$$\nFactor:\n$$(x - 4)(x + 2) = 0$$\nBy the Zero-Product Property:\n$$x = 4 \\quad \\text{or} \\quad x = -2$$\nThe $x$-intercepts are $(-2,\\,0)$ and $(4,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:28.440Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 4",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-061"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2} + \\frac{1}{x+2} = \\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "1. Factor the right-side denominator: $x^2-4=(x-2)(x+2)$, so the LCD is $(x-2)(x+2)$, with restrictions $x\neq 2,\\ x\neq -2$.\n2. Multiply every term by the LCD:\n$$3(x+2)+1(x-2)=8$$\n3. Expand:\n$$3x+6+x-2=8$$\n4. Combine like terms:\n$$4x+4=8$$\n5. Solve:\n$$4x=4\\implies x=1$$\n6. Check: $x=1$ makes no denominator zero, so the solution is valid.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:30.063Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-062"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "Two trains leave the same station at the same time, traveling in opposite directions. Train A travels at $60$ mph and Train B travels at $80$ mph. After how many hours will the two trains be $420$ miles apart?",
+      "answer": "3",
+      "solution": "Let $t$ = the number of hours elapsed after departure.\n\nTrain A covers $60t$ miles; Train B covers $80t$ miles. Because they travel in opposite directions, their distances add:\n$$60t + 80t = 420$$\n$$140t = 420$$\n$$t = 3$$\n\nThe trains are $420$ miles apart after $\\mathbf{3}$ hours.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:43.617Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-063"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A pharmacist needs to prepare $100$ mL of a $40\\%$ alcohol solution by mixing a $25\\%$ alcohol solution with a $50\\%$ alcohol solution. How many mL of the $25\\%$ solution must she use?",
+      "answer": "40",
+      "solution": "Let $x$ = mL of the $25\\%$ solution used. Then $100 - x$ = mL of the $50\\%$ solution used.\n\nThe alcohol content from each part must equal the alcohol content of the final mixture:\n$$0.25x + 0.50(100 - x) = 0.40(100)$$\n\nDistribute:\n$$0.25x + 50 - 0.50x = 40$$\n\nCombine like terms:\n$$-0.25x + 50 = 40$$\n\nSubtract $50$ from both sides:\n$$-0.25x = -10$$\n\nDivide by $-0.25$:\n$$x = 40$$\n\nShe must use $40$ mL of the $25\\%$ solution (and $60$ mL of the $50\\%$ solution).\n\nCheck: $0.25(40) + 0.50(60) = 10 + 30 = 40 = 0.40(100)$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:44.715Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "40",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "40",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-064"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve for $x$ using the quadratic formula: $2x^2 - 4x - 3 = 0$",
+      "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+      "solution": "**1.** Identify $a = 2$, $b = -4$, $c = -3$.\n**2.** Compute the discriminant: $b^2 - 4ac = (-4)^2 - 4(2)(-3) = 16 + 24 = 40$.\n**3.** Apply the quadratic formula:\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{4 \\pm \\sqrt{40}}{4} = \\frac{4 \\pm 2\\sqrt{10}}{4} = \\frac{2 \\pm \\sqrt{10}}{2}$$\n**4.** The two solutions are $x = \\dfrac{2 - \\sqrt{10}}{2} \\approx -0.58$ and $x = \\dfrac{2 + \\sqrt{10}}{2} \\approx 2.58$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:48:57.315Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2 - sqrt(10))/2, (2 + sqrt(10))/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-065"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve: $$x^4 - 13x^2 + 36 = 0$$",
+      "answer": "-3, -2, 2, 3",
+      "solution": "Recognize the equation is quadratic in form. Substitute $u = x^2$:\n$$u^2 - 13u + 36 = 0$$\nFactor:\n$$(u - 4)(u - 9) = 0$$\nSo $u = 4$ or $u = 9$.\n\nBack-substitute $u = x^2$:\n- $x^2 = 4 \\Rightarrow x = \\pm 2$\n- $x^2 = 9 \\Rightarrow x = \\pm 3$\n\nSolution set: $\\{-3,\\,-2,\\,2,\\,3\\}$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:01.057Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, -2, 2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, -2, 2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-066"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation:\n$$|2x - 5| \\leq 9$$",
+      "answer": "[-2, 7]",
+      "solution": "**Rewrite as a compound inequality:**\n$$-9 \\leq 2x - 5 \\leq 9$$\n\n**Add 5 to all three parts:**\n$$-9 + 5 \\leq 2x \\leq 9 + 5$$\n$$-4 \\leq 2x \\leq 14$$\n\n**Divide all three parts by 2:**\n$$-2 \\leq x \\leq 7$$\n\n**Solution in interval notation:** $[-2,\\, 7]$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:02.565Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-067"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "**Step 1:** Factor the right-hand denominator: $x^2-4=(x-2)(x+2)$. The LCD is $(x-2)(x+2)$; restrictions $x\neq 2$ and $x\neq -2$.\n**Step 2:** Multiply every term by $(x-2)(x+2)$:\n$$3(x+2)+(x-2)=8$$\n**Step 3:** Expand: $3x+6+x-2=8$\n**Step 4:** Combine like terms: $4x+4=8$\n**Step 5:** Solve: $4x=4\\Rightarrow x=1$\n**Step 6:** Check: $x=1$ satisfies neither restriction, so it is valid. $\\checkmark$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:25.083Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-068"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A student invests a total of $\\$8{,}000$, part at $5\\%$ annual simple interest and the remainder at $7\\%$ annual simple interest. After one year, the total interest earned is $\\$484$. How much was invested at $5\\%$?",
+      "answer": "3800",
+      "solution": "Let $x$ = amount invested at $5\\%$, so $8000 - x$ = amount invested at $7\\%$.\n\nInterest equation:\n$$0.05x + 0.07(8000 - x) = 484$$\n\nDistribute:\n$$0.05x + 560 - 0.07x = 484$$\n\nCombine like terms:\n$$-0.02x = -76$$\n\nDivide:\n$$x = 3800$$\n\nSo $\\$3{,}800$ was invested at $5\\%$ and $\\$4{,}200$ was invested at $7\\%$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:27.445Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3800",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3800",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-069"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$- and $y$-intercepts of the graph of $$y = x^2 - 2x - 3$$",
+      "answer": "(-1, 0), (0, -3), (3, 0)",
+      "solution": "**y-intercept** — Set $x = 0$:\n$$y = 0^2 - 2(0) - 3 = -3$$\nThe $y$-intercept is $(0,\\,-3)$.\n\n**x-intercepts** — Set $y = 0$:\n$$x^2 - 2x - 3 = 0$$\n$$(x - 3)(x + 1) = 0$$\n$$x = 3 \\quad \\text{or} \\quad x = -1$$\nThe $x$-intercepts are $(-1,\\,0)$ and $(3,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:34.925Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, 0), (0, -3), (3, 0)",
+          "confidence": 0.9
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, 0), (0, -3), (3, 0)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-070"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "Two cars leave the same location at the same time, traveling in opposite directions. One car travels at $55$ mph and the other at $65$ mph. After how many hours will the two cars be $300$ miles apart?",
+      "answer": "5/2",
+      "solution": "Let $t$ = time in hours.\n\nBecause the cars travel in opposite directions, their distances add:\n$$55t + 65t = 300$$\n$$120t = 300$$\n$$t = \\frac{300}{120} = \\frac{5}{2}$$\n\nThe cars are $300$ miles apart after $\\dfrac{5}{2}$ hours.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:45.038Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-071"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for $x$: $\\sqrt{x + 5} + 1 = x$",
+      "answer": "4",
+      "solution": "1. Isolate the radical: $\\sqrt{x+5} = x - 1$\n2. Square both sides: $x + 5 = (x-1)^2 = x^2 - 2x + 1$\n3. Rearrange: $0 = x^2 - 3x - 4$\n4. Factor: $0 = (x - 4)(x + 1)$\n5. Candidate solutions: $x = 4$ or $x = -1$\n6. Check $x = -1$: $\\sqrt{-1+5}+1 = 2+1 = 3 \neq -1$ — **extraneous**, reject.\n7. Check $x = 4$: $\\sqrt{4+5}+1 = 3+1 = 4$ ✓\n\nThe solution is $x = 4$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:55.765Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-072"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve the quadratic equation: $$2x^2 - 3x - 5 = 0$$",
+      "answer": "-1, 5/2",
+      "solution": "**Step 1: Factor the left side.**\n$$2x^2 - 3x - 5 = (2x - 5)(x + 1) = 0$$\n\n**Step 2: Apply the Zero-Product Property.**\n$$2x - 5 = 0 \\quad \\text{or} \\quad x + 1 = 0$$\n\n**Step 3: Solve each linear equation.**\n$$x = \\frac{5}{2} \\quad \\text{or} \\quad x = -1$$\n\nThe solution set is $\\left\\{-1,\\ \\dfrac{5}{2}\\right\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:49:56.026Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 5/2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-073"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation:\n\n$$|2x - 3| \\leq 7$$",
+      "answer": "[-2, 5]",
+      "solution": "An absolute value inequality $|A| \\leq c$ (with $c > 0$) is equivalent to $-c \\leq A \\leq c$.\n\n1. Rewrite: $-7 \\leq 2x - 3 \\leq 7$\n2. Add $3$ to all three parts: $-4 \\leq 2x \\leq 10$\n3. Divide all three parts by $2$: $-2 \\leq x \\leq 5$\n\nSolution set: $[-2,\\, 5]$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:00.812Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 5]",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 5]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-074"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$-intercepts of the graph of $y = x^2 - 4x - 5$.",
+      "answer": "-1, 5",
+      "solution": "1. To find $x$-intercepts, set $y = 0$:\n$$x^2 - 4x - 5 = 0$$\n2. Factor:\n$$(x - 5)(x + 1) = 0$$\n3. Zero-product property:\n$$x - 5 = 0 \\Rightarrow x = 5$$\n$$x + 1 = 0 \\Rightarrow x = -1$$\n4. The $x$-intercepts are $(-1,\\,0)$ and $(5,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:17.612Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-075"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$:\n$$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "**Step 1 — Factor the denominator on the right.**\n$$x^2-4=(x-2)(x+2)$$\nRestrictions: $x\neq 2$ and $x\neq -2$.\n\n**Step 2 — Multiply every term by the LCD $(x-2)(x+2)$.**\n$$3(x+2)+1(x-2)=8$$\n\n**Step 3 — Expand and combine like terms.**\n$$3x+6+x-2=8$$\n$$4x+4=8$$\n\n**Step 4 — Solve for $x$.**\n$$4x=4\\implies x=1$$\n\n**Step 5 — Check** that $x=1$ satisfies the original restrictions ($1\neq 2$, $1\neq -2$). ✓\n\nSubstitute back:\n$$\\frac{3}{-1}+\\frac{1}{3}=\\frac{8}{-3}\\implies -3+\\tfrac{1}{3}=-\\tfrac{8}{3}\\implies -\\tfrac{8}{3}=-\\tfrac{8}{3}\\checkmark$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:24.324Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-076"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A car rental company charges a flat daily fee of $\\$35$ plus $\\$0.25$ per mile driven. If a customer's total bill for one day is $\\$72.50$, how many miles did the customer drive?",
+      "answer": "150",
+      "solution": "Let $m$ = number of miles driven.\n\nSet up the equation:\n$$35 + 0.25m = 72.50$$\n\nSubtract 35 from both sides:\n$$0.25m = 37.50$$\n\nDivide both sides by $0.25$:\n$$m = \\frac{37.50}{0.25} = 150$$\n\nThe customer drove $150$ miles.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:26.152Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "150",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "150",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-077"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A total of $\\$8{,}000$ is invested in two accounts. One account pays $4\\%$ annual simple interest and the other pays $6\\%$ annual simple interest. After one year, the combined interest earned is $\\$420$. How much was invested in the account paying $4\\%$?",
+      "answer": "3000",
+      "solution": "Let $x$ = the amount invested at $4\\%$, so $8000 - x$ = the amount invested at $6\\%$.\n\nWrite the interest equation:\n$$0.04x + 0.06(8000 - x) = 420$$\n\nDistribute:\n$$0.04x + 480 - 0.06x = 420$$\n\nCombine like terms:\n$$-0.02x + 480 = 420$$\n\nSubtract $480$ from both sides:\n$$-0.02x = -60$$\n\nDivide by $-0.02$:\n$$x = 3000$$\n\n$\\$3{,}000$ was invested at $4\\%$ (and $\\$5{,}000$ at $6\\%$).",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:38.718Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-078"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve for $x$: $2x^2 - 3x - 5 = 0$",
+      "answer": "-1, 5/2",
+      "solution": "Identify $a = 2$, $b = -3$, $c = -5$.\nApply the quadratic formula:\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{3 \\pm \\sqrt{(-3)^2 - 4(2)(-5)}}{2(2)} = \\frac{3 \\pm \\sqrt{9 + 40}}{4} = \\frac{3 \\pm \\sqrt{49}}{4} = \\frac{3 \\pm 7}{4}$$\nTwo solutions:\n$$x = \\frac{3 + 7}{4} = \\frac{10}{4} = \\frac{5}{2}, \\qquad x = \\frac{3 - 7}{4} = \\frac{-4}{4} = -1$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:53.915Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 5/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-079"
+    },
+    {
+      "topic": "1.6 Other Types Of Equations",
+      "problem": "Solve for all real values of $x$:\n$$x^4 - 13x^2 + 36 = 0$$",
+      "answer": "-3, -2, 2, 3",
+      "solution": "**1.** Recognize the equation is quadratic in form. Substitute $u = x^2$:\n$$u^2 - 13u + 36 = 0$$\n\n**2.** Factor:\n$$(u - 4)(u - 9) = 0$$\n\n**3.** Solve for $u$:\n$$u = 4 \\quad \\text{or} \\quad u = 9$$\n\n**4.** Back-substitute $u = x^2$:\n- $x^2 = 4 \\;\\Rightarrow\\; x = \\pm 2$\n- $x^2 = 9 \\;\\Rightarrow\\; x = \\pm 3$\n\n**5.** All four values are valid (no radicals or fractions introduced extraneous solutions). Solution set: $\\{-3,\\,-2,\\,2,\\,3\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:50:56.136Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, -2, 2, 3",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, -2, 2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-080"
+    },
+    {
+      "topic": "1.7 Linear Inequalities and Absolute Value Inequalities",
+      "problem": "Solve the inequality $|2x - 5| < 9$ and write the solution set in interval notation.",
+      "answer": "(-2, 7)",
+      "solution": "**Step 1.** For $|A| < c$ with $c > 0$, rewrite as $-c < A < c$:\n$$-9 < 2x - 5 < 9$$\n**Step 2.** Add $5$ to all three parts:\n$$-4 < 2x < 14$$\n**Step 3.** Divide all three parts by $2$:\n$$-2 < x < 7$$\nThe solution set is $(-2,\\ 7)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:51:00.697Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 7)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 7)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-081"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all intercepts of the graph of $y = x^2 - 4x - 5$.",
+      "answer": "(-1, 0), (0, -5), (5, 0)",
+      "solution": "**Step 1 — y-intercept** (set $x = 0$):\n$$y = (0)^2 - 4(0) - 5 = -5$$\nSo the $y$-intercept is $(0, -5)$.\n\n**Step 2 — x-intercepts** (set $y = 0$):\n$$x^2 - 4x - 5 = 0$$\n$$(x - 5)(x + 1) = 0$$\n$$x = 5 \\quad \\text{or} \\quad x = -1$$\nSo the $x$-intercepts are $(-1,\\, 0)$ and $(5,\\, 0)$.\n\n**All intercepts:** $(-1,\\,0)$, $(0,\\,-5)$, $(5,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:51:19.540Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, 0), (0, -5), (5, 0)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, 0), (0, -5), (5, 0)",
+          "confidence": 0.95
+        },
+        "attempts": 1
+      },
+      "id": "ch1-082"
+    },
+    {
+      "topic": "1.4 Models and Applications",
+      "problem": "A student invests a portion of $\\$8000$ at $4\\%$ annual simple interest and the remainder at $6\\%$ annual simple interest. If the total interest earned after one year is $\\$380$, how much (in dollars) was invested at $4\\%$?",
+      "answer": "5000",
+      "solution": "Let $x$ = the amount invested at $4\\%$. Then $(8000 - x)$ = the amount invested at $6\\%$.\n\nSet up the interest equation:\n$$0.04x + 0.06(8000 - x) = 380$$\n\nDistribute:\n$$0.04x + 480 - 0.06x = 380$$\n\nCombine like terms:\n$$-0.02x = -100$$\n\nDivide both sides by $-0.02$:\n$$x = 5000$$\n\nThe student invested $\\$5000$ at $4\\%$ (and $\\$3000$ at $6\\%$).",
+      "meta": {
+        "generatedAt": "2026-05-09T18:51:32.663Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5000",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-083"
+    },
+    {
+      "topic": "1.3 Models and Applications",
+      "problem": "A student invests a total of $\\$10{,}000$ in two accounts. One account earns $5\\%$ annual simple interest and the other earns $2\\%$ annual simple interest. After one year, the combined interest earned is $\\$380$. How much was invested at $5\\%$?",
+      "answer": "6000",
+      "solution": "Let $x$ = the amount (in dollars) invested at $5\\%$, so $10{,}000 - x$ is invested at $2\\%$.\n\nWrite the interest equation:\n$$0.05x + 0.02(10{,}000 - x) = 380$$\n\nDistribute $0.02$:\n$$0.05x + 200 - 0.02x = 380$$\n\nCombine like terms:\n$$0.03x = 180$$\n\nDivide both sides by $0.03$:\n$$x = 6000$$\n\nSo $\\$6{,}000$ was invested at $5\\%$ (and the remaining $\\$4{,}000$ at $2\\%$).",
+      "meta": {
+        "generatedAt": "2026-05-09T18:51:32.713Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-084"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve for $x$:\n$$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "**Step 1 — Factor and identify restrictions.**\n$x^2-4=(x-2)(x+2)$, so $x\neq 2$ and $x\neq -2$.\n\n**Step 2 — Multiply every term by the LCD $(x-2)(x+2)$.**\n$$3(x+2)+1(x-2)=8$$\n\n**Step 3 — Expand.**\n$$3x+6+x-2=8$$\n$$4x+4=8$$\n\n**Step 4 — Solve.**\n$$4x=4\\implies x=1$$\n\n**Step 5 — Check.** $x=1$ is not an excluded value.\n$$\\text{LHS}=\\frac{3}{-1}+\\frac{1}{3}=-\\frac{8}{3},\\qquad\\text{RHS}=\\frac{8}{1-4}=-\\frac{8}{3}\\checkmark$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:51:33.592Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-085"
+    },
+    {
+      "topic": "1.5 Quadratic Equations",
+      "problem": "Solve by factoring: $$2x^2 - 3x - 5 = 0$$",
+      "answer": "-1, 5/2",
+      "solution": "1. Factor the trinomial: $2x^2 - 3x - 5 = (2x - 5)(x + 1) = 0$\n2. Apply the zero-product property:\n   $2x - 5 = 0 \\Rightarrow x = \\dfrac{5}{2}$\n   $x + 1 = 0 \\Rightarrow x = -1$\n3. Solution set: $\\left\\{-1,\\; \\dfrac{5}{2}\\right\\}$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:51:40.372Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 5/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 5/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-086"
+    },
+    {
+      "topic": "1.2 Linear and Rational Equations",
+      "problem": "Solve: $$\\frac{3}{x-2}+\\frac{1}{x+2}=\\frac{8}{x^2-4}$$",
+      "answer": "1",
+      "solution": "Factor the denominator on the right: $x^2-4=(x-2)(x+2)$, so the LCD is $(x-2)(x+2)$ with restrictions $x\\neq 2$ and $x\\neq -2$.\n\nMultiply every term by $(x-2)(x+2)$: $$3(x+2)+1(x-2)=8$$\n\nExpand: $$3x+6+x-2=8$$\n\nCombine like terms: $$4x+4=8$$\n\nSolve: $$4x=4\\implies x=1$$\n\nCheck: $x=1$ is not an excluded value. Substituting: $\\dfrac{3}{-1}+\\dfrac{1}{3}=-3+\\dfrac{1}{3}=-\\dfrac{8}{3}$ and $\\dfrac{8}{1-4}=\\dfrac{8}{-3}=-\\dfrac{8}{3}$. ✓",
+      "meta": {
+        "generatedAt": "2026-05-10T14:52:22.574Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-087"
+    },
+    {
+      "topic": "1.1 Graphs and Graphing Utilities",
+      "problem": "Find all $x$-intercepts of the graph of $$y = x^3 - x^2 - 4x + 4$$",
+      "answer": "-2, 1, 2",
+      "solution": "Set $y = 0$ and solve: $$x^3 - x^2 - 4x + 4 = 0$$\n\nFactor by grouping — split into two pairs: $$x^2(x - 1) - 4(x - 1) = 0$$\n\nFactor out the common binomial $(x-1)$: $$(x^2 - 4)(x - 1) = 0$$\n\nFactor the difference of squares: $$(x - 2)(x + 2)(x - 1) = 0$$\n\nApply the zero-product property: $$x = -2, \\quad x = 1, \\quad x = 2$$\n\nThe $x$-intercepts are $(-2,\\, 0)$, $(1,\\, 0)$, and $(2,\\, 0)$.",
+      "meta": {
+        "generatedAt": "2026-05-10T14:52:45.490Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch1-088"
+    }
+  ]
+}

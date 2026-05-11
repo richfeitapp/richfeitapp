@@ -1,0 +1,2414 @@
+{
+  "chapter": "ch2",
+  "chapterTitle": "Functions and Graphs",
+  "problems": [
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "A line passes through the point $(2, -3)$ and is parallel to the line $4x - 2y = 10$. Find the $y$-intercept of the line.",
+      "answer": "-7",
+      "solution": "**1. Find the slope of the given line.**\nRewrite $4x - 2y = 10$ in slope-intercept form:\n$$-2y = -4x + 10 \\implies y = 2x - 5$$\nSo the slope is $m = 2$.\n\n**2. Apply the parallel-lines rule.**\nParallel lines have equal slopes, so the new line also has slope $m = 2$.\n\n**3. Use point-slope form with $(2,\\,-3)$.**\n$$y - (-3) = 2(x - 2)$$\n$$y + 3 = 2x - 4$$\n$$y = 2x - 7$$\n\n**4. Read off the $y$-intercept.**\nThe equation is in slope-intercept form $y = mx + b$, so $b = -7$.\nThe $y$-intercept is $\\boxed{-7}$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:51:37.584Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-001"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{x-4}}{x-7}$.",
+      "answer": "[4, 7) U (7, infinity)",
+      "solution": "**Step 1:** The radicand must be non-negative:\n$$x - 4 \\geq 0 \\implies x \\geq 4$$\n**Step 2:** The denominator cannot be zero:\n$$x - 7 \neq 0 \\implies x \neq 7$$\n**Step 3:** Combine both restrictions — require $x \\geq 4$ while excluding $x = 7$:\n$$[4,\\, 7) \\cup (7,\\, \\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:51:38.015Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[4, 7) U (7, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[4, 7) U (7, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-002"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Find the average rate of change of $f(x) = x^2 - 3x + 1$ from $x = 1$ to $x = 4$.",
+      "answer": "2",
+      "solution": "1. Evaluate at the left endpoint:\n$$f(1) = 1^2 - 3(1) + 1 = 1 - 3 + 1 = -1$$\n2. Evaluate at the right endpoint:\n$$f(4) = 4^2 - 3(4) + 1 = 16 - 12 + 1 = 5$$\n3. Apply the average rate of change formula:\n$$\\frac{f(4)-f(1)}{4-1} = \\frac{5-(-1)}{3} = \\frac{6}{3} = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:51:51.713Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-003"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "The graph of $y = \\sqrt{x}$ is reflected across the $x$-axis, shifted right 5 units, and shifted up 2 units to produce the graph of $y = g(x)$. Evaluate $g(9)$.",
+      "answer": "0",
+      "solution": "Apply each transformation to $y = \\sqrt{x}$ in order:\n1. Reflect across the $x$-axis: $y = -\\sqrt{x}$\n2. Shift right 5 units: $y = -\\sqrt{x - 5}$\n3. Shift up 2 units: $g(x) = -\\sqrt{x - 5} + 2$\n\nEvaluate at $x = 9$:\n$$g(9) = -\\sqrt{9 - 5} + 2 = -\\sqrt{4} + 2 = -2 + 2 = 0$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:52:37.313Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "0",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "0",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-004"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Given $f(x) = x + 2$ and $g(x) = x^2 - 2$, find all values of $x$ for which $(f \\circ g)(x) = (g \\circ f)(x)$.",
+      "answer": "-1/2",
+      "solution": "**1.** Compute $(f \\circ g)(x)$:\n$$f(g(x)) = f(x^2 - 2) = (x^2 - 2) + 2 = x^2$$\n\n**2.** Compute $(g \\circ f)(x)$:\n$$g(f(x)) = g(x + 2) = (x+2)^2 - 2 = x^2 + 4x + 4 - 2 = x^2 + 4x + 2$$\n\n**3.** Set the two expressions equal and solve:\n$$x^2 = x^2 + 4x + 2$$\n$$0 = 4x + 2$$\n$$x = -\\dfrac{1}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:52:50.253Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-005"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of the function $$f(x) = \\dfrac{\\sqrt{x+5}}{x-2}$$ and express it in interval notation.",
+      "answer": "[-5, 2) U (2, infinity)",
+      "solution": "**Step 1 — Radical restriction:** The expression under the square root must be non-negative:\n$$x + 5 \\ge 0 \\implies x \\ge -5$$\n\n**Step 2 — Denominator restriction:** The denominator cannot equal zero:\n$$x - 2 \neq 0 \\implies x \neq 2$$\n\n**Step 3 — Combine restrictions:** We need $x \\ge -5$ *and* $x \ne 2$.\n\n**Step 4 — Write in interval notation:** Starting at $-5$ (included), removing the gap at $2$:\n$$[-5,\\,2)\\cup(2,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:53:30.777Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-5, 2) U (2, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-5, 2) U (2, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-006"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Let $f(x) = x^2 - 2x + 5$. Find the average rate of change of $f$ from $x = 1$ to $x = 4$.",
+      "answer": "3",
+      "solution": "The average rate of change from $x=1$ to $x=4$ is $\\dfrac{f(4)-f(1)}{4-1}$.\n1. $f(1) = (1)^2 - 2(1) + 5 = 1 - 2 + 5 = 4$\n2. $f(4) = (4)^2 - 2(4) + 5 = 16 - 8 + 5 = 13$\n3. $\\dfrac{f(4)-f(1)}{4-1} = \\dfrac{13-4}{3} = \\dfrac{9}{3} = 3$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:53:30.800Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch2-007"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "Find the equation of the line passing through $(-2,\\, 5)$ and $(4,\\, -1)$. Write your answer in slope-intercept form.",
+      "answer": "y = -x + 3",
+      "solution": "1. Compute the slope:\n$$m = \\frac{-1-5}{4-(-2)} = \\frac{-6}{6} = -1$$\n2. Apply point-slope form using $(-2,\\;5)$:\n$$y - 5 = -1\\bigl(x-(-2)\\bigr) = -(x+2)$$\n3. Distribute and solve for $y$:\n$$y - 5 = -x - 2 \\implies y = -x + 3$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:53:58.894Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = -x + 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = -x + 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-008"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Let $f(x) = 3x^2 - x + 2$. Find and simplify the difference quotient $$\\frac{f(x+h)-f(x)}{h}, \\quad h \neq 0.$$",
+      "answer": "6x + 3h - 1",
+      "solution": "1. Expand $f(x+h)$:\n$$f(x+h) = 3(x+h)^2 - (x+h) + 2 = 3x^2 + 6xh + 3h^2 - x - h + 2$$\n\n2. Subtract $f(x) = 3x^2 - x + 2$:\n$$f(x+h) - f(x) = 6xh + 3h^2 - h$$\n\n3. Factor and divide by $h$:\n$$\\frac{f(x+h)-f(x)}{h} = \\frac{h(6x + 3h - 1)}{h} = 6x + 3h - 1$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:54:51.413Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6x + 3h - 1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6x + 3h - 1",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-009"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "Let $f(x) = |x|$. The function $g$ is obtained from $f$ by (1) reflecting the graph across the $x$-axis, (2) shifting left $2$ units, and (3) shifting up $4$ units. Find $g(-5)$.",
+      "answer": "1",
+      "solution": "Apply each transformation in order to build $g(x)$, then evaluate.\n\n**Step 1 — Reflect across the $x$-axis:**\n$$f(x) = |x| \\;\\longrightarrow\\; -|x|$$\n\n**Step 2 — Shift left 2 units** (replace $x$ with $x+2$):\n$$-|x| \\;\\longrightarrow\\; -|x+2|$$\n\n**Step 3 — Shift up 4 units** (add 4 outside):\n$$-|x+2| \\;\\longrightarrow\\; g(x) = -|x+2|+4$$\n\n**Step 4 — Evaluate at $x = -5$:**\n$$g(-5) = -|{-5}+2|+4 = -|{-3}|+4 = -3+4 = \\boxed{1}$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:54:56.059Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-010"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\dfrac{1}{x-3}$ and $g(x) = \\dfrac{2}{x}$. Find the domain of $(f \\circ g)(x)$.",
+      "answer": "(-infinity, 0) U (0, 2/3) U (2/3, infinity)",
+      "solution": "1. Form the composite:\n$$( f \\circ g)(x) = f\\!\\left(\\frac{2}{x}\\right) = \\frac{1}{\\dfrac{2}{x}-3} = \\frac{1}{\\dfrac{2-3x}{x}} = \\frac{x}{2-3x}$$\n2. Restrict for $g$: $g(x) = \\dfrac{2}{x}$ is undefined when $x = 0$, so $x \neq 0$.\n3. Restrict for $f$: $f$ is undefined when its input equals $3$, so solve $g(x) = 3$:\n$$\\frac{2}{x} = 3 \\implies x = \\frac{2}{3}$$\nThus $x \neq \\dfrac{2}{3}$.\n4. The domain is all real numbers excluding $0$ and $\\dfrac{2}{3}$:\n$$\\boxed{(-\\infty,\\,0)\\cup\\!\\left(0,\\,\\tfrac{2}{3}\\right)\\cup\\!\\left(\\tfrac{2}{3},\\,\\infty\\right)}$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:55:37.166Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, 0) U (0, 2/3) U (2/3, infinity)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, 0) U (0, 2/3) U (2/3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-011"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Let $f(x) = -x^2 + 6x - 5$. Find the relative maximum value of $f$.",
+      "answer": "4",
+      "solution": "Complete the square to rewrite $f$ in vertex form:\n$$f(x) = -(x^2 - 6x) - 5$$\n$$= -(x^2 - 6x + 9) + 9 - 5$$\n$$= -(x - 3)^2 + 4$$\nBecause the leading coefficient is $-1 < 0$, the parabola opens downward, so the vertex is a relative maximum.\nThe vertex is $(3,\\,4)$, so the relative maximum value is $f(3) = 4$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:55:55.603Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-012"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Find the average rate of change of $f(x) = x^2 - 3x + 5$ from $x = 2$ to $x = 6$.",
+      "answer": "5",
+      "solution": "Use the average rate of change formula: $\\dfrac{f(b)-f(a)}{b-a}$.\n\n1. Evaluate $f(2)$:\n$$f(2) = (2)^2 - 3(2) + 5 = 4 - 6 + 5 = 3$$\n\n2. Evaluate $f(6)$:\n$$f(6) = (6)^2 - 3(6) + 5 = 36 - 18 + 5 = 23$$\n\n3. Compute the average rate of change:\n$$\\frac{f(6)-f(2)}{6-2} = \\frac{23-3}{4} = \\frac{20}{4} = 5$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:56:43.623Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-013"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $$f(x) = \\dfrac{\\sqrt{3x - 6}}{x - 5}$$",
+      "answer": "[2, 5) U (5, infinity)",
+      "solution": "**Step 1 — Radicand must be non-negative (square root restriction):**\n$$3x - 6 \\geq 0 \\implies x \\geq 2$$\n\n**Step 2 — Denominator cannot be zero:**\n$$x - 5 \neq 0 \\implies x \neq 5$$\n\n**Step 3 — Combine both restrictions:**\n$x \\geq 2$ with the single point $x = 5$ excluded.\n\n$$\\text{Domain} = [2,\\,5) \\cup (5,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:56:51.313Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[2, 5) U (5, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[2, 5) U (5, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-014"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Find the value of $k$ such that the line passing through $(k,\\,3)$ and $(2,\\,-1)$ is parallel to the line $4x - 2y = 8$.",
+      "answer": "4",
+      "solution": "**Step 1 — slope of the given line.**\nRewrite $4x-2y=8$ in slope-intercept form:\n$$-2y = -4x+8 \\implies y = 2x-4$$\nSo its slope is $m = 2$.\n\n**Step 2 — parallel lines share equal slopes.**\nThe slope of the line through $(k,3)$ and $(2,-1)$ must also equal $2$:\n$$\\frac{-1-3}{2-k} = 2$$\n\n**Step 3 — solve for $k$.**\n$$\\frac{-4}{2-k} = 2$$\n$$-4 = 2(2-k) = 4-2k$$\n$$2k = 8$$\n$$k = 4$$\n\n**Check:** slope through $(4,3)$ and $(2,-1)$ is $\\dfrac{-1-3}{2-4}=\\dfrac{-4}{-2}=2$. ✓",
+      "meta": {
+        "generatedAt": "2026-05-08T05:57:33.974Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-015"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "Find the standard-form equation of the circle with center $(3, -2)$ that passes through the point $(7, 1)$.",
+      "answer": "(x - 3)^2 + (y + 2)^2 = 25",
+      "solution": "Step 1: Use the distance formula to find the radius $r$ (the distance from the center to the given point).\n$$r = \\sqrt{(7-3)^2 + (1-(-2))^2} = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$$\nStep 2: Substitute $h = 3$, $k = -2$, and $r = 5$ into the standard form $(x - h)^2 + (y - k)^2 = r^2$.\n$$(x - 3)^2 + (y + 2)^2 = 25$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:57:34.514Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 3)^2 + (y + 2)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 3)^2 + (y + 2)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-016"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "The line $\\ell$ passes through $(-3,\\,4)$ with slope $m = 2$. Find the $x$-intercept of $\\ell$.",
+      "answer": "-5",
+      "solution": "1. Apply point-slope form with $(-3,\\,4)$ and $m=2$:\n$$y - 4 = 2\\bigl(x - (-3)\\bigr) = 2(x + 3)$$\n2. Expand and collect:\n$$y = 2x + 6 + 4 = 2x + 10$$\n3. Set $y = 0$ to find the $x$-intercept:\n$$0 = 2x + 10 \\implies x = -5$$\n\nThe $x$-intercept is $(-5,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:57:39.981Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-017"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "Let $f(x) = \\sqrt{x}$. The function $g$ is obtained from $f$ by shifting right 4 units, stretching vertically by a factor of 3, and shifting down 1 unit. Find $g(8)$.",
+      "answer": "5",
+      "solution": "**Step 1 — Build $g(x)$ by applying each transformation:**\n$$g(x) = 3\\sqrt{x - 4} - 1$$\nShift right 4 units $\\Rightarrow$ replace $x$ with $(x-4)$; vertical stretch by factor 3 $\\Rightarrow$ multiply output by 3; shift down 1 $\\Rightarrow$ subtract 1.\n\n**Step 2 — Evaluate at $x = 8$:**\n$$g(8) = 3\\sqrt{8 - 4} - 1 = 3\\sqrt{4} - 1 = 3(2) - 1 = 6 - 1 = 5$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:57:45.991Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-018"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "The endpoints of a diameter of a circle are $(-3,\\,2)$ and $(5,\\,-4)$. Write the standard form of the equation of the circle.",
+      "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+      "solution": "**Step 1 — Find the center** (midpoint of the diameter):\n$$\\left(\\frac{-3+5}{2},\\;\\frac{2+(-4)}{2}\\right)=\\left(1,\\,-1\\right)$$\n\n**Step 2 — Find the radius** (distance from center to one endpoint):\n$$r=\\sqrt{(5-1)^2+(-4-(-1))^2}=\\sqrt{16+9}=\\sqrt{25}=5$$\n\n**Step 3 — Write the equation**:\n$$(x-1)^2+(y+1)^2=25$$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:58:08.769Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-019"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Let $f(x) = \\dfrac{2x+3}{x-1}$. Find $f^{-1}(x)$.",
+      "answer": "(x+3)/(x-2)",
+      "solution": "Replace $f(x)$ with $y$:\n$$y = \\frac{2x+3}{x-1}$$\nSwap $x$ and $y$ (reflect across $y = x$):\n$$x = \\frac{2y+3}{y-1}$$\nMultiply both sides by $(y-1)$:\n$$x(y-1) = 2y+3$$\n$$xy - x = 2y+3$$\nCollect $y$-terms on one side:\n$$xy - 2y = x+3$$\n$$y(x-2) = x+3$$\nDivide:\n$$y = \\frac{x+3}{x-2}$$\nTherefore $f^{-1}(x) = \\dfrac{x+3}{x-2}$, defined for $x \neq 2$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:58:16.227Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x+3)/(x-2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x+3)/(x-2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-020"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Let $f(x) = \\begin{cases} x^2 - 1 & \\text{if } x < 2 \\\\ 3x + 1 & \\text{if } x \\geq 2 \\end{cases}$. Find $f(-3) + f(4)$.",
+      "answer": "21",
+      "solution": "1. Evaluate $f(-3)$: since $-3 < 2$, use the first rule: $f(-3) = (-3)^2 - 1 = 9 - 1 = 8$.\n2. Evaluate $f(4)$: since $4 \\geq 2$, use the second rule: $f(4) = 3(4) + 1 = 12 + 1 = 13$.\n3. Add: $f(-3) + f(4) = 8 + 13 = 21$.",
+      "meta": {
+        "generatedAt": "2026-05-08T05:58:24.470Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "21",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "21",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-021"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Let $f(x) = x^2 - 2x + 3$. Find the average rate of change of $f$ from $x = 1$ to $x = 4$.",
+      "answer": "3",
+      "solution": "The average rate of change from $x = 1$ to $x = 4$ is $\\dfrac{f(4) - f(1)}{4 - 1}$.\n\n1. $f(4) = (4)^2 - 2(4) + 3 = 16 - 8 + 3 = 11$\n2. $f(1) = (1)^2 - 2(1) + 3 = 1 - 2 + 3 = 2$\n3. Average rate of change $= \\dfrac{11 - 2}{4 - 1} = \\dfrac{9}{3} = 3$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:58:55.795Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-022"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\sqrt{x+3}$ and $g(x) = x^2 - 7$. Find $(f \\circ g)(4)$.",
+      "answer": "2*sqrt(3)",
+      "solution": "1. Evaluate the inner function: $g(4) = 4^2 - 7 = 16 - 7 = 9$\n2. Apply the outer function: $(f \\circ g)(4) = f\\!\\left(g(4)\\right) = f(9) = \\sqrt{9 + 3} = \\sqrt{12}$\n3. Simplify: $\\sqrt{12} = \\sqrt{4 \\cdot 3} = 2\\sqrt{3}$",
+      "meta": {
+        "generatedAt": "2026-05-08T05:59:44.271Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2*sqrt(3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2*sqrt(3)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-023"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\dfrac{1}{x-3}$ and $g(x) = \\dfrac{2}{x+1}$. Find the domain of $(f \\circ g)(x)$.",
+      "answer": "(-infinity, -1) U (-1, -1/3) U (-1/3, infinity)",
+      "solution": "1. Form the composite: $(f \\circ g)(x) = f(g(x)) = f\\!\\left(\\dfrac{2}{x+1}\\right) = \\dfrac{1}{\\dfrac{2}{x+1}-3}$.\n2. Simplify the denominator: $\\dfrac{2}{x+1}-3 = \\dfrac{2-3(x+1)}{x+1} = \\dfrac{-3x-1}{x+1}$, so $(f \\circ g)(x) = \\dfrac{x+1}{-3x-1}$.\n3. Restriction from $g$: denominator $x+1\neq 0 \\Rightarrow x\neq -1$.\n4. Restriction from $f$: its input $\\dfrac{2}{x+1}$ must not equal $3$, since $f$ is undefined at $3$. Solve $\\dfrac{2}{x+1}=3 \\Rightarrow 2=3(x+1) \\Rightarrow x=-\\dfrac{1}{3}$, so $x\neq -\\dfrac{1}{3}$.\n5. Domain: $(-\\infty,\\,-1)\\cup\\!\\left(-1,\\,-\\dfrac{1}{3}\\right)\\cup\\!\\left(-\\dfrac{1}{3},\\,\\infty\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-08T06:01:04.566Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -1) U (-1, -1/3) U (-1/3, infinity)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -1) U (-1, -1/3) U (-1/3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-024"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "Find the slope-intercept form of the equation of the line passing through the points $(-3,\\ 7)$ and $(5,\\ -1)$.",
+      "answer": "y = -x + 4",
+      "solution": "**Step 1 — Compute the slope:**\n$$m = \\frac{-1 - 7}{5 - (-3)} = \\frac{-8}{8} = -1$$\n\n**Step 2 — Apply point-slope form** using $(-3,\\ 7)$:\n$$y - 7 = -1\\bigl(x - (-3)\\bigr)$$\n$$y - 7 = -x - 3$$\n\n**Step 3 — Solve for $y$:**\n$$y = -x + 4$$",
+      "meta": {
+        "generatedAt": "2026-05-08T06:01:07.838Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = -x + 4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = -x + 4",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch2-025"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{x+5}}{x-3}$. Write your answer in interval notation.",
+      "answer": "[-5, 3) U (3, infinity)",
+      "solution": "**Step 1:** The square root requires its radicand to be non-negative:\n$$x + 5 \\geq 0 \\implies x \\geq -5$$\n**Step 2:** The denominator cannot equal zero:\n$$x - 3 \neq 0 \\implies x \neq 3$$\n**Step 3:** Combine both restrictions: $x \\geq -5$ with $x \neq 3$.\n**Step 4:** In interval notation: $[-5,\\, 3) \\cup (3,\\, \\infty)$",
+      "meta": {
+        "generatedAt": "2026-05-08T06:01:35.741Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-5, 3) U (3, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-5, 3) U (3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-026"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "The endpoints of a diameter of a circle are $(-3,\\, 2)$ and $(5,\\, -4)$. Write the standard-form equation of the circle.",
+      "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+      "solution": "**1. Find the center** using the midpoint formula:\n$$\\left(\\frac{-3+5}{2},\\;\\frac{2+(-4)}{2}\\right)=\\left(\\frac{2}{2},\\;\\frac{-2}{2}\\right)=(1,-1)$$\n\n**2. Find the radius** — distance from the center $(1,-1)$ to the endpoint $(5,-4)$:\n$$r=\\sqrt{(5-1)^2+(-4-(-1))^2}=\\sqrt{4^2+(-3)^2}=\\sqrt{16+9}=\\sqrt{25}=5$$\n\n**3. Write standard form** $(x-h)^2+(y-k)^2=r^2$ with $(h,k)=(1,-1)$ and $r=5$:\n$$(x-1)^2+(y+1)^2=25$$",
+      "meta": {
+        "generatedAt": "2026-05-08T06:02:32.306Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-027"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "A line passes through the points $(2, -5)$ and $(-4, 7)$. Find the $y$-intercept of the line.",
+      "answer": "-1",
+      "solution": "1. Find the slope using the two points:\n$$m = \\frac{7-(-5)}{-4-2} = \\frac{12}{-6} = -2$$\n2. Apply point-slope form with $(2,\\,-5)$:\n$$y-(-5) = -2(x-2)$$\n3. Simplify to slope-intercept form:\n$$y+5 = -2x+4 \\implies y = -2x-1$$\n4. The $y$-intercept is $-1$.",
+      "meta": {
+        "generatedAt": "2026-05-08T06:02:35.801Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-028"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Let $f(x) = \\dfrac{3x+1}{x-2}$. Find $f^{-1}(x)$.",
+      "answer": "(2x+1)/(x-3)",
+      "solution": "Replace $f(x)$ with $y$:\n$$y = \\dfrac{3x+1}{x-2}$$\nSwap $x$ and $y$ (reflect across $y = x$):\n$$x = \\dfrac{3y+1}{y-2}$$\nMultiply both sides by $(y-2)$:\n$$x(y-2) = 3y+1$$\n$$xy - 2x = 3y+1$$\nCollect $y$-terms on the left:\n$$xy - 3y = 2x+1$$\n$$y(x-3) = 2x+1$$\n$$y = \\dfrac{2x+1}{x-3}$$\nTherefore $f^{-1}(x) = \\dfrac{2x+1}{x-3}$, defined for $x \neq 3$.\n\n**Verification:** $f\\!\\left(f^{-1}(x)\\right) = \\dfrac{3\\cdot\\dfrac{2x+1}{x-3}+1}{\\dfrac{2x+1}{x-3}-2} = \\dfrac{(6x+3)+(x-3)}{(2x+1)-2(x-3)} = \\dfrac{7x}{7} = x$ $\\checkmark$",
+      "meta": {
+        "generatedAt": "2026-05-08T06:02:39.163Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2x+1)/(x-3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2x+1)/(x-3)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-029"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Let $f(x) = \\begin{cases} 2x + 3 & \\text{if } x \\leq -1 \\\\ x^2 - 1 & \\text{if } x > -1 \\end{cases}$\n\nEvaluate $f(-3)$, $f(-1)$, and $f(2)$.",
+      "answer": "-3, 1, 3",
+      "solution": "Identify which piece applies to each input.\n\n**$f(-3)$:** Since $-3 \\leq -1$, use $2x+3$:\n$$f(-3) = 2(-3)+3 = -6+3 = -3$$\n\n**$f(-1)$:** Since $-1 \\leq -1$, use $2x+3$:\n$$f(-1) = 2(-1)+3 = -2+3 = 1$$\n\n**$f(2)$:** Since $2 > -1$, use $x^2-1$:\n$$f(2) = (2)^2 - 1 = 4-1 = 3$$\n\nThus $f(-3) = -3$, $f(-1) = 1$, $f(2) = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-08T06:02:43.412Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, 1, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, 1, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-030"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\sqrt{2x+3}$ and $g(x) = x^2 - 1$. Find $(g \\circ f)(3)$.",
+      "answer": "8",
+      "solution": "$(g \\circ f)(3) = g(f(3))$\n\n**Step 1 — Evaluate the inner function:**\n$$f(3) = \\sqrt{2(3)+3} = \\sqrt{6+3} = \\sqrt{9} = 3$$\n\n**Step 2 — Evaluate the outer function at that result:**\n$$g(3) = 3^2 - 1 = 9 - 1 = 8$$\n\n$$\\boxed{(g \\circ f)(3) = 8}$$",
+      "meta": {
+        "generatedAt": "2026-05-08T06:03:38.061Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "8",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "8",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-031"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "The graph of $y = f(x)$ passes through the point $(2, 5)$. The function $g$ is defined by $$g(x) = -2f(x - 3) + 1.$$ Find the point that must lie on the graph of $g$.",
+      "answer": "(5, -9)",
+      "solution": "1. Since $(2, 5)$ is on $y = f(x)$, we know $f(2) = 5$.\n2. Find the $x$-value on $g$ whose inner expression equals $2$:\n$$x - 3 = 2 \\implies x = 5.$$\n3. Evaluate $g(5)$:\n$$g(5) = -2f(5 - 3) + 1 = -2f(2) + 1 = -2(5) + 1 = -10 + 1 = -9.$$\n4. Therefore the point $(5, -9)$ lies on the graph of $g$.",
+      "meta": {
+        "generatedAt": "2026-05-08T06:03:55.292Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(5, -9)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(5, -9)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-032"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Find the inverse function $f^{-1}(x)$ for $f(x) = \\dfrac{2x+3}{x-1}$.",
+      "answer": "(x+3)/(x-2)",
+      "solution": "**1.** Replace $f(x)$ with $y$:\n$$y = \\frac{2x+3}{x-1}$$\n**2.** Swap $x$ and $y$ to reflect across $y = x$:\n$$x = \\frac{2y+3}{y-1}$$\n**3.** Multiply both sides by $(y-1)$:\n$$x(y-1) = 2y+3 \\implies xy - x = 2y+3$$\n**4.** Collect $y$-terms on one side:\n$$xy - 2y = x+3 \\implies y(x-2) = x+3$$\n**5.** Divide by $(x-2)$:\n$$y = \\frac{x+3}{x-2}$$\n\nTherefore $f^{-1}(x) = \\dfrac{x+3}{x-2}$, defined for $x \neq 2$.",
+      "meta": {
+        "generatedAt": "2026-05-08T06:04:00.630Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x+3)/(x-2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x+3)/(x-2)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-033"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "The endpoints of a diameter of a circle are $(1, -3)$ and $(7, 5)$. Write the standard form of the equation of the circle.",
+      "answer": "(x - 4)^2 + (y - 1)^2 = 25",
+      "solution": "**1. Find the center** (midpoint of the diameter):\n$$\\left(\\frac{1+7}{2},\\, \\frac{-3+5}{2}\\right) = (4,\\, 1)$$\n\n**2. Find the radius** (distance from center to one endpoint):\n$$r = \\sqrt{(7-4)^2 + (5-1)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$$\n\n**3. Write standard form** $(x-h)^2+(y-k)^2=r^2$ with $(h,k)=(4,1)$ and $r=5$:\n$$(x-4)^2 + (y-1)^2 = 25$$",
+      "meta": {
+        "generatedAt": "2026-05-08T06:06:49.338Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 4)^2 + (y - 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 4)^2 + (y - 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch2-034"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Let $$f(x) = \\begin{cases} x^2 + 1 & \\text{if } x < 2 \\\\ 3x - 1 & \\text{if } x \\geq 2 \\end{cases}$$ Evaluate $f(-1) + f(4)$.",
+      "answer": "13",
+      "solution": "1. Since $-1 < 2$, use the first branch: $f(-1) = (-1)^2 + 1 = 1 + 1 = 2$\n2. Since $4 \\geq 2$, use the second branch: $f(4) = 3(4) - 1 = 12 - 1 = 11$\n3. $f(-1) + f(4) = 2 + 11 = \\boxed{13}$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:52:14.377Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-035"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Find the average rate of change of $f(x) = 2x^2 - x + 3$ from $x = 0$ to $x = 3$.",
+      "answer": "5",
+      "solution": "**1.** Evaluate at the endpoints:\n$$f(0) = 2(0)^2 - 0 + 3 = 3$$\n$$f(3) = 2(3)^2 - 3 + 3 = 18 - 3 + 3 = 18$$\n\n**2.** Apply the average rate of change formula:\n$$\\frac{f(3)-f(0)}{3-0} = \\frac{18-3}{3} = \\frac{15}{3} = 5$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:52:16.266Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-036"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Let $f(x) = x^2 - 3x + 1$. Find the average rate of change of $f$ from $x = 1$ to $x = 4$.",
+      "answer": "2",
+      "solution": "**Step 1.** Evaluate $f$ at the endpoints.\n$$f(1) = (1)^2 - 3(1) + 1 = 1 - 3 + 1 = -1$$\n$$f(4) = (4)^2 - 3(4) + 1 = 16 - 12 + 1 = 5$$\n\n**Step 2.** Apply the average-rate-of-change formula.\n$$\\frac{f(4)-f(1)}{4-1} = \\frac{5-(-1)}{3} = \\frac{6}{3} = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:52:33.723Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-037"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "Line $\\ell_1$ passes through $(-1, 4)$ and $(3, -2)$. Line $\\ell_2$ is perpendicular to $\\ell_1$ and passes through $(2, 5)$. Find the $x$-intercept of $\\ell_2$.",
+      "answer": "-11/2",
+      "solution": "1. Find the slope of $\\ell_1$:\n$$m_1 = \\frac{-2-4}{3-(-1)} = \\frac{-6}{4} = -\\frac{3}{2}$$\n2. The slope of $\\ell_2$ is the negative reciprocal of $m_1$:\n$$m_2 = \\frac{2}{3}$$\n3. Write the equation of $\\ell_2$ through $(2, 5)$ using point-slope form:\n$$y - 5 = \\frac{2}{3}(x - 2)$$\n$$y = \\frac{2}{3}x - \\frac{4}{3} + \\frac{15}{3} = \\frac{2}{3}x + \\frac{11}{3}$$\n4. Set $y = 0$ to find the $x$-intercept:\n$$0 = \\frac{2}{3}x + \\frac{11}{3} \\implies \\frac{2}{3}x = -\\frac{11}{3} \\implies x = -\\frac{11}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:52:44.273Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-11/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-11/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-038"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\dfrac{x+2}{x-1}$ and $g(x) = \\dfrac{3}{x}$. Evaluate $(f \\circ g)(2)$.",
+      "answer": "7",
+      "solution": "$(f \\circ g)(2) = f(g(2))$\n\nStep 1: Find $g(2)$:\n$$g(2) = \\frac{3}{2}$$\n\nStep 2: Apply $f$ to that result:\n$$f\\!\\left(\\frac{3}{2}\\right) = \\frac{\\tfrac{3}{2}+2}{\\tfrac{3}{2}-1} = \\frac{\\tfrac{3}{2}+\\tfrac{4}{2}}{\\tfrac{3}{2}-\\tfrac{2}{2}} = \\frac{\\tfrac{7}{2}}{\\tfrac{1}{2}} = \\frac{7}{2} \\cdot \\frac{2}{1} = 7$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:52:49.575Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-039"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "The point $(-4,\\ 6)$ lies on the graph of $y = f(x)$. Find the $y$-coordinate of the corresponding point on the graph of $y = 2f(x + 1) - 5$.",
+      "answer": "7",
+      "solution": "To find the point on $y = 2f(x+1)-5$ that corresponds to $(-4,6)$ on $y = f(x)$:\n\n1. **Identify the input that evaluates $f$ at $-4$:** The inner expression is $x+1$. Set $x + 1 = -4$, giving $x = -5$.\n2. **Apply the outer transformations:** Substitute $x = -5$:\n$$y = 2f(-5+1) - 5 = 2f(-4) - 5$$\n3. **Use the known value $f(-4) = 6$:**\n$$y = 2(6) - 5 = 12 - 5 = 7$$\n\nThe corresponding point is $(-5,\\ 7)$, so the $y$-coordinate is $7$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:53:08.198Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-040"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{x - 3}}{x - 7}$.",
+      "answer": "[3, 7) U (7, infinity)",
+      "solution": "The domain requires two conditions to hold simultaneously.\n\n1. **Square root defined:** The radicand must be non-negative:\n$$x - 3 \\geq 0 \\implies x \\geq 3$$\n\n2. **Denominator non-zero:** Division by zero is undefined:\n$$x - 7 \neq 0 \\implies x \neq 7$$\n\n3. **Combine:** $x \\geq 3$ and $x \neq 7$, so the domain is $[3,\\, 7) \\cup (7,\\, \\infty)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:53:35.878Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[3, 7) U (7, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[3, 7) U (7, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-041"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Let $f(x) = \\dfrac{2x + 3}{x - 1}$. Find $f^{-1}(x)$.",
+      "answer": "(x + 3)/(x - 2)",
+      "solution": "**Step 1.** Replace $f(x)$ with $y$:\n$$y = \\frac{2x+3}{x-1}$$\n\n**Step 2.** Swap $x$ and $y$ (the inverse-function exchange):\n$$x = \\frac{2y+3}{y-1}$$\n\n**Step 3.** Multiply both sides by $(y-1)$:\n$$x(y-1) = 2y+3$$\n\n**Step 4.** Expand and collect $y$-terms on one side:\n$$xy - x = 2y + 3 \\\\\\\\ xy - 2y = x + 3$$\n\n**Step 5.** Factor out $y$:\n$$y(x-2) = x+3$$\n\n**Step 6.** Solve for $y$:\n$$y = \\frac{x+3}{x-2}$$\n\n**Step 7.** Write the inverse:\n$$f^{-1}(x) = \\frac{x+3}{x-2}, \\quad x \neq 2$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:53:40.175Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x + 3)/(x - 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x + 3)/(x - 2)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-042"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "A circle has a diameter with endpoints $(-3, 4)$ and $(5, -2)$. Write the standard-form equation of the circle.",
+      "answer": "(x - 1)^2 + (y - 1)^2 = 25",
+      "solution": "**Step 1: Find the center** using the Midpoint Formula.\n$$\\left(\\frac{-3+5}{2},\\;\\frac{4+(-2)}{2}\\right)=\\left(\\frac{2}{2},\\;\\frac{2}{2}\\right)=(1,\\,1)$$\n\n**Step 2: Find the radius** — half the length of the diameter.\n$$d=\\sqrt{(5-(-3))^2+(-2-4)^2}=\\sqrt{8^2+(-6)^2}=\\sqrt{64+36}=\\sqrt{100}=10$$\n$$r=\\frac{d}{2}=5$$\n\n**Step 3: Write the standard-form equation** $(x-h)^2+(y-k)^2=r^2$ with center $(1,1)$ and $r=5$.\n$$(x-1)^2+(y-1)^2=25$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:54:06.596Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 1)^2 + (y - 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 1)^2 + (y - 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-043"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "Find the slope-intercept form of the equation of the line passing through the points $(1,\\,-2)$ and $(4,\\,7)$.",
+      "answer": "y = 3x - 5",
+      "solution": "**1. Compute the slope.**\n$$m = \\frac{7-(-2)}{4-1} = \\frac{9}{3} = 3$$\n\n**2. Apply point-slope form** using $(1,\\,-2)$:\n$$y - (-2) = 3(x - 1)$$\n\n**3. Simplify to slope-intercept form.**\n$$y + 2 = 3x - 3$$\n$$y = 3x - 5$$\n\nThe slope is $m = 3$ and the $y$-intercept is $(0,\\,-5)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:54:24.998Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = 3x - 5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = 3x - 5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-044"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Find the average rate of change of $f(x) = x^3 - 4x$ from $x = -1$ to $x = 2$.",
+      "answer": "-1",
+      "solution": "1. Evaluate at $x = 2$: $f(2) = (2)^3 - 4(2) = 8 - 8 = 0$\n2. Evaluate at $x = -1$: $f(-1) = (-1)^3 - 4(-1) = -1 + 4 = 3$\n3. Apply the formula:\n$$\\frac{f(2)-f(-1)}{2-(-1)} = \\frac{0 - 3}{3} = -1$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:54:44.234Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-045"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "The graph of $f$ passes through the points $(-1,\\,4)$, $(0,\\,1)$, and $(2,\\,9)$. Let $$g(x)=\\tfrac{1}{2}f(x-3)+2.$$ Find $g(5)$.",
+      "answer": "13/2",
+      "solution": "1. Recognize the transformations applied to $f$: $g(x)=\\frac{1}{2}f(x-3)+2$ shifts the graph of $f$ **right 3**, compresses it **vertically by $\\frac{1}{2}$**, and shifts it **up 2**.\n2. Substitute $x=5$ into $g$:\n$$g(5)=\\tfrac{1}{2}f(5-3)+2=\\tfrac{1}{2}f(2)+2$$\n3. Read $f(2)$ from the given points: $f(2)=9$.\n4. Compute:\n$$g(5)=\\tfrac{1}{2}(9)+2=\\tfrac{9}{2}+\\tfrac{4}{2}=\\boxed{\\dfrac{13}{2}}$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:54:46.477Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "13/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "13/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-046"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = x^2 - 4$ and $g(x) = \\sqrt{x + 5}$. Evaluate $(f \\circ g)(4)$.",
+      "answer": "5",
+      "solution": "**Step 1.** Evaluate the inner function at $x = 4$:\n$$g(4) = \\sqrt{4 + 5} = \\sqrt{9} = 3$$\n**Step 2.** Apply $f$ to that result:\n$$f\\!\\left(g(4)\\right) = f(3) = 3^2 - 4 = 9 - 4 = 5$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:54:53.639Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-047"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "The endpoints of a diameter of a circle are $(-3, 2)$ and $(5, -4)$. Write the equation of this circle in standard form.",
+      "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+      "solution": "1. **Find the center** using the midpoint formula:\n$$\\left(\\frac{-3+5}{2},\\ \\frac{2+(-4)}{2}\\right) = (1,\\ -1)$$\n2. **Find the radius** — distance from the center $(1,-1)$ to one endpoint, say $(5,-4)$:\n$$r = \\sqrt{(5-1)^2+(-4-(-1))^2} = \\sqrt{16+9} = \\sqrt{25} = 5$$\n3. **Write standard form** $(x-h)^2+(y-k)^2=r^2$ with center $(1,-1)$ and $r=5$:\n$$(x-1)^2+(y+1)^2=25$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:55:21.023Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-048"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{x+4}}{x-2}$.",
+      "answer": "[-4, 2) U (2, infinity)",
+      "solution": "Identify the restrictions on $x$.\n\n**Step 1 — Square root:** The radicand must be non-negative:\n$$x + 4 \\ge 0 \\implies x \\ge -4$$\n\n**Step 2 — Denominator:** Cannot equal zero:\n$$x - 2 \ne 0 \\implies x \ne 2$$\n\n**Step 3 — Combine:** All $x \\ge -4$ except $x = 2$.\n$$\\text{Domain} = [-4,\\,2)\\cup(2,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:55:45.886Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-4, 2) U (2, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-4, 2) U (2, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-049"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "Find the $y$-intercept of the line passing through the points $(-4,\\ 3)$ and $(2,\\ -9)$.",
+      "answer": "-5",
+      "solution": "1. Compute the slope:\n$$m = \\frac{-9-3}{2-(-4)} = \\frac{-12}{6} = -2$$\n2. Apply point-slope form using $(-4,\\ 3)$:\n$$y - 3 = -2(x + 4)$$\n3. Expand and simplify:\n$$y - 3 = -2x - 8 \\implies y = -2x - 5$$\n4. The $y$-intercept is $\\mathbf{-5}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:56:25.617Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-050"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Determine whether $f(x) = x^2 + |x|$ is even, odd, or neither. Justify your answer algebraically.",
+      "answer": "even",
+      "solution": "Replace $x$ with $-x$ and simplify:\n$$f(-x) = (-x)^2 + |-x| = x^2 + |x| = f(x)$$\nSince $f(-x) = f(x)$ for all $x$ in the domain, $f$ is an **even** function.\nGeometrically, this means the graph is symmetric about the $y$-axis.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:56:57.145Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "even",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "even",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-051"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "Suppose $f(3) = 7$. If $g(x) = 2f(x - 1) + 3$, find $g(4)$.",
+      "answer": "17",
+      "solution": "Substitute $x = 4$ into the definition of $g$:\n$$g(4) = 2f(4 - 1) + 3 = 2f(3) + 3$$\nUse the given value $f(3) = 7$:\n$$g(4) = 2(7) + 3 = 14 + 3 = 17$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:57:36.370Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "17",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "17",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-052"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\dfrac{x-1}{x+2}$ and $g(x) = 3x + 1$. Evaluate $(g \\circ f)(3)$.",
+      "answer": "11/5",
+      "solution": "1. Evaluate the inner function first:\n$$f(3) = \\frac{3-1}{3+2} = \\frac{2}{5}$$\n\n2. Apply the outer function to that result:\n$$g\\!\\left(\\frac{2}{5}\\right) = 3\\cdot\\frac{2}{5} + 1 = \\frac{6}{5} + \\frac{5}{5} = \\frac{11}{5}$$\n\nTherefore $(g \\circ f)(3) = \\dfrac{11}{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:58:04.500Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "11/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "11/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-053"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Let $f(x) = \\dfrac{2x + 5}{x - 3}$. Find $f^{-1}(x)$.",
+      "answer": "(3x + 5)/(x - 2)",
+      "solution": "**Step 1.** Write $y = \\dfrac{2x+5}{x-3}$.\n\n**Step 2.** Swap $x$ and $y$:\n$$x = \\frac{2y+5}{y-3}$$\n\n**Step 3.** Solve for $y$ — multiply both sides by $(y-3)$:\n$$x(y-3) = 2y+5$$\n$$xy - 3x = 2y + 5$$\n\n**Step 4.** Collect $y$-terms on one side:\n$$xy - 2y = 3x + 5$$\n$$y(x-2) = 3x+5$$\n\n**Step 5.** Divide:\n$$y = \\frac{3x+5}{x-2}$$\n\nTherefore $f^{-1}(x) = \\dfrac{3x+5}{x-2}$, defined for all $x \neq 2$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:58:06.769Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3x + 5)/(x - 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3x + 5)/(x - 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-054"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "Find the radius of the circle given by $x^2 + y^2 + 10x - 4y - 7 = 0$.",
+      "answer": "6",
+      "solution": "Move the constant and group by variable:\n$$x^2 + 10x + y^2 - 4y = 7$$\nComplete the square in $x$: add $\\left(\\frac{10}{2}\\right)^2 = 25$. Complete the square in $y$: add $\\left(\\frac{-4}{2}\\right)^2 = 4$. Add both values to the right side:\n$$(x^2 + 10x + 25) + (y^2 - 4y + 4) = 7 + 25 + 4$$\n$$(x + 5)^2 + (y - 2)^2 = 36$$\nThis is standard form $(x - h)^2 + (y - k)^2 = r^2$ with $r^2 = 36$, so $r = \\sqrt{36} = 6$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:58:35.106Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-055"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{x+4}}{x-2}$.",
+      "answer": "[-4, 2) U (2, infinity)",
+      "solution": "**Step 1: Restriction from the square root.**\nThe radicand must be non-negative:\n$$x + 4 \\ge 0 \\implies x \\ge -4$$\n\n**Step 2: Restriction from the denominator.**\nThe denominator cannot equal zero:\n$$x - 2 \ne 0 \\implies x \ne 2$$\n\n**Step 3: Combine restrictions.**\nWe need $x \\ge -4$ *and* $x \ne 2$.\n\n**Step 4: Write in interval notation.**\n$$[-4,\\,2)\\cup(2,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:58:42.290Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-4, 2) U (2, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-4, 2) U (2, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-056"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Determine whether $f(x) = \\dfrac{x^4 - 3x^2}{x^2 + 1}$ is even, odd, or neither. Justify your answer algebraically.",
+      "answer": "even",
+      "solution": "Replace every $x$ with $-x$:\n$$f(-x) = \\frac{(-x)^4 - 3(-x)^2}{(-x)^2 + 1} = \\frac{x^4 - 3x^2}{x^2 + 1} = f(x)$$\nSince $f(-x) = f(x)$ for all $x$ in the domain, $f$ is an **even** function. Its graph is symmetric about the $y$-axis.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:58:54.154Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "even",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "even",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-057"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "Find the $y$-intercept of the line passing through $(-4,\\, 1)$ and $(2,\\, 10)$.",
+      "answer": "7",
+      "solution": "**Step 1 — Compute the slope.**\n$$m = \\frac{10 - 1}{2 - (-4)} = \\frac{9}{6} = \\frac{3}{2}$$\n\n**Step 2 — Write point-slope form using $(-4,\\,1)$.**\n$$y - 1 = \\frac{3}{2}\\bigl(x + 4\\bigr)$$\n\n**Step 3 — Simplify to slope-intercept form.**\n$$y - 1 = \\frac{3}{2}x + 6$$\n$$y = \\frac{3}{2}x + 7$$\n\nThe $y$-intercept is $7$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:59:19.111Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-058"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Line $L$ has equation $3x - 4y = 12$. Line $M$ is perpendicular to $L$ and passes through the point $(2, -1)$. Find the $x$-intercept of line $M$.",
+      "answer": "5/4",
+      "solution": "1. Rewrite $L$ in slope-intercept form: $3x - 4y = 12 \\Rightarrow y = \\dfrac{3}{4}x - 3$, so the slope of $L$ is $m_L = \\dfrac{3}{4}$.\n2. Since $M \\perp L$, its slope is the negative reciprocal: $m_M = -\\dfrac{4}{3}$.\n3. Apply point-slope form at $(2,\\,-1)$: $y + 1 = -\\dfrac{4}{3}(x - 2)$.\n4. Simplify: $y = -\\dfrac{4}{3}x + \\dfrac{8}{3} - 1 = -\\dfrac{4}{3}x + \\dfrac{5}{3}$.\n5. Set $y = 0$ to find the $x$-intercept: $0 = -\\dfrac{4}{3}x + \\dfrac{5}{3} \\Rightarrow \\dfrac{4}{3}x = \\dfrac{5}{3} \\Rightarrow x = \\dfrac{5}{4}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T18:59:36.012Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-059"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "The graph of $g$ is obtained from $f(x) = \\sqrt[3]{x}$ by reflecting across the $y$-axis, stretching vertically by a factor of $2$, and shifting down $3$. Evaluate $g(-8)$.",
+      "answer": "1",
+      "solution": "Step 1: Start with the parent function $f(x) = \\sqrt[3]{x}$.\n\nStep 2: Reflect across the $y$-axis — replace $x$ with $-x$:\n$$\\sqrt[3]{-x}$$\n\nStep 3: Stretch vertically by a factor of $2$ — multiply the output by $2$:\n$$2\\sqrt[3]{-x}$$\n\nStep 4: Shift down $3$ — subtract $3$:\n$$g(x) = 2\\sqrt[3]{-x} - 3$$\n\nStep 5: Evaluate at $x = -8$:\n$$g(-8) = 2\\sqrt[3]{-(-8)} - 3 = 2\\sqrt[3]{8} - 3 = 2(2) - 3 = 4 - 3 = \\boxed{1}$$",
+      "meta": {
+        "generatedAt": "2026-05-09T18:59:41.169Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-060"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{x-2}}{x-5}$.",
+      "answer": "[2, 5) U (5, infinity)",
+      "solution": "**Step 1:** The radicand must be non-negative:\n$$x - 2 \\geq 0 \\implies x \\geq 2$$\n**Step 2:** The denominator cannot equal zero:\n$$x - 5 \neq 0 \\implies x \neq 5$$\n**Step 3:** Combine both restrictions: $x \\geq 2$ and $x \neq 5$.\n**Step 4:** Domain: $[2,\\,5)\\cup(5,\\infty)$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:00:22.125Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[2, 5) U (5, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[2, 5) U (5, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-061"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Let $$f(x) = \\begin{cases} 3x + 1 & \\text{if } x \\leq -1 \\\\ x^2 - 2 & \\text{if } x > -1 \\end{cases}$$ Evaluate $f(-3)$, $f(-1)$, and $f(2)$.",
+      "answer": "-8, -2, 2",
+      "solution": "Identify which piece applies for each input:\n\n1. $f(-3)$: Since $-3 \\leq -1$, use the first piece: $f(-3) = 3(-3)+1 = -9+1 = -8$\n\n2. $f(-1)$: Since $-1 \\leq -1$ (boundary belongs to first piece): $f(-1) = 3(-1)+1 = -3+1 = -2$\n\n3. $f(2)$: Since $2 > -1$, use the second piece: $f(2) = (2)^2 - 2 = 4-2 = 2$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:01:09.780Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-8, -2, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-8, -2, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-062"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "Find the radius of the circle whose equation is $x^2 + y^2 - 8x + 2y + 8 = 0$.",
+      "answer": "3",
+      "solution": "**Step 1:** Group the $x$- and $y$-terms and move the constant to the right:\n$$(x^2 - 8x) + (y^2 + 2y) = -8$$\n\n**Step 2:** Complete the square for $x$: $\\left(\\tfrac{-8}{2}\\right)^2 = 16$. Add $16$ to both sides.\n\n**Step 3:** Complete the square for $y$: $\\left(\\tfrac{2}{2}\\right)^2 = 1$. Add $1$ to both sides:\n$$(x^2 - 8x + 16) + (y^2 + 2y + 1) = -8 + 16 + 1 = 9$$\n\n**Step 4:** Factor each perfect-square trinomial:\n$$(x - 4)^2 + (y + 1)^2 = 9$$\n\nThis is the standard form $(x-h)^2+(y-k)^2=r^2$ with center $(4,\\,-1)$ and $r^2 = 9$, so the radius is $r = \\sqrt{9} = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:01:27.596Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-063"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "The line through $(k,\\,3)$ and $(4,\\,k)$ has slope $-2$. Find $k$.",
+      "answer": "5",
+      "solution": "Apply the slope formula with $(x_1,y_1)=(k,3)$ and $(x_2,y_2)=(4,k)$:\n$$\\frac{k-3}{4-k}=-2$$\nMultiply both sides by $(4-k)$:\n$$k-3=-2(4-k)=-8+2k$$\nCollect like terms:\n$$k-2k=-8+3\\implies -k=-5\\implies k=5$$\nVerify: the slope through $(5,3)$ and $(4,5)$ is $\\dfrac{5-3}{4-5}=\\dfrac{2}{-1}=-2$. $\\checkmark$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:02:00.465Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-064"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "Let $f(x) = \\sqrt{x}$. Write the equation of $g(x)$ obtained by applying the following transformations to $f$ in order: (1) reflect across the $y$-axis, (2) stretch vertically by a factor of $2$, (3) shift down $4$ units.",
+      "answer": "2*sqrt(-x) - 4",
+      "solution": "Start with the parent function $f(x) = \\sqrt{x}$.\n\n**Step 1 — Reflect across the $y$-axis:** Replace $x$ with $-x$:\n$$y = \\sqrt{-x}$$\n\n**Step 2 — Stretch vertically by a factor of 2:** Multiply the output by $2$:\n$$y = 2\\sqrt{-x}$$\n\n**Step 3 — Shift down 4 units:** Subtract $4$ from the output:\n$$g(x) = 2\\sqrt{-x} - 4$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:02:39.424Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2*sqrt(-x) - 4",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2*sqrt(-x) - 4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-065"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Find the average rate of change of $f(x) = x^2 - 3x$ from $x_1 = 1$ to $x_2 = 4$.",
+      "answer": "2",
+      "solution": "1. Evaluate $f(4)$: $f(4) = 4^2 - 3(4) = 16 - 12 = 4$\n2. Evaluate $f(1)$: $f(1) = 1^2 - 3(1) = 1 - 3 = -2$\n3. Apply the average rate of change formula:\n$$\\frac{f(x_2)-f(x_1)}{x_2-x_1} = \\frac{4-(-2)}{4-1} = \\frac{6}{3} = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:02:47.494Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-066"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\dfrac{1}{x-2}$ and $g(x) = \\sqrt{x}$. Find the domain of $(f \\circ g)$.",
+      "answer": "[0, 4) U (4, infinity)",
+      "solution": "1. Form the composite: $(f \\circ g)(x) = f\\!\\left(\\sqrt{x}\\right) = \\dfrac{1}{\\sqrt{x}-2}$\n2. Restriction from $g$: $\\sqrt{x}$ is defined only when $x \\ge 0$.\n3. Restriction from $f$: the denominator cannot equal zero, so $\\sqrt{x} \neq 2$, which means $x \neq 4$.\n4. Combine both restrictions: $x \\ge 0$ and $x \neq 4$.\n$$\\text{Domain} = [0,\\,4)\\cup(4,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:03:38.886Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[0, 4) U (4, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[0, 4) U (4, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-067"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "A circle has a diameter with endpoints $A(1, -3)$ and $B(7, 5)$. Write the standard-form equation of this circle.",
+      "answer": "(x - 4)^2 + (y - 1)^2 = 25",
+      "solution": "**Step 1 — Center = midpoint of the diameter:**\n$$\\text{Center} = \\left(\\frac{1+7}{2},\\;\\frac{-3+5}{2}\\right) = (4,\\,1)$$\n\n**Step 2 — Radius = distance from center to either endpoint (use $B$):**\n$$r = \\sqrt{(7-4)^2+(5-1)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$$\n\n**Step 3 — Write standard form $(x-h)^2+(y-k)^2=r^2$:**\n$$(x-4)^2+(y-1)^2 = 25$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:04:41.885Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 4)^2 + (y - 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 4)^2 + (y - 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-068"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "A line passes through the points $(2, -5)$ and $(-4, 7)$. Find the $x$-intercept of this line.",
+      "answer": "-1/2",
+      "solution": "**Step 1:** Compute the slope. $$m = \\frac{7-(-5)}{-4-2} = \\frac{12}{-6} = -2$$\n**Step 2:** Apply point-slope form using $(2,\\,-5)$. $$y-(-5)=-2(x-2) \\implies y+5=-2x+4 \\implies y=-2x-1$$\n**Step 3:** Set $y=0$ to find the $x$-intercept. $$0=-2x-1 \\implies x=-\\tfrac{1}{2}$$\nThe $x$-intercept is $\\left(-\\tfrac{1}{2},\\,0\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:29:02.576Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-069"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Let $f(x) = x^2 - 3x + 1$. Find the average rate of change of $f$ from $x = 1$ to $x = 4$.",
+      "answer": "2",
+      "solution": "The average rate of change formula is $$\\frac{f(b)-f(a)}{b-a}$$\n\nCompute $f(1)$: $$f(1)=1^2-3(1)+1=1-3+1=-1$$\n\nCompute $f(4)$: $$f(4)=4^2-3(4)+1=16-12+1=5$$\n\nAverage rate of change: $$\\frac{f(4)-f(1)}{4-1}=\\frac{5-(-1)}{3}=\\frac{6}{3}=2$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:29:03.052Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-070"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $$f(x) = \\dfrac{x+1}{\\sqrt{4-x^2}}$$",
+      "answer": "(-2, 2)",
+      "solution": "The square root is in the denominator, so the radicand must be **strictly positive** (not merely non-negative).\n\nSet up the inequality: $$4 - x^2 > 0$$\n\nRearrange: $$x^2 < 4$$\n\nTake square roots: $$|x| < 2$$\n\nThis gives $-2 < x < 2$, so the domain is $(-2,\\,2)$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:29:08.544Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-071"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "Let $f(x) = \\sqrt{x}$. The graph of $g$ is obtained from the graph of $f$ by reflecting across the $y$-axis, shifting right $4$ units, and shifting up $3$ units. Evaluate $g(-12)$.",
+      "answer": "7",
+      "solution": "**Step 1 — Reflect across the $y$-axis** (replace $x$ with $-x$):\n$$h(x) = f(-x) = \\sqrt{-x}$$\n\n**Step 2 — Shift right 4 units** (replace $x$ with $x - 4$):\n$$k(x) = \\sqrt{-(x-4)} = \\sqrt{4 - x}$$\n\n**Step 3 — Shift up 3 units** (add 3):\n$$g(x) = \\sqrt{4 - x} + 3$$\n\n**Step 4 — Evaluate at $x = -12$:**\n$$g(-12) = \\sqrt{4 - (-12)} + 3 = \\sqrt{16} + 3 = 4 + 3 = \\boxed{7}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:29:47.218Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-072"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "The endpoints of a diameter of a circle are $(-3,\\, 2)$ and $(5,\\, -4)$.  Find the standard-form equation of the circle.",
+      "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+      "solution": "**Step 1 — Find the center** (midpoint of the diameter): $$\\left(\\frac{-3+5}{2},\\, \\frac{2+(-4)}{2}\\right) = (1,\\,-1)$$\n\n**Step 2 — Find the radius** (half the length of the diameter): $$d = \\sqrt{(5-(-3))^2+(-4-2)^2} = \\sqrt{64+36} = \\sqrt{100} = 10 \\implies r = 5$$\n\n**Step 3 — Write the equation** using $(h,k)=(1,-1)$ and $r=5$: $$(x-1)^2+(y+1)^2=25$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:30:25.021Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 1)^2 + (y + 1)^2 = 25",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-073"
+    },
+    {
+      "topic": "2.4 More On Slope",
+      "problem": "Find the average rate of change of $f(x) = x^2 + 4x - 3$ on the interval $[-2,\\, 3]$.",
+      "answer": "5",
+      "solution": "**Step 1.** Evaluate $f$ at the endpoints.\n$$f(-2) = (-2)^2 + 4(-2) - 3 = 4 - 8 - 3 = -7$$\n$$f(3) = (3)^2 + 4(3) - 3 = 9 + 12 - 3 = 18$$\n\n**Step 2.** Apply the average rate of change formula (slope of the secant line).\n$$\\frac{f(3)-f(-2)}{3-(-2)} = \\frac{18-(-7)}{5} = \\frac{25}{5} = 5$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:30:25.753Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch2-074"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Let $f(x) = \\sqrt{x-3}$ and $g(x) = x^2 + 3$. Find and simplify $(f \\circ g)(x)$.",
+      "answer": "|x|",
+      "solution": "**1.** Write the composition: $$(f \\circ g)(x) = f(g(x)) = f(x^2+3)$$\n\n**2.** Substitute into $f(x) = \\sqrt{x-3}$: $$= \\sqrt{(x^2+3)-3}$$\n\n**3.** Simplify under the radical: $$= \\sqrt{x^2}$$\n\n**4.** Apply $\\sqrt{x^2} = |x|$: $$= |x|$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:30:45.891Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "|x|",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "|x|",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-075"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $$f(x) = \\dfrac{\\sqrt{2x - 6}}{x - 5}$$",
+      "answer": "[3, 5) U (5, infinity)",
+      "solution": "**Step 1 — Radicand must be non-negative:**\n$$2x - 6 \\ge 0 \\implies x \\ge 3$$\nSo the radicand condition gives $[3, \\infty)$.\n\n**Step 2 — Denominator cannot equal zero:**\n$$x - 5 \\ne 0 \\implies x \\ne 5$$\n\n**Step 3 — Combine both conditions:**\nStart with $[3, \\infty)$ and remove $x = 5$:\n$$[3,\\, 5) \\cup (5,\\, \\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:30:55.018Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[3, 5) U (5, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[3, 5) U (5, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-076"
+    },
+    {
+      "topic": "2.3 Linear Functions and Slope",
+      "problem": "A line has slope $\\dfrac{3}{4}$ and passes through the point $(-4,\\,1)$. Find the $y$-intercept of the line.",
+      "answer": "4",
+      "solution": "Apply point-slope form with $m = \\dfrac{3}{4}$ and $(x_1, y_1) = (-4, 1)$: $$y - 1 = \\frac{3}{4}\\bigl(x - (-4)\\bigr) = \\frac{3}{4}(x + 4)$$ Distribute the slope: $$y - 1 = \\frac{3}{4}x + 3$$ Add 1 to both sides to reach slope-intercept form: $$y = \\frac{3}{4}x + 4$$ The equation is now in the form $y = mx + b$, so the $y$-intercept is $b = 4$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:31:31.346Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-077"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Let $f(x) = \\dfrac{2x+5}{x-3}$. Find a formula for $f^{-1}(x)$.",
+      "answer": "(3x + 5)/(x - 2)",
+      "solution": "**Step 1.** Write $y = f(x)$: $$y = \\frac{2x+5}{x-3}$$\n\n**Step 2.** Swap $x$ and $y$ (this exchanges the roles of input and output): $$x = \\frac{2y+5}{y-3}$$\n\n**Step 3.** Solve for $y$. Multiply both sides by $(y-3)$: $$x(y-3) = 2y+5$$\n\n**Step 4.** Distribute and collect all $y$-terms on one side: $$xy - 3x = 2y + 5 \\implies xy - 2y = 3x + 5 \\implies y(x-2) = 3x+5$$\n\n**Step 5.** Divide both sides by $(x-2)$: $$y = \\frac{3x+5}{x-2}$$\n\nTherefore $f^{-1}(x) = \\dfrac{3x+5}{x-2}$. (The domain of $f^{-1}$ is all real numbers $x \\neq 2$, since $x = 2$ makes the denominator zero.)",
+      "meta": {
+        "generatedAt": "2026-05-10T20:31:37.922Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3x+5)/(x-2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3x+5)/(x-2)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch2-078"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Given the piecewise function $$f(x) = \\begin{cases} x^2 - 4 & \\text{if } x < 2 \\\\ 3x - 2 & \\text{if } x \\geq 2 \\end{cases}$$ find the value of $f(0) - f(5)$.",
+      "answer": "-17",
+      "solution": "1. Evaluate $f(0)$. Since $0 < 2$, use the first rule $f(x) = x^2 - 4$: $$f(0) = (0)^2 - 4 = -4$$\n2. Evaluate $f(5)$. Since $5 \\geq 2$, use the second rule $f(x) = 3x - 2$: $$f(5) = 3(5) - 2 = 15 - 2 = 13$$\n3. Compute the difference: $$f(0) - f(5) = -4 - 13 = -17$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:31:58.241Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-17",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-17",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-079"
+    },
+    {
+      "topic": "2.5 Transformations Of Functions",
+      "problem": "The graph of $g$ is obtained from $f(x) = |x|$ by applying the following transformations in order: stretch vertically by a factor of $2$, shift $1$ unit to the left, reflect over the $x$-axis, and shift $3$ units down. Find $g(2)$.",
+      "answer": "-9",
+      "solution": "Apply each transformation to build $g(x)$ step by step:\n\n**Step 1 — Start:** $f(x) = |x|$\n\n**Step 2 — Vertical stretch by 2:** $2|x|$\n\n**Step 3 — Shift left 1** (replace $x$ with $x+1$): $2|x+1|$\n\n**Step 4 — Reflect over the $x$-axis** (multiply by $-1$): $-2|x+1|$\n\n**Step 5 — Shift down 3:** $$g(x) = -2|x+1| - 3$$\n\n**Step 6 — Evaluate at $x = 2$:** $$g(2) = -2|2+1| - 3 = -2(3) - 3 = -6 - 3 = \\boxed{-9}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:32:16.932Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-9",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-9",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-080"
+    },
+    {
+      "topic": "2.8 Distance and Midpoint Formulas; Circles",
+      "problem": "The endpoints of a diameter of a circle are $(-1, 3)$ and $(5, -1)$. Write the equation of the circle in standard form.",
+      "answer": "(x - 2)^2 + (y - 1)^2 = 13",
+      "solution": "1. Find the center using the midpoint formula:\n$$\\left(\\frac{-1+5}{2},\\;\\frac{3+(-1)}{2}\\right) = (2,\\;1)$$\n2. Find the radius by computing the distance from the center $(2,1)$ to one endpoint $(5,-1)$:\n$$r = \\sqrt{(5-2)^2+(-1-1)^2} = \\sqrt{9+4} = \\sqrt{13}$$\n3. Substitute into the standard form $(x-h)^2+(y-k)^2=r^2$ with center $(2,1)$ and $r^2=13$:\n$$(x-2)^2+(y-1)^2=13$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:32:52.077Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x - 2)^2 + (y - 1)^2 = 13",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x - 2)^2 + (y - 1)^2 = 13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-081"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $f(x) = \\dfrac{\\sqrt{2x-6}}{x-5}$.",
+      "answer": "[3, 5) U (5, infinity)",
+      "solution": "**Step 1:** The radicand must be nonnegative: $$2x - 6 \\geq 0 \\implies x \\geq 3$$\n**Step 2:** The denominator cannot equal zero: $$x - 5 \\neq 0 \\implies x \\neq 5$$\n**Step 3:** Apply both restrictions simultaneously — $x \\geq 3$ with $x \\neq 5$ — giving the domain $$[3,\\,5)\\cup(5,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:33:18.229Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[3, 5) U (5, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[3, 5) U (5, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-082"
+    },
+    {
+      "topic": "2.2 More On Functions and Their Graphs",
+      "problem": "Find the average rate of change of $f(x) = x^2 - 3x + 1$ from $x = 1$ to $x = 4$.",
+      "answer": "2",
+      "solution": "**1. Evaluate at the endpoints.**\n\n$$f(1) = (1)^2 - 3(1) + 1 = 1 - 3 + 1 = -1$$\n\n$$f(4) = (4)^2 - 3(4) + 1 = 16 - 12 + 1 = 5$$\n\n**2. Apply the average rate of change formula.**\n\n$$\\frac{f(4)-f(1)}{4-1} = \\frac{5-(-1)}{3} = \\frac{6}{3} = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:33:36.455Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-083"
+    },
+    {
+      "topic": "2.6 Combinations Of Functions; Composite Functions",
+      "problem": "Given $f(x) = \\sqrt{x+3}$ and $g(x) = 4x^2 - 1$, evaluate $(f \\circ g)(2)$.",
+      "answer": "3*sqrt(2)",
+      "solution": "**Step 1:** Evaluate the inner function at $x = 2$: $$g(2) = 4(2)^2 - 1 = 16 - 1 = 15$$\n**Step 2:** Apply $f$ to that result: $$f(g(2)) = f(15) = \\sqrt{15 + 3} = \\sqrt{18} = \\sqrt{9 \\cdot 2} = 3\\sqrt{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:33:56.589Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3*sqrt(2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3*sqrt(2)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch2-084"
+    },
+    {
+      "topic": "2.7 Inverse Functions",
+      "problem": "Let $f(x) = \\dfrac{2x+3}{x-1}$. Find $f^{-1}(x)$.",
+      "answer": "(x + 3)/(x - 2)",
+      "solution": "1. Replace $f(x)$ with $y$: $$y = \\frac{2x+3}{x-1}$$\n2. Swap $x$ and $y$: $$x = \\frac{2y+3}{y-1}$$\n3. Multiply both sides by $(y-1)$: $$x(y-1) = 2y+3$$\n4. Expand and collect $y$-terms: $$xy - x = 2y+3 \\implies xy - 2y = x+3 \\implies y(x-2) = x+3$$\n5. Divide both sides by $(x-2)$: $$y = \\frac{x+3}{x-2}$$\n6. Therefore $f^{-1}(x) = \\dfrac{x+3}{x-2}$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:34:04.997Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(x+3)/(x-2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(x+3)/(x-2)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch2-085"
+    },
+    {
+      "topic": "2.1 Basics Of Functions and Their Graphs",
+      "problem": "Find the domain of $$f(x) = \\frac{x+3}{x^2 - x - 6}$$ and express your answer in interval notation.",
+      "answer": "(-infinity, -2) U (-2, 3) U (3, infinity)",
+      "solution": "**Step 1.** The domain is all real $x$ for which the denominator is defined and nonzero.\n\n**Step 2.** Factor and solve $x^2 - x - 6 = 0$: $$(x - 3)(x + 2) = 0 \\implies x = 3 \\text{ or } x = -2$$\n\n**Step 3.** Exclude $x = -2$ and $x = 3$ from $\\mathbb{R}$.\n\n**Domain:** $(-\\infty,\\,-2)\\cup(-2,\\,3)\\cup(3,\\,\\infty)$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:39:12.179Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -2) U (-2, 3) U (3, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -2) U (-2, 3) U (3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch2-086"
+    }
+  ]
+}

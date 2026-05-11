@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Math Practice — Algebra 2 / Trig Final Review</title>
+  <link rel='stylesheet' href='vendor/katex/katex.min.css'>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+
+  <main id='app'>
+
+    <!-- ============ CHOOSER VIEW ============ -->
+    <section id='chooser-view' class='view'>
+      <header class='hdr'>
+        <span class='hdr-title'>Math Practice</span>
+        <span class='hdr-meta'>Algebra 2 / Trig — Final Review</span>
+      </header>
+      <div class='body'>
+        <h1>Pick a chapter</h1>
+        <p class='sub'>Or jump into a mixed review session</p>
+        <ul id='chapter-list' class='chapter-list'></ul>
+        <button id='btn-mix' class='btn-primary'>🎲  Mix me up</button>
+        <div class='reset-row'>
+          <button id='btn-reset' class='btn-link'>Reset stats</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRACTICE VIEW ============ -->
+    <section id='practice-view' class='view hidden'>
+      <header class='hdr'>
+        <span id='practice-title' class='hdr-title'></span>
+        <span class='hdr-meta'>
+          <span id='session-tally'>Session: 0 / 0 ✓</span>
+          <button id='btn-end' class='btn-link-light'>End session</button>
+        </span>
+      </header>
+      <div class='body'>
+        <div id='problem-card' class='problem-card'>
+          <div id='problem-text' class='math-block'></div>
+        </div>
+        <button id='btn-show' class='btn-secondary'>Show Answer
+          <span class='kbd-hint'>[space]</span>
+        </button>
+
+        <div id='answer-block' class='answer-block hidden'>
+          <div class='answer-label'>Answer</div>
+          <div id='answer-text' class='answer-value math-block'></div>
+          <div id='solution-text' class='solution math-block'></div>
+          <div id='topic-text' class='topic'></div>
+        </div>
+
+        <div id='grade-row' class='grade-row hidden'>
+          <p class='did-you'>Did you get it?</p>
+          <div class='grade-buttons'>
+            <button id='btn-got' class='btn-got'>✓ Got it</button>
+            <button id='btn-missed' class='btn-missed'>✗ Missed it</button>
+          </div>
+          <p class='kbd-row'>[1 / g] for got it · [2 / m] for missed it</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src='vendor/katex/katex.min.js'></script>
+  <script src='vendor/katex/contrib/auto-render.min.js'></script>
+  <script src='app.js' type='module'></script>
+</body>
+</html>

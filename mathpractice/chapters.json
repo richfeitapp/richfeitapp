@@ -1,0 +1,72 @@
+{
+  "ch1": {
+    "title": "Equations and Inequalities",
+    "topics": [
+      "1.1 Graphs and Graphing Utilities",
+      "1.2 Linear and Rational Equations",
+      "1.3 Models and Applications",
+      "1.4 Models and Applications",
+      "1.5 Quadratic Equations",
+      "1.6 Other Types Of Equations",
+      "1.7 Linear Inequalities and Absolute Value Inequalities"
+    ]
+  },
+  "ch2": {
+    "title": "Functions and Graphs",
+    "topics": [
+      "2.1 Basics Of Functions and Their Graphs",
+      "2.2 More On Functions and Their Graphs",
+      "2.3 Linear Functions and Slope",
+      "2.4 More On Slope",
+      "2.5 Transformations Of Functions",
+      "2.6 Combinations Of Functions; Composite Functions",
+      "2.7 Inverse Functions",
+      "2.8 Distance and Midpoint Formulas; Circles"
+    ]
+  },
+  "ch3": {
+    "title": "Polynomial and Rational Functions",
+    "topics": [
+      "3.1 Quadratic Functions",
+      "3.2 Polynomials Functions and Their Graphs",
+      "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "3.4 Zeros Of Polynomial Functions",
+      "3.5 Rational Functions And Their Graphs",
+      "3.6 Polynomial and Rational Inequalities",
+      "3.7 Modeling Using Variation"
+    ]
+  },
+  "ch4": {
+    "title": "Exponential and Logarithmic Functions",
+    "topics": [
+      "4.1 Exponential Functions",
+      "4.2 Logarithmic Functions",
+      "4.3 Properties Of Logarithms",
+      "4.4 Exponential and Logarithmic Equations",
+      "4.5 Exponential Growth and Decay: Modeling Data"
+    ]
+  },
+  "ch5": {
+    "title": "Trigonometric Functions",
+    "comment": "missing section titles for 5.6 and 5.8",
+    "topics": [
+      "5.1 Angles and Radian Measure",
+      "5.2 Right Triangle Trigonometry",
+      "5.3 Trigonometric Functions Of Any Angle",
+      "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "5.5 Graphs Of Sine and Cosine Functions",
+      "5.7 Inverse Trigonometric Functions"
+    ]
+  },
+  "ch8": {
+    "title": "Systems of Equations and Inequalities",
+    "comment": "missing section title for 8.6",
+    "topics": [
+      "8.1 Systems Of Linear Equations In Two Variables",
+      "8.2 Systems Of linear Equations In Three Variables",
+      "8.3 Partial Fractions",
+      "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "8.5 Systems Of Inequalities"
+    ]
+  }
+}

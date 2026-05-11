@@ -1,0 +1,2414 @@
+{
+  "chapter": "ch3",
+  "chapterTitle": "Polynomial and Rational Functions",
+  "problems": [
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 5x^2 - 4x + 3$.",
+      "answer": "-1, 1/2, 3",
+      "solution": "**1. List possible rational zeros** (Rational Zero Theorem):\n$$\\pm\\frac{p}{q} = \\pm 1,\\; \\pm 3,\\; \\pm\\tfrac{1}{2},\\; \\pm\\tfrac{3}{2}\n$$\n\n**2. Test $x = 3$ by synthetic division:**\n$$\\begin{array}{r|rrrr}\n3 & 2 & -5 & -4 & 3 \\\\\\\\\n  &   & 6  &  3 & -3 \\\\\\\\\n\\hline\n  & 2 &  1 & -1 & 0\n\\end{array}$$\nRemainder $= 0$, so $(x - 3)$ is a factor and the reduced polynomial is $2x^2 + x - 1$.\n\n**3. Factor the quadratic:**\n$$2x^2 + x - 1 = (2x - 1)(x + 1)$$\n\n**4. Solve each factor:**\n$$2x - 1 = 0 \\;\\Rightarrow\\; x = \\tfrac{1}{2}, \\qquad x + 1 = 0 \\;\\Rightarrow\\; x = -1$$\n\n**5. All zeros:**\n$$x = -1,\\quad x = \\tfrac{1}{2},\\quad x = 3$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:20:39.560Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-001"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $-2$ is a zero of $f(x) = 2x^3 + 3x^2 - 5x - 6$, use the Factor Theorem and synthetic division to find **all** zeros of $f$.",
+      "answer": "-2, -1, 3/2",
+      "solution": "**1. Apply the Factor Theorem.**\nSince $f(-2) = 0$, the Factor Theorem guarantees $(x + 2)$ is a factor of $f(x)$.\n\n**2. Divide by $(x+2)$ via synthetic division** (use $c = -2$):\n$$\n\\begin{array}{r|rrrr}\n-2 & 2 & 3 & -5 & -6 \\\\\\\\\n   &   & -4 & 2 & 6 \\\\\\\\\n\\hline\n   & 2 & -1 & -3 & 0\n\\end{array}\n$$\nQuotient: $2x^2 - x - 3$, remainder $0$.\n\nSo $f(x) = (x+2)(2x^2 - x - 3)$.\n\n**3. Factor the quadratic.**\n$$2x^2 - x - 3 = (2x - 3)(x + 1)$$\n\n**4. Set each factor equal to zero.**\n$$x + 2 = 0 \\Rightarrow x = -2$$\n$$2x - 3 = 0 \\Rightarrow x = \\tfrac{3}{2}$$\n$$x + 1 = 0 \\Rightarrow x = -1$$\n\nThe zeros of $f$ are $x = -2,\\; -1,\\; \\dfrac{3}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:20:45.526Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, -1, 3/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, -1, 3/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-002"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the rational inequality and express the solution in interval notation:\n$$\\frac{x+1}{x-3} \\geq 2$$",
+      "answer": "(3, 7]",
+      "solution": "1. Move all terms to one side:\n$$\\frac{x+1}{x-3} - 2 \\geq 0$$\n\n2. Combine over a common denominator:\n$$\\frac{x+1 - 2(x-3)}{x-3} \\geq 0 \\implies \\frac{-x+7}{x-3} \\geq 0$$\n\n3. Identify critical values: $x = 7$ (numerator zero) and $x = 3$ (denominator zero, excluded).\n\n4. Test each interval on the number line:\n\n| Interval | $-x+7$ | $x-3$ | Quotient |\n|---|---|---|---|\n| $(-\\infty, 3)$ | $+$ | $-$ | $-$ |\n| $(3, 7)$ | $+$ | $+$ | $+$ ✓ |\n| $(7, \\infty)$ | $-$ | $+$ | $-$ |\n\n5. Check endpoints: $x=7$ gives $0 \\geq 0$ ✓ (include); $x=3$ is undefined (exclude).\n\n6. Solution: $(3,\\, 7]$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:21:19.210Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 7]",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-003"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find all real zeros of $f(x) = 2x^3 + 3x^2 - 8x - 12$.",
+      "answer": "-2, -3/2, 2",
+      "solution": "**Step 1.** Group the terms:\n$$f(x) = (2x^3 + 3x^2) + (-8x - 12)$$\n\n**Step 2.** Factor each group:\n$$= x^2(2x + 3) - 4(2x + 3)$$\n\n**Step 3.** Factor out the common binomial $(2x + 3)$:\n$$= (2x + 3)(x^2 - 4)$$\n\n**Step 4.** Factor the difference of squares:\n$$= (2x + 3)(x - 2)(x + 2)$$\n\n**Step 5.** Set each factor equal to zero:\n$$2x + 3 = 0 \\Rightarrow x = -\\tfrac{3}{2}, \\qquad x - 2 = 0 \\Rightarrow x = 2, \\qquad x + 2 = 0 \\Rightarrow x = -2$$\n\nAll three zeros have multiplicity $1$, so the graph **crosses** the $x$-axis at each: $x = -2,\\ -\\tfrac{3}{2},\\ 2$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:21:28.047Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, -3/2, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, -3/2, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-004"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the maximum value of $f(x) = -2x^2 + 8x - 3$.",
+      "answer": "5",
+      "solution": "1. Since $a = -2 < 0$, the parabola opens downward, so the vertex gives the **maximum**.\n2. Find the $x$-coordinate of the vertex:\n$$x = -\\frac{b}{2a} = -\\frac{8}{2(-2)} = -\\frac{8}{-4} = 2$$\n3. Evaluate $f$ at $x = 2$:\n$$f(2) = -2(2)^2 + 8(2) - 3 = -8 + 16 - 3 = 5$$\n4. The maximum value is $\\boxed{5}$, occurring at the vertex $(2,\\,5)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:21:31.123Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-005"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "For the quadratic function $f(x) = -3x^2 + 12x - 5$, find the maximum value.",
+      "answer": "7",
+      "solution": "**Step 1.** Identify $a = -3$, $b = 12$, $c = -5$. Since $a < 0$ the parabola opens downward, so $f$ has a maximum.\n**Step 2.** The maximum occurs at the vertex; find its $x$-coordinate:\n$$x = -\\\\frac{b}{2a} = -\\\\frac{12}{2(-3)} = 2$$\n**Step 3.** Evaluate $f$ at $x = 2$:\n$$f(2) = -3(2)^2 + 12(2) - 5 = -12 + 24 - 5 = 7$$\nThe maximum value is $7$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:21:56.738Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-006"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find all real zeros of $f(x) = x^3 - 2x^2 - 5x + 6$ and write $f$ in completely factored form.",
+      "answer": "-2, 1, 3",
+      "solution": "**Step 1 — Rational Zero Test candidates:** $\\pm1, \\pm2, \\pm3, \\pm6$.\n\n**Step 2 — Test $x = 1$:**\n$$f(1) = 1 - 2 - 5 + 6 = 0 \\checkmark$$\nSo $(x - 1)$ is a factor.\n\n**Step 3 — Synthetic division by $(x-1)$:**\n$$x^3 - 2x^2 - 5x + 6 = (x-1)(x^2 - x - 6)$$\n\n**Step 4 — Factor the quadratic:**\n$$x^2 - x - 6 = (x-3)(x+2)$$\n\n**Step 5 — Completely factored form and zeros:**\n$$f(x) = (x-1)(x-3)(x+2)$$\nZeros: $x = -2,\\; x = 1,\\; x = 3$ (each with multiplicity 1).",
+      "meta": {
+        "generatedAt": "2026-05-09T19:22:06.032Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1, 3",
+          "confidence": 0.9
+        },
+        "attempts": 1
+      },
+      "id": "ch3-007"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "The rational function $f(x) = \\dfrac{x^2 - x - 12}{x^2 - 16}$ has a removable discontinuity (hole) at one value of $x$ and a vertical asymptote at another. Find the $y$-coordinate of the hole in the graph.",
+      "answer": "7/8",
+      "solution": "Factor the numerator and denominator completely.\n$$f(x) = \\frac{(x-4)(x+3)}{(x-4)(x+4)}$$\nCancel the common factor $(x - 4)$, keeping track of the restriction $x \neq 4$:\n$$f(x) = \\frac{x+3}{x+4}, \\quad x \neq 4$$\nThe cancelled factor produces a hole at $x = 4$; the remaining factor in the denominator, $x + 4 = 0 \\Rightarrow x = -4$, gives the vertical asymptote.\nTo find the $y$-coordinate of the hole, substitute $x = 4$ into the simplified expression:\n$$y = \\frac{4+3}{4+4} = \\frac{7}{8}$$\nThe hole is at the point $\\left(4,\\, \\dfrac{7}{8}\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:22:21.364Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7/8",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7/8",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-008"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 5x^2 - 4x + 3$.",
+      "answer": "-1, 1/2, 3",
+      "solution": "**Step 1.** By the Rational Zero Theorem, possible rational zeros are $\\pm 1,\\, \\pm 3,\\, \\pm\\tfrac{1}{2},\\, \\pm\\tfrac{3}{2}$.\n**Step 2.** Test $x = 3$:\n$$f(3) = 2(27) - 5(9) - 4(3) + 3 = 54 - 45 - 12 + 3 = 0\\checkmark$$\n**Step 3.** Use synthetic division to divide by $(x - 3)$:\n$$\\begin{array}{r|rrrr}3 & 2 & -5 & -4 & 3 \\\\ & & 6 & 3 & -3 \\\\ \\hline & 2 & 1 & -1 & 0\\end{array}$$\nQuotient: $2x^2 + x - 1$.\n**Step 4.** Factor the quotient:\n$$2x^2 + x - 1 = (2x - 1)(x + 1)$$\n**Step 5.** Therefore:\n$$f(x) = (x-3)(2x-1)(x+1)$$\nSetting each factor equal to zero gives $x = -1,\\; x = \\tfrac{1}{2},\\; x = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:22:41.625Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-009"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $x = -2$ is a zero of $f(x) = 2x^3 - 3x^2 - 11x + 6$, use synthetic division and the Factor Theorem to factor $f$ completely, then state all zeros of $f$.",
+      "answer": "-2, 1/2, 3",
+      "solution": "1. By the Factor Theorem, since $x = -2$ is a zero, $(x + 2)$ is a factor. Apply synthetic division with $c = -2$:\n$$\\begin{array}{r|rrrr}-2 & 2 & -3 & -11 & 6 \\\\& & -4 & 14 & -6 \\\\\\hline& 2 & -7 & 3 & 0\\end{array}$$\n2. The remainder is $0$ (confirming the Factor Theorem), and the quotient is $2x^2 - 7x + 3$, so:\n$$f(x) = (x + 2)(2x^2 - 7x + 3)$$\n3. Factor the quadratic by finding two numbers with product $2 \\cdot 3 = 6$ and sum $-7$: those are $-6$ and $-1$.\n$$2x^2 - 7x + 3 = 2x^2 - 6x - x + 3 = 2x(x-3) - 1(x-3) = (2x-1)(x-3)$$\n4. The complete factorization is:\n$$f(x) = (x+2)(2x-1)(x-3)$$\n5. Setting each factor equal to zero: $x + 2 = 0 \\Rightarrow x = -2$; $\\;2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}$; $\\;x - 3 = 0 \\Rightarrow x = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:22:42.330Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-010"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "The wind force $F$ on a vertical sail varies jointly as the sail's area $A$ and the square of the wind speed $v$. A sail with area 40 square feet in a 15 mph wind experiences a force of 900 pounds. Find the force (in pounds) on a sail with area 60 square feet in a 20 mph wind.",
+      "answer": "2400",
+      "solution": "1. Since $F$ varies jointly as $A$ and $v^2$, write the model: $F = kAv^2$\n2. Substitute the known values $A = 40$, $v = 15$, $F = 900$:\n$$900 = k(40)(15)^2 = k(40)(225) = 9000k$$\n3. Solve for $k$:\n$$k = \\frac{900}{9000} = \\frac{1}{10}$$\n4. The variation model is $F = \\dfrac{1}{10}Av^2$.\n5. Substitute $A = 60$, $v = 20$:\n$$F = \\frac{1}{10}(60)(20)^2 = \\frac{1}{10}(60)(400) = 2400 \\text{ pounds}$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:22:46.931Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2400",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2400",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-011"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "The resistance $R$ (in ohms) of a wire varies directly as its length $L$ (in meters) and inversely as the square of its diameter $d$ (in centimeters). A wire that is 100 meters long with a diameter of 0.5 cm has a resistance of 25 ohms. Find the resistance of a wire that is 200 meters long with a diameter of 0.25 cm.",
+      "answer": "200",
+      "solution": "**1. Write the combined-variation equation.**\n$$R = \\\\frac{kL}{d^2}$$\n\n**2. Find the constant of variation $k$ using the given data** ($R=25$, $L=100$, $d=0.5$).\n$$25 = \\\\frac{k(100)}{(0.5)^2} = \\\\frac{100k}{0.25} = 400k \\\\implies k = \\\\frac{25}{400} = \\\\frac{1}{16}$$\n\n**3. Write the model.**\n$$R = \\\\frac{L}{16d^2}$$\n\n**4. Evaluate at the new values** ($L=200$, $d=0.25$).\n$$R = \\\\frac{200}{16(0.25)^2} = \\\\frac{200}{16 \\\\cdot 0.0625} = \\\\frac{200}{1} = \\\\boxed{200 \\\\text{ ohms}}$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:23:19.599Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "200",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "200",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-012"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the inequality and write the solution in interval notation: $$\\frac{x^2-x-6}{x-4}\\leq 0$$",
+      "answer": "(-infinity, -2] U [3, 4)",
+      "solution": "**Step 1.** Factor the numerator: $x^2-x-6=(x+2)(x-3)$, giving\n$$\\frac{(x+2)(x-3)}{x-4}\\leq 0.$$\n\n**Step 2.** Identify critical numbers: zeros at $x=-2$ and $x=3$; $x=4$ is excluded (denominator equals zero).\n\n**Step 3.** Sign chart on each interval:\n- $x<-2$: $\\dfrac{(-)(-)}{(-)}=\\dfrac{+}{-}<0\\;$ ✓\n- $-2<x<3$: $\\dfrac{(+)(-)}{(-)}=\\dfrac{-}{-}>0\\;$ ✗\n- $3<x<4$: $\\dfrac{(+)(+)}{(-)}=\\dfrac{+}{-}<0\\;$ ✓\n- $x>4$: $\\dfrac{(+)(+)}{(+)}>0\\;$ ✗\n\n**Step 4.** At $x=-2$ and $x=3$ the expression equals $0$, satisfying $\\leq 0$ (include both). At $x=4$ the expression is undefined (exclude).\n\n**Solution:** $(-\\infty,-2]\\cup[3,4)$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:23:44.744Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -2] U [3, 4)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -2] U [3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-013"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "A ball is thrown upward from the top of a 96-foot cliff with an initial velocity of 16 feet per second. Its height above the ground after $t$ seconds is modeled by $$h(t) = -16t^2 + 16t + 96.$$ Find the maximum height of the ball, in feet.",
+      "answer": "100",
+      "solution": "1. Identify $a = -16$, $b = 16$, $c = 96$. Because $a < 0$ the parabola opens downward, so the vertex gives the maximum.\n2. Time of maximum: $$t = -\\frac{b}{2a} = -\\frac{16}{2(-16)} = \\frac{1}{2} \\text{ second.}$$\n3. Substitute back: $$h\\!\\left(\\tfrac{1}{2}\\right) = -16\\!\\left(\\tfrac{1}{2}\\right)^{\\!2} + 16\\!\\left(\\tfrac{1}{2}\\right) + 96 = -4 + 8 + 96 = 100 \\text{ ft.}$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:23:46.460Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "100",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "100",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-014"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find the vertical asymptote(s) of the rational function $$f(x) = \\frac{2x^2 + 5x - 3}{x^3 - x}$$",
+      "answer": "-1, 0, 1",
+      "solution": "**Step 1:** Factor the denominator:\n$$x^3 - x = x(x^2 - 1) = x(x-1)(x+1)$$\n**Step 2:** Factor the numerator:\n$$2x^2 + 5x - 3 = (2x - 1)(x + 3)$$\n**Step 3:** Check for common factors. The zeros of the numerator are $x = \\tfrac{1}{2}$ and $x = -3$; neither matches any zero of the denominator ($x = 0, \\pm 1$), so there are no holes (removable discontinuities).\n**Step 4:** A vertical asymptote occurs at each zero of the denominator where the numerator is nonzero:\n$$x = -1, \\quad x = 0, \\quad x = 1$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:23:49.346Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 0, 1",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 0, 1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-015"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "A degree-4 polynomial with leading coefficient $3$ has zeros at $x = -2$ (multiplicity $1$), $x = 0$ (multiplicity $2$), and $x = 1$ (multiplicity $1$). Find $f(2)$.",
+      "answer": "48",
+      "solution": "1. The zeros and their multiplicities give the factored form:\n$$f(x) = a(x + 2)\\,x^2(x - 1)$$\n2. Expanding, the leading term is $ax^4$. Since the leading coefficient is $3$, we have $a = 3$.\n3. Therefore $f(x) = 3x^2(x + 2)(x - 1)$.\n4. Evaluate at $x = 2$:\n$$f(2) = 3(2)^2(2 + 2)(2 - 1) = 3 \\cdot 4 \\cdot 4 \\cdot 1 = 48$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:24:21.168Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "48",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "48",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-016"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = x^3 - 2x^2 - 5x + 6$. Use the Rational Zero Theorem to list all possible rational zeros, then determine the exact zeros of $f$.",
+      "answer": "-2, 1, 3",
+      "solution": "**1. List possible rational zeros.**\nBy the Rational Zero Theorem, possible rational zeros are $\\pm\\frac{p}{q}$ where $p \\mid 6$ and $q \\mid 1$:\n$$\\pm1,\\ \\pm2,\\ \\pm3,\\ \\pm6$$\n\n**2. Test $x = 1$.**\n$$f(1) = 1 - 2 - 5 + 6 = 0\\ \\checkmark$$\nSo $(x-1)$ is a factor.\n\n**3. Synthetic division by $(x-1)$.**\n$$\\begin{array}{r|rrrr}1 & 1 & -2 & -5 & 6\\\\& & 1 & -1 & -6\\\\\\hline& 1 & -1 & -6 & 0\\end{array}$$\nQuotient: $x^2 - x - 6$\n\n**4. Factor the quotient.**\n$$x^2 - x - 6 = (x-3)(x+2)$$\n\n**5. Write the complete factorization and state the zeros.**\n$$f(x) = (x-1)(x-3)(x+2)$$\nZeros: $x = -2,\\ 1,\\ 3$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:25:03.429Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-017"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find all $x$-intercepts of $$f(x) = \\frac{x^2 - 5x + 6}{x^2 - 1}.$$",
+      "answer": "2, 3",
+      "solution": "1. Factor the numerator: $x^2 - 5x + 6 = (x-2)(x-3)$.\n2. Factor the denominator: $x^2 - 1 = (x-1)(x+1)$.\n3. No common factors exist between numerator and denominator, so there are no holes — every zero of the numerator is a genuine $x$-intercept.\n4. Set the numerator equal to zero: $(x-2)(x-3)=0 \\Rightarrow x=2$ or $x=3$.\n5. Verify neither value zeros the denominator: at $x=2$, denominator $= 3\neq 0$; at $x=3$, denominator $= 8\neq 0$.\n\nThe $x$-intercepts are $(2,\\,0)$ and $(3,\\,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-09T19:25:06.147Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-018"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $x = 3$ is a zero of $f(x) = 2x^3 - 5x^2 - 4x + 3$, use the Factor Theorem and synthetic division to find **all** zeros of $f(x)$.",
+      "answer": "-1, 1/2, 3",
+      "solution": "**Step 1:** Verify via the Factor Theorem: since $x = 3$ is a zero, evaluate $f(3)$:\n$$f(3) = 2(27) - 5(9) - 4(3) + 3 = 54 - 45 - 12 + 3 = 0$$\nBecause $f(3) = 0$, $(x - 3)$ is a factor.\n\n**Step 2:** Divide $f(x)$ by $(x - 3)$ using synthetic division ($c = 3$):\n$$\\begin{array}{r|rrrr}3 & 2 & -5 & -4 & 3 \\\\ & & 6 & 3 & -3 \\\\ \\hline & 2 & 1 & -1 & 0\\end{array}$$\nQuotient: $2x^2 + x - 1$, remainder $0$.\n\n**Step 3:** Factor the quotient by trial or the $ac$-method:\n$$2x^2 + x - 1 = (2x - 1)(x + 1)$$\n\n**Step 4:** Write the complete linear factorization:\n$$f(x) = (x - 3)(2x - 1)(x + 1)$$\n\n**Step 5:** Set each factor equal to zero:\n$$x - 3 = 0 \\Rightarrow x = 3, \\qquad 2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}, \\qquad x + 1 = 0 \\Rightarrow x = -1$$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:25:12.809Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-019"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the rational inequality and express the solution in interval notation:\n$$\\frac{2x}{x-3} \\geq 4$$",
+      "answer": "(3, 6]",
+      "solution": "1. Move all terms to one side:\n$$\\frac{2x}{x-3} - 4 \\geq 0$$\n\n2. Combine over a common denominator:\n$$\\frac{2x - 4(x-3)}{x-3} \\geq 0$$\n\n3. Simplify the numerator:\n$$\\frac{-2x + 12}{x-3} = \\frac{-2(x-6)}{x-3} \\geq 0$$\n\n4. Find the critical values: the numerator equals $0$ when $x = 6$; the denominator equals $0$ when $x = 3$ (excluded from the domain).\n\n5. Build the sign chart on the intervals $(-\\infty,3)$, $(3,6)$, and $(6,\\infty)$:\n\n| Interval | $-2(x-6)$ | $x-3$ | Quotient |\n|---|---|---|---|\n| $x < 3$ | $+$ | $-$ | $-$ ✗ |\n| $3 < x < 6$ | $+$ | $+$ | $+$ ✓ |\n| $x > 6$ | $-$ | $+$ | $-$ ✗ |\n\n6. Check the endpoints: at $x = 6$ the expression equals $0 \\geq 0$ ✓ (include); at $x = 3$ the expression is undefined ✗ (exclude).\n\n7. Solution: $(3,\\,6]$",
+      "meta": {
+        "generatedAt": "2026-05-09T19:25:22.503Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 6]",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 6]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-020"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 3x^2 - 11x + 6$. List each zero and state its multiplicity.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — List possible rational zeros** (Rational Zero Theorem): factors of 6 over factors of 2.\n\n$$\\pm1,\\; \\pm2,\\; \\pm3,\\; \\pm6,\\; \\pm\\tfrac{1}{2},\\; \\pm\\tfrac{3}{2}$$\n\n**Step 2 — Test $x = 3$ by synthetic division:**\n\n$$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\n\nRemainder is 0, so $x = 3$ is a zero and the depressed polynomial is $2x^2 + 3x - 2$.\n\n**Step 3 — Factor the depressed polynomial:**\n\n$$2x^2 + 3x - 2 = (2x - 1)(x + 2)$$\n\n**Step 4 — Solve each factor:**\n\n$$2x - 1 = 0 \\implies x = \\tfrac{1}{2}, \\qquad x + 2 = 0 \\implies x = -2$$\n\n**Step 5 — Write the complete factored form and state zeros:**\n\n$$f(x) = (x - 3)(2x - 1)(x + 2)$$\n\nThe zeros are $x = -2$, $x = \\tfrac{1}{2}$, and $x = 3$, each with multiplicity 1.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:51:40.699Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-021"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find all real zeros of $f(x) = x^3 - 4x^2 - x + 4$ and state the multiplicity of each.",
+      "answer": "-1, 1, 4",
+      "solution": "Factor by grouping — split the four terms into two pairs:\n$$f(x) = x^2(x - 4) - 1(x - 4) = (x^2 - 1)(x - 4)$$\nFactor the difference of squares:\n$$(x + 1)(x - 1)(x - 4)$$\nSet each linear factor equal to zero:\n$$x + 1 = 0 \\Rightarrow x = -1$$\n$$x - 1 = 0 \\Rightarrow x = 1$$\n$$x - 4 = 0 \\Rightarrow x = 4$$\nEach factor appears exactly once, so all three zeros have multiplicity 1. The graph crosses the $x$-axis at each zero.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:51:46.341Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 1, 4",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 1, 4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-022"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Let $f(x) = 2x^3 - 3x^2 - 11x + 6$. Use the Factor Theorem to confirm that $x = 3$ is a zero of $f$, then use synthetic division to factor $f(x)$ completely and state all zeros.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — Apply the Factor Theorem.**\nEvaluate $f(3)$: $$f(3) = 2(3)^3 - 3(3)^2 - 11(3) + 6 = 54 - 27 - 33 + 6 = 0$$\nSince $f(3) = 0$, the Factor Theorem guarantees $(x - 3)$ is a factor.\n\n**Step 2 — Synthetic division by $(x-3)$.**\n$$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\nSo $f(x) = (x - 3)(2x^2 + 3x - 2)$.\n\n**Step 3 — Factor the quotient.**\n$$2x^2 + 3x - 2 = (2x - 1)(x + 2)$$\nThus $f(x) = (x - 3)(2x - 1)(x + 2)$.\n\n**Step 4 — State the zeros.**\nSetting each factor to zero: $x = 3$, $x = \\dfrac{1}{2}$, $x = -2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:51:51.369Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-023"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the maximum value of the function $f(x) = -2x^2 + 8x - 3$.",
+      "answer": "5",
+      "solution": "Since $a = -2 < 0$, the parabola opens downward, so $f$ has a maximum value at its vertex.\n\nFind the $x$-coordinate of the vertex: $$x = -\\frac{b}{2a} = -\\frac{8}{2(-2)} = 2$$\n\nEvaluate $f$ at $x = 2$: $$f(2) = -2(2)^2 + 8(2) - 3 = -8 + 16 - 3 = 5$$\n\nThe maximum value of $f$ is $5$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:52:06.025Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-024"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the rational inequality and express the solution set in interval notation: $$\\frac{x+2}{x-3} \\leq 0$$",
+      "answer": "[-2, 3)",
+      "solution": "1. Find critical values by setting numerator and denominator each equal to zero:\n   - Numerator: $x + 2 = 0 \\Rightarrow x = -2$\n   - Denominator: $x - 3 = 0 \\Rightarrow x = 3$\n\n2. These values divide the number line into three intervals: $(-\\infty, -2)$, $(-2, 3)$, and $(3, \\infty)$.\n\n3. Test a value from each interval in $\\dfrac{x+2}{x-3}$:\n   - $(-\\infty, -2)$: $x = -3 \\Rightarrow \\dfrac{-1}{-6} = \\tfrac{1}{6} > 0$ — fails $\\leq 0$.\n   - $(-2,\\; 3)$: $x = 0 \\Rightarrow \\dfrac{2}{-3} = -\\tfrac{2}{3} < 0$ — satisfies $\\leq 0$.\n   - $(3, \\infty)$: $x = 4 \\Rightarrow \\dfrac{6}{1} = 6 > 0$ — fails $\\leq 0$.\n\n4. Check endpoints:\n   - $x = -2$: expression equals $0$, which satisfies $\\leq 0$; **include**.\n   - $x = 3$: expression is undefined; **exclude**.\n\n5. Solution set: $[-2,\\; 3)$",
+      "meta": {
+        "generatedAt": "2026-05-10T15:52:32.937Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-025"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the maximum value of $f(x) = -2x^2 + 8x - 3$ by rewriting it in vertex form.",
+      "answer": "5",
+      "solution": "Complete the square. Factor $-2$ from the variable terms:\n\n$$f(x) = -2(x^2 - 4x) - 3$$\n\nAdd and subtract $\\left(\\dfrac{-4}{2}\\right)^2 = 4$ inside the parentheses:\n\n$$= -2(x^2 - 4x + 4 - 4) - 3$$\n\n$$= -2(x^2 - 4x + 4) + (-2)(-4) - 3$$\n\n$$= -2(x - 2)^2 + 8 - 3$$\n\n$$= -2(x - 2)^2 + 5$$\n\nThe vertex is $(2,\\ 5)$. Since $a = -2 < 0$ the parabola opens downward, so the vertex is a maximum. The maximum value is $f(2) = \\mathbf{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:52:34.290Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-026"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "The load $L$ a horizontal beam can support varies jointly as its width $w$ and the square of its depth $d$, and inversely as its length $\\ell$. A beam that is 3 inches wide, 4 inches deep, and 6 feet long supports 800 pounds. Find the load (in pounds) supported by a beam that is 4 inches wide, 6 inches deep, and 12 feet long.",
+      "answer": "1200",
+      "solution": "**Step 1 — Write the variation model.**\n\n$$L = \\frac{k\\,w\\,d^2}{\\ell}$$\n\n**Step 2 — Find the constant of variation $k$ using the given beam.**\n\nSubstitute $L=800$, $w=3$, $d=4$, $\\ell=6$:\n\n$$800 = \\frac{k \\cdot 3 \\cdot 4^2}{6} = \\frac{48k}{6} = 8k \\implies k = 100$$\n\n**Step 3 — Write the specific model.**\n\n$$L = \\frac{100\\,w\\,d^2}{\\ell}$$\n\n**Step 4 — Evaluate for the new beam** ($w=4$, $d=6$, $\\ell=12$).\n\n$$L = \\frac{100 \\cdot 4 \\cdot 6^2}{12} = \\frac{100 \\cdot 4 \\cdot 36}{12} = \\frac{14400}{12} = \\boxed{1200} \\text{ pounds}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T15:53:07.195Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1200",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1200",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-027"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find the slant asymptote of $$f(x) = \\frac{x^2 - 4}{x - 3}$$",
+      "answer": "y = x + 3",
+      "solution": "**1.** Since the degree of the numerator (2) exceeds the degree of the denominator (1) by exactly 1, a slant asymptote exists.\n\n**2.** Perform polynomial long division of $x^2 - 4$ by $x - 3$:\n- $x^2 \\div x = x$; $\\quad x(x-3) = x^2 - 3x$; subtract to get $3x - 4$\n- $3x \\div x = 3$; $\\quad 3(x-3) = 3x - 9$; subtract to get remainder $5$\n\nSo $f(x) = x + 3 + \\dfrac{5}{x-3}$.\n\n**3.** As $x \\to \\pm\\infty$, the remainder term $\\dfrac{5}{x-3} \\to 0$.\n\nThe slant asymptote is $y = x + 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:53:14.990Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = x + 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = x + 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-028"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $x = 3$ is a zero of $f(x) = 2x^3 - 3x^2 - 11x + 6$, use the Factor Theorem and synthetic division to factor $f(x)$ completely, then state all zeros.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**1.** By the Factor Theorem, $x = 3$ is a zero $\\Rightarrow$ $(x-3)$ is a factor. Divide synthetically by 3: $$\\begin{array}{r|rrrr}3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\\\hline & 2 & 3 & -2 & 0\\end{array}$$\n**2.** The remainder is 0, confirming $(x-3)$ is a factor. The quotient is $2x^2+3x-2$, so $$f(x)=(x-3)(2x^2+3x-2).$$\n**3.** Factor the trinomial by finding factors of $2(-2)=-4$ that sum to $3$: use $4$ and $-1$. $$2x^2+3x-2=2x^2+4x-x-2=2x(x+2)-1(x+2)=(2x-1)(x+2).$$\n**4.** Complete factored form: $$f(x)=(x-3)(2x-1)(x+2).$$ Setting each factor to zero gives the zeros $x=-2,\\ x=\\dfrac{1}{2},\\ x=3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:53:41.717Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-029"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - x^2 - 13x - 6$. Use the Rational Zero Theorem to list candidates, identify one rational zero by testing, then factor completely to find all zeros.",
+      "answer": "-2, -1/2, 3",
+      "solution": "**Step 1 — List candidates via the Rational Zero Theorem.**  Possible rational zeros have the form $\\pm\\dfrac{p}{q}$ where $p \\mid 6$ and $q \\mid 2$: $$\\pm1,\\ \\pm2,\\ \\pm3,\\ \\pm6,\\ \\pm\\tfrac{1}{2},\\ \\pm\\tfrac{3}{2}$$\n\n**Step 2 — Test $x = -2$ by synthetic division.** $$\\begin{array}{r|rrrr} -2 & 2 & -1 & -13 & -6 \\\\ & & -4 & 10 & 6 \\\\ \\hline & 2 & -5 & -3 & 0 \\end{array}$$ Remainder is $0$, so $(x+2)$ is a factor and the depressed quotient is $2x^2 - 5x - 3$.\n\n**Step 3 — Factor the quadratic.** $$2x^2 - 5x - 3 = (2x + 1)(x - 3)$$\n\n**Step 4 — Write the complete factored form and state all zeros.** $$f(x) = (x+2)(2x+1)(x-3)$$ Setting each factor equal to zero: $x = -2,\\quad x = -\\tfrac{1}{2},\\quad x = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:53:44.792Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, -1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, -1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-030"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "Suppose $y$ varies jointly as $x$ and the square of $z$, and inversely as $w$. If $y = 27$ when $x = 2$, $z = 3$, and $w = 4$, find $y$ when $x = 5$, $z = 2$, and $w = 10$.",
+      "answer": "12",
+      "solution": "**Step 1 — Write the general variation equation.**\n\n$$y = \\frac{k x z^2}{w}$$\n\n**Step 2 — Find the constant of variation $k$ using the given values** $y=27,\\, x=2,\\, z=3,\\, w=4$:\n\n$$27 = \\frac{k(2)(3^2)}{4} = \\frac{18k}{4} = \\frac{9k}{2}$$\n\n$$k = \\frac{27 \\cdot 2}{9} = 6$$\n\n**Step 3 — Write the specific equation.**\n\n$$y = \\frac{6xz^2}{w}$$\n\n**Step 4 — Substitute** $x=5,\\, z=2,\\, w=10$:\n\n$$y = \\frac{6(5)(2^2)}{10} = \\frac{6 \\cdot 5 \\cdot 4}{10} = \\frac{120}{10} = 12$$",
+      "meta": {
+        "generatedAt": "2026-05-10T15:54:15.210Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-031"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the polynomial inequality and express the solution in interval notation: $$x^3 - 4x^2 - 4x + 16 > 0$$",
+      "answer": "(-2, 2) U (4, infinity)",
+      "solution": "**Step 1: Factor by grouping.**\n$$x^3 - 4x^2 - 4x + 16 = x^2(x-4) - 4(x-4) = (x^2-4)(x-4) = (x-2)(x+2)(x-4)$$\n\n**Step 2: Identify boundary points** (zeros of the left side): $x = -2,\\ x = 2,\\ x = 4$.\n\n**Step 3: Sign chart.** The boundary points divide the number line into four intervals:\n\n| Interval | Test value | $(x-2)$ | $(x+2)$ | $(x-4)$ | Product | $> 0$? |\n|---|---|---|---|---|---|---|\n| $(-\\infty,-2)$ | $-3$ | $-$ | $-$ | $-$ | $-$ | No |\n| $(-2,2)$ | $0$ | $-$ | $+$ | $-$ | $+$ | **Yes** |\n| $(2,4)$ | $3$ | $+$ | $+$ | $-$ | $-$ | No |\n| $(4,\\infty)$ | $5$ | $+$ | $+$ | $+$ | $+$ | **Yes** |\n\n**Step 4: Strict inequality**, so exclude the boundary points.\n\n$$\\boxed{(-2,\\ 2)\\ \\cup\\ (4,\\ \\infty)}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T15:54:21.840Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 2) U (4, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 2) U (4, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-032"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the minimum value of $f(x) = 2x^2 - 8x + 3$ by rewriting it in vertex form $f(x) = a(x - h)^2 + k$.",
+      "answer": "-5",
+      "solution": "**Step 1.** Factor $a = 2$ from the variable terms: $$f(x) = 2(x^2 - 4x) + 3$$\n\n**Step 2.** Complete the square inside the parentheses. Take half the coefficient of $x$: $\\frac{-4}{2} = -2$, then square it: $(-2)^2 = 4$. Add and subtract 4 inside: $$f(x) = 2(x^2 - 4x + 4 - 4) + 3$$\n\n**Step 3.** Regroup: $$f(x) = 2(x^2 - 4x + 4) + 2(-4) + 3 = 2(x - 2)^2 - 8 + 3 = 2(x-2)^2 - 5$$\n\n**Step 4.** Identify the vertex. With $h = 2$ and $k = -5$, the vertex is $(2,\\,-5)$.\n\n**Step 5.** Since $a = 2 > 0$, the parabola opens upward, so the vertex is a **minimum**. The minimum value is $\\boxed{-5}$, occurring at $x = 2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:54:44.555Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-033"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find the equation of the slant (oblique) asymptote of $$f(x) = \\frac{x^2 + 4x + 1}{x + 2}$$",
+      "answer": "y = x + 2",
+      "solution": "The numerator has degree 2 and the denominator has degree 1, so the degree difference is 1 — a slant asymptote exists.\n\nPerform polynomial long division of $x^2+4x+1$ by $x+2$:\n\n$$x^2 + 4x + 1 \\div (x+2)$$\n\n**Step 1:** $x^2 \\div x = x$. Multiply: $x(x+2) = x^2+2x$. Subtract: $(x^2+4x+1)-(x^2+2x) = 2x+1$.\n\n**Step 2:** $2x \\div x = 2$. Multiply: $2(x+2) = 2x+4$. Subtract: $(2x+1)-(2x+4) = -3$.\n\nSo: $$f(x) = x + 2 + \\frac{-3}{x+2}$$\n\nAs $x \\to \\pm\\infty$, the remainder $\\dfrac{-3}{x+2} \\to 0$, so the slant asymptote is $y = x+2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:54:56.074Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = x + 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = x + 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-034"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "A polynomial function $f$ has a positive leading coefficient. Its graph crosses the $x$-axis at $x = -1$ and $x = 5$, and touches (but does not cross) the $x$-axis at $x = 2$. What is the minimum possible degree of $f$?",
+      "answer": "4",
+      "solution": "A zero where the graph **crosses** the $x$-axis has odd multiplicity; the smallest odd multiplicity is 1. A zero where the graph **touches** the $x$-axis and turns back has even multiplicity; the smallest even multiplicity is 2.\n\nAssign the minimum multiplicity to each zero:\n- $x = -1$: crosses $\\Rightarrow$ multiplicity $1$\n- $x = 5$: crosses $\\Rightarrow$ multiplicity $1$\n- $x = 2$: touches $\\Rightarrow$ multiplicity $2$\n\nMinimum degree $= 1 + 1 + 2 = \\boxed{4}$\n\nA concrete example satisfying all conditions is $$f(x) = (x+1)(x-2)^2(x-5),$$ which has a positive leading coefficient and exactly the described intercept behavior.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:55:22.646Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-035"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $$f(x) = 2x^3 - 3x^2 - 11x + 6$$",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — Rational Zero Theorem:** Possible rational zeros are factors of $6$ over factors of $2$: $\\pm1, \\pm2, \\pm3, \\pm6, \\pm\\frac{1}{2}, \\pm\\frac{3}{2}$.\n\n**Step 2 — Test $x = 3$:** $$f(3) = 2(27) - 3(9) - 11(3) + 6 = 54 - 27 - 33 + 6 = 0 \\checkmark$$\n\n**Step 3 — Synthetic division by $(x - 3)$:** $$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\n\nDepressed polynomial: $2x^2 + 3x - 2$.\n\n**Step 4 — Factor the depressed polynomial:** $$2x^2 + 3x - 2 = (2x - 1)(x + 2)$$\n\n**Step 5 — Solve each factor:** $$2x - 1 = 0 \\implies x = \\tfrac{1}{2} \\qquad x + 2 = 0 \\implies x = -2$$\n\nThe three zeros are $x = -2,\\ \\tfrac{1}{2},\\ 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:55:53.693Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-036"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find the equation of the oblique (slant) asymptote of $$f(x) = \\frac{x^2 - 4x + 3}{x - 2}$$",
+      "answer": "y = x - 2",
+      "solution": "**Step 1:** Compare degrees. The numerator has degree 2 and the denominator has degree 1. Because the numerator's degree exceeds the denominator's by exactly 1, a slant (oblique) asymptote exists; find it via polynomial long division.\n\n**Step 2:** Divide $x^2 - 4x + 3$ by $x - 2$:\n$$x^2 - 4x + 3 = (x - 2)(x - 2) + (-1)$$\nso\n$$f(x) = x - 2 + \\frac{-1}{x - 2}.$$\n\n**Step 3:** As $x \\to \\pm\\infty$, the remainder term $\\dfrac{-1}{x-2} \\to 0$. The graph approaches the line $y = x - 2$.\n\nThe slant asymptote is $y = x - 2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:56:29.597Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = x - 2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = x - 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-037"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $(x - 2)$ is a factor of $f(x) = 2x^3 - 3x^2 - 8x + 12$, use synthetic division to find all remaining factors and determine all real zeros of $f$.",
+      "answer": "-2, 3/2, 2",
+      "solution": "**Step 1.** By the Factor Theorem, $(x - 2)$ is a factor, so divide using synthetic division with $c = 2$: $$\\begin{array}{r|rrrr} 2 & 2 & -3 & -8 & 12 \\\\ & & 4 & 2 & -12 \\\\ \\hline & 2 & 1 & -6 & 0 \\end{array}$$\n\nThe remainder is $0$ (confirming the factor) and the depressed polynomial is $2x^2 + x - 6$.\n\n**Step 2.** Factor the depressed polynomial: $$2x^2 + x - 6 = (2x - 3)(x + 2)$$\n\n**Step 3.** Write the complete factorization: $$f(x) = (x - 2)(2x - 3)(x + 2)$$\n\n**Step 4.** Set each factor equal to zero:\n\n$x - 2 = 0 \\Rightarrow x = 2$\n\n$2x - 3 = 0 \\Rightarrow x = \\tfrac{3}{2}$\n\n$x + 2 = 0 \\Rightarrow x = -2$\n\nThe real zeros are $x = -2,\\ \\tfrac{3}{2},\\ 2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T15:56:30.993Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 3/2, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 3/2, 2",
+          "confidence": 0.9
+        },
+        "attempts": 2
+      },
+      "id": "ch3-038"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the rational inequality: $$\\frac{x-1}{x+2} < 2$$",
+      "answer": "(-infinity, -5) U (-2, infinity)",
+      "solution": "**Step 1.** Move all terms to one side:\n$$\\frac{x-1}{x+2} - 2 < 0$$\n\n**Step 2.** Combine into a single fraction:\n$$\\frac{x-1 - 2(x+2)}{x+2} < 0 \\implies \\frac{-x-5}{x+2} < 0$$\n\n**Step 3.** Find critical values — set numerator and denominator each equal to zero:\n- Numerator: $-x - 5 = 0 \\Rightarrow x = -5$\n- Denominator: $x + 2 = 0 \\Rightarrow x = -2$ (excluded from domain)\n\n**Step 4.** Test one value from each interval on the number line $(\\text{split at } x=-5 \\text{ and } x=-2)$:\n\n| Interval | Test value | Sign of $\\dfrac{-x-5}{x+2}$ | Satisfies $< 0$? |\n|---|---|---|---|\n| $(-\\infty, -5)$ | $x=-6$ | $\\dfrac{1}{-4} < 0$ | Yes |\n| $(-5,\\,-2)$ | $x=-3$ | $\\dfrac{-2}{-1} > 0$ | No |\n| $(-2,\\,\\infty)$ | $x=0$ | $\\dfrac{-5}{2} < 0$ | Yes |\n\n**Step 5.** Since the inequality is strict ($<$), exclude the critical values. The solution set is:\n$$(-\\infty,\\,-5)\\cup(-2,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-10T15:56:39.492Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -5) U (-2, infinity)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -5) U (-2, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-039"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the minimum value of $f(x) = 3x^2 - 12x + 7$.",
+      "answer": "-5",
+      "solution": "**Step 1.** Since $a = 3 > 0$, the parabola opens upward, so the vertex yields a minimum.\n\n**Step 2.** Find the $x$-coordinate of the vertex: $$x = -\\frac{b}{2a} = -\\frac{-12}{2(3)} = \\frac{12}{6} = 2$$\n\n**Step 3.** Evaluate $f$ at the vertex: $$f(2) = 3(2)^2 - 12(2) + 7 = 12 - 24 + 7 = -5$$\n\n**Step 4.** The minimum value of $f$ is $-5$.",
+      "meta": {
+        "generatedAt": "2026-05-10T16:58:16.017Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-040"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - x^2 - 13x - 6$.",
+      "answer": "-2, -1/2, 3",
+      "solution": "**Step 1 — List candidates (Rational Zero Theorem).** Possible rational zeros are $\\pm\\frac{p}{q}$ where $p \\mid 6$ and $q \\mid 2$: $$\\pm1,\\ \\pm2,\\ \\pm3,\\ \\pm6,\\ \\pm\\tfrac{1}{2},\\ \\pm\\tfrac{3}{2}$$\n\n**Step 2 — Test $x = -2$ by synthetic division.** $$\\begin{array}{r|rrrr} -2 & 2 & -1 & -13 & -6 \\\\ & & -4 & 10 & 6 \\\\ \\hline & 2 & -5 & -3 & 0 \\end{array}$$ Remainder $= 0$, so $x = -2$ is a zero. The depressed polynomial is $2x^2 - 5x - 3$.\n\n**Step 3 — Factor the quadratic.** $$2x^2 - 5x - 3 = (2x + 1)(x - 3)$$ Setting each factor equal to zero gives $x = -\\tfrac{1}{2}$ and $x = 3$.\n\n**Step 4 — State all zeros.** $$x = -2,\\quad x = -\\tfrac{1}{2},\\quad x = 3$$",
+      "meta": {
+        "generatedAt": "2026-05-10T16:58:21.385Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, -1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, -1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-041"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $x = 3$ is a zero of $p(x) = 2x^3 - 3x^2 - 11x + 6$, use the Factor Theorem and synthetic division to find all zeros of $p(x)$, then write $p(x)$ as a product of linear factors.",
+      "answer": "-2, 1/2, 3",
+      "solution": "1. By the Factor Theorem, $x = 3$ is a zero $\\Rightarrow$ $(x-3)$ is a factor. Divide synthetically:\n$$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\n2. Remainder is $0$ (confirming $x=3$ is a zero). Quotient: $2x^2+3x-2$, so $p(x)=(x-3)(2x^2+3x-2)$.\n3. Factor the quadratic: $2x^2+3x-2=(2x-1)(x+2)$.\n4. Complete factorization: $p(x)=(x-3)(2x-1)(x+2)$.\n5. Set each factor to zero: $x-3=0\\Rightarrow x=3$; $\\;2x-1=0\\Rightarrow x=\\tfrac{1}{2}$; $\\;x+2=0\\Rightarrow x=-2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T16:58:27.270Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.8
+        },
+        "attempts": 1
+      },
+      "id": "ch3-042"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = x^3 - 2x^2 - 5x + 6$ using the Rational Zero Theorem. List all zeros.",
+      "answer": "-2, 1, 3",
+      "solution": "**Step 1 — List possible rational zeros.**\nBy the Rational Zero Theorem, possible rational zeros are $\\pm\\frac{p}{q}$ where $p \\mid 6$ and $q \\mid 1$:\n$$\\pm1,\\ \\pm2,\\ \\pm3,\\ \\pm6$$\n\n**Step 2 — Test candidates.**\nTest $x = 1$:\n$$f(1) = 1 - 2 - 5 + 6 = 0\\ \\checkmark$$\nSo $(x - 1)$ is a factor.\n\n**Step 3 — Divide out the known factor.**\nUsing synthetic division with $x = 1$:\n$$\\begin{array}{r|rrrr} 1 & 1 & -2 & -5 & 6 \\\\ & & 1 & -1 & -6 \\\\ \\hline & 1 & -1 & -6 & 0 \\end{array}$$\n$$f(x) = (x-1)(x^2 - x - 6)$$\n\n**Step 4 — Factor the quotient.**\n$$x^2 - x - 6 = (x-3)(x+2)$$\n\n**Step 5 — State all zeros.**\n$$f(x) = (x-1)(x-3)(x+2)$$\nThe zeros are $x = -2,\\ 1,\\ 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T17:10:11.721Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-043"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find all real zeros of $f(x) = x^3 - 2x^2 - 5x + 6$ and state the multiplicity of each zero.",
+      "answer": "-2, 1, 3",
+      "solution": "1. By the Rational Zero Theorem, possible rational zeros are $\\pm 1, \\pm 2, \\pm 3, \\pm 6$.\n\n2. Test $x = 1$: $$f(1) = 1 - 2 - 5 + 6 = 0$$ So $(x - 1)$ is a factor.\n\n3. Divide by $(x - 1)$ via synthetic division: $$x^3 - 2x^2 - 5x + 6 = (x - 1)(x^2 - x - 6)$$\n\n4. Factor the depressed quadratic: $$x^2 - x - 6 = (x - 3)(x + 2)$$\n\n5. Therefore $f(x) = (x + 2)(x - 1)(x - 3)$. Each factor is linear and appears once, so all three zeros have multiplicity 1: $x = -2,\\ 1,\\ 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:47:13.194Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1, 3",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1, 3",
+          "confidence": 0.9
+        },
+        "attempts": 1
+      },
+      "id": "ch3-044"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Use synthetic division to divide $f(x) = 2x^3 - 3x^2 - 8x + 12$ by $(x - 2)$. Then use the Factor Theorem and the resulting quotient to find all zeros of $f$.",
+      "answer": "-2, 3/2, 2",
+      "solution": "**Step 1 — Synthetic division by $c = 2$:**\n\n$$\\begin{array}{r|rrrr} 2 & 2 & -3 & -8 & 12 \\\\ & & 4 & 2 & -12 \\\\ \\hline & 2 & 1 & -6 & 0 \\end{array}$$\n\nThe remainder is $0$, so by the Factor Theorem $(x - 2)$ is a factor, and the quotient is $2x^2 + x - 6$.\n\n**Step 2 — Write the factored form:**\n\n$$f(x) = (x - 2)(2x^2 + x - 6)$$\n\n**Step 3 — Factor the quadratic:**\n\n$$2x^2 + x - 6 = (2x - 3)(x + 2)$$\n\n**Step 4 — Complete factorization:**\n\n$$f(x) = (x - 2)(2x - 3)(x + 2)$$\n\n**Step 5 — Solve for zeros:** Set each factor equal to zero:\n\n$$x - 2 = 0 \\implies x = 2, \\qquad 2x - 3 = 0 \\implies x = \\tfrac{3}{2}, \\qquad x + 2 = 0 \\implies x = -2$$\n\nThe zeros of $f$ are $x = -2,\\; \\dfrac{3}{2},\\; 2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:47:17.871Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 3/2, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 3/2, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-045"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 5x^2 - 4x + 3$.",
+      "answer": "-1, 1/2, 3",
+      "solution": "**1. List possible rational zeros** (Rational Zero Theorem): factors of 3 over factors of 2, so $$\\pm1,\\; \\pm3,\\; \\pm\\tfrac{1}{2},\\; \\pm\\tfrac{3}{2}.$$\n\n**2. Test $x = 3$** by synthetic division: $$\\begin{array}{r|rrrr} 3 & 2 & -5 & -4 & 3 \\\\ & & 6 & 3 & -3 \\\\ \\hline & 2 & 1 & -1 & 0 \\end{array}$$ Remainder $= 0$, so $x = 3$ is a zero and $f(x) = (x - 3)(2x^2 + x - 1)$.\n\n**3. Factor the quotient:** $$2x^2 + x - 1 = (2x - 1)(x + 1).$$\n\n**4. Solve each factor:** $2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}$; $\\quad x + 1 = 0 \\Rightarrow x = -1$.\n\nThe zeros are $x = -1,\\; \\dfrac{1}{2},\\; 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:47:45.872Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-046"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "The rational function $$f(x) = \\frac{x^2 + x - 12}{x^2 - 2x - 3}$$ has a removable discontinuity (a hole in its graph). Find the $y$-coordinate of the hole.",
+      "answer": "7/4",
+      "solution": "**Step 1 — Factor the numerator:**\n$$x^2 + x - 12 = (x + 4)(x - 3)$$\n\n**Step 2 — Factor the denominator:**\n$$x^2 - 2x - 3 = (x - 3)(x + 1)$$\n\n**Step 3 — Identify and cancel the common factor:**\n$$f(x) = \\frac{(x+4)(x-3)}{(x-3)(x+1)} = \\frac{x+4}{x+1}, \\quad x \\neq 3$$\n\nThe factor $(x - 3)$ cancels, producing a hole at $x = 3$ rather than a vertical asymptote.\n\n**Step 4 — Find the $y$-coordinate by substituting $x = 3$ into the simplified expression:**\n$$y = \\frac{3 + 4}{3 + 1} = \\frac{7}{4}$$\n\nThe hole is located at $\\left(3,\\ \\dfrac{7}{4}\\right)$, so the $y$-coordinate is $\\dfrac{7}{4}$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:11.578Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-047"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the polynomial inequality and express the solution set in interval notation: $$x^3 - x^2 - 6x > 0$$",
+      "answer": "(-2, 0) U (3, infinity)",
+      "solution": "Step 1 — Factor the left side completely.\n$$x^3 - x^2 - 6x = x(x^2 - x - 6) = x(x+2)(x-3)$$\n\nStep 2 — Find the boundary points (real zeros of the factored form): $x = -2,\\ x = 0,\\ x = 3$.\n\nStep 3 — Test each interval created by the boundary points. The sign of the product $x(x+2)(x-3)$ in each interval:\n\n- $(-\\infty,-2)$, test $x = -3$: $(-3)(-1)(-6) = -18 < 0$ ✗\n- $(-2,\\ 0)$, test $x = -1$: $(-1)(1)(-4) = 4 > 0$ ✓\n- $(0,\\ 3)$, test $x = 1$: $(1)(3)(-2) = -6 < 0$ ✗\n- $(3,\\ \\infty)$, test $x = 4$: $(4)(6)(1) = 24 > 0$ ✓\n\nStep 4 — The inequality is strict ($> 0$), so the boundary points are excluded.\n$$\\text{Solution: }(-2,\\,0)\\cup(3,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:13.369Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 0) U (3, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 0) U (3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-048"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "A ball is thrown upward from the top of a 48-foot building with an initial velocity of 32 feet per second. Its height above the ground (in feet) $t$ seconds after it is thrown is modeled by $$h(t) = -16t^2 + 32t + 48$$ Find the maximum height the ball reaches above the ground.",
+      "answer": "64",
+      "solution": "Because $a = -16 < 0$, the parabola opens downward and the vertex gives the maximum.\n\n**Step 1 — Find the vertex's $t$-coordinate.** $$t = -\\frac{b}{2a} = -\\frac{32}{2(-16)} = 1$$\n\n**Step 2 — Evaluate $h(1)$.** $$h(1) = -16(1)^2 + 32(1) + 48 = -16 + 32 + 48 = 64$$\n\nThe maximum height is $\\boxed{64}$ feet, reached 1 second after the ball is thrown.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:15.314Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "64",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "64",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-049"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "Suppose $y$ varies jointly as $x$ and the square of $z$, and inversely as $w$. If $y = 12$ when $x = 2$, $z = 3$, and $w = 6$, find $y$ when $x = 5$, $z = 2$, and $w = 4$.",
+      "answer": "20",
+      "solution": "**Step 1 — Write the variation model.**\n\n$$y = \\frac{k x z^2}{w}$$\n\n**Step 2 — Find the constant of variation $k$ using the given values** $y=12,\\ x=2,\\ z=3,\\ w=6$:\n\n$$12 = \\frac{k(2)(3)^2}{6} = \\frac{18k}{6} = 3k \\implies k = 4$$\n\n**Step 3 — State the specific model.**\n\n$$y = \\frac{4xz^2}{w}$$\n\n**Step 4 — Substitute** $x=5,\\ z=2,\\ w=4$:\n\n$$y = \\frac{4(5)(2)^2}{4} = \\frac{4 \\cdot 5 \\cdot 4}{4} = 20$$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:22.011Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "20",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "20",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-050"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $-2$ is a zero of $f(x) = 2x^3 + x^2 - 8x - 4$, use synthetic division and the Factor Theorem to find **all** zeros of $f$.",
+      "answer": "-2, -1/2, 2",
+      "solution": "**Step 1 — Synthetic division by $(x + 2)$, i.e., $c = -2$:**\n\n$$\\begin{array}{r|rrrr} -2 & 2 & 1 & -8 & -4 \\\\ & & -4 & 6 & 4 \\\\ \\hline & 2 & -3 & -2 & 0 \\end{array}$$\n\nRemainder $= 0$ confirms $x = -2$ is a zero; quotient is $2x^2 - 3x - 2$.\n\n**Step 2 — Factor the depressed quadratic:**\n\n$$2x^2 - 3x - 2 = (2x + 1)(x - 2)$$\n\n**Step 3 — Solve each linear factor:**\n\n$$2x + 1 = 0 \\implies x = -\\tfrac{1}{2}, \\qquad x - 2 = 0 \\implies x = 2$$\n\n**All zeros:** $x = -2,\\; x = -\\dfrac{1}{2},\\; x = 2$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:51.375Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, -1/2, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, -1/2, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-051"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 5x^2 + x + 2$, using the Rational Zero Theorem to identify candidates.",
+      "answer": "-1/2, 1, 2",
+      "solution": "**Step 1 — List rational zero candidates.**  By the Rational Zero Theorem, possible rational zeros are $\\pm\\dfrac{p}{q}$ where $p \\mid 2$ and $q \\mid 2$: $$\\pm 1,\\; \\pm 2,\\; \\pm\\tfrac{1}{2}.$$\n\n**Step 2 — Test $x = 2$.**  $$f(2) = 2(8) - 5(4) + 2 + 2 = 16 - 20 + 2 + 2 = 0\\checkmark$$  So $(x - 2)$ is a factor.\n\n**Step 3 — Synthetic (or polynomial) division.** $$2x^3 - 5x^2 + x + 2 = (x-2)(2x^2 - x - 1)$$\n\n**Step 4 — Factor the quotient.** $$2x^2 - x - 1 = (2x + 1)(x - 1)$$\n\n**Step 5 — Solve each factor.** $$x - 2 = 0 \\;\\Rightarrow\\; x = 2$$ $$2x + 1 = 0 \\;\\Rightarrow\\; x = -\\tfrac{1}{2}$$ $$x - 1 = 0 \\;\\Rightarrow\\; x = 1$$\n\nThe three zeros are $x = -\\tfrac{1}{2},\\; 1,\\; 2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:52.622Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2, 1, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2, 1, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-052"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the minimum value of $f(x) = 2x^2 - 12x + 13$ by rewriting the function in vertex form.",
+      "answer": "-5",
+      "solution": "**Step 1.** Factor $2$ from the variable terms: $$f(x) = 2(x^2 - 6x) + 13$$\n\n**Step 2.** Complete the square inside the parentheses. Take half the $x$-coefficient, square it: $\\left(\\dfrac{-6}{2}\\right)^2 = 9$. Add and subtract $9$ inside: $$f(x) = 2(x^2 - 6x + 9 - 9) + 13 = 2(x^2 - 6x + 9) - 18 + 13$$\n\n**Step 3.** Write in vertex form: $$f(x) = 2(x - 3)^2 - 5$$\n\n**Step 4.** The vertex is $(3,\\,-5)$. Since $a = 2 > 0$ the parabola opens upward, so the vertex is the lowest point. The minimum value is $-5$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:48:58.642Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-053"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "The stopping distance of a car varies directly as the square of its speed. A car traveling at $40$ mph requires $80$ feet to stop. How many feet are required to stop a car traveling at $60$ mph?",
+      "answer": "180",
+      "solution": "**1. Write the variation equation.**\n$$d = ks^2$$\nwhere $d$ is stopping distance and $s$ is speed.\n\n**2. Find the constant of variation** using $d = 80$ when $s = 40$:\n$$80 = k(40)^2 = 1600k \\implies k = \\frac{80}{1600} = \\frac{1}{20}$$\n\n**3. Write the specific model.**\n$$d = \\frac{1}{20}s^2$$\n\n**4. Evaluate at $s = 60$.**\n$$d = \\frac{1}{20}(60)^2 = \\frac{3600}{20} = 180$$\n\nThe car requires $\\boxed{180}$ feet to stop.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:49:28.110Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "180",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "180",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-054"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the polynomial inequality and express the solution in interval notation: $$x^3 - x^2 - 6x > 0$$",
+      "answer": "(-2, 0) U (3, infinity)",
+      "solution": "**Step 1 — Factor.**\n$$x^3 - x^2 - 6x = x(x^2 - x - 6) = x(x+2)(x-3)$$\nThe inequality becomes $x(x+2)(x-3) > 0$.\n\n**Step 2 — Find boundary points.**\nSet each factor equal to zero: $x = -2,\\ 0,\\ 3$.\n\n**Step 3 — Build a sign chart.**\nThese three values divide the number line into four test intervals.\n\n| Interval | Test pt | $x$ | $x+2$ | $x-3$ | Product |\n|---|---|---|---|---|---|\n| $(-\\infty,-2)$ | $-3$ | $-$ | $-$ | $-$ | $-$ |\n| $(-2,0)$ | $-1$ | $-$ | $+$ | $-$ | $+$ |\n| $(0,3)$ | $1$ | $+$ | $+$ | $-$ | $-$ |\n| $(3,\\infty)$ | $4$ | $+$ | $+$ | $+$ | $+$ |\n\n**Step 4 — Select positive intervals.**\nThe product is positive on $(-2, 0)$ and $(3, \\infty)$.\n\n**Step 5 — Exclude boundary points** (strict inequality).\n\n$$\\boxed{(-2,\\,0)\\cup(3,\\,\\infty)}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:49:36.965Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 0) U (3, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 0) U (3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-055"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "The rational function $$f(x) = \\frac{3x^2 - 12}{x^2 - x - 6}$$ has a removable discontinuity (hole) in its graph. Find the $y$-coordinate of the hole.",
+      "answer": "12/5",
+      "solution": "**Step 1 — Factor numerator and denominator completely:**\n$$\\frac{3x^2 - 12}{x^2 - x - 6} = \\frac{3(x^2-4)}{x^2-x-6} = \\frac{3(x+2)(x-2)}{(x+2)(x-3)}$$\n\n**Step 2 — Identify the hole:**\nThe factor $(x+2)$ appears in both numerator and denominator, so it cancels, producing a hole at $x = -2$. The simplified function is: $$g(x) = \\frac{3(x-2)}{x-3}, \\quad x \\neq -2$$\n\n**Step 3 — Find the $y$-coordinate of the hole:**\nSubstitute $x = -2$ into the simplified form:\n$$y = \\frac{3(-2-2)}{-2-3} = \\frac{3(-4)}{-5} = \\frac{-12}{-5} = \\frac{12}{5}$$\n\nThe hole is located at $\\left(-2,\\, \\dfrac{12}{5}\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:49:51.356Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-056"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the maximum value of $f(x) = -2x^2 + 8x - 3$ by completing the square.",
+      "answer": "5",
+      "solution": "**Step 1.** Factor $-2$ from the variable terms: $$f(x) = -2(x^2 - 4x) - 3$$\n\n**Step 2.** Complete the square inside the parentheses. Half of $-4$ is $-2$; $(-2)^2 = 4$. Add and subtract $4$ inside: $$f(x) = -2(x^2 - 4x + 4 - 4) - 3$$\n\n**Step 3.** Regroup so the perfect-square trinomial stays inside the factor: $$f(x) = -2(x^2 - 4x + 4) + (-2)(-4) - 3 = -2(x-2)^2 + 8 - 3$$\n\n**Step 4.** Simplify to vertex form: $$f(x) = -2(x-2)^2 + 5$$\n\n**Step 5.** The vertex is $(2,\\,5)$. Because $a = -2 < 0$ the parabola opens downward, so the vertex is a maximum. The maximum value is $f(2) = \\boxed{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:49:59.297Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-057"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 3x^2 - 11x + 6$.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — List possible rational zeros** using the Rational Zero Theorem: factors of 6 over factors of 2, giving $\\pm1, \\pm2, \\pm3, \\pm6, \\pm\\tfrac{1}{2}, \\pm\\tfrac{3}{2}$.\n\n**Step 2 — Test $x = 3$** with synthetic division:\n$$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\nRemainder $= 0$, so $x = 3$ is a zero and the depressed polynomial is $2x^2 + 3x - 2$.\n\n**Step 3 — Factor the depressed polynomial:**\n$$2x^2 + 3x - 2 = (2x - 1)(x + 2)$$\n\n**Step 4 — Solve** $(2x-1)(x+2)=0$:\n$$x = \\tfrac{1}{2} \\quad \\text{or} \\quad x = -2$$\n\n**Conclusion:** The three zeros are $x = -2,\\ \\tfrac{1}{2},\\ 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:50:31.625Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-058"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "A degree-5 polynomial $f$ has zeros at $x = -2$ (multiplicity 2), $x = 1$ (multiplicity 1), and $x = 4$ (multiplicity 2), and its leading coefficient is negative. Given that $f(3) = -50$, find $f(0)$.",
+      "answer": "64",
+      "solution": "**Step 1 — Write the factored form.**\n\nBecause the zeros and their multiplicities account for all 5 degrees, $$f(x) = a(x+2)^2(x-1)(x-4)^2, \\quad a < 0.$$\n\n**Step 2 — Solve for $a$ using $f(3) = -50$.**\n\n$$f(3) = a(3+2)^2(3-1)(3-4)^2 = a(25)(2)(1) = 50a = -50 \\implies a = -1.$$\n\nThe negative value confirms the leading-coefficient condition.\n\n**Step 3 — State the polynomial.**\n\n$$f(x) = -(x+2)^2(x-1)(x-4)^2$$\n\n**Step 4 — Evaluate $f(0)$.**\n\n$$f(0) = -(0+2)^2(0-1)(0-4)^2 = -(4)(-1)(16) = -(-64) = \\boxed{64}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:50:49.928Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "64",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "64",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch3-059"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the rational inequality and write the solution in interval notation: $$\\frac{x+2}{x-3} \\leq 0$$",
+      "answer": "[-2, 3)",
+      "solution": "**Step 1 — Find the critical values.**\nSet the numerator equal to zero: $x + 2 = 0 \\Rightarrow x = -2$ (boundary, included because $\\leq$).\nSet the denominator equal to zero: $x - 3 = 0 \\Rightarrow x = 3$ (excluded; makes expression undefined).\n\n**Step 2 — Place the critical values on a number line.**\nThe two values $x = -2$ and $x = 3$ create three intervals: $(-\\infty, -2)$, $(-2, 3)$, and $(3, \\infty)$.\n\n**Step 3 — Test a point in each interval.**\n| Interval | Test point | $\\frac{x+2}{x-3}$ | Sign | Satisfies $\\leq 0$? |\n|---|---|---|---|---|\n| $(-\\infty,-2)$ | $x=-4$ | $\\dfrac{-2}{-7}=\\frac{2}{7}$ | $+$ | No |\n| $(-2,\\ 3)$ | $x=0$ | $\\dfrac{2}{-3}=-\\frac{2}{3}$ | $-$ | Yes |\n| $(3,\\ \\infty)$ | $x=5$ | $\\dfrac{7}{2}$ | $+$ | No |\n\n**Step 4 — Include the endpoint where the expression equals zero.**\nAt $x = -2$: $\\dfrac{0}{-5} = 0$, which satisfies $\\leq 0$. Include $x = -2$.\nAt $x = 3$: undefined. Exclude $x = 3$.\n\n**Solution:** $[-2,\\ 3)$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:51:24.773Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-2, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-060"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find the equation of the slant (oblique) asymptote of $$f(x) = \\frac{x^2 - x - 6}{x - 4}$$",
+      "answer": "y = x + 3",
+      "solution": "Since the degree of the numerator (2) exceeds the degree of the denominator (1) by exactly one, a slant asymptote exists. Use polynomial long division.\n\nDivide $x^2 - x - 6$ by $x - 4$:\n\nStep 1: $x^2 \\div x = x$; multiply: $x(x-4) = x^2 - 4x$; subtract to get remainder $3x - 6$.\n\nStep 2: $3x \\div x = 3$; multiply: $3(x-4) = 3x - 12$; subtract to get remainder $6$.\n\nSo: $$\\frac{x^2 - x - 6}{x - 4} = x + 3 + \\frac{6}{x - 4}$$\n\nAs $x \\to \\pm\\infty$, the term $\\dfrac{6}{x-4} \\to 0$, so the graph approaches $$y = x + 3$$",
+      "meta": {
+        "generatedAt": "2026-05-10T18:51:26.207Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = x + 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = x + 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-061"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Use the Factor Theorem to verify that $x = 3$ is a zero of $p(x) = 2x^3 - 3x^2 - 11x + 6$. Then use synthetic division and factoring to find all zeros of $p$.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1.** Apply the Factor Theorem — evaluate $p(3)$: $$p(3)=2(3)^3-3(3)^2-11(3)+6=54-27-33+6=0.$$ Since $p(3)=0$, $(x-3)$ is a factor of $p$.\n\n**Step 2.** Divide $p(x)$ by $(x-3)$ via synthetic division: $$\\begin{array}{r|rrrr}3 & 2 & -3 & -11 & 6\\\\ & & 6 & 9 & -6\\\\\\hline & 2 & 3 & -2 & 0\\end{array}$$ The quotient is $2x^2+3x-2$, so $p(x)=(x-3)(2x^2+3x-2)$.\n\n**Step 3.** Factor the quadratic — find two numbers that multiply to $2\\cdot(-2)=-4$ and add to $3$: those are $4$ and $-1$. $$2x^2+3x-2=2x^2+4x-x-2=2x(x+2)-(x+2)=(2x-1)(x+2).$$\n\n**Step 4.** The complete factorization is $p(x)=(x-3)(2x-1)(x+2)$, giving zeros $x=3,\\;\\dfrac{1}{2},\\;-2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T18:51:26.208Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-062"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $$f(x) = x^4 + x^3 + 7x^2 + 9x - 18$$ using the Rational Zero Theorem, synthetic division, and the quadratic formula or factoring as needed. List all real and complex zeros.",
+      "answer": "-2, 1, -3i, 3i",
+      "solution": "**Step 1 — List possible rational zeros.**\nBy the Rational Zero Theorem, possible rational zeros are $\\pm\\{1,2,3,6,9,18\\}$.\n\n**Step 2 — Test $x = 1$.**\n$$1 + 1 + 7 + 9 - 18 = 0 \\checkmark$$\n\n**Step 3 — Synthetic division by $(x-1)$.**\n$$\\begin{array}{r|rrrrr} 1 & 1 & 1 & 7 & 9 & -18 \\\\ & & 1 & 2 & 9 & 18 \\\\ \\hline & 1 & 2 & 9 & 18 & 0 \\end{array}$$\nQuotient: $x^3 + 2x^2 + 9x + 18$.\n\n**Step 4 — Test $x = -2$ on the quotient.**\n$$(-2)^3 + 2(-2)^2 + 9(-2) + 18 = -8 + 8 - 18 + 18 = 0 \\checkmark$$\n\n**Step 5 — Synthetic division by $(x+2)$.**\n$$\\begin{array}{r|rrrr} -2 & 1 & 2 & 9 & 18 \\\\ & & -2 & 0 & -18 \\\\ \\hline & 1 & 0 & 9 & 0 \\end{array}$$\nQuotient: $x^2 + 9$.\n\n**Step 6 — Solve $x^2 + 9 = 0$.**\n$$x^2 = -9 \\implies x = \\pm 3i$$\n\n**Conclusion:** The four zeros are $x = -2,\\ 1,\\ -3i,\\ 3i$, and $f$ factors completely as $$(x+2)(x-1)(x^2+9).$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:19:16.368Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1, -3i, 3i",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1, -3i, 3i",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-063"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "A ball is thrown upward from the top of a 160-foot building. Its height $h$ (in feet) above the ground after $t$ seconds is modeled by $$h(t) = -16t^2 + 48t + 160.$$ Find the maximum height of the ball above the ground.",
+      "answer": "196",
+      "solution": "The parabola opens downward ($a = -16 < 0$), so the vertex gives the maximum.\n\n**Step 1** — Find the time at the vertex using $t = -\\dfrac{b}{2a}$ with $a = -16,\\; b = 48$: $$t = -\\frac{48}{2(-16)} = \\frac{48}{32} = \\frac{3}{2} \\text{ sec}$$\n\n**Step 2** — Evaluate $h$ at $t = \\tfrac{3}{2}$: $$h\\!\\left(\\tfrac{3}{2}\\right) = -16\\!\\left(\\tfrac{3}{2}\\right)^{\\!2} + 48\\!\\left(\\tfrac{3}{2}\\right) + 160 = -16\\cdot\\tfrac{9}{4} + 72 + 160 = -36 + 72 + 160 = 196$$\n\nThe maximum height is $\\mathbf{196}$ feet.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:19:17.821Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "196",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "196",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-064"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "The graph of $f(x) = a(x+2)^2(x-1)$ passes through the point $(0,\\ -8)$. Find the value of $a$.",
+      "answer": "2",
+      "solution": "Substitute $x = 0$ and $f(0) = -8$ into the equation: $$-8 = a(0+2)^2(0-1)$$ Simplify each factor: $$-8 = a(4)(-1)$$ $$-8 = -4a$$ Divide both sides by $-4$: $$a = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:19:51.074Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-065"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the rational inequality: $$\\frac{x-1}{x+3} \\ge 2$$",
+      "answer": "[-7, -3)",
+      "solution": "1. Subtract 2 from both sides so the right side is 0: $$\\frac{x-1}{x+3} - 2 \\ge 0$$\n2. Combine over the common denominator: $$\\frac{x-1-2(x+3)}{x+3} = \\frac{-x-7}{x+3} \\ge 0$$\n3. Find the critical values — set numerator and denominator each equal to zero: $-x-7=0 \\Rightarrow x=-7$ (sign change, included) and $x+3=0 \\Rightarrow x=-3$ (excluded, denominator zero).\n4. Use the critical values to form three test intervals and evaluate the sign of $\\dfrac{-x-7}{x+3}$ on each:\n   - $(-\\infty,-7)$: test $x=-10$: $\\dfrac{10-7}{-10+3}=\\dfrac{3}{-7}<0$ — does **not** satisfy $\\ge 0$.\n   - $[-7,-3)$: test $x=-5$: $\\dfrac{5-7}{-5+3}=\\dfrac{-2}{-2}=1>0$ ✓; at $x=-7$ the expression equals $0$ ✓.\n   - $(-3,\\infty)$: test $x=0$: $\\dfrac{-7}{3}<0$ — does **not** satisfy $\\ge 0$.\n5. The inequality holds on $[-7,-3)$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:20:10.936Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "[-7, -3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "[-7, -3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-066"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "The weight of a rectangular piece of glass varies jointly as its area and its thickness. A piece measuring 2 ft by 3 ft and $0.25$ in thick weighs $9$ lb. Find the weight of a piece measuring 3 ft by 4 ft and $0.5$ in thick.",
+      "answer": "36",
+      "solution": "**Step 1 — Write the joint-variation model.**\n\nLet $W$ = weight (lb), $A$ = area (ft²), $t$ = thickness (in).\n\n$$W = kAt$$\n\n**Step 2 — Find the constant of variation $k$.**\n\nSubstitute the known values $W = 9$, $A = 2 \\cdot 3 = 6$, $t = 0.25$:\n\n$$9 = k(6)(0.25) = 1.5k \\implies k = \\frac{9}{1.5} = 6$$\n\n**Step 3 — Write the specific model.**\n\n$$W = 6At$$\n\n**Step 4 — Evaluate for the new piece.**\n\n$A = 3 \\cdot 4 = 12$ ft², $t = 0.5$ in:\n\n$$W = 6(12)(0.5) = \\boxed{36} \\text{ lb}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:20:19.686Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "36",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "36",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-067"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Use synthetic division and the Factor Theorem to find all zeros of $$f(x) = 2x^3 + x^2 - 13x + 6$$ given that $x = 2$ is a zero.",
+      "answer": "-3, 1/2, 2",
+      "solution": "**Step 1.** Since $x = 2$ is a zero, the Factor Theorem guarantees $(x - 2)$ is a factor. Divide by synthetic division:\n\n$$\\begin{array}{r|rrrr} 2 & 2 & 1 & -13 & 6 \\\\ & & 4 & 10 & -6 \\\\ \\hline & 2 & 5 & -3 & 0 \\end{array}$$\n\nThe quotient is $2x^2 + 5x - 3$ (remainder $= 0$ confirms $x = 2$ is a zero).\n\n**Step 2.** Factor the quotient: $$2x^2 + 5x - 3 = (2x - 1)(x + 3)$$\n\n**Step 3.** Write the complete factorization: $$f(x) = (x - 2)(2x - 1)(x + 3)$$\n\n**Step 4.** Set each factor equal to zero: $$x - 2 = 0 \\Rightarrow x = 2, \\qquad 2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}, \\qquad x + 3 = 0 \\Rightarrow x = -3$$\n\nThe zeros are $x = -3,\\ \\dfrac{1}{2},\\ 2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:20:40.637Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, 1/2, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, 1/2, 2",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch3-068"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "Find the maximum value of $f(x) = -2x^2 + 8x - 3$ by rewriting it in vertex form.",
+      "answer": "5",
+      "solution": "**Step 1 — Factor $-2$ from the variable terms:**\n$$f(x) = -2(x^2 - 4x) - 3$$\n\n**Step 2 — Complete the square inside the parentheses** (half of $-4$ is $-2$; $(-2)^2 = 4$):\n$$f(x) = -2(x^2 - 4x + 4 - 4) - 3$$\n\n**Step 3 — Regroup and distribute:**\n$$f(x) = -2\\bigl[(x-2)^2 - 4\\bigr] - 3 = -2(x-2)^2 + 8 - 3$$\n\n**Step 4 — Vertex form:**\n$$f(x) = -2(x-2)^2 + 5$$\n\n**Step 5 — Identify the maximum:** Since $a = -2 < 0$ the parabola opens downward, so the vertex $(2,\\,5)$ is the highest point. The maximum value of $f$ is $\\boxed{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:20:46.009Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-069"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "The graph of $$f(x) = \\frac{2x+6}{x^2+x-6}$$ has a removable discontinuity (hole). Find the $y$-coordinate of the hole.",
+      "answer": "-2/5",
+      "solution": "**Step 1.** Factor numerator and denominator completely: $$f(x) = \\frac{2(x+3)}{(x+3)(x-2)}$$\n\n**Step 2.** Identify the common factor. Since $(x+3)$ appears in both, there is a hole at $x = -3$. Cancel to get the simplified form: $$f(x) = \\frac{2}{x-2}, \\quad x \\neq -3$$\n\n**Step 3.** Find the $y$-coordinate of the hole by evaluating the *simplified* function at $x = -3$: $$\\frac{2}{-3-2} = \\frac{2}{-5} = -\\frac{2}{5}$$\n\n**Conclusion.** The hole is at $\\left(-3,\\,-\\dfrac{2}{5}\\right)$, so the $y$-coordinate is $-\\dfrac{2}{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:20:57.651Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-070"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $$f(x) = 2x^3 - 7x^2 + 2x + 3$$",
+      "answer": "-1/2, 1, 3",
+      "solution": "**Step 1 — List possible rational zeros** (Rational Zero Theorem). Factors of the constant term $3$: $\\pm1, \\pm3$. Factors of the leading coefficient $2$: $\\pm1, \\pm2$. Possible rational zeros: $$\\pm1,\\ \\pm3,\\ \\pm\\tfrac{1}{2},\\ \\pm\\tfrac{3}{2}$$\n\n**Step 2 — Test $x = 1$** by synthetic division:\n$$\\begin{array}{r|rrrr} 1 & 2 & -7 & 2 & 3 \\\\ & & 2 & -5 & -3 \\\\ \\hline & 2 & -5 & -3 & 0 \\end{array}$$\nRemainder $= 0$, so $x = 1$ is a zero and $f(x) = (x-1)(2x^2 - 5x - 3)$.\n\n**Step 3 — Factor the depressed quadratic** $2x^2 - 5x - 3$:\n$$(2x + 1)(x - 3)$$\nCheck: $(2x+1)(x-3) = 2x^2 - 6x + x - 3 = 2x^2 - 5x - 3$ ✓\n\n**Step 4 — Set each factor equal to zero:**\n$$x - 1 = 0 \\Rightarrow x = 1$$\n$$2x + 1 = 0 \\Rightarrow x = -\\tfrac{1}{2}$$\n$$x - 3 = 0 \\Rightarrow x = 3$$\n\nThe zeros are $x = -\\tfrac{1}{2},\\ 1,\\ 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:21:28.546Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2, 1, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2, 1, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-071"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Use synthetic division to divide $f(x) = 2x^3 - 3x^2 - 11x + 6$ by $(x - 3)$. Then apply the Factor Theorem and factor the depressed polynomial to find all zeros of $f(x)$.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — Synthetic division with $c = 3$:**\n$$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\nThe remainder is $0$, so by the Factor Theorem $(x - 3)$ is a factor of $f(x)$, and the depressed polynomial is $2x^2 + 3x - 2$.\n\n**Step 2 — Factor the depressed polynomial:**\n$$2x^2 + 3x - 2 = (2x - 1)(x + 2)$$\n\n**Step 3 — Write the complete factorization:**\n$$f(x) = (x - 3)(2x - 1)(x + 2)$$\n\n**Step 4 — Solve for the zeros:**\nSetting each factor equal to zero gives $x = 3$, $x = \\dfrac{1}{2}$, and $x = -2$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:21:30.695Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-072"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find the polynomial function of least degree with leading coefficient $1$, a zero of multiplicity $2$ at $x = -1$, and a simple zero at $x = 4$. Write your answer in standard form.",
+      "answer": "x^3 - 2x^2 - 7x - 4",
+      "solution": "**Step 1 — Build the factored form.**\nA zero of multiplicity 2 at $x = -1$ contributes the factor $(x+1)^2$; a simple zero at $x = 4$ contributes $(x-4)$. With leading coefficient 1:\n$$f(x) = (x+1)^2(x-4)$$\n\n**Step 2 — Expand $(x+1)^2$.**\n$$(x+1)^2 = x^2 + 2x + 1$$\n\n**Step 3 — Multiply by $(x-4)$.**\n$$(x^2+2x+1)(x-4) = x^3 - 4x^2 + 2x^2 - 8x + x - 4$$\n$$= x^3 - 2x^2 - 7x - 4$$\n\n**Check zeros:** $f(-1) = (0)^2(-5) = 0$ ✓ and $f(4) = (5)^2(0) = 0$ ✓\n\n$$\\boxed{f(x) = x^3 - 2x^2 - 7x - 4}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:21:56.154Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "x^3 - 2x^2 - 7x - 4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "x^3 - 2x^2 - 7x - 4",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-073"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "Find the equation of the oblique (slant) asymptote of $$f(x) = \\frac{2x^2 + 3x - 5}{x - 2}$$",
+      "answer": "y = 2x + 7",
+      "solution": "1. Since $\\deg(\\text{numerator}) = 2$ exceeds $\\deg(\\text{denominator}) = 1$ by exactly 1, a slant asymptote exists.\n2. Perform polynomial long division of $2x^2 + 3x - 5$ by $x - 2$: $$2x^2 + 3x - 5 = (x - 2)(2x + 7) + 9$$\n3. Rewrite $f$ in quotient-remainder form: $$f(x) = 2x + 7 + \\frac{9}{x - 2}$$\n4. As $|x| \\to \\infty$ the remainder term $\\dfrac{9}{x-2} \\to 0$, so the graph approaches the line $y = 2x + 7$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:22:01.488Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "y = 2x + 7",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "y = 2x + 7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-074"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation: $$\\frac{x+1}{x-3} \\geq 2$$",
+      "answer": "(3, 7]",
+      "solution": "**Step 1 — Move all terms to one side:**\n\n$$\\frac{x+1}{x-3} - 2 \\geq 0$$\n\n**Step 2 — Combine over a common denominator:**\n\n$$\\frac{x+1-2(x-3)}{x-3} \\geq 0 \\implies \\frac{7-x}{x-3} \\geq 0$$\n\n**Step 3 — Identify critical values:** $x=3$ makes the denominator zero (excluded); $x=7$ makes the numerator zero (included if the inequality holds).\n\n**Step 4 — Sign chart:**\n\n| Interval | $7-x$ | $x-3$ | Quotient |\n|---|---|---|---|\n| $x < 3$ | $+$ | $-$ | $-$ |\n| $3 < x < 7$ | $+$ | $+$ | $+$ |\n| $x > 7$ | $-$ | $+$ | $-$ |\n\n**Step 5 — Collect solutions:** The quotient is positive on $(3,7)$ and equals $0$ at $x=7$; $x=3$ is excluded (undefined).\n\n$$\\boxed{(3,\\,7]}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:22:18.032Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 7]",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 7]",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-075"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "A ball is thrown upward from ground level. Its height (in feet) after $t$ seconds is given by $$h(t) = -16t^2 + 64t.$$ What is the maximum height the ball reaches?",
+      "answer": "64",
+      "solution": "**Step 1.** Identify the coefficients: $a = -16$, $b = 64$. Since $a < 0$, the parabola opens downward, so the vertex is a maximum.\n\n**Step 2.** Find the $t$-coordinate of the vertex: $$t = -\\frac{b}{2a} = -\\frac{64}{2(-16)} = -\\frac{64}{-32} = 2 \\text{ seconds.}$$\n\n**Step 3.** Evaluate $h$ at $t = 2$: $$h(2) = -16(2)^2 + 64(2) = -64 + 128 = 64 \\text{ feet.}$$\n\nThe maximum height is $\\boxed{64}$ feet.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:22:31.998Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "64",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "64",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-076"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "The force of attraction between two charged particles varies jointly as the magnitudes of their charges and inversely as the square of the distance between them. When two particles have charges of $3$ units and $4$ units and are $2$ units apart, the force is $9$ units. Find the force when the charges are $6$ units and $5$ units and the particles are $3$ units apart.",
+      "answer": "10",
+      "solution": "**Step 1 — Write the variation model.**\n\n$$F = \\frac{k\\, q_1\\, q_2}{d^2}$$\n\n**Step 2 — Find the constant of variation $k$.**\n\nSubstitute $F = 9$, $q_1 = 3$, $q_2 = 4$, $d = 2$:\n\n$$9 = \\frac{k(3)(4)}{2^2} = \\frac{12k}{4} = 3k \\implies k = 3$$\n\n**Step 3 — Write the specific model.**\n\n$$F = \\frac{3\\, q_1\\, q_2}{d^2}$$\n\n**Step 4 — Evaluate for the new conditions.**\n\nSubstitute $q_1 = 6$, $q_2 = 5$, $d = 3$:\n\n$$F = \\frac{3(6)(5)}{3^2} = \\frac{90}{9} = 10$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:22:42.617Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-077"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find all real zeros of $f(x) = 2x^3 - 6x^2 - 8x$.",
+      "answer": "-1, 0, 4",
+      "solution": "**Step 1.** Factor out the GCF $2x$: $$f(x) = 2x(x^2 - 3x - 4)$$ **Step 2.** Factor the trinomial: $$f(x) = 2x(x - 4)(x + 1)$$ **Step 3.** Set each factor equal to zero: $$2x = 0 \\;\\Rightarrow\\; x = 0, \\qquad x - 4 = 0 \\;\\Rightarrow\\; x = 4, \\qquad x + 1 = 0 \\;\\Rightarrow\\; x = -1$$ Each factor appears once (multiplicity 1), so the graph **crosses** the $x$-axis at all three zeros: $x = -1,\\ 0,\\ 4$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:22:54.536Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1, 0, 4",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1, 0, 4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-078"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $(x + 2)$ is a factor of $f(x) = 2x^3 - 3x^2 - 11x + 6$, use synthetic division and the Factor Theorem to find all zeros of $f$.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — Synthetic division by $c = -2$:** $$\\begin{array}{r|rrrr}-2 & 2 & -3 & -11 & 6 \\\\ & & -4 & 14 & -6 \\\\ \\hline & 2 & -7 & 3 & 0\\end{array}$$ The quotient is $2x^2 - 7x + 3$ with remainder $0$, confirming $(x+2)$ is indeed a factor.\n**Step 2 — Factor the quotient:** $$2x^2 - 7x + 3 = (2x - 1)(x - 3)$$\n**Step 3 — Complete factorization:** $$f(x) = (x + 2)(2x - 1)(x - 3)$$\n**Step 4 — Solve $f(x) = 0$:** Setting each factor to zero gives $x = -2$, $\\;x = \\dfrac{1}{2}$, $\\;x = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:23:07.037Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-079"
+    },
+    {
+      "topic": "3.4 Zeros Of Polynomial Functions",
+      "problem": "Find all zeros of $f(x) = 2x^3 - 3x^2 - 11x + 6$.",
+      "answer": "-2, 1/2, 3",
+      "solution": "**Step 1 — List candidates via the Rational Zero Theorem.**\nFactors of the constant 6: $\\pm1, \\pm2, \\pm3, \\pm6$.\nFactors of the leading coefficient 2: $\\pm1, \\pm2$.\nPossible rational zeros: $\\pm1, \\pm2, \\pm3, \\pm6, \\pm\\tfrac{1}{2}, \\pm\\tfrac{3}{2}$.\n\n**Step 2 — Test $x = 3$ by synthetic division.**\n$$\\begin{array}{r|rrrr} 3 & 2 & -3 & -11 & 6 \\\\ & & 6 & 9 & -6 \\\\ \\hline & 2 & 3 & -2 & 0 \\end{array}$$\nRemainder is 0, so $x = 3$ is a zero. The depressed polynomial is $2x^2 + 3x - 2$.\n\n**Step 3 — Factor the depressed quadratic.** $$2x^2 + 3x - 2 = (2x - 1)(x + 2)$$\nSetting each factor to zero gives $x = \\tfrac{1}{2}$ and $x = -2$.\n\n**Step 4 — State all zeros.** $$x = -2, \\quad x = \\tfrac{1}{2}, \\quad x = 3$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:23:11.314Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2, 1/2, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2, 1/2, 3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-080"
+    },
+    {
+      "topic": "3.6 Polynomial and Rational Inequalities",
+      "problem": "Solve the inequality and express the solution in interval notation: $$\\frac{x+1}{x-3} \\leq 2$$",
+      "answer": "(-infinity, 3) U [7, infinity)",
+      "solution": "**Step 1.** Move all terms to one side: $$\\frac{x+1}{x-3} - 2 \\leq 0$$\n\n**Step 2.** Combine over the common denominator $x-3$: $$\\frac{(x+1) - 2(x-3)}{x-3} \\leq 0 \\implies \\frac{-x+7}{x-3} \\leq 0$$\n\n**Step 3.** Find critical values (where numerator or denominator equals zero):\n- Numerator $= 0$: $-x + 7 = 0 \\Rightarrow x = 7$\n- Denominator $= 0$: $x - 3 = 0 \\Rightarrow x = 3$ (excluded from domain)\n\n**Step 4.** Test each interval on a sign chart:\n\n| Interval | $-x+7$ | $x-3$ | Quotient | Satisfies $\\leq 0$? |\n|---|---|---|---|---|\n| $x < 3$ | $+$ | $-$ | $-$ | Yes |\n| $3 < x < 7$ | $+$ | $+$ | $+$ | No |\n| $x > 7$ | $-$ | $+$ | $-$ | Yes |\n\n**Step 5.** Check endpoints: $x = 7$ gives $\\frac{0}{4} = 0 \\leq 0$ ✓ (include); $x = 3$ is undefined ✗ (exclude).\n\n**Step 6.** Solution: $$(-\\infty,\\, 3)\\cup[7,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:23:35.388Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, 3) U [7, infinity)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, 3) U [7, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-081"
+    },
+    {
+      "topic": "3.5 Rational Functions And Their Graphs",
+      "problem": "The rational function $f(x) = \\dfrac{x^2 - 9}{x^2 + x - 12}$ has a removable discontinuity (hole). Find the $y$-coordinate of the hole.",
+      "answer": "6/7",
+      "solution": "**Step 1.** Factor the numerator and denominator completely: $$f(x) = \\frac{(x-3)(x+3)}{(x-3)(x+4)}$$\n\n**Step 2.** The factor $(x-3)$ appears in both numerator and denominator. It cancels, producing a hole at $x = 3$, leaving the simplified form $$f(x) = \\frac{x+3}{x+4}, \\quad x \\neq 3$$\n\n**Step 3.** To find the $y$-coordinate of the hole, substitute $x = 3$ into the simplified expression: $$y = \\frac{3+3}{3+4} = \\frac{6}{7}$$\n\nThe removable discontinuity (hole) is located at $\\left(3,\\,\\dfrac{6}{7}\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:23:44.143Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6/7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6/7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-082"
+    },
+    {
+      "topic": "3.1 Quadratic Functions",
+      "problem": "A ball is thrown upward from a platform 6 feet above the ground with an initial velocity of 48 feet per second. Its height (in feet) above the ground after $t$ seconds is modeled by $$h(t) = -16t^2 + 48t + 6.$$ Find the maximum height the ball reaches.",
+      "answer": "42",
+      "solution": "Since $a = -16 < 0$, the parabola opens downward, so the vertex yields the maximum value.\n\nThe $t$-coordinate of the vertex is $$t = -\\frac{b}{2a} = -\\frac{48}{2(-16)} = \\frac{3}{2}.$$\n\nSubstitute $t = \\tfrac{3}{2}$ into $h(t)$: $$h\\!\\left(\\tfrac{3}{2}\\right) = -16\\!\\left(\\tfrac{3}{2}\\right)^{\\!2} + 48\\!\\left(\\tfrac{3}{2}\\right) + 6 = -36 + 72 + 6 = 42.$$\n\nThe maximum height is $\\mathbf{42}$ feet.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:23:46.062Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "42",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "42",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-083"
+    },
+    {
+      "topic": "3.7 Modeling Using Variation",
+      "problem": "Suppose $y$ varies directly as $x$ and inversely as the square of $z$. When $x = 6$ and $z = 3$, $y = 8$. Find $y$ when $x = 10$ and $z = 5$.",
+      "answer": "24/5",
+      "solution": "1. Write the combined variation equation: $$y = \\frac{kx}{z^2}$$\n2. Substitute the known values $x = 6$, $z = 3$, $y = 8$ to find $k$: $$8 = \\frac{k \\cdot 6}{3^2} = \\frac{6k}{9} = \\frac{2k}{3}$$\n3. Solve for $k$: $k = 12$.\n4. The model is $y = \\dfrac{12x}{z^2}$. Substitute $x = 10$, $z = 5$: $$y = \\frac{12 \\cdot 10}{5^2} = \\frac{120}{25} = \\frac{24}{5}$$",
+      "meta": {
+        "generatedAt": "2026-05-10T20:24:08.529Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "24/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "24/5",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch3-084"
+    },
+    {
+      "topic": "3.3 Dividing Polynomials; Remainder and Factor Theorems",
+      "problem": "Given that $x = 1$ is a zero of $f(x) = 2x^3 + 3x^2 - 8x + 3$, use the Factor Theorem and synthetic division to find all zeros of $f$.",
+      "answer": "-3, 1/2, 1",
+      "solution": "1. By the Factor Theorem, since $f(1) = 0$, $(x - 1)$ is a factor of $f(x)$.\n2. Use synthetic division to divide by $(x - 1)$: $$\\begin{array}{r|rrrr} 1 & 2 & 3 & -8 & 3 \\\\ & & 2 & 5 & -3 \\\\ \\hline & 2 & 5 & -3 & 0 \\end{array}$$\n3. The remainder is $0$ (confirming $x=1$ is a zero) and the quotient is $2x^2 + 5x - 3$, so $f(x) = (x - 1)(2x^2 + 5x - 3)$.\n4. Factor the quadratic: $2x^2 + 5x - 3 = (2x - 1)(x + 3)$.\n5. Set each factor to zero: $x - 1 = 0 \\Rightarrow x = 1$; $\\;2x - 1 = 0 \\Rightarrow x = \\dfrac{1}{2}$; $\\;x + 3 = 0 \\Rightarrow x = -3$.\n6. The zeros are $x = -3,\\; \\dfrac{1}{2},\\; 1$.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:24:24.606Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, 1/2, 1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, 1/2, 1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-085"
+    },
+    {
+      "topic": "3.2 Polynomials Functions and Their Graphs",
+      "problem": "Find all real zeros of $f(x) = x^3 + 2x^2 - 5x - 6$.",
+      "answer": "-3, -1, 2",
+      "solution": "**1.** By the Rational Root Theorem, possible rational zeros are $\\pm 1, \\pm 2, \\pm 3, \\pm 6$.\n\n**2.** Test $x = 2$: $$f(2) = 8 + 8 - 10 - 6 = 0\\checkmark$$ So $(x - 2)$ is a factor.\n\n**3.** Synthetic division by $(x - 2)$:\n$$\\begin{array}{r|rrrr} 2 & 1 & 2 & -5 & -6 \\\\ & & 2 & 8 & 6 \\\\ \\hline & 1 & 4 & 3 & 0 \\end{array}$$\nso $f(x) = (x-2)(x^2+4x+3)$.\n\n**4.** Factor the quadratic: $x^2 + 4x + 3 = (x+1)(x+3)$.\n\n**5.** Therefore $f(x) = (x-2)(x+1)(x+3)$, giving zeros $x = -3,\\ x = -1,\\ x = 2$, each with multiplicity 1. The graph crosses the $x$-axis at all three zeros.",
+      "meta": {
+        "generatedAt": "2026-05-10T20:24:47.440Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3, -1, 2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3, -1, 2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch3-086"
+    }
+  ]
+}
