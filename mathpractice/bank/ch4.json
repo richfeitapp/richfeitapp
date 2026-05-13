@@ -1541,6 +1541,874 @@
         "attempts": 1
       },
       "id": "ch4-055"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "Solve for $x$: $$4^{x+1} = 8^{x-2}$$",
+      "answer": "8",
+      "solution": "Rewrite both sides as powers of $2$:\n$$2^{2(x+1)} = 2^{3(x-2)}$$\nSince the bases are equal, set the exponents equal:\n$$2(x+1) = 3(x-2)$$\n$$2x + 2 = 3x - 6$$\n$$x = 8$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:17:24.470Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "8",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "8",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-056"
+    },
+    {
+      "topic": "4.4 Exponential and Logarithmic Equations",
+      "problem": "Solve for $x$: $$\\log_2(x+3)+\\log_2(x-3)=4$$",
+      "answer": "5",
+      "solution": "**Step 1.** Apply the product rule for logarithms:\n$$\\log_2[(x+3)(x-3)]=4$$\n\n**Step 2.** Expand the product:\n$$\\log_2(x^2-9)=4$$\n\n**Step 3.** Rewrite in exponential form:\n$$x^2-9=2^4=16$$\n\n**Step 4.** Solve the resulting equation:\n$$x^2=25 \\implies x=\\pm5$$\n\n**Step 5.** Check for extraneous solutions. Both arguments must be positive.\n- $x=-5$: $\\log_2(-5+3)=\\log_2(-2)$ is undefined. **Reject.**\n- $x=5$: $\\log_2(8)$ and $\\log_2(2)$ are both defined. **Accept.**\n\nThe solution is $x=5$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:17:28.674Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-057"
+    },
+    {
+      "topic": "4.2 Logarithmic Functions",
+      "problem": "Evaluate $\\log_{1/3} 27$.",
+      "answer": "-3",
+      "solution": "Let $y = \\log_{1/3} 27$. By the definition of a logarithm, this means: $$\\left(\\frac{1}{3}\\right)^y = 27$$ Rewrite both sides as powers of 3: $$3^{-y} = 3^3$$ Since the bases are equal, set the exponents equal: $$-y = 3 \\implies y = -3$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:17:32.838Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-058"
+    },
+    {
+      "topic": "4.2 Logarithmic Functions",
+      "problem": "Solve for $x$: $$\\log_4(x + 5) = \\frac{3}{2}$$",
+      "answer": "3",
+      "solution": "Rewrite in exponential form: $4^{3/2} = x + 5$\n\nEvaluate the left side: $4^{3/2} = \\left(\\sqrt{4}\\right)^3 = 2^3 = 8$\n\nSolve for $x$: $$8 = x + 5 \\implies x = 3$$\n\nCheck: $\\log_4(3 + 5) = \\log_4 8 = \\log_4 4^{3/2} = \\dfrac{3}{2}$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:00.023Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-059"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "The exponential function $f(x) = a \\cdot b^x$ satisfies $f(0) = 5$ and $f(2) = 45$, where $b > 0$. Find $f(1)$.",
+      "answer": "15",
+      "solution": "**Step 1.** Evaluate at $x = 0$: $$f(0) = a \\cdot b^0 = a = 5$$\n\n**Step 2.** Substitute $a = 5$ and evaluate at $x = 2$: $$f(2) = 5 \\cdot b^2 = 45 \\implies b^2 = 9$$\n\nSince $b > 0$, we get $b = 3$.\n\n**Step 3.** Evaluate at $x = 1$: $$f(1) = 5 \\cdot 3^1 = 15$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:01.387Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "15",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "15",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-060"
+    },
+    {
+      "topic": "4.5 Exponential Growth and Decay: Modeling Data",
+      "problem": "A bacteria culture initially contains $500$ bacteria. After $3$ hours, the population has grown to $2000$ bacteria. Assuming exponential growth modeled by $A(t) = A_0 e^{kt}$, find the number of hours it will take for the population to reach $8000$ bacteria.",
+      "answer": "6",
+      "solution": "**Step 1.** Identify $A_0 = 500$, so the model is $A(t) = 500e^{kt}$.\n\n**Step 2.** Use $A(3) = 2000$ to find $k$: $$2000 = 500e^{3k} \\implies 4 = e^{3k} \\implies k = \\frac{\\ln 4}{3}.$$\n\n**Step 3.** Set $A(t) = 8000$ and solve for $t$: $$8000 = 500e^{\\frac{\\ln 4}{3}\\,t} \\implies 16 = e^{\\frac{\\ln 4}{3}\\,t} \\implies \\ln 16 = \\frac{\\ln 4}{3}\\,t.$$\n\n**Step 4.** Simplify using $\\ln 16 = \\ln 4^2 = 2\\ln 4$: $$t = \\frac{3\\ln 16}{\\ln 4} = \\frac{3 \\cdot 2\\ln 4}{\\ln 4} = 6.$$\n\nThe population reaches $8000$ bacteria after $\\boxed{6}$ hours.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:06.350Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-061"
+    },
+    {
+      "topic": "4.4 Exponential and Logarithmic Equations",
+      "problem": "Solve: $$\\log_3(x+4)+\\log_3(x-2)=3$$",
+      "answer": "5",
+      "solution": "Apply the product rule to combine the logarithms: $$\\log_3[(x+4)(x-2)]=3$$\nConvert to exponential form: $$(x+4)(x-2)=3^3=27$$\nExpand the left side: $$x^2+2x-8=27$$\nRearrange into standard form: $$x^2+2x-35=0$$\nFactor: $$(x+7)(x-5)=0 \\implies x=-7 \\text{ or } x=5$$\nCheck for extraneous solutions: $x=-7$ requires $\\log_3(-3)$, which is undefined — reject. For $x=5$: $\\log_3(9)+\\log_3(3)=2+1=3$ ✓\nThe solution is $x=5$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:29.320Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-062"
+    },
+    {
+      "topic": "4.3 Properties Of Logarithms",
+      "problem": "Use properties of logarithms to find the exact value of $$2\\log_3 6 - \\log_3 4.$$",
+      "answer": "2",
+      "solution": "**Step 1.** Apply the Power Rule to rewrite the coefficient as an exponent: $$2\\log_3 6 = \\log_3 6^2 = \\log_3 36$$**Step 2.** Apply the Quotient Rule to combine into a single logarithm: $$\\log_3 36 - \\log_3 4 = \\log_3\\!\\left(\\frac{36}{4}\\right) = \\log_3 9$$**Step 3.** Evaluate by expressing 9 as a power of 3: $$\\log_3 9 = \\log_3 3^2 = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:32.041Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch4-063"
+    },
+    {
+      "topic": "4.3 Properties Of Logarithms",
+      "problem": "Use properties of logarithms to condense the expression into a single logarithm: $$3\\ln x - \\frac{1}{2}\\ln(x+1) + \\ln 5$$",
+      "answer": "ln(5*x^3/sqrt(x+1))",
+      "solution": "Apply the Power Rule to each term with a coefficient: $$3\\ln x = \\ln x^3, \\qquad \\frac{1}{2}\\ln(x+1) = \\ln\\sqrt{x+1}$$ Combine the two positive terms using the Product Rule: $$\\ln x^3 + \\ln 5 = \\ln(5x^3)$$ Subtract the remaining term using the Quotient Rule: $$\\ln(5x^3) - \\ln\\sqrt{x+1} = \\ln\\frac{5x^3}{\\sqrt{x+1}}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:32.497Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "ln(5*x^3/sqrt(x+1))",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "ln(5x^3/sqrt(x+1))",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-064"
+    },
+    {
+      "topic": "4.5 Exponential Growth and Decay: Modeling Data",
+      "problem": "The population of a city was $50{,}000$ in 2010 and $80{,}000$ in 2020. Assuming exponential growth modeled by $P = P_0 e^{kt}$, where $t$ is the number of years after 2010, predict the city's population in 2030.",
+      "answer": "128000",
+      "solution": "**Step 1:** Set $t = 0$ at year 2010, giving $P_0 = 50000$, and note $P(10) = 80000$.\n\n**Step 2:** Substitute the 2020 data to find $k$: $$80000 = 50000\\,e^{10k}$$ $$\\frac{8}{5} = e^{10k}$$ $$k = \\frac{\\ln(8/5)}{10}$$\n\n**Step 3:** Evaluate $P(20)$ for year 2030: $$P(20) = 50000\\,e^{20k} = 50000\\!\\left(e^{10k}\\right)^{\\!2} = 50000\\left(\\frac{8}{5}\\right)^{\\!2}$$ $$= 50000 \\cdot \\frac{64}{25} = \\mathbf{128{,}000}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:18:52.348Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "128000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "128000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-065"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "Solve for $x$: $$4^{x+1} = 8^{2x-3}$$",
+      "answer": "11/4",
+      "solution": "Rewrite both sides as powers of $2$: $$(2^2)^{x+1} = (2^3)^{2x-3}$$ Apply the power-of-a-power rule: $$2^{2x+2} = 2^{6x-9}$$ Since the bases are equal, set the exponents equal: $$2x + 2 = 6x - 9$$ Solve for $x$: $$11 = 4x \\implies x = \\dfrac{11}{4}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:19:05.507Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "11/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "11/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-066"
+    },
+    {
+      "topic": "4.3 Properties Of Logarithms",
+      "problem": "Expand completely, writing as a sum or difference of logarithms (or multiples of logarithms): $$\\log_3\\!\\left(\\frac{x^4\\sqrt{y}}{27z^2}\\right)$$",
+      "answer": "4*log_3(x) + (1/2)*log_3(y) - 2*log_3(z) - 3",
+      "solution": "Apply the quotient rule: $$\\log_3\\!\\left(\\frac{x^4\\sqrt{y}}{27z^2}\\right) = \\log_3\\!\\left(x^4\\sqrt{y}\\right) - \\log_3(27z^2)$$\nApply the product rule to each part: $$= \\log_3(x^4) + \\log_3(y^{1/2}) - \\log_3(27) - \\log_3(z^2)$$\nApply the power rule ($\\log_b M^p = p\\log_b M$) and evaluate $\\log_3 27 = \\log_3 3^3 = 3$: $$= 4\\log_3 x + \\tfrac{1}{2}\\log_3 y - 3 - 2\\log_3 z$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:19:12.422Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4*log_3(x) + (1/2)*log_3(y) - 3 - 2*log_3(z)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4*log_3(x) + (1/2)*log_3(y) - 3 - 2*log_3(z)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-067"
+    },
+    {
+      "topic": "4.2 Logarithmic Functions",
+      "problem": "Find the domain of $f(x) = \\log_2(x^2 - 4x - 5)$. Express your answer in interval notation.",
+      "answer": "(-infinity, -1) U (5, infinity)",
+      "solution": "The argument of a logarithm must be strictly positive, so solve the inequality $x^2 - 4x - 5 > 0$.\n\nFactor: $$(x - 5)(x + 1) > 0$$\n\nThe zeros are $x = -1$ and $x = 5$, which divide the number line into three intervals. Test each:\n\n| Interval | Test value | Sign of $(x-5)(x+1)$ |\n|---|---|---|\n| $(-\\infty, -1)$ | $x = -2$ | $(-)(-)=+$ ✓ |\n| $(-1,\\; 5)$ | $x = 0$ | $(-)(+)=-$ ✗ |\n| $(5,\\; \\infty)$ | $x = 6$ | $(+)(+)=+$ ✓ |\n\nThe inequality holds on $(-\\infty,-1)\\cup(5,\\infty)$, so the domain is $$(-\\infty,\\,-1)\\cup(5,\\,\\infty).$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:19:19.358Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -1) U (5, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -1) U (5, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-068"
+    },
+    {
+      "topic": "4.4 Exponential and Logarithmic Equations",
+      "problem": "Solve for $x$: $$\\log_3(x + 6) + \\log_3(x) = 3$$",
+      "answer": "3",
+      "solution": "1. Apply the Product Rule for logarithms: $$\\log_3\\!\\bigl(x(x+6)\\bigr) = 3$$\n2. Rewrite in exponential form: $$x(x+6) = 3^3 = 27$$\n3. Expand and set equal to zero: $$x^2 + 6x - 27 = 0$$\n4. Factor: $$(x - 3)(x + 9) = 0 \\implies x = 3 \\text{ or } x = -9$$\n5. Check domains: $x = -9$ requires $\\log_3(-9)$, which is undefined — reject. For $x = 3$: $\\log_3 9 + \\log_3 3 = 2 + 1 = 3$ ✓\n\nThe solution is $x = 3$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:19:29.499Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-069"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "Solve for $x$: $$4^{x-1} = 32$$",
+      "answer": "7/2",
+      "solution": "Rewrite both sides as powers of $2$: $$4^{x-1} = (2^2)^{x-1} = 2^{2(x-1)}, \\qquad 32 = 2^5$$ Set the exponents equal (same base): $$2(x-1) = 5$$ Distribute and solve: $$2x - 2 = 5 \\implies 2x = 7 \\implies x = \\dfrac{7}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:19:42.319Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-070"
+    },
+    {
+      "topic": "4.5 Exponential Growth and Decay: Modeling Data",
+      "problem": "A city's population in 2010 was 80,000. By 2020, the population had grown to 100,000. Assuming continuous exponential growth, predict the city's population in 2030.",
+      "answer": "125000",
+      "solution": "**Step 1.** Use the continuous growth model $A = A_0 e^{kt}$ with $t = 0$ in 2010, so $A_0 = 80{,}000$.\n\n**Step 2.** Substitute the 2020 data ($t = 10$, $A = 100{,}000$): $$100{,}000 = 80{,}000\\,e^{10k}$$ $$\\frac{5}{4} = e^{10k} \\implies 10k = \\ln\\!\\left(\\tfrac{5}{4}\\right) \\implies k = \\frac{\\ln(5/4)}{10}$$\n\n**Step 3.** For 2030, $t = 20$: $$A = 80{,}000\\,e^{20 \\cdot \\frac{\\ln(5/4)}{10}} = 80{,}000\\,e^{2\\ln(5/4)} = 80{,}000\\!\\left(\\frac{5}{4}\\right)^{\\!2} = 80{,}000 \\cdot \\frac{25}{16} = \\mathbf{125{,}000}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:19:53.161Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "125000",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "125000",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-071"
+    },
+    {
+      "topic": "4.2 Logarithmic Functions",
+      "problem": "Find the domain of $f(x) = \\log_2(x^2 - 9)$. Express your answer in interval notation.",
+      "answer": "(-infinity, -3) U (3, infinity)",
+      "solution": "The argument of a logarithm must be strictly positive, so we need $x^2 - 9 > 0$.\n\nFactor: $$(x - 3)(x + 3) > 0$$\n\nThe zeros are $x = -3$ and $x = 3$, creating three test intervals:\n\n1. $x < -3$: choose $x = -4$; $(-7)(-1) = 7 > 0$ — included\n2. $-3 < x < 3$: choose $x = 0$; $(-3)(3) = -9 < 0$ — excluded\n3. $x > 3$: choose $x = 4$; $(1)(7) = 7 > 0$ — included\n\nDomain: $$(-\\infty,\\,-3)\\cup(3,\\,\\infty)$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:03.565Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-infinity, -3) U (3, infinity)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-infinity, -3) U (3, infinity)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-072"
+    },
+    {
+      "topic": "4.4 Exponential and Logarithmic Equations",
+      "problem": "Solve for $x$: $$\\log_3(x+6)+\\log_3 x=3$$",
+      "answer": "3",
+      "solution": "Apply the product rule to combine the left side into a single logarithm: $$\\log_3[x(x+6)]=3$$ Convert to exponential form: $$x(x+6)=3^3=27$$ Expand and rearrange into standard form: $$x^2+6x-27=0$$ Factor: $$(x+9)(x-3)=0$$ So $x=-9$ or $x=3$. Check domains: $x=-9$ forces $\\log_3(-9)$, which is undefined, so $x=-9$ is extraneous. The only solution is $x=3$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:05.570Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-073"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "Solve for $x$: $$3^{2x-1} = 27$$",
+      "answer": "2",
+      "solution": "Rewrite 27 as a power of 3: $$3^{2x-1} = 3^3$$\n\nSince the bases are equal, set the exponents equal: $$2x - 1 = 3$$\n\nAdd 1 to both sides: $$2x = 4$$\n\nDivide by 2: $$x = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:21.936Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-074"
+    },
+    {
+      "topic": "4.3 Properties Of Logarithms",
+      "problem": "Use properties of logarithms to evaluate: $$\\log_6 4 + \\log_6 9$$",
+      "answer": "2",
+      "solution": "Apply the product rule $\\log_b M + \\log_b N = \\log_b(MN)$: $$\\log_6 4 + \\log_6 9 = \\log_6(4 \\cdot 9) = \\log_6 36$$ Recognize that $36 = 6^2$ and apply the power rule: $$\\log_6 6^2 = 2\\log_6 6 = 2(1) = 2$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:22.730Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-075"
+    },
+    {
+      "topic": "4.2 Logarithmic Functions",
+      "problem": "The graph of $f(x) = \\log_b x$ passes through the point $(8, -3)$. Find the base $b$.",
+      "answer": "1/2",
+      "solution": "By the definition of logarithm, $\\log_b x = y \\iff b^y = x$.\n\nSubstituting the point $(8,\\,-3)$:\n$$\\log_b 8 = -3 \\implies b^{-3} = 8$$\n\nTake the $-\\tfrac{1}{3}$ power of both sides:\n$$b = 8^{-1/3} = \\frac{1}{8^{1/3}} = \\frac{1}{2}$$\n\nCheck: $b = \\tfrac{1}{2} > 0$ and $b \\neq 1$ ✓, and $\\left(\\tfrac{1}{2}\\right)^{-3} = 2^3 = 8$ ✓\n\nTherefore $b = \\dfrac{1}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:37.814Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-076"
+    },
+    {
+      "topic": "4.5 Exponential Growth and Decay: Modeling Data",
+      "problem": "A fossil bone contains 25% of the carbon-14 found in a living bone. Given that the half-life of carbon-14 is 5730 years, use the exponential decay model $A = A_0 e^{kt}$ to determine the age of the fossil.",
+      "answer": "11460",
+      "solution": "1. Find $k$ from the half-life condition $\\dfrac{A_0}{2} = A_0 e^{5730k}$: $$k = \\frac{\\ln(1/2)}{5730} = -\\frac{\\ln 2}{5730}$$\n2. With 25% remaining, set $0.25A_0 = A_0 e^{kt}$ and take the natural log: $$\\ln(0.25) = kt \\implies -2\\ln 2 = kt$$\n3. Solve for $t$: $$t = \\frac{-2\\ln 2}{k} = \\frac{-2\\ln 2}{-\\ln 2/5730} = 2 \\times 5730 = 11{,}460 \\text{ years}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:44.849Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "11460",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "11460",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-077"
+    },
+    {
+      "topic": "4.4 Exponential and Logarithmic Equations",
+      "problem": "Solve for $x$: $$\\log_3(x+5)+\\log_3(x-1)=3$$",
+      "answer": "4",
+      "solution": "Apply the product rule for logarithms: $$\\log_3[(x+5)(x-1)]=3$$\nConvert to exponential form: $$(x+5)(x-1)=3^3=27$$\nExpand and rearrange: $$x^2+4x-5=27 \\implies x^2+4x-32=0$$\nFactor: $$(x+8)(x-4)=0 \\implies x=-8 \\text{ or } x=4$$\nCheck $x=-8$: $\\log_3(-3)$ is undefined — reject. Check $x=4$: $\\log_3(9)+\\log_3(3)=2+1=3$ ✓\nThe solution is $x=4$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:20:49.281Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-078"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "Solve for $x$: $$4^{2x-1} = 8^{x+2}$$",
+      "answer": "8",
+      "solution": "Rewrite both sides as powers of $2$, since $4 = 2^2$ and $8 = 2^3$:\n$$(2^2)^{2x-1} = (2^3)^{x+2}$$\nApply the power rule $(a^m)^n = a^{mn}$:\n$$2^{4x-2} = 2^{3x+6}$$\nSince the bases are equal, set the exponents equal:\n$$4x - 2 = 3x + 6$$\n$$x = 8$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:10.312Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "8",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "8",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-079"
+    },
+    {
+      "topic": "4.3 Properties Of Logarithms",
+      "problem": "Use properties of logarithms to write the following expression as a single logarithm: $$3\\log_2 x - \\frac{1}{2}\\log_2(x+1) + \\log_2 5$$",
+      "answer": "log_2(5*x^3/sqrt(x+1))",
+      "solution": "**Step 1 — Power Rule:** Apply $p\\log_b M = \\log_b M^p$ to the coefficients:\n$$3\\log_2 x = \\log_2 x^3, \\qquad \\tfrac{1}{2}\\log_2(x+1) = \\log_2\\sqrt{x+1}$$\n\n**Step 2 — Product Rule:** Combine the two positive terms:\n$$\\log_2 x^3 + \\log_2 5 = \\log_2(5x^3)$$\n\n**Step 3 — Quotient Rule:** Subtract the remaining term:\n$$\\log_2(5x^3) - \\log_2\\sqrt{x+1} = \\log_2\\!\\left(\\frac{5x^3}{\\sqrt{x+1}}\\right)$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:18.598Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "log_2(5*x^3/sqrt(x+1))",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "log_2(5*x^3/sqrt(x+1))",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-080"
+    },
+    {
+      "topic": "4.2 Logarithmic Functions",
+      "problem": "Solve for $x$: $$\\log_3(x+4)+\\log_3(x-2)=3$$",
+      "answer": "5",
+      "solution": "1. Apply the product rule for logarithms: $$\\log_3\\bigl((x+4)(x-2)\\bigr)=3$$\n2. Rewrite in exponential form: $$(x+4)(x-2)=3^3=27$$\n3. Expand the left side: $$x^2+2x-8=27$$\n4. Rearrange: $$x^2+2x-35=0$$\n5. Factor: $$(x+7)(x-5)=0 \\implies x=-7 \\text{ or } x=5$$\n6. Check the domain. For $x=-7$: $\\log_3(-7-2)=\\log_3(-9)$ is undefined — reject. For $x=5$: $\\log_3(9)+\\log_3(3)=2+1=3$ ✓\n7. The solution is $x=5$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:21.202Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-081"
+    },
+    {
+      "topic": "4.5 Exponential Growth and Decay: Modeling Data",
+      "problem": "A radioactive substance has a half-life of $20$ years. A sample initially contains $500$ grams. How many grams remain after $50$ years? Express your answer in simplified radical form.",
+      "answer": "125*sqrt(2)/2",
+      "solution": "Use the half-life decay model: $$A(t) = A_0\\left(\\frac{1}{2}\\right)^{t/h}$$ with $A_0 = 500$ g, half-life $h = 20$ yr, and $t = 50$ yr.\n\nSubstitute: $$A(50) = 500\\left(\\frac{1}{2}\\right)^{50/20} = 500\\left(\\frac{1}{2}\\right)^{5/2}$$\n\nRewrite using exponent rules: $$= \\frac{500}{2^{5/2}} = \\frac{500}{2^2 \\cdot 2^{1/2}} = \\frac{500}{4\\sqrt{2}}= \\frac{125}{\\sqrt{2}}$$\n\nRationalize the denominator: $$= \\frac{125\\sqrt{2}}{2} \\approx 88.4 \\text{ grams}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:25.673Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "125*sqrt(2)/2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "125*sqrt(2)/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-082"
+    },
+    {
+      "topic": "4.4 Exponential and Logarithmic Equations",
+      "problem": "Solve for $x$: $$\\log_3(x+5)+\\log_3(x-1)=3$$",
+      "answer": "4",
+      "solution": "**1.** Apply the product rule for logarithms: $$\\log_3\\!\\bigl[(x+5)(x-1)\\bigr]=3$$\n\n**2.** Rewrite in exponential form: $$(x+5)(x-1)=3^3=27$$\n\n**3.** Expand the left side: $$x^2+4x-5=27$$\n\n**4.** Rearrange into standard form: $$x^2+4x-32=0$$\n\n**5.** Factor: $$(x+8)(x-4)=0\\implies x=-8\\text{ or }x=4$$\n\n**6.** Check for extraneous solutions. If $x=-8$: $\\log_3(-8+5)=\\log_3(-3)$, which is undefined. Reject $x=-8$.\n\nIf $x=4$: $\\log_3(9)+\\log_3(3)=2+1=3$ ✓\n\nThe solution is $x=4$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:45.364Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-083"
+    },
+    {
+      "topic": "4.1 Exponential Functions",
+      "problem": "Solve for $x$: $$4^x = 8$$",
+      "answer": "3/2",
+      "solution": "Rewrite both sides as powers of $2$:\n$$4^x = (2^2)^x = 2^{2x}, \\qquad 8 = 2^3$$\nSince the bases are equal, set the exponents equal:\n$$2x = 3$$\n$$x = \\dfrac{3}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:53.369Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-084"
+    },
+    {
+      "topic": "4.5 Exponential Growth and Decay: Modeling Data",
+      "problem": "A radioactive isotope has a half-life of $10$ years. A sample initially contains $200$ grams. How many grams remain after $25$ years? Express your answer in simplified radical form.",
+      "answer": "25*sqrt(2)",
+      "solution": "**1.** Write the half-life decay model: $$A(t) = A_0\\!\\left(\\tfrac{1}{2}\\right)^{t/h}$$ with $A_0 = 200$ g, half-life $h = 10$ yr, $t = 25$ yr.\n\n**2.** Substitute: $$A(25) = 200\\left(\\frac{1}{2}\\right)^{25/10} = 200\\left(\\frac{1}{2}\\right)^{5/2}$$\n\n**3.** Simplify the power: $$\\left(\\frac{1}{2}\\right)^{5/2} = \\frac{1}{2^{5/2}} = \\frac{1}{2^2 \\cdot 2^{1/2}} = \\frac{1}{4\\sqrt{2}}$$\n\n**4.** Multiply and rationalize: $$A(25) = \\frac{200}{4\\sqrt{2}} = \\frac{50}{\\sqrt{2}} = \\frac{50\\sqrt{2}}{2} = 25\\sqrt{2} \\approx 35.4 \\text{ g}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:21:59.557Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "25*sqrt(2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "25*sqrt(2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch4-085"
+    },
+    {
+      "topic": "4.3 Properties Of Logarithms",
+      "problem": "Use properties of logarithms to find the exact value of $2\\log_4 2 + \\log_4 16$.",
+      "answer": "3",
+      "solution": "**Step 1.** Apply the Power Rule to the first term:\n$$2\\log_4 2 = \\log_4 2^2 = \\log_4 4$$\n\n**Step 2.** Apply the Product Rule to combine the two terms:\n$$\\log_4 4 + \\log_4 16 = \\log_4(4 \\cdot 16) = \\log_4 64$$\n\n**Step 3.** Recognize that $64 = 4^3$ and evaluate:\n$$\\log_4 64 = \\log_4 4^3 = 3$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:22:53.857Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch4-086"
     }
   ]
 }

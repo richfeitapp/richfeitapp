@@ -1,0 +1,2246 @@
+{
+  "chapter": "ch8",
+  "chapterTitle": "Systems of Equations and Inequalities",
+  "problems": [
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} y = x^2 - 2x - 3 \\\\ y = x + 1 \\end{cases}$$",
+      "answer": "(-1, 0), (4, 5)",
+      "solution": "**Step 1: Substitute.** Both equations are solved for $y$, so set the right-hand sides equal: $$x^2 - 2x - 3 = x + 1$$\n\n**Step 2: Rearrange into standard form.** $$x^2 - 3x - 4 = 0$$\n\n**Step 3: Factor.** $$(x - 4)(x + 1) = 0 \\implies x = 4 \\text{ or } x = -1$$\n\n**Step 4: Back-substitute into the linear equation** $y = x + 1$.\n- $x = 4$: $y = 4 + 1 = 5$, giving the point $(4,\\,5)$.\n- $x = -1$: $y = -1 + 1 = 0$, giving the point $(-1,\\,0)$.\n\n**Step 5: Verify both points satisfy the parabola** $y = x^2 - 2x - 3$.\n- $(4, 5)$: $4^2 - 2(4) - 3 = 16 - 8 - 3 = 5$ ✓\n- $(-1, 0)$: $(-1)^2 - 2(-1) - 3 = 1 + 2 - 3 = 0$ ✓\n\nThe solution set is $\\{(-1,\\,0),\\;(4,\\,5)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:10:07.524Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, 0), (4, 5)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, 0), (4, 5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-001"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$2x + 3y = 12$$ $$5x - y = 13$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1 — Solve the second equation for $y$:** $$y = 5x - 13$$ **Step 2 — Substitute into the first equation:** $$2x + 3(5x - 13) = 12$$ **Step 3 — Distribute and simplify:** $$2x + 15x - 39 = 12 \\implies 17x = 51 \\implies x = 3$$ **Step 4 — Back-substitute to find $y$:** $$y = 5(3) - 13 = 15 - 13 = 2$$ **Step 5 — Check in both original equations:** $2(3)+3(2)=6+6=12$ ✓ and $5(3)-2=13$ ✓ The solution is $(3,\\,2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:10:10.053Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-002"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Find the partial fraction decomposition of $$\\frac{x+11}{(x-1)(x+3)}.$$",
+      "answer": "3/(x-1) - 2/(x+3)",
+      "solution": "**Set up the decomposition.** Write $$\\frac{x+11}{(x-1)(x+3)} = \\frac{A}{x-1} + \\frac{B}{x+3}$$\n\n**Clear denominators.** Multiply both sides by $(x-1)(x+3)$: $$x + 11 = A(x+3) + B(x-1)$$\n\n**Solve for $A$.** Let $x = 1$: $$1 + 11 = A(4) + B(0) \\implies 12 = 4A \\implies A = 3$$\n\n**Solve for $B$.** Let $x = -3$: $$-3 + 11 = A(0) + B(-4) \\implies 8 = -4B \\implies B = -2$$\n\n**Write the result.** $$\\frac{x+11}{(x-1)(x+3)} = \\frac{3}{x-1} - \\frac{2}{x+3}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:10:10.086Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/(x-1) - 2/(x+3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/(x-1) - 2/(x+3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-003"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables: $$\\begin{cases} x + y + z = 4 \\\\ 2x - y + z = 8 \\\\ x + 2y - z = -3 \\end{cases}$$",
+      "answer": "(2, -1, 3)",
+      "solution": "**Step 1 — Eliminate $z$ from equations (1) and (3):**\nAdd (1) and (3):\n$$(x+y+z)+(x+2y-z)=4+(-3)$$\n$$2x+3y=1\\tag{4}$$\n**Step 2 — Eliminate $z$ from equations (2) and (3):**\nAdd (2) and (3):\n$$(2x-y+z)+(x+2y-z)=8+(-3)$$\n$$3x+y=5\\tag{5}$$\n**Step 3 — Solve the two-variable system (4) and (5):**\nMultiply (5) by $-3$: $\\;-9x-3y=-15$\nAdd to (4): $\\;(2x+3y)+(-9x-3y)=1+(-15)$\n$$-7x=-14\\implies x=2$$\n**Step 4 — Back-substitute $x=2$ into (5):**\n$$3(2)+y=5\\implies y=-1$$\n**Step 5 — Back-substitute $x=2,\\,y=-1$ into (1):**\n$$2+(-1)+z=4\\implies z=3$$\nThe solution is $(x,y,z)=(2,-1,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:10:14.814Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2, -1, 3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-004"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations by substitution: $$\\begin{cases} 3x + 2y = 16 \\\\ x - y = 2 \\end{cases}$$",
+      "answer": "(4, 2)",
+      "solution": "1. Solve the second equation for $x$: $$x = y + 2$$\n2. Substitute into the first equation: $$3(y + 2) + 2y = 16$$\n3. Expand and collect like terms: $$3y + 6 + 2y = 16 \\implies 5y = 10 \\implies y = 2$$\n4. Back-substitute to find $x$: $$x = 2 + 2 = 4$$\n5. The solution is the ordered pair $(4,\\, 2)$. Check: $3(4)+2(2)=16$ ✓ and $4-2=2$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-13T04:10:44.888Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(4, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(4, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-005"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Write the partial fraction decomposition of $$\\frac{4x^2+13x+2}{x(x+1)(x+2)}.$$",
+      "answer": "1/x + 7/(x+1) - 4/(x+2)",
+      "solution": "**Step 1.** Set up the form with unknown constants over each distinct linear factor: $$\\frac{4x^2+13x+2}{x(x+1)(x+2)}=\\frac{A}{x}+\\frac{B}{x+1}+\\frac{C}{x+2}.$$\n\n**Step 2.** Multiply both sides by $x(x+1)(x+2)$: $$4x^2+13x+2=A(x+1)(x+2)+Bx(x+2)+Cx(x+1).$$\n\n**Step 3.** Substitute values that zero out factors one at a time.\n\n$x=0$: $\\;2=A(1)(2)\\;\\Rightarrow\\;A=1.$\n\n$x=-1$: $\\;4-13+2=B(-1)(1)\\;\\Rightarrow\\;-7=-B\\;\\Rightarrow\\;B=7.$\n\n$x=-2$: $\\;16-26+2=C(-2)(-1)\\;\\Rightarrow\\;-8=2C\\;\\Rightarrow\\;C=-4.$\n\n**Step 4.** Write the decomposition: $$\\frac{4x^2+13x+2}{x(x+1)(x+2)}=\\frac{1}{x}+\\frac{7}{x+1}-\\frac{4}{x+2}.$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:10:54.774Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/x + 7/(x+1) - 4/(x+2)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/x + 7/(x+1) - 4/(x+2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-006"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 2 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $y$ using equations (1) and (2):**\n\nAdd (1) and (2): $(x+y+z)+(2x-y+z)=6+3$, giving $$3x+2z=9 \\quad (4)$$\n\n**Step 2 — Eliminate $z$ using equations (2) and (3):**\n\nAdd (2) and (3): $(2x-y+z)+(x+2y-z)=3+2$, giving $$3x+y=5 \\quad (5)$$\n\n**Step 3 — Eliminate $z$ using equations (1) and (3):**\n\nAdd (1) and (3): $(x+y+z)+(x+2y-z)=6+2$, giving $$2x+3y=8 \\quad (6)$$\n\n**Step 4 — Solve the two-variable system (5) and (6):**\n\nFrom (5): $y=5-3x$. Substitute into (6): $$2x+3(5-3x)=8 \\implies 2x+15-9x=8 \\implies -7x=-7 \\implies x=1$$\n\n**Step 5 — Back-substitute to find $y$:**\n\n$$y=5-3(1)=2$$\n\n**Step 6 — Back-substitute into equation (1) to find $z$:**\n\n$$1+2+z=6 \\implies z=3$$\n\n**Check:** $(1):\\;1+2+3=6\\checkmark\\quad(2):\\;2-2+3=3\\checkmark\\quad(3):\\;1+4-3=2\\checkmark$\n\nThe solution is the ordered triple $(1,\\,2,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:11:03.114Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, 3)",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-007"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$2x + y = 8$$ $$x - 3y = -3$$",
+      "answer": "(3, 2)",
+      "solution": "Solve the second equation for $x$: $$x = 3y - 3$$ Substitute into the first equation: $$2(3y - 3) + y = 8$$ $$6y - 6 + y = 8$$ $$7y = 14$$ $$y = 2$$ Back-substitute to find $x$: $$x = 3(2) - 3 = 3$$ Check in both original equations: $2(3) + 2 = 8$ ✓ and $3 - 3(2) = -3$ ✓. The solution is $(3,\\,2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:11:37.865Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-008"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$y = x^2 - 3$$ $$y = x + 3$$",
+      "answer": "(-2, 1), (3, 6)",
+      "solution": "Substitute the linear expression for $y$ into the quadratic equation:\n$$x^2 - 3 = x + 3$$\nRearrange to standard form:\n$$x^2 - x - 6 = 0$$\nFactor:\n$$(x - 3)(x + 2) = 0$$\nSo $x = 3$ or $x = -2$.\n\nFind $y$ for each value using $y = x + 3$:\n- $x = 3$: $y = 6$ $\\Rightarrow$ $(3, 6)$\n- $x = -2$: $y = 1$ $\\Rightarrow$ $(-2, 1)$\n\nThe solution set is $\\{(-2,\\,1),\\,(3,\\,6)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:11:45.943Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 1), (3, 6)",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 1), (3, 6)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-009"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Write the partial fraction decomposition of $$\\frac{2x^2+5x+1}{(x+1)(x^2+1)}$$",
+      "answer": "-1/(x+1) + (3x+2)/(x^2+1)",
+      "solution": "1. The denominator has a distinct linear factor $(x+1)$ and an irreducible quadratic factor $(x^2+1)$, so write: $$\\frac{2x^2+5x+1}{(x+1)(x^2+1)}=\\frac{A}{x+1}+\\frac{Bx+C}{x^2+1}$$\n2. Multiply both sides by $(x+1)(x^2+1)$: $$2x^2+5x+1=A(x^2+1)+(Bx+C)(x+1)$$\n3. Substitute $x=-1$ to isolate $A$: $2(1)+5(-1)+1=A(2) \\Rightarrow -2=2A \\Rightarrow A=-1$\n4. Expand the right side using $A=-1$: $$2x^2+5x+1=(B-1)x^2+(B+C)x+(C-1)$$\n5. Match coefficients by degree:\n   - $x^2$: $B-1=2 \\Rightarrow B=3$\n   - constant: $C-1=1 \\Rightarrow C=2$\n   - $x$ (check): $B+C=3+2=5$ ✓\n6. The partial fraction decomposition is: $$\\frac{-1}{x+1}+\\frac{3x+2}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:12:35.900Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/(x+1) + (3x+2)/(x^2+1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/(x+1) + (3x+2)/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-010"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$x^2 + y^2 = 25$$ $$y = x + 1$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "**Step 1 — Substitute** the linear equation into the circle equation. Replace $y$ with $x+1$: $$x^2 + (x+1)^2 = 25$$\n\n**Step 2 — Expand and simplify:** $$x^2 + x^2 + 2x + 1 = 25$$ $$2x^2 + 2x - 24 = 0$$ $$x^2 + x - 12 = 0$$\n\n**Step 3 — Factor:** $$(x+4)(x-3) = 0$$ So $x = -4$ or $x = 3$.\n\n**Step 4 — Find corresponding $y$-values** using $y = x + 1$:\n- $x = -4 \\Rightarrow y = -3$\n- $x = 3 \\Rightarrow y = 4$\n\n**Step 5 — Check both solutions** satisfy $x^2+y^2=25$:\n- $(-4)^2+(-3)^2 = 16+9 = 25$ ✓\n- $(3)^2+(4)^2 = 9+16 = 25$ ✓\n\nThe solutions are $(-4,\\,-3)$ and $(3,\\,4)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:13:09.974Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-011"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables: $$\\begin{cases} x + y + z = 4 \\\\ 2x - y + z = 8 \\\\ x + 2y - z = -3 \\end{cases}$$",
+      "answer": "(2, -1, 3)",
+      "solution": "**Step 1 — Eliminate $x$.**\n\nSubtract $2 \\times \\text{Eq. 1}$ from Eq. 2: $$(2x - y + z) - 2(x + y + z) = 8 - 8 \\implies -3y - z = 0 \\tag{4}$$\n\nSubtract Eq. 1 from Eq. 3: $$(x + 2y - z) - (x + y + z) = -3 - 4 \\implies y - 2z = -7 \\tag{5}$$\n\n**Step 2 — Eliminate $y$ from (4) and (5).**\n\nMultiply (5) by 3 and add to (4): $$3(y - 2z) + (-3y - z) = 3(-7) + 0 \\implies -7z = -21 \\implies z = 3$$\n\n**Step 3 — Back-substitute $z = 3$ into (5).**\n\n$$y - 2(3) = -7 \\implies y = -1$$\n\n**Step 4 — Back-substitute $y = -1,\\ z = 3$ into Eq. 1.**\n\n$$x + (-1) + 3 = 4 \\implies x = 2$$\n\nThe solution is $(x, y, z) = (2,\\,-1,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:13:26.397Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, -1, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1, 3)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-012"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of linear equations using the substitution method: $$2x + 3y = 12$$ $$x - y = 1$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1 — Isolate a variable.** From the second equation, solve for $x$: $$x = y + 1$$\n\n**Step 2 — Substitute** into the first equation: $$2(y + 1) + 3y = 12$$\n\n**Step 3 — Solve for $y$:** $$2y + 2 + 3y = 12 \\implies 5y = 10 \\implies y = 2$$\n\n**Step 4 — Back-substitute** $y = 2$ into $x = y + 1$: $$x = 2 + 1 = 3$$\n\n**Step 5 — Check** in both original equations:\n- $2(3) + 3(2) = 6 + 6 = 12$ ✓\n- $3 - 2 = 1$ ✓\n\nThe solution is $(3,\\ 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:13:44.713Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-013"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations: $$x + y + z = 6$$ $$2x - y + z = 3$$ $$x + 2y - z = 2$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $z$ from equations (1) and (2):** Add (1) and (2): $$(x+y+z)+(2x-y+z)=6+3 \\implies 3x+2z=9 \\tag{4}$$\n\n**Step 2 — Eliminate $z$ from equations (1) and (3):** Add (1) and (3): $$(x+y+z)+(x+2y-z)=6+2 \\implies 2x+3y=8 \\tag{5}$$\n\n**Step 3 — Eliminate $z$ from equations (2) and (3):** Add (2) and (3): $$(2x-y+z)+(x+2y-z)=3+2 \\implies 3x+y=5 \\tag{6}$$\n\n**Step 4 — Solve the two-variable system (5) and (6):** From (6): $y=5-3x$. Substitute into (5): $$2x+3(5-3x)=8 \\implies 2x+15-9x=8 \\implies -7x=-7 \\implies x=1$$\n\n**Step 5 — Back-substitute to find $y$ and $z$:** $$y=5-3(1)=2$$ From (4): $3(1)+2z=9 \\implies 2z=6 \\implies z=3$\n\n**Step 6 — Verify in all three original equations:** $(1):\\; 1+2+3=6\\checkmark\\quad (2):\\; 2-2+3=3\\checkmark\\quad (3):\\; 1+4-3=2\\checkmark$\n\nThe solution is the ordered triple $(1,\\,2,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:14:10.586Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-014"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Find the partial fraction decomposition of $$\\frac{5x-4}{x^2-x-2}$$",
+      "answer": "2/(x-2) + 3/(x+1)",
+      "solution": "**Step 1.** Factor the denominator: $x^2 - x - 2 = (x-2)(x+1)$\n\n**Step 2.** Write the decomposition template: $$\\frac{5x-4}{(x-2)(x+1)} = \\frac{A}{x-2} + \\frac{B}{x+1}$$\n\n**Step 3.** Multiply both sides by $(x-2)(x+1)$: $$5x - 4 = A(x+1) + B(x-2)$$\n\n**Step 4.** Substitute $x = 2$: $5(2)-4 = A(3) \\;\\Rightarrow\\; 6 = 3A \\;\\Rightarrow\\; A = 2$\n\n**Step 5.** Substitute $x = -1$: $5(-1)-4 = B(-3) \\;\\Rightarrow\\; -9 = -3B \\;\\Rightarrow\\; B = 3$\n\n**Step 6.** Write the result: $$\\frac{5x-4}{x^2-x-2} = \\frac{2}{x-2} + \\frac{3}{x+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:14:20.901Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2/(x - 2) + 3/(x + 1)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2/(x-2) + 3/(x+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-015"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} x^2 + y^2 = 25 \\\\ y = x + 1 \\end{cases}$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "Substitute $y = x + 1$ into $x^2 + y^2 = 25$: $$x^2 + (x+1)^2 = 25$$ Expand: $$2x^2 + 2x + 1 = 25$$ $$2x^2 + 2x - 24 = 0$$ $$x^2 + x - 12 = 0$$ Factor: $$(x + 4)(x - 3) = 0$$ so $x = -4$ or $x = 3$. Back-substitute into $y = x + 1$: when $x = -4$, $y = -3$; when $x = 3$, $y = 4$. The solutions are $(-4,\\,-3)$ and $(3,\\,4)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:14:38.747Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-016"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1:** Solve the second equation for $y$: $y = 5x - 13$.\n\n**Step 2:** Substitute into the first equation: $2x + 3(5x - 13) = 12$.\n\n**Step 3:** Expand: $2x + 15x - 39 = 12 \\Rightarrow 17x = 51 \\Rightarrow x = 3$.\n\n**Step 4:** Back-substitute: $y = 5(3) - 13 = 15 - 13 = 2$.\n\n**Step 5:** The solution is $(3,\\ 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:14:52.746Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-017"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations: $$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - 3z = -4 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $y$ from equations (1) and (2).**\nAdd equations (1) and (2):\n$$(x+y+z)+(2x-y+z)=6+3 \\implies 3x+2z=9 \\quad (4)$$\n\n**Step 2 — Eliminate $y$ from equations (1) and (3).**\nMultiply (1) by $-2$: $-2x-2y-2z=-12$. Add to (3):\n$$(-2x-2y-2z)+(x+2y-3z)=-12+(-4) \\implies -x-5z=-16 \\implies x+5z=16 \\quad (5)$$\n\n**Step 3 — Solve the two-variable system (4) and (5).**\nFrom (5): $x=16-5z$. Substitute into (4):\n$$3(16-5z)+2z=9 \\implies 48-13z=9 \\implies z=3$$\n\n**Step 4 — Back-substitute to find $x$ and $y$.**\n$$x=16-5(3)=1$$\n$$y=6-x-z=6-1-3=2$$\n\n**Solution:** $(x,y,z)=(1,2,3)$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:15:35.904Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-018"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{5x^2 + 3x + 2}{x(x^2+1)}$$",
+      "answer": "2/x + (3x + 3)/(x^2 + 1)",
+      "solution": "Because the denominator has a linear factor $x$ and an irreducible quadratic factor $x^2+1$, write:\n$$\\frac{5x^2+3x+2}{x(x^2+1)}=\\frac{A}{x}+\\frac{Bx+C}{x^2+1}$$\nMultiply both sides by $x(x^2+1)$:\n$$5x^2+3x+2=A(x^2+1)+(Bx+C)x$$\n**Find $A$:** Set $x=0$: $\\;2=A(1)\\;\\Rightarrow\\;A=2$.\n**Match coefficients** after expanding the right side with $A=2$:\n$$5x^2+3x+2=(2+B)x^2+Cx+2$$\n$x^2$: $\\;5=2+B\\;\\Rightarrow\\;B=3$\n$x^1$: $\\;3=C\\;\\Rightarrow\\;C=3$\n$x^0$: $\\;2=2\\;\\checkmark$\n**Result:**\n$$\\frac{5x^2+3x+2}{x(x^2+1)}=\\frac{2}{x}+\\frac{3x+3}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:15:41.144Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2/x + (3x + 3)/(x^2 + 1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2/x + (3x + 3)/(x^2 + 1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-019"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$x^2 + y^2 = 25$$ $$y = x^2 - 5$$",
+      "answer": "(-3, 4), (0, -5), (3, 4)",
+      "solution": "Substitute $y = x^2 - 5$ into $x^2 + y^2 = 25$:\n$$x^2 + (x^2 - 5)^2 = 25$$\nExpand:\n$$x^2 + x^4 - 10x^2 + 25 = 25$$\n$$x^4 - 9x^2 = 0$$\nFactor:\n$$x^2(x^2 - 9) = 0 \\implies x^2(x-3)(x+3) = 0$$\nSo $x = 0,\\; x = 3,\\; x = -3$.\n\nFind $y$ from $y = x^2 - 5$:\n- $x = 0$: $y = 0 - 5 = -5$ → $(0,\\,-5)$\n- $x = 3$: $y = 9 - 5 = 4$ → $(3,\\,4)$\n- $x = -3$: $y = 9 - 5 = 4$ → $(-3,\\,4)$\n\nThe solution set is $\\{(-3,\\,4),\\;(0,\\,-5),\\;(3,\\,4)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:16:19.544Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-3, 4), (0, -5), (3, 4)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-3, 4), (0, -5), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-020"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$2x + 3y = 7$$ $$5x - y = 9$$",
+      "answer": "(2, 1)",
+      "solution": "**Step 1 — Isolate $y$ in the second equation:**\n$$5x - y = 9 \\implies y = 5x - 9$$\n\n**Step 2 — Substitute into the first equation:**\n$$2x + 3(5x - 9) = 7$$\n$$2x + 15x - 27 = 7$$\n$$17x = 34$$\n$$x = 2$$\n\n**Step 3 — Back-substitute to find $y$:**\n$$y = 5(2) - 9 = 10 - 9 = 1$$\n\n**Step 4 — Check in both original equations:**\n$2(2)+3(1)=4+3=7$ ✓ and $5(2)-1=9$ ✓\n\nThe solution is $(2,\\,1)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:16:52.071Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, 1)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, 1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-021"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{5x^2 + 3x - 2}{x(x^2 + 2)}$$",
+      "answer": "-1/x + (6x + 3)/(x^2 + 2)",
+      "solution": "The denominator has one distinct linear factor $x$ and one irreducible quadratic factor $x^2+2$, so write:\n$$\\frac{5x^2+3x-2}{x(x^2+2)} = \\frac{A}{x} + \\frac{Bx+C}{x^2+2}$$\nMultiply both sides by $x(x^2+2)$:\n$$5x^2+3x-2 = A(x^2+2)+(Bx+C)x$$\nExpand the right side and collect by degree:\n$$5x^2+3x-2 = (A+B)x^2 + Cx + 2A$$\nMatch coefficients on each power of $x$:\n\n- Constant: $2A = -2 \\;\\Rightarrow\\; A = -1$\n- $x^1$: $C = 3$\n- $x^2$: $A + B = 5 \\;\\Rightarrow\\; B = 6$\n\nTherefore:\n$$\\frac{5x^2+3x-2}{x(x^2+2)} = \\frac{-1}{x} + \\frac{6x+3}{x^2+2}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:17:28.975Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/x + (6x + 3)/(x^2 + 2)",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/x + (6x + 3)/(x^2 + 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-022"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables:\n$$\\begin{aligned} x + y + z &= 4 \\\\ 2x - y + z &= 8 \\\\ x + 2y - z &= -3 \\end{aligned}$$",
+      "answer": "(2, -1, 3)",
+      "solution": "**Step 1 — Eliminate $y$ using equations (1) and (2).**\n\nAdd equations (1) and (2):\n\n$$(x+y+z)+(2x-y+z)=4+8 \\implies 3x+2z=12 \\tag{4}$$\n\n**Step 2 — Eliminate $z$ using equations (1) and (3).**\n\nAdd equations (1) and (3):\n\n$$(x+y+z)+(x+2y-z)=4+(-3) \\implies 2x+3y=1 \\tag{5}$$\n\n**Step 3 — Eliminate $z$ using equations (2) and (3).**\n\nAdd equations (2) and (3):\n\n$$(2x-y+z)+(x+2y-z)=8+(-3) \\implies 3x+y=5 \\tag{6}$$\n\n**Step 4 — Solve the two-variable system formed by (5) and (6).**\n\nFrom (6): $y = 5 - 3x$. Substitute into (5):\n\n$$2x + 3(5-3x) = 1 \\implies 2x+15-9x=1 \\implies -7x=-14 \\implies x=2$$\n\nThen $y = 5 - 3(2) = -1$.\n\n**Step 5 — Find $z$ using equation (4).**\n\n$$3(2)+2z=12 \\implies 6+2z=12 \\implies z=3$$\n\n**Step 6 — Check in all three original equations.**\n\n- $(2)+(-1)+(3)=4$ ✓\n- $2(2)-(-1)+(3)=8$ ✓\n- $(2)+2(-1)-(3)=-3$ ✓\n\nThe solution set is $\\{(2,\\,-1,\\,3)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:17:43.089Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, -1, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1, 3)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-023"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system: $$\\begin{cases} x^2 + y^2 = 9 \\\\ y = x^2 - 3 \\end{cases}$$",
+      "answer": "(-sqrt(5), 2), (0, -3), (sqrt(5), 2)",
+      "solution": "**Step 1.** Substitute $y = x^2 - 3$ into $x^2 + y^2 = 9$: $$x^2 + (x^2 - 3)^2 = 9$$\n\n**Step 2.** Expand the left side: $$x^2 + x^4 - 6x^2 + 9 = 9$$\n\n**Step 3.** Simplify and factor: $$x^4 - 5x^2 = 0 \\implies x^2(x^2 - 5) = 0$$\n\nSo $x = 0$ or $x = \\pm\\sqrt{5}$.\n\n**Step 4.** Back-substitute each $x$-value into $y = x^2 - 3$:\n- $x = 0$: $y = 0 - 3 = -3$, giving $(0, -3)$\n- $x = \\pm\\sqrt{5}$: $y = 5 - 3 = 2$, giving $\\bigl(-\\sqrt{5},\\,2\\bigr)$ and $\\bigl(\\sqrt{5},\\,2\\bigr)$\n\n**Step 5.** Verify each point satisfies both equations (all three do).\n\nThe solution set is $\\left\\{\\left(-\\sqrt{5},\\,2\\right),\\,(0,\\,-3),\\,\\left(\\sqrt{5},\\,2\\right)\\right\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:18:08.457Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-sqrt(5), 2), (0, -3), (sqrt(5), 2)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-sqrt(5), 2), (0, -3), (sqrt(5), 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-024"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find all vertices of the solution region of the system of inequalities: $$y \\leq -2x + 6$$ $$y \\geq x - 3$$ $$x \\geq 0, \\quad y \\geq 0$$",
+      "answer": "(0, 0), (0, 6), (3, 0)",
+      "solution": "Find the intersection of each pair of boundary lines that form corner points.\n\n**Step 1:** Intersect $y = -2x + 6$ and $y = x - 3$: $$-2x + 6 = x - 3 \\implies 9 = 3x \\implies x = 3,\\; y = 0$$ Corner point: $(3, 0)$.\n\n**Step 2:** Intersect $y = -2x + 6$ and $x = 0$: $$y = -2(0) + 6 = 6$$ Corner point: $(0, 6)$.\n\n**Step 3:** Intersect $x = 0$ and $y = 0$: Corner point: $(0, 0)$.\n\n**Step 4:** Check that no other boundary intersections fall inside the region. The line $y = x - 3$ meets $x = 0$ at $(0, -3)$, which violates $y \\geq 0$, so it is not a vertex.\n\n**Step 5:** Verify each candidate satisfies all four inequalities. All three points check out, confirming the solution region is a bounded triangle with vertices $(0, 0)$, $(0, 6)$, and $(3, 0)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:19:01.552Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(0, 0), (0, 6), (3, 0)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(0, 0), (0, 6), (3, 0)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch8-025"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find all vertices of the feasible region defined by the system of inequalities: $$x + y \\leq 5$$ $$2x + y \\leq 8$$ $$x \\geq 0, \\quad y \\geq 0$$",
+      "answer": "(0, 0), (0, 5), (3, 2), (4, 0)",
+      "solution": "The boundary lines are $x+y=5$, $2x+y=8$, $x=0$, and $y=0$. The feasible region is in the first quadrant, so each vertex comes from intersecting two boundary lines.\n\n**Corner 1:** $x=0$ and $y=0$ gives $(0,0)$.\n\n**Corner 2:** $x=0$ and $x+y=5$ gives $(0,5)$. Check $2(0)+5=5\\leq 8$ ✓\n\n**Corner 3:** $y=0$ and $2x+y=8$ gives $x=4$, so $(4,0)$. Check $4+0=4\\leq 5$ ✓\n\n**Corner 4:** Intersect $x+y=5$ and $2x+y=8$. Subtract the first equation from the second: $$x = 3$$ Substitute back: $3+y=5\\Rightarrow y=2$, giving $(3,2)$. Check both inequalities: $3+2=5\\leq 5$ ✓ and $6+2=8\\leq 8$ ✓\n\nThe four vertices of the feasible region are $(0,0)$, $(4,0)$, $(3,2)$, and $(0,5)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:19:56.003Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(0, 0), (0, 5), (3, 2), (4, 0)",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(0, 0), (0, 5), (3, 2), (4, 0)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch8-026"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$y = x^2 - 4$$ $$y = 2x - 1$$",
+      "answer": "(-1, -3), (3, 5)",
+      "solution": "**1.** Substitute the linear expression into the parabola (both equal $y$): $$x^2 - 4 = 2x - 1$$\n\n**2.** Rearrange to standard form: $$x^2 - 2x - 3 = 0$$\n\n**3.** Factor: $$(x - 3)(x + 1) = 0 \\implies x = 3 \\text{ or } x = -1$$\n\n**4.** Find $y$ using $y = 2x - 1$:\n- $x = 3$: $y = 2(3) - 1 = 5$\n- $x = -1$: $y = 2(-1) - 1 = -3$\n\n**5.** The solutions are $(-1,\\,-3)$ and $(3,\\,5)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:57:23.397Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, -3), (3, 5)",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, -3), (3, 5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-027"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations: $$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 2 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $z$ to get two equations in two variables.**\n\nAdd equations (1) and (2): $$(x+y+z)+(2x-y+z)=6+3 \\implies 3x+2z=9 \\tag{4}$$\n\nAdd equations (1) and (3): $$(x+y+z)+(x+2y-z)=6+2 \\implies 2x+3y=8 \\tag{5}$$\n\nAdd equations (2) and (3): $$(2x-y+z)+(x+2y-z)=3+2 \\implies 3x+y=5 \\tag{6}$$\n\n**Step 2 — Solve the two-variable system (5) and (6).**\n\nFrom (6): $y = 5-3x$.\n\nSubstitute into (5): $$2x+3(5-3x)=8 \\implies 2x+15-9x=8 \\implies -7x=-7 \\implies x=1$$\n\nBack-substitute: $y=5-3(1)=2$.\n\n**Step 3 — Find $z$ using equation (1).**\n\n$$1+2+z=6 \\implies z=3$$\n\n**Step 4 — Verify in all three original equations.**\n\n- $(1)$: $1+2+3=6$ ✓\n- $(2)$: $2(1)-2+3=3$ ✓\n- $(3)$: $1+2(2)-3=2$ ✓\n\nThe solution is $(x,y,z)=(1,2,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:57:51.446Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1, 2, 3",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-028"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$$",
+      "answer": "(3, 2)",
+      "solution": "Solve the second equation for $y$: $$y = 5x - 13$$\n\nSubstitute into the first equation: $$2x + 3(5x - 13) = 12$$ $$2x + 15x - 39 = 12$$ $$17x = 51$$ $$x = 3$$\n\nBack-substitute to find $y$: $$y = 5(3) - 13 = 15 - 13 = 2$$\n\nCheck in both original equations: $2(3)+3(2)=6+6=12$ ✓ and $5(3)-2=13$ ✓\n\nThe solution is $(3,\\ 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:57:53.028Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-029"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables:\n$$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 2 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $z$ from equations (2) and (3).**\n\nAdd equations (2) and (3):\n$$(2x - y + z) + (x + 2y - z) = 3 + 2$$\n$$3x + y = 5 \\quad \\cdots (4)$$\n\n**Step 2 — Eliminate $z$ from equations (1) and (2).**\n\nMultiply equation (2) by $-1$ and add to equation (1):\n$$(x + y + z) + (-2x + y - z) = 6 + (-3)$$\n$$-x + 2y = 3 \\quad \\cdots (5)$$\n\n**Step 3 — Solve the two-variable system formed by (4) and (5).**\n\nMultiply equation (4) by $2$: $\\;6x + 2y = 10$\n\nSubtract equation (5): $\\;(6x + 2y) - (-x + 2y) = 10 - 3$\n$$7x = 7 \\implies x = 1$$\n\nSubstitute $x = 1$ into (4): $\\;3(1) + y = 5 \\implies y = 2$\n\n**Step 4 — Find $z$ by back-substitution into equation (1).**\n\n$$1 + 2 + z = 6 \\implies z = 3$$\n\n**Solution:** $(x, y, z) = (1,\\, 2,\\, 3)$\n\n**Check:** $(1):\\; 1+2+3=6\\checkmark\\quad (2):\\; 2-2+3=3\\checkmark\\quad (3):\\; 1+4-3=2\\checkmark$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:58:33.836Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1, 2, 3",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-030"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$3x - y = 1$$ $$x + y = 7$$",
+      "answer": "(2, 5)",
+      "solution": "Add the two equations to eliminate $y$:\n$$(3x - y) + (x + y) = 1 + 7$$\n$$4x = 8 \\implies x = 2$$\nSubstitute $x = 2$ into $x + y = 7$:\n$$2 + y = 7 \\implies y = 5$$\nThe solution is the ordered pair $(2,\\, 5)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:58:52.579Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, 5)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, 5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-031"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{3x^2+2x+1}{x(x-1)^2}$$",
+      "answer": "1/x + 2/(x-1) + 6/(x-1)^2",
+      "solution": "**1.** Set up the form (distinct linear factor $x$ plus repeated linear factor $(x-1)^2$):\n$$\\frac{3x^2+2x+1}{x(x-1)^2} = \\frac{A}{x}+\\frac{B}{x-1}+\\frac{C}{(x-1)^2}$$\n\n**2.** Multiply both sides by $x(x-1)^2$:\n$$3x^2+2x+1 = A(x-1)^2 + Bx(x-1) + Cx$$\n\n**3.** Substitute $x=0$: $\\;1 = A(1)^2 \\Rightarrow A = 1$\n\n**4.** Substitute $x=1$: $\\;3+2+1 = C(1) \\Rightarrow C = 6$\n\n**5.** Expand the right side and compare $x^2$ coefficients:\n$$x^2\\text{-terms}: \\quad 3 = A + B = 1 + B \\Rightarrow B = 2$$\n\n**6.** Verify by expanding $1\\cdot(x-1)^2 + 2x(x-1) + 6x = x^2-2x+1+2x^2-2x+6x = 3x^2+2x+1$ ✓\n\n$$\\frac{3x^2+2x+1}{x(x-1)^2} = \\frac{1}{x}+\\frac{2}{x-1}+\\frac{6}{(x-1)^2}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:59:00.202Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/x + 2/(x-1) + 6/(x-1)^2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/x + 2/(x-1) + 6/(x-1)^2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-032"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{3x^2+5x+4}{(x-1)^2(x+3)}$$",
+      "answer": "2/(x-1) + 3/(x-1)^2 + 1/(x+3)",
+      "solution": "Write the partial fraction form:\n$$\\frac{3x^2+5x+4}{(x-1)^2(x+3)}=\\frac{A}{x-1}+\\frac{B}{(x-1)^2}+\\frac{C}{x+3}$$\nMultiply both sides by $(x-1)^2(x+3)$:\n$$3x^2+5x+4=A(x-1)(x+3)+B(x+3)+C(x-1)^2$$\nLet $x=1$: $\\;3+5+4=4B \\;\\Rightarrow\\; B=3$.\nLet $x=-3$: $\\;27-15+4=16C \\;\\Rightarrow\\; C=1$.\nMatch $x^2$ coefficients: $A+C=3 \\;\\Rightarrow\\; A=2$.\nVerify constant terms: $-3(2)+3(3)+1=4$ ✓\n$$\\frac{3x^2+5x+4}{(x-1)^2(x+3)}=\\frac{2}{x-1}+\\frac{3}{(x-1)^2}+\\frac{1}{x+3}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T04:59:24.875Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2/(x-1) + 3/(x-1)^2 + 1/(x+3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2/(x-1) + 3/(x-1)^2 + 1/(x+3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-033"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$x^2 + y^2 = 25$$ $$y = x + 1$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "**Step 1.** Substitute $y = x + 1$ into $x^2 + y^2 = 25$: $$x^2 + (x+1)^2 = 25$$\n\n**Step 2.** Expand and simplify: $$x^2 + x^2 + 2x + 1 = 25$$ $$2x^2 + 2x - 24 = 0$$ $$x^2 + x - 12 = 0$$\n\n**Step 3.** Factor: $$(x + 4)(x - 3) = 0$$ so $x = -4$ or $x = 3$.\n\n**Step 4.** Back-substitute into $y = x + 1$:\n- $x = -4 \\Rightarrow y = -3$\n- $x = 3 \\Rightarrow y = 4$\n\n**Solutions:** $(-4,\\,-3)$ and $(3,\\,4)$. Both satisfy the original circle equation: $(-4)^2+(-3)^2=16+9=25$ ✓ and $3^2+4^2=9+16=25$ ✓.",
+      "meta": {
+        "generatedAt": "2026-05-13T04:59:38.173Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-034"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find the vertices of the triangular region that is the solution set of the system: $$y \\geq x - 2$$ $$y \\leq -2x + 4$$ $$y \\geq -1$$",
+      "answer": "(1, -1), (2, 0), (5/2, -1)",
+      "solution": "Each vertex is the intersection of two boundary lines.\n\n**Vertex 1:** Intersect $y = x - 2$ and $y = -2x + 4$:\n$$x - 2 = -2x + 4 \\implies 3x = 6 \\implies x = 2,\\quad y = 0$$\nVertex: $(2,\\,0)$.\n\n**Vertex 2:** Intersect $y = x - 2$ and $y = -1$:\n$$x - 2 = -1 \\implies x = 1,\\quad y = -1$$\nVertex: $(1,\\,-1)$.\n\n**Vertex 3:** Intersect $y = -2x + 4$ and $y = -1$:\n$$-2x + 4 = -1 \\implies -2x = -5 \\implies x = \\tfrac{5}{2},\\quad y = -1$$\nVertex: $\\!\\left(\\tfrac{5}{2},\\,-1\\right)$.\n\n**Verify each vertex satisfies all three inequalities** (each lies on two boundaries and strictly satisfies the third), confirming the triangular solution region has vertices $(1,-1)$, $(2,0)$, and $\\!\\left(\\tfrac{5}{2},-1\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:00:00.175Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, -1), (2, 0), (5/2, -1)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, -1), (2, 0), (5/2, -1)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch8-035"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system by substitution: $$\\begin{cases} 2x - y = 4 \\\\ 3x + 2y = 13 \\end{cases}$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1.** Solve the first equation for $y$: $$y = 2x - 4$$\n\n**Step 2.** Substitute into the second equation: $$3x + 2(2x - 4) = 13$$\n\n**Step 3.** Distribute and simplify: $$3x + 4x - 8 = 13 \\implies 7x = 21 \\implies x = 3$$\n\n**Step 4.** Back-substitute to find $y$: $$y = 2(3) - 4 = 2$$\n\n**Step 5.** Check in both original equations:\n- $2(3) - 2 = 4$ ✓\n- $3(3) + 2(2) = 9 + 4 = 13$ ✓\n\nThe solution is $(3,\\, 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:00:01.086Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-036"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} x + y + z = 4 \\\\ 2x - y + z = 8 \\\\ x + 2y - z = -3 \\end{cases}$$",
+      "answer": "(2, -1, 3)",
+      "solution": "**Step 1 — Eliminate $z$ using equations (1) and (3).**\nAdd equations (1) and (3): $(x+y+z)+(x+2y-z)=4+(-3)$, giving $$2x+3y=1 \\quad \\cdots (4)$$\n\n**Step 2 — Eliminate $z$ using equations (2) and (3).**\nAdd equations (2) and (3): $(2x-y+z)+(x+2y-z)=8+(-3)$, giving $$3x+y=5 \\quad \\cdots (5)$$\n\n**Step 3 — Solve the two-variable system.**\nFrom (5): $y=5-3x$. Substitute into (4): $$2x+3(5-3x)=1 \\implies -7x=-14 \\implies x=2$$\nThen $y=5-3(2)=-1$.\n\n**Step 4 — Back-substitute to find $z$.**\nUse equation (1): $2+(-1)+z=4 \\implies z=3$.\n\n**Solution:** $(x,y,z)=(2,-1,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:00:21.843Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, -1, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-037"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} y = x^2 - 2x \\\\ y = x + 4 \\end{cases}$$",
+      "answer": "(-1, 3), (4, 8)",
+      "solution": "**Step 1 — Substitute.** Both equations are solved for $y$, so set them equal:\n$$x^2 - 2x = x + 4$$\n\n**Step 2 — Rearrange into standard form:**\n$$x^2 - 3x - 4 = 0$$\n\n**Step 3 — Factor:**\n$$(x - 4)(x + 1) = 0 \\implies x = 4 \\text{ or } x = -1$$\n\n**Step 4 — Back-substitute** each $x$ value into $y = x + 4$:\n- $x = 4$: $y = 4 + 4 = 8$\n- $x = -1$: $y = -1 + 4 = 3$\n\n**Solutions:** $(-1,\\, 3)$ and $(4,\\, 8)$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:00:35.617Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, 3), (4, 8)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, 3), (4, 8)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-038"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{3x^2+4x+1}{(x-1)(x^2+1)}$$",
+      "answer": "4/(x-1) + (3-x)/(x^2+1)",
+      "solution": "**Step 1.** The denominator has a distinct linear factor $(x-1)$ and an irreducible quadratic factor $(x^2+1)$, so write: $$\\frac{3x^2+4x+1}{(x-1)(x^2+1)}=\\frac{A}{x-1}+\\frac{Bx+C}{x^2+1}$$\n\n**Step 2.** Multiply both sides by $(x-1)(x^2+1)$: $$3x^2+4x+1=A(x^2+1)+(Bx+C)(x-1)$$\n\n**Step 3.** Substitute $x=1$ to isolate $A$: $$3(1)+4(1)+1=A(1+1)\\implies 8=2A\\implies A=4$$\n\n**Step 4.** Expand the right side: $$3x^2+4x+1=(4+B)x^2+(-B+C)x+(4-C)$$\n\n**Step 5.** Match coefficients of each power of $x$:\n- $x^2$: $3=4+B\\implies B=-1$\n- $x^1$: $4=-B+C=1+C\\implies C=3$\n- $x^0$: $1=4-C=4-3=1$ ✓\n\n**Step 6.** Write the result: $$\\frac{3x^2+4x+1}{(x-1)(x^2+1)}=\\frac{4}{x-1}+\\frac{-x+3}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:00:52.753Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/(x-1) + (3-x)/(x^2+1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/(x-1) + (-x+3)/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-039"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$2x + 3y = 12$$ $$5x - y = 13$$",
+      "answer": "(3, 2)",
+      "solution": "Use substitution. From the second equation, solve for $y$: $$y = 5x - 13$$ Substitute into the first equation: $$2x + 3(5x - 13) = 12$$ $$2x + 15x - 39 = 12$$ $$17x = 51$$ $$x = 3$$ Substitute back: $$y = 5(3) - 13 = 15 - 13 = 2$$ The solution is $(3, 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:01:26.272Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-040"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables: $$\\begin{cases} 2x + y - z = 5 \\\\ x - 2y + 3z = -6 \\\\ 3x + y + 2z = 3 \\end{cases}$$",
+      "answer": "(1, 2, -1)",
+      "solution": "**Step 1: Eliminate $y$ from equations (1) and (3).**\nSubtract equation (3) from equation (1):\n$$(2x + y - z) - (3x + y + 2z) = 5 - 3$$\n$$-x - 3z = 2 \\tag{4}$$\n\n**Step 2: Eliminate $y$ from equations (1) and (2).**\nMultiply equation (1) by 2 to get $4x + 2y - 2z = 10$, then add equation (2):\n$$(4x + 2y - 2z) + (x - 2y + 3z) = 10 + (-6)$$\n$$5x + z = 4 \\tag{5}$$\n\n**Step 3: Solve the two-variable system formed by (4) and (5).**\nMultiply (5) by 3: $15x + 3z = 12$. Add to (4):\n$$(-x - 3z) + (15x + 3z) = 2 + 12$$\n$$14x = 14 \\implies x = 1$$\n\n**Step 4: Back-substitute to find $z$, then $y$.**\nFrom (5): $5(1) + z = 4 \\implies z = -1$\nFrom (1): $2(1) + y - (-1) = 5 \\implies 3 + y = 5 \\implies y = 2$\n\n**Solution:** $(x,\\, y,\\, z) = (1,\\, 2,\\, -1)$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:01:36.654Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, -1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, -1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-041"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{5x+7}{(x+1)(x+2)}$$",
+      "answer": "2/(x+1) + 3/(x+2)",
+      "solution": "**1.** Set up the decomposition form: $$\\frac{5x+7}{(x+1)(x+2)} = \\frac{A}{x+1} + \\frac{B}{x+2}$$\n\n**2.** Multiply both sides by $(x+1)(x+2)$: $$5x+7 = A(x+2) + B(x+1)$$\n\n**3.** Substitute $x = -1$: $5(-1)+7 = A(1) \\Rightarrow 2 = A$\n\n**4.** Substitute $x = -2$: $5(-2)+7 = B(-1) \\Rightarrow -3 = -B \\Rightarrow B = 3$\n\n**5.** Write the result: $$\\frac{5x+7}{(x+1)(x+2)} = \\frac{2}{x+1} + \\frac{3}{x+2}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:01:54.272Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2/(x+1) + 3/(x+2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2/(x+1) + 3/(x+2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-042"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system: $$\\begin{cases} x^2 + y^2 = 25 \\\\ y = x + 1 \\end{cases}$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "Substitute $y = x + 1$ into the circle equation:\n$$x^2 + (x+1)^2 = 25$$\n$$x^2 + x^2 + 2x + 1 = 25$$\n$$2x^2 + 2x - 24 = 0$$\n$$x^2 + x - 12 = 0$$\n$$(x + 4)(x - 3) = 0$$\nSo $x = -4$ or $x = 3$.\n\nFor $x = -4$: $y = -4 + 1 = -3$, giving the point $(-4, -3)$.\nFor $x = 3$: $y = 3 + 1 = 4$, giving the point $(3, 4)$.\n\nThe solution set is $\\{(-4,\\,-3),\\;(3,\\,4)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:02:07.175Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-043"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find all vertices of the feasible region determined by the system of inequalities: $$x \\geq 0, \\quad y \\geq 0, \\quad x + 2y \\leq 8, \\quad 3x + 2y \\leq 12$$",
+      "answer": "(0, 0), (0, 4), (2, 3), (4, 0)",
+      "solution": "The feasible region lies in the first quadrant. Vertices occur at intersections of boundary lines (or axes).\n\n**Step 1 — Origin:** Both axis constraints give the corner $(0, 0)$.\n\n**Step 2 — Left axis with first slanted line:** Set $x = 0$ in $x + 2y = 8$: $$2y = 8 \\implies y = 4$$ Vertex: $(0, 4)$.\n\n**Step 3 — Bottom axis with second slanted line:** Set $y = 0$ in $3x + 2y = 12$: $$3x = 12 \\implies x = 4$$ Vertex: $(4, 0)$.\n\n**Step 4 — Intersection of the two slanted lines:** Solve simultaneously: $$x + 2y = 8 \\qquad (1)$$ $$3x + 2y = 12 \\qquad (2)$$ Subtract (1) from (2): $2x = 4 \\Rightarrow x = 2$. Substitute into (1): $2 + 2y = 8 \\Rightarrow y = 3$. Vertex: $(2, 3)$.\n\n**Step 5 — Verify $(2,3)$ satisfies all constraints:** $x=2\\geq 0$ ✓, $y=3\\geq 0$ ✓, $2+2(3)=8\\leq 8$ ✓, $3(2)+2(3)=12\\leq 12$ ✓.\n\nThe four vertices of the feasible region are $(0,0)$, $(0,4)$, $(2,3)$, and $(4,0)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:02:12.617Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(0, 0), (0, 4), (2, 3), (4, 0)",
+          "confidence": 0.9
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(0, 0), (0, 4), (2, 3), (4, 0)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch8-044"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations:\n$$2x + 3y = 13$$\n$$x - 2y = -4$$",
+      "answer": "(2, 3)",
+      "solution": "**Step 1.** Solve the second equation for $x$:\n$$x = 2y - 4$$\n\n**Step 2.** Substitute into the first equation:\n$$2(2y - 4) + 3y = 13$$\n$$4y - 8 + 3y = 13$$\n$$7y = 21 \\implies y = 3$$\n\n**Step 3.** Back-substitute to find $x$:\n$$x = 2(3) - 4 = 2$$\n\n**Step 4.** The solution is $(2, 3)$.\n\nCheck: $2(2)+3(3)=13$ ✓ and $2-2(3)=-4$ ✓",
+      "meta": {
+        "generatedAt": "2026-05-13T05:02:47.389Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-045"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables: $$\\begin{aligned} x + y + z &= 6 \\\\ 2x - y + z &= 3 \\\\ x + 2y - 3z &= -4 \\end{aligned}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "Label the equations (1), (2), (3).\n\n**Eliminate $y$ from (1) and (2)** — add them directly:\n$$(1)+(2): \\quad 3x + 2z = 9 \\tag{4}$$\n\n**Eliminate $y$ from (1) and (3)** — multiply (1) by $-2$ and add to (3):\n$$-2x - 2y - 2z = -12$$\n$$x + 2y - 3z = -4$$\n$$\\longrightarrow \\quad -x - 5z = -16 \\quad\\Longrightarrow\\quad x + 5z = 16 \\tag{5}$$\n\n**Solve the $2\\times 2$ system (4) and (5):** From (5), $x = 16 - 5z$. Substitute into (4):\n$$3(16 - 5z) + 2z = 9 \\implies 48 - 13z = 9 \\implies z = 3$$\n\n**Back-substitute $z = 3$:**\n$$x = 16 - 5(3) = 1$$\n$$y = 6 - x - z = 6 - 1 - 3 = 2$$\n\n**Check in all three original equations:**\n- $(1)$: $1+2+3=6$ ✓\n- $(2)$: $2(1)-2+3=3$ ✓\n- $(3)$: $1+2(2)-3(3)=1+4-9=-4$ ✓\n\nThe solution is $(x,y,z)=(1,2,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:02:56.490Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1, 2, 3",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-046"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Find the partial fraction decomposition of $$\\frac{3x^2 + 2x + 1}{x(x^2 + 1)}$$",
+      "answer": "1/x + (2x + 2)/(x^2 + 1)",
+      "solution": "**Set up the form.** The denominator has a distinct linear factor $x$ and an irreducible quadratic $x^2+1$, so write: $$\\frac{3x^2+2x+1}{x(x^2+1)}=\\frac{A}{x}+\\frac{Bx+C}{x^2+1}$$\n\n**Clear denominators.** Multiply both sides by $x(x^2+1)$: $$3x^2+2x+1=A(x^2+1)+(Bx+C)x$$\n\n**Find $A$.** Let $x=0$: $$1=A(1)+0 \\implies A=1$$\n\n**Find $B$ and $C$.** Expand the right side with $A=1$: $$3x^2+2x+1=(1+B)x^2+Cx+1$$\n\nMatching coefficients:\n- $x^2$: $1+B=3 \\implies B=2$\n- $x^1$: $C=2$\n\n**Result.** $$\\frac{3x^2+2x+1}{x(x^2+1)}=\\frac{1}{x}+\\frac{2x+2}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:03:32.145Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/x + (2x + 2)/(x^2 + 1)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/x + (2x + 2)/(x^2 + 1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-047"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} x^2 + y^2 = 25 \\\\ y = x + 1 \\end{cases}$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "**Step 1 — Substitute** the linear equation into the circle equation:\n$$x^2 + (x+1)^2 = 25$$\n\n**Step 2 — Expand and simplify:**\n$$x^2 + x^2 + 2x + 1 = 25 \\implies 2x^2 + 2x - 24 = 0 \\implies x^2 + x - 12 = 0$$\n\n**Step 3 — Factor:**\n$$(x+4)(x-3) = 0 \\implies x = -4 \\text{ or } x = 3$$\n\n**Step 4 — Find corresponding $y$-values** using $y = x + 1$:\n- $x = -4 \\Rightarrow y = -3$\n- $x = 3 \\Rightarrow y = 4$\n\n**Step 5 — Verify** both points satisfy $x^2+y^2=25$:\n- $(-4)^2+(-3)^2 = 16+9 = 25$ ✓\n- $3^2+4^2 = 9+16 = 25$ ✓\n\nThe solutions are $(-4,\\,-3)$ and $(3,\\,4)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:03:40.514Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-048"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations using the elimination method: $$\\begin{cases} 2x + 3y = 13 \\\\ 5x - 2y = 4 \\end{cases}$$",
+      "answer": "(2, 3)",
+      "solution": "**Step 1: Eliminate $y$ by creating opposite coefficients.**\nMultiply the first equation by $2$ and the second by $3$:\n$$4x + 6y = 26$$\n$$15x - 6y = 12$$\n\n**Step 2: Add the equations.**\n$$19x = 38 \\implies x = 2$$\n\n**Step 3: Back-substitute $x = 2$ into the first original equation.**\n$$2(2) + 3y = 13 \\implies 4 + 3y = 13 \\implies 3y = 9 \\implies y = 3$$\n\n**Step 4: Check in both original equations.**\n$$2(2)+3(3)=4+9=13\\checkmark \\qquad 5(2)-2(3)=10-6=4\\checkmark$$\n\nThe solution is the ordered pair $(2,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:04:09.568Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-049"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables:\n$$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + y - z = 0 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $z$ using equations (1) and (3).**\n\nSubtract equation (3) from equation (1):\n$$(x+y+z)-(x+y-z)=6-0 \\implies 2z=6 \\implies z=3$$\n\n**Step 2 — Back-substitute $z=3$ to get a two-variable system.**\n\nFrom equation (1): $x+y+3=6 \\implies x+y=3$\n\nFrom equation (2): $2x-y+3=3 \\implies 2x-y=0$\n\n**Step 3 — Solve the two-variable system.**\n\nAdd $x+y=3$ and $2x-y=0$:\n$$3x=3 \\implies x=1$$\n\nSubstitute into $x+y=3$:\n$$1+y=3 \\implies y=2$$\n\n**Step 4 — State the solution.**\n\nThe solution is $(x,y,z)=(1,2,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:04:18.615Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-050"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find all vertices of the feasible region defined by the system: $$x + y \\leq 6$$ $$2x - y \\geq -3$$ $$x \\geq 0, \\quad y \\geq 0$$",
+      "answer": "(0, 0), (0, 3), (1, 5), (6, 0)",
+      "solution": "Find each vertex by solving pairs of boundary equations, then verify the point satisfies all four inequalities.\n\n**Vertex 1:** $x = 0$ and $y = 0$ intersect at $(0, 0)$. Check: $0 \\leq 6$ ✓, $0 \\geq -3$ ✓.\n\n**Vertex 2:** $x = 0$ and $2x - y = -3$: substituting gives $-y = -3$, so $y = 3$. Point: $(0, 3)$. Check: $3 \\leq 6$ ✓, $0 \\geq -3$ ✓.\n\n**Vertex 3:** $x + y = 6$ and $2x - y = -3$: add the two equations to eliminate $y$: $$3x = 3 \\implies x = 1, \\quad y = 5.$$ Point: $(1, 5)$. Check: $6 \\leq 6$ ✓, $2 - 5 = -3 \\geq -3$ ✓.\n\n**Vertex 4:** $x + y = 6$ and $y = 0$: gives $x = 6$. Point: $(6, 0)$. Check: $6 \\leq 6$ ✓, $12 \\geq -3$ ✓.\n\nThe feasible region is a bounded quadrilateral with vertices $(0, 0)$, $(0, 3)$, $(1, 5)$, $(6, 0)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:04:36.988Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(0, 0), (0, 3), (1, 5), (6, 0)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(0, 0), (0, 3), (1, 5), (6, 0)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-051"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} x^2 + y^2 = 25 \\\\ y = x + 1 \\end{cases}$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "**Step 1.** Substitute $y = x + 1$ into the circle equation: $$x^2 + (x+1)^2 = 25$$\n\n**Step 2.** Expand and simplify: $$x^2 + x^2 + 2x + 1 = 25 \\implies 2x^2 + 2x - 24 = 0 \\implies x^2 + x - 12 = 0$$\n\n**Step 3.** Factor: $$(x + 4)(x - 3) = 0 \\implies x = -4 \\text{ or } x = 3$$\n\n**Step 4.** Back-substitute into $y = x + 1$:\n- $x = -4$: $y = -4 + 1 = -3$, giving $(-4,\\,-3)$\n- $x = 3$: $y = 3 + 1 = 4$, giving $(3,\\,4)$\n\n**Check both points in $x^2 + y^2 = 25$:** $(-4)^2 + (-3)^2 = 16 + 9 = 25$ ✓ and $3^2 + 4^2 = 9 + 16 = 25$ ✓\n\nThe solution set is $\\{(-4,\\,-3),\\,(3,\\,4)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:04:48.042Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-052"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Write the partial fraction decomposition of $$\\frac{3x+7}{x^2+3x+2}$$",
+      "answer": "4/(x+1) - 1/(x+2)",
+      "solution": "**Step 1:** Factor the denominator: $x^2+3x+2=(x+1)(x+2)$\n\n**Step 2:** Set up the decomposition: $$\\frac{3x+7}{(x+1)(x+2)}=\\frac{A}{x+1}+\\frac{B}{x+2}$$\n\n**Step 3:** Multiply both sides by $(x+1)(x+2)$: $$3x+7=A(x+2)+B(x+1)$$\n\n**Step 4:** Let $x=-1$: $\\ 3(-1)+7=A(1)\\Rightarrow 4=A$\n\n**Step 5:** Let $x=-2$: $\\ 3(-2)+7=B(-1)\\Rightarrow 1=-B\\Rightarrow B=-1$\n\n**Step 6:** The partial fraction decomposition is $$\\frac{3x+7}{(x+1)(x+2)}=\\frac{4}{x+1}-\\frac{1}{x+2}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:04:57.958Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/(x+1) - 1/(x+2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/(x+1) - 1/(x+2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-053"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Find the partial fraction decomposition of $$\\frac{5x+7}{(x+1)(x+3)}$$",
+      "answer": "1/(x+1) + 4/(x+3)",
+      "solution": "Write the decomposition form: $$\\frac{5x+7}{(x+1)(x+3)} = \\frac{A}{x+1} + \\frac{B}{x+3}$$\nMultiply both sides by $(x+1)(x+3)$: $$5x+7 = A(x+3) + B(x+1)$$\nSubstitute $x = -1$: $\\;2 = 2A$, so $A = 1$.\nSubstitute $x = -3$: $\\;-8 = -2B$, so $B = 4$.\nThe partial fraction decomposition is: $$\\frac{1}{x+1} + \\frac{4}{x+3}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:51:26.240Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/(x+1) + 4/(x+3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/(x+1) + 4/(x+3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-054"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$y = x^2 - 2x - 3$$ $$y = x + 1$$",
+      "answer": "(-1, 0), (4, 5)",
+      "solution": "**Step 1 — Substitute** the linear equation into the parabola (both equal $y$): $$x^2 - 2x - 3 = x + 1$$\n\n**Step 2 — Rearrange** to standard form: $$x^2 - 3x - 4 = 0$$\n\n**Step 3 — Factor:** $$(x - 4)(x + 1) = 0 \\implies x = 4 \\text{ or } x = -1$$\n\n**Step 4 — Find $y$ for each $x$** using $y = x + 1$:\n- $x = 4$: $y = 4 + 1 = 5$, giving the point $(4,\\,5)$\n- $x = -1$: $y = -1 + 1 = 0$, giving the point $(-1,\\,0)$\n\n**Step 5 — Check** both points in $y = x^2 - 2x - 3$:\n- $(4,5)$: $16 - 8 - 3 = 5$ ✓\n- $(-1,0)$: $1 + 2 - 3 = 0$ ✓\n\nThe solution set is $\\{(-1,\\;0),\\;(4,\\;5)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:51:26.756Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, 0), (4, 5)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, 0), (4, 5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-055"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1 — Solve the second equation for $y$:**\n$$5x - y = 13 \\implies y = 5x - 13$$\n\n**Step 2 — Substitute into the first equation:**\n$$2x + 3(5x - 13) = 12$$\n$$2x + 15x - 39 = 12$$\n$$17x = 51 \\implies x = 3$$\n\n**Step 3 — Back-substitute to find $y$:**\n$$y = 5(3) - 13 = 15 - 13 = 2$$\n\n**Step 4 — Check in both original equations:**\n$2(3) + 3(2) = 6 + 6 = 12$ ✓\n$5(3) - 2 = 15 - 2 = 13$ ✓\n\nThe solution is $(3,\\,2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:51:30.557Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-056"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system: $$\\begin{cases} 2x + y - z = 5 \\\\ x - 3y + 2z = -7 \\\\ 3x + 2y + z = 6 \\end{cases}$$",
+      "answer": "(1, 2, -1)",
+      "solution": "**Step 1 — Eliminate $z$ from Equations (1) and (3).**\nAdd Eq. (1) and Eq. (3): $(2x+y-z)+(3x+2y+z)=5+6$, giving $$5x+3y=11\\tag{4}$$\n\n**Step 2 — Eliminate $z$ from Equations (1) and (2).**\nMultiply Eq. (1) by 2 to get $4x+2y-2z=10$, then add Eq. (2): $(4x+2y-2z)+(x-3y+2z)=10+(-7)$, giving $$5x-y=3\\tag{5}$$\n\n**Step 3 — Solve the two-variable system formed by (4) and (5).**\nSubtract (5) from (4): $4y=8$, so $y=2$.\nSubstitute $y=2$ into (5): $5x-2=3 \\Rightarrow x=1$.\n\n**Step 4 — Back-substitute $x=1,\\, y=2$ into Equation (1).**\n$2(1)+2-z=5 \\Rightarrow 4-z=5 \\Rightarrow z=-1$.\n\nThe solution set is $\\{(1,\\,2,\\,-1)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:51:37.300Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, -1)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, -1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-057"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of three linear equations: $$\\begin{cases} 2x + y - z = 0 \\\\ x - 2y + z = 7 \\\\ 3x + y + 2z = 11 \\end{cases}$$",
+      "answer": "(2, -1, 3)",
+      "solution": "Label the equations:\n(1) $2x + y - z = 0$\n(2) $x - 2y + z = 7$\n(3) $3x + y + 2z = 11$\n\n**Step 1** — Eliminate $z$ by adding equations (1) and (2): $$3x - y = 7 \\tag{4}$$\n\n**Step 2** — Eliminate $z$ from equations (2) and (3). Multiply (2) by 2 to get $2x - 4y + 2z = 14$, then subtract from (3): $$(3x + y + 2z) - (2x - 4y + 2z) = 11 - 14$$ $$x + 5y = -3 \\tag{5}$$\n\n**Step 3** — Solve the two-variable system (4) and (5). From (4): $y = 3x - 7$. Substitute into (5): $$x + 5(3x - 7) = -3 \\implies x + 15x - 35 = -3 \\implies 16x = 32 \\implies x = 2$$\n\n**Step 4** — Back-substitute $x = 2$ into $y = 3x - 7$: $$y = 3(2) - 7 = -1$$\n\n**Step 5** — Substitute $x = 2$, $y = -1$ into equation (1) to find $z$: $$2(2) + (-1) - z = 0 \\implies 3 - z = 0 \\implies z = 3$$\n\nThe solution is $(2,\\,-1,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:52:19.826Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, -1, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-058"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{3x^2+7x+4}{x(x^2+1)}$$",
+      "answer": "4/x + (7 - x)/(x^2 + 1)",
+      "solution": "**Step 1.** The denominator has one linear factor $x$ and one irreducible quadratic factor $x^2+1$, so write the form: $$\\frac{3x^2+7x+4}{x(x^2+1)} = \\frac{A}{x} + \\frac{Bx+C}{x^2+1}$$\n**Step 2.** Multiply both sides by $x(x^2+1)$: $$3x^2+7x+4 = A(x^2+1)+(Bx+C)x$$\n**Step 3.** Expand the right side and collect by degree: $$3x^2+7x+4 = (A+B)x^2 + Cx + A$$\n**Step 4.** Equate coefficients of like powers:\n- $x^2$: $A+B=3$\n- $x^1$: $C=7$\n- $x^0$: $A=4$\n\n**Step 5.** Solve: $A=4$, $B=3-4=-1$, $C=7$.\n**Step 6.** The decomposition is: $$\\frac{3x^2+7x+4}{x(x^2+1)} = \\frac{4}{x}+\\frac{-x+7}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:52:22.414Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/x + (-x + 7)/(x^2 + 1)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/x + (-x+7)/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-059"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$x^2 + y^2 = 25$$ $$y = x^2 - 5$$",
+      "answer": "(-3, 4), (0, -5), (3, 4)",
+      "solution": "**Step 1.** Substitute $y = x^2 - 5$ into the circle equation:\n$$x^2 + (x^2 - 5)^2 = 25$$\n\n**Step 2.** Expand and simplify:\n$$x^2 + x^4 - 10x^2 + 25 = 25$$\n$$x^4 - 9x^2 = 0$$\n\n**Step 3.** Factor:\n$$x^2(x^2 - 9) = 0 \\implies x^2(x-3)(x+3) = 0$$\nSo $x = 0,\\; x = 3,\\; x = -3$.\n\n**Step 4.** Back-substitute into $y = x^2 - 5$:\n- $x = 0$: $y = 0 - 5 = -5$ $\\;\\Rightarrow\\;$ $(0,\\,-5)$\n- $x = 3$: $y = 9 - 5 = 4$ $\\;\\Rightarrow\\;$ $(3,\\,4)$\n- $x = -3$: $y = 9 - 5 = 4$ $\\;\\Rightarrow\\;$ $(-3,\\,4)$\n\n**Solution set:** $\\{(-3,\\,4),\\;(0,\\,-5),\\;(3,\\,4)\\}$",
+      "meta": {
+        "generatedAt": "2026-05-13T05:52:58.348Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-3, 4), (0, -5), (3, 4)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-3, 4), (0, -5), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-060"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system by substitution or elimination: $$\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1 — Isolate a variable.** From the second equation, solve for $y$: $$y = 5x - 13$$ **Step 2 — Substitute** into the first equation: $$2x + 3(5x - 13) = 12$$ **Step 3 — Solve for $x$:** $$2x + 15x - 39 = 12 \\implies 17x = 51 \\implies x = 3$$ **Step 4 — Back-substitute** $x = 3$ into $y = 5x - 13$: $$y = 5(3) - 13 = 15 - 13 = 2$$ **Step 5 — Check** in both original equations: $2(3)+3(2)=12$ ✓ and $5(3)-2=13$ ✓ The solution is $(3,\\,2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:55:01.284Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-061"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find the vertices of the solution set of the system of inequalities: $$2x + y \\leq 8$$ $$x + 2y \\leq 8$$ $$x \\geq 0$$ $$y \\geq 0$$",
+      "answer": "(0, 0), (0, 4), (8/3, 8/3), (4, 0)",
+      "solution": "**Step 1 — Identify the boundary lines and corner candidates.**\n\nThe four boundaries are $2x+y=8$, $x+2y=8$, $x=0$, and $y=0$. Vertices occur where pairs of boundary lines intersect inside (or on the edge of) the feasible region.\n\n**Step 2 — Intersect adjacent boundaries.**\n\n$x=0$ and $y=0$: $(0,0)$\n\n$2x+y=8$ and $y=0$: $2x=8 \\Rightarrow x=4$, giving $(4,0)$\n\n$x+2y=8$ and $x=0$: $2y=8 \\Rightarrow y=4$, giving $(0,4)$\n\n$2x+y=8$ and $x+2y=8$: subtract the first from the second to get $-x+y=0$, so $y=x$. Substitute: $2x+x=8 \\Rightarrow x=\\dfrac{8}{3}$, $y=\\dfrac{8}{3}$, giving $\\left(\\dfrac{8}{3},\\dfrac{8}{3}\\right)$.\n\n**Step 3 — Verify each candidate satisfies all four inequalities.**\n\n| Point | $2x+y\\leq 8$ | $x+2y\\leq 8$ | $x\\geq 0$ | $y\\geq 0$ |\n|---|---|---|---|---|\n| $(0,0)$ | $0\\leq 8$ ✓ | $0\\leq 8$ ✓ | ✓ | ✓ |\n| $(4,0)$ | $8\\leq 8$ ✓ | $4\\leq 8$ ✓ | ✓ | ✓ |\n| $(0,4)$ | $4\\leq 8$ ✓ | $8\\leq 8$ ✓ | ✓ | ✓ |\n| $\\left(\\frac{8}{3},\\frac{8}{3}\\right)$ | $8\\leq 8$ ✓ | $8\\leq 8$ ✓ | ✓ | ✓ |\n\nAll four points are vertices of the bounded feasible region.",
+      "meta": {
+        "generatedAt": "2026-05-13T05:55:11.055Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(0, 0), (0, 4), (8/3, 8/3), (4, 0)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(0, 0), (0, 4), (8/3, 8/3), (4, 0)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch8-062"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$x^2 + y^2 = 25$$ $$y = x + 1$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "**Step 1.** Substitute $y = x + 1$ into $x^2 + y^2 = 25$: $$x^2 + (x+1)^2 = 25$$\n\n**Step 2.** Expand and simplify: $$x^2 + x^2 + 2x + 1 = 25 \\implies 2x^2 + 2x - 24 = 0 \\implies x^2 + x - 12 = 0$$\n\n**Step 3.** Factor: $$(x + 4)(x - 3) = 0 \\implies x = -4 \\text{ or } x = 3$$\n\n**Step 4.** Find corresponding $y$-values using $y = x + 1$:\n- $x = -4 \\Rightarrow y = -3$\n- $x = 3 \\Rightarrow y = 4$\n\n**Step 5.** The solution set is $\\{(-4,\\,-3),\\;(3,\\,4)\\}$. Both satisfy the original circle equation $x^2+y^2=25$: $(-4)^2+(-3)^2 = 16+9 = 25$ ✓ and $3^2+4^2 = 9+16=25$ ✓.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:30:01.312Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-063"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations in three variables: $$\\begin{cases} x + y + z = 4 \\\\ 2x - y + z = 8 \\\\ x + 2y - z = -3 \\end{cases}$$",
+      "answer": "(2, -1, 3)",
+      "solution": "**Step 1 — Eliminate $y$: add equations (1) and (2).**\n$$(x+y+z)+(2x-y+z)=4+8 \\implies 3x+2z=12 \\tag{4}$$\n\n**Step 2 — Eliminate $z$: add equations (1) and (3).**\n$$(x+y+z)+(x+2y-z)=4+(-3) \\implies 2x+3y=1 \\tag{5}$$\n\n**Step 3 — Eliminate $z$: add equations (2) and (3).**\n$$(2x-y+z)+(x+2y-z)=8+(-3) \\implies 3x+y=5 \\tag{6}$$\n\n**Step 4 — Solve the two-variable system formed by (5) and (6).**\nFrom (6): $y = 5-3x$. Substitute into (5):\n$$2x+3(5-3x)=1 \\implies -7x=-14 \\implies x=2$$\nThen $y=5-3(2)=-1$.\n\n**Step 5 — Back-substitute into (4) to find $z$.**\n$$3(2)+2z=12 \\implies 2z=6 \\implies z=3$$\n\nThe solution is $(x,y,z)=(2,-1,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:30:01.743Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, -1, 3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-064"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system by substitution or elimination: $$\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$$",
+      "answer": "(3, 2)",
+      "solution": "**Step 1 — Isolate $y$ in equation (2):**\n$$5x - y = 13 \\implies y = 5x - 13$$\n\n**Step 2 — Substitute into equation (1):**\n$$2x + 3(5x - 13) = 12$$\n$$2x + 15x - 39 = 12$$\n$$17x = 51$$\n$$x = 3$$\n\n**Step 3 — Back-substitute to find $y$:**\n$$y = 5(3) - 13 = 15 - 13 = 2$$\n\n**Step 4 — Check in both original equations:**\n$$2(3) + 3(2) = 6 + 6 = 12 \\checkmark$$\n$$5(3) - 2 = 15 - 2 = 13 \\checkmark$$\n\nThe solution is $(3,\\ 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:30:46.829Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(3, 2)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(3, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-065"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system of linear equations: $$2x + y - z = 1$$ $$x - 3y + 2z = 1$$ $$3x + 2y + z = 10$$",
+      "answer": "(1, 2, 3)",
+      "solution": "Label the equations (1), (2), (3).\n\n**Eliminate $z$ from (1) and (2).** Multiply (1) by 2, then add to (2): $$4x+2y-2z=2$$ $$x-3y+2z=1$$ $$\\Rightarrow\\quad 5x-y=3\\tag{4}$$\n\n**Eliminate $z$ from (1) and (3).** Add (1) and (3) directly: $$5x+3y=11\\tag{5}$$\n\n**Solve the $2\\times 2$ system (4)–(5).** From (4): $y=5x-3$. Substitute into (5): $$5x+3(5x-3)=11\\implies 20x=20\\implies x=1$$ Then $y=5(1)-3=2$.\n\n**Back-substitute into (1).** $$2(1)+2-z=1\\implies z=3$$\n\nThe solution is $(1,\\,2,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:31:37.538Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-066"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose into partial fractions: $$\\frac{5x^2+3x+2}{x(x^2+1)}$$",
+      "answer": "2/x + (3x + 3)/(x^2 + 1)",
+      "solution": "Write the partial fraction form (linear factor and irreducible quadratic): $$\\frac{5x^2+3x+2}{x(x^2+1)} = \\frac{A}{x} + \\frac{Bx+C}{x^2+1}$$\nMultiply both sides by $x(x^2+1)$: $$5x^2+3x+2 = A(x^2+1)+(Bx+C)x$$\nExpand and collect like terms: $$5x^2+3x+2 = (A+B)x^2 + Cx + A$$\nMatch coefficients on each power of $x$:\n- Constant term: $A = 2$\n- $x^1$ term: $C = 3$\n- $x^2$ term: $A+B = 5 \\Rightarrow B = 3$\nSubstitute back: $$\\frac{5x^2+3x+2}{x(x^2+1)} = \\frac{2}{x}+\\frac{3x+3}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T15:31:53.233Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2/x + (3x + 3)/(x^2 + 1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2/x + (3x+3)/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-067"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system using elimination: $$3x + 4y = 2$$ $$2x - y = 5$$",
+      "answer": "(2, -1)",
+      "solution": "Multiply the second equation by $4$ to eliminate $y$: $$8x - 4y = 20$$ Add to the first equation: $$3x + 4y = 2$$ $$8x - 4y = 20$$ $$\\longrightarrow 11x = 22 \\implies x = 2$$ Substitute $x = 2$ into $2x - y = 5$: $$2(2) - y = 5 \\implies 4 - y = 5 \\implies y = -1$$ The solution is $(2,\\,-1)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:34:26.591Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(2, -1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(2, -1)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-068"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Find the partial fraction decomposition of $$\\frac{3x^2+2x-1}{(x-1)(x^2+1)}$$",
+      "answer": "2/(x-1) + (x+3)/(x^2+1)",
+      "solution": "Set up the decomposition, using a linear numerator over the irreducible quadratic factor: $$\\frac{3x^2+2x-1}{(x-1)(x^2+1)}=\\frac{A}{x-1}+\\frac{Bx+C}{x^2+1}$$ Multiply both sides by $(x-1)(x^2+1)$: $$3x^2+2x-1=A(x^2+1)+(Bx+C)(x-1)$$ Substitute $x=1$: $3+2-1=A(1+1)$, so $4=2A$ and $A=2$. Expand the right side and collect by degree: $$3x^2+2x-1=(2+B)x^2+(C-B)x+(2-C)$$ Match coefficients term by term — $x^2$: $3=2+B \\Rightarrow B=1$; constant: $-1=2-C \\Rightarrow C=3$; verify $x^1$: $C-B=3-1=2$ ✓ $$\\frac{3x^2+2x-1}{(x-1)(x^2+1)}=\\frac{2}{x-1}+\\frac{x+3}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T15:36:28.003Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "2/(x-1) + (x+3)/(x^2+1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "2/(x-1) + (x+3)/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-069"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of nonlinear equations: $$x^2 + y^2 = 25$$ $$y = x^2 - 5$$",
+      "answer": "(-3, 4), (0, -5), (3, 4)",
+      "solution": "**Step 1 — Substitution.** The second equation already gives $y$ explicitly. Substitute $y = x^2 - 5$ into the first equation:\n$$x^2 + (x^2 - 5)^2 = 25$$\n\n**Step 2 — Expand and simplify.**\n$$x^2 + x^4 - 10x^2 + 25 = 25$$\n$$x^4 - 9x^2 = 0$$\n\n**Step 3 — Factor.**\n$$x^2(x^2 - 9) = 0 \\implies x^2(x-3)(x+3) = 0$$\n$$x = 0,\\quad x = 3,\\quad x = -3$$\n\n**Step 4 — Back-substitute** each $x$ into $y = x^2 - 5$:\n- $x = 0$: $y = 0 - 5 = -5$ $\\Rightarrow$ $(0,\\,-5)$\n- $x = 3$: $y = 9 - 5 = 4$ $\\Rightarrow$ $(3,\\,4)$\n- $x = -3$: $y = 9 - 5 = 4$ $\\Rightarrow$ $(-3,\\,4)$\n\n**Step 5 — Verify** each point satisfies $x^2 + y^2 = 25$:\n- $(0,-5)$: $0 + 25 = 25$ ✓\n- $(\\pm 3, 4)$: $9 + 16 = 25$ ✓\n\nThe solution set is $\\{(-3,\\,4),\\;(0,\\,-5),\\;(3,\\,4)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:37:29.998Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-3, 4), (0, -5), (3, 4)",
+          "confidence": 0.92
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-3, 4), (0, -5), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-070"
+    },
+    {
+      "topic": "8.5 Systems Of Inequalities",
+      "problem": "Find all corner points (vertices) of the solution set of the system of inequalities: $$\\begin{cases} y \\leq -x + 4 \\\\ y \\leq x + 2 \\\\ y \\geq 0 \\end{cases}$$",
+      "answer": "(-2, 0), (1, 3), (4, 0)",
+      "solution": "The boundary lines are $y = -x + 4$, $y = x + 2$, and $y = 0$. Corner points occur at the pairwise intersections of these lines, provided each intersection satisfies all three inequalities.\n\n**Corner 1** — intersect $y = x + 2$ and $y = 0$:\n$$0 = x + 2 \\implies x = -2$$\nCandidate: $(-2,\\, 0)$. Check: $0 \\leq -(-2)+4 = 6$ ✓ and $0 \\leq (-2)+2 = 0$ ✓ and $0 \\geq 0$ ✓.\n\n**Corner 2** — intersect $y = -x + 4$ and $y = 0$:\n$$0 = -x + 4 \\implies x = 4$$\nCandidate: $(4,\\, 0)$. Check: $0 \\leq -(4)+4 = 0$ ✓ and $0 \\leq 4+2 = 6$ ✓ and $0 \\geq 0$ ✓.\n\n**Corner 3** — intersect $y = -x + 4$ and $y = x + 2$:\n$$-x + 4 = x + 2 \\implies 2 = 2x \\implies x = 1,\\quad y = 3$$\nCandidate: $(1,\\, 3)$. Check: $3 \\leq -(1)+4 = 3$ ✓ and $3 \\leq 1+2 = 3$ ✓ and $3 \\geq 0$ ✓.\n\nThe solution set is the triangular region with vertices $(-2,\\, 0)$, $(1,\\, 3)$, and $(4,\\, 0)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:37:59.967Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-2, 0), (1, 3), (4, 0)",
+          "confidence": 0.97
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-2, 0), (1, 3), (4, 0)",
+          "confidence": 1
+        },
+        "attempts": 3
+      },
+      "id": "ch8-071"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of linear equations: $$\\begin{cases} 3x + 2y = 10 \\\\ x - y = 5 \\end{cases}$$",
+      "answer": "(4, -1)",
+      "solution": "**Step 1.** Solve the second equation for $x$: $$x = y + 5$$\n\n**Step 2.** Substitute into the first equation: $$3(y + 5) + 2y = 10$$\n\n**Step 3.** Distribute and simplify: $$3y + 15 + 2y = 10 \\implies 5y = -5 \\implies y = -1$$\n\n**Step 4.** Back-substitute to find $x$: $$x = (-1) + 5 = 4$$\n\n**Step 5.** Verify in both original equations:\n- $3(4) + 2(-1) = 12 - 2 = 10$ ✓\n- $4 - (-1) = 5$ ✓\n\nThe solution is the ordered pair $(4,\\ -1)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:42:35.914Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4, -1",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(4, -1)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-072"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$x^2 + y^2 = 25$$ $$y = x + 1$$",
+      "answer": "(-4, -3), (3, 4)",
+      "solution": "**Step 1.** Substitute $y = x + 1$ into $x^2 + y^2 = 25$: $$x^2 + (x+1)^2 = 25$$\n**Step 2.** Expand and simplify: $$x^2 + x^2 + 2x + 1 = 25 \\implies 2x^2 + 2x - 24 = 0 \\implies x^2 + x - 12 = 0$$\n**Step 3.** Factor: $$(x + 4)(x - 3) = 0 \\implies x = -4 \\text{ or } x = 3$$\n**Step 4.** Back-substitute to find $y$: if $x = -4$, then $y = -4 + 1 = -3$; if $x = 3$, then $y = 3 + 1 = 4$.\n**Step 5.** Check both solutions in $x^2 + y^2 = 25$: $(-4)^2 + (-3)^2 = 16 + 9 = 25$ ✓ and $3^2 + 4^2 = 9 + 16 = 25$ ✓.\nThe solution set is $\\{(-4,\\,-3),\\,(3,\\,4)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:43:40.704Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-4, -3), (3, 4)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-073"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Find the partial fraction decomposition of $$\\frac{3x^2 + 2x + 1}{(x-1)(x^2+1)}$$",
+      "answer": "3/(x-1) + 2/(x^2+1)",
+      "solution": "**Step 1.** Write the form of the decomposition. Since $(x-1)$ is a distinct linear factor and $(x^2+1)$ is an irreducible quadratic factor: $$\\frac{3x^2+2x+1}{(x-1)(x^2+1)} = \\frac{A}{x-1}+\\frac{Bx+C}{x^2+1}$$\n\n**Step 2.** Multiply both sides by $(x-1)(x^2+1)$: $$3x^2+2x+1 = A(x^2+1)+(Bx+C)(x-1)$$\n\n**Step 3.** Substitute $x=1$ to find $A$: $$3+2+1 = A(1+1) \\implies 6 = 2A \\implies A = 3$$\n\n**Step 4.** Expand the right side with $A=3$ and collect like terms: $$3x^2+2x+1 = (3+B)x^2+(C-B)x+(3-C)$$\n\n**Step 5.** Match coefficients of each power of $x$:\n- $x^2$: $3+B=3 \\implies B=0$\n- $x^1$: $C-B=2 \\implies C=2$\n- $x^0$: $3-C=1$ ✓\n\n**Step 6.** Write the result: $$\\frac{3x^2+2x+1}{(x-1)(x^2+1)} = \\frac{3}{x-1}+\\frac{2}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T15:43:41.036Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/(x-1) + 2/(x^2+1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/(x-1) + 2/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-074"
+    },
+    {
+      "topic": "8.1 Systems Of Linear Equations In Two Variables",
+      "problem": "Solve the system of equations using substitution: $$3x + 2y = 16$$ $$x - y = 2$$",
+      "answer": "(4, 2)",
+      "solution": "**Step 1 — Solve the simpler equation for one variable.**\nFrom $x - y = 2$, isolate $x$: $$x = y + 2$$\n\n**Step 2 — Substitute into the other equation.**\n$$3(y + 2) + 2y = 16$$\n\n**Step 3 — Distribute and combine like terms.**\n$$3y + 6 + 2y = 16 \\implies 5y = 10 \\implies y = 2$$\n\n**Step 4 — Back-substitute to find $x$.**\n$$x = 2 + 2 = 4$$\n\n**Step 5 — Check in both original equations.**\n$3(4) + 2(2) = 12 + 4 = 16$ ✓  and  $4 - 2 = 2$ ✓\n\nThe solution is $(4,\\ 2)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:45:55.419Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(4, 2)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(4, 2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-075"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system: $$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 2 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "**Step 1 — Eliminate $z$ between equations (1) and (2).**\nSubtract equation (2) from equation (1):\n$$(x+y+z)-(2x-y+z)=6-3 \\implies -x+2y=3 \\tag{4}$$\n\n**Step 2 — Eliminate $z$ between equations (1) and (3).**\nAdd equations (1) and (3):\n$$(x+y+z)+(x+2y-z)=6+2 \\implies 2x+3y=8 \\tag{5}$$\n\n**Step 3 — Solve the $2\\times 2$ system formed by (4) and (5).**\nFrom (4): $x = 2y-3$.\nSubstitute into (5): $2(2y-3)+3y=8 \\implies 7y=14 \\implies y=2$.\nBack-substitute: $x=2(2)-3=1$.\n\n**Step 4 — Find $z$.**\nSubstitute $x=1,\\,y=2$ into equation (1): $1+2+z=6 \\implies z=3$.\n\n**Step 5 — Check in all three original equations.**\n$$1+2+3=6\\checkmark,\\quad 2(1)-2+3=3\\checkmark,\\quad 1+2(2)-3=2\\checkmark$$\n\nThe solution is the ordered triple $(1,\\,2,\\,3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:46:27.160Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1, 2, 3",
+          "confidence": 0.95
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-076"
+    },
+    {
+      "topic": "8.2 Systems Of linear Equations In Three Variables",
+      "problem": "Solve the system: $$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 2 \\end{cases}$$",
+      "answer": "(1, 2, 3)",
+      "solution": "Label the equations:\n$$(1)\\; x + y + z = 6 \\qquad (2)\\; 2x - y + z = 3 \\qquad (3)\\; x + 2y - z = 2$$\n\n**Step 1 — Eliminate $z$ to get a 2-variable system.**\n\nAdd equations (1) and (3) (the $z$ terms cancel):\n$$2x + 3y = 8 \\quad (4)$$\n\nAdd equations (2) and (3) (the $z$ terms cancel):\n$$3x + y = 5 \\quad (5)$$\n\n**Step 2 — Solve the 2-variable system (4) and (5).**\n\nFrom (5): $y = 5 - 3x$. Substitute into (4):\n$$2x + 3(5 - 3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$$\n\nBack-substitute: $y = 5 - 3(1) = 2$\n\n**Step 3 — Find $z$.**\n\nSubstitute $x = 1,\\, y = 2$ into equation (1):\n$$1 + 2 + z = 6 \\implies z = 3$$\n\n**Check** in all three original equations:\n- $(1):\\; 1+2+3 = 6$ ✓\n- $(2):\\; 2(1)-2+3 = 3$ ✓\n- $(3):\\; 1+2(2)-3 = 2$ ✓\n\nThe solution is $(1,\\, 2,\\, 3)$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:46:46.162Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(1, 2, 3)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(1, 2, 3)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch8-077"
+    },
+    {
+      "topic": "8.4 Systems Of Non-Linear Equations In Two Variables",
+      "problem": "Solve the system of equations: $$\\begin{cases} y = x^2 - 4 \\\\ y = 2x - 1 \\end{cases}$$",
+      "answer": "(-1, -3), (3, 5)",
+      "solution": "**Step 1 — Substitute** the linear equation into the quadratic: $$2x - 1 = x^2 - 4$$\n\n**Step 2 — Rearrange** to standard form: $$x^2 - 2x - 3 = 0$$\n\n**Step 3 — Factor:** $$(x - 3)(x + 1) = 0 \\implies x = 3 \\text{ or } x = -1$$\n\n**Step 4 — Find** $y$ for each $x$ using $y = 2x - 1$:\n- $x = 3$: $y = 2(3) - 1 = 5$ → $(3,\\,5)$\n- $x = -1$: $y = 2(-1) - 1 = -3$ → $(-1,\\,-3)$\n\n**Step 5 — Verify** both points satisfy $y = x^2 - 4$:\n- $(3, 5)$: $3^2 - 4 = 5$ ✓\n- $(-1, -3)$: $(-1)^2 - 4 = -3$ ✓\n\nThe solution set is $\\{(-1,\\,-3),\\,(3,\\,5)\\}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T15:47:32.377Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "(-1, -3), (3, 5)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "(-1, -3), (3, 5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-078"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Write the partial fraction decomposition of $$\\frac{4x^2 + 3x - 1}{(x-1)(x^2+1)}$$",
+      "answer": "3/(x-1) + (x+4)/(x^2+1)",
+      "solution": "**1. Set up the form.** Because the denominator has a distinct linear factor $(x-1)$ and an irreducible quadratic factor $(x^2+1)$, write: $$\\frac{4x^2+3x-1}{(x-1)(x^2+1)} = \\frac{A}{x-1}+\\frac{Bx+C}{x^2+1}$$\n\n**2. Clear denominators.** Multiply both sides by $(x-1)(x^2+1)$: $$4x^2+3x-1 = A(x^2+1)+(Bx+C)(x-1)$$\n\n**3. Solve for $A$ by substituting $x=1$.** $$4(1)+3(1)-1 = A(2)+0 \\implies 6=2A \\implies A=3$$\n\n**4. Expand and match coefficients.** $$3(x^2+1)+(Bx+C)(x-1) = (3+B)x^2+(-B+C)x+(3-C)$$\n\nSetting equal to $4x^2+3x-1$:\n- $x^2$: $3+B=4 \\implies B=1$\n- $x^1$: $-B+C=3 \\implies C=4$\n- $x^0$: $3-C=-1$ ✓\n\n**5. Write the decomposition.** $$\\frac{4x^2+3x-1}{(x-1)(x^2+1)} = \\frac{3}{x-1}+\\frac{x+4}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T15:48:12.563Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/(x-1) + (x+4)/(x^2+1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/(x-1) + (x+4)/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-079"
+    },
+    {
+      "topic": "8.3 Partial Fractions",
+      "problem": "Decompose the rational expression into partial fractions: $$\\frac{x^2+3x-2}{(x-1)(x^2+1)}$$",
+      "answer": "1/(x-1) + 3/(x^2+1)",
+      "solution": "**Step 1.** The denominator has a linear factor $(x-1)$ and an irreducible quadratic factor $(x^2+1)$, so write:\n$$\\frac{x^2+3x-2}{(x-1)(x^2+1)} = \\frac{A}{x-1} + \\frac{Bx+C}{x^2+1}$$\n\n**Step 2.** Multiply both sides by $(x-1)(x^2+1)$:\n$$x^2+3x-2 = A(x^2+1) + (Bx+C)(x-1)$$\n\n**Step 3.** Substitute $x = 1$ to isolate $A$:\n$$1+3-2 = A(1+1) \\implies 2 = 2A \\implies A = 1$$\n\n**Step 4.** Expand the right side with $A=1$ and collect like terms:\n$$x^2+3x-2 = (1+B)x^2 + (-B+C)x + (1-C)$$\n\n**Step 5.** Match coefficients of each power of $x$:\n- $x^2$: $1+B = 1 \\implies B = 0$\n- $x^1$: $-B+C = 3 \\implies C = 3$\n- $x^0$: $1-C = -2$ ✓ (consistent)\n\n**Step 6.** Write the decomposition:\n$$\\frac{x^2+3x-2}{(x-1)(x^2+1)} = \\frac{1}{x-1} + \\frac{3}{x^2+1}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T16:01:11.766Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/(x-1) + 3/(x^2+1)",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/(x-1) + 3/(x^2+1)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch8-080"
+    }
+  ]
+}

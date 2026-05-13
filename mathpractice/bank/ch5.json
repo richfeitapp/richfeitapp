@@ -1,0 +1,2414 @@
+{
+  "chapter": "ch5",
+  "chapterTitle": "Trigonometric Functions",
+  "problems": [
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Use the periodic properties of trigonometric functions to find the exact value of $\\tan\\!\\left(\\dfrac{19\\pi}{4}\\right)$.",
+      "answer": "-1",
+      "solution": "The tangent function has period $\\pi$, meaning $\\tan(t + n\\pi) = \\tan(t)$ for any integer $n$.\n\nReduce $\\dfrac{19\\pi}{4}$ by subtracting the largest whole multiple of $\\pi$ that keeps the result in $[0, \\pi)$:\n$$\\frac{19\\pi}{4} - 4\\pi = \\frac{19\\pi}{4} - \\frac{16\\pi}{4} = \\frac{3\\pi}{4}$$\n\nSo $\\tan\\!\\left(\\dfrac{19\\pi}{4}\\right) = \\tan\\!\\left(\\dfrac{3\\pi}{4}\\right)$.\n\nThe angle $\\dfrac{3\\pi}{4}$ is in Quadrant II, with reference angle $\\dfrac{\\pi}{4}$. Since tangent is negative in Quadrant II:\n$$\\tan\\!\\left(\\frac{3\\pi}{4}\\right) = -\\tan\\!\\left(\\frac{\\pi}{4}\\right) = -1$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:23:57.070Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-001"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Suppose $\\tan\\theta = -\\dfrac{4}{3}$ and $\\theta$ lies in Quadrant II. Find the exact value of $\\sin\\theta$.",
+      "answer": "4/5",
+      "solution": "Since $\\tan\\theta = \\dfrac{y}{x} = -\\dfrac{4}{3}$ and $\\theta$ is in Quadrant II (where $x < 0$, $y > 0$), assign $x = -3$ and $y = 4$.\n\nCompute $r$: $$r = \\sqrt{x^2 + y^2} = \\sqrt{(-3)^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\nApply the definition of sine: $$\\sin\\theta = \\frac{y}{r} = \\frac{4}{5}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:24:00.464Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-002"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has radius $12$ cm. Find the length of the arc intercepted by a central angle of $150°$.",
+      "answer": "10*pi",
+      "solution": "**Step 1:** Convert the central angle to radians: $$150° \\cdot \\frac{\\pi}{180°} = \\frac{5\\pi}{6} \\text{ radians}$$**Step 2:** Apply the arc length formula $s = r\\theta$: $$s = 12 \\cdot \\frac{5\\pi}{6} = \\frac{60\\pi}{6} = 10\\pi \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:24:03.167Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-003"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has a radius of $8$ cm. Find the arc length intercepted by a central angle of $135°$.",
+      "answer": "6*pi",
+      "solution": "**Step 1.** Convert $135°$ to radians: $$135° \\cdot \\frac{\\pi}{180°} = \\frac{135\\pi}{180} = \\frac{3\\pi}{4} \\text{ rad}$$\n\n**Step 2.** Apply the arc length formula $s = r\\theta$ (with $\\theta$ in radians): $$s = 8 \\cdot \\frac{3\\pi}{4} = \\frac{24\\pi}{4} = 6\\pi \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:24:32.664Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-004"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $$\\cos\\!\\left(\\sin^{-1}\\frac{5}{13}+\\cos^{-1}\\frac{3}{5}\\right)$$",
+      "answer": "16/65",
+      "solution": "Let $\\alpha = \\sin^{-1}\\!\\dfrac{5}{13}$ and $\\beta = \\cos^{-1}\\!\\dfrac{3}{5}$.\n\n**Step 1 — Find the missing trig values for $\\alpha$.**\nSince $\\sin\\alpha = \\dfrac{5}{13}$ and $\\alpha\\in\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$ with $\\sin\\alpha>0$, angle $\\alpha$ is in Quadrant I, so $\\cos\\alpha>0$: $$\\cos\\alpha = \\sqrt{1-\\frac{25}{169}} = \\sqrt{\\frac{144}{169}} = \\frac{12}{13}$$\n\n**Step 2 — Find the missing trig values for $\\beta$.**\nSince $\\cos\\beta = \\dfrac{3}{5}$ and $\\beta\\in[0,\\pi]$ with $\\cos\\beta>0$, angle $\\beta$ is in Quadrant I, so $\\sin\\beta>0$: $$\\sin\\beta = \\sqrt{1-\\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac{4}{5}$$\n\n**Step 3 — Apply the cosine addition formula.**\n$$\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta - \\sin\\alpha\\sin\\beta = \\frac{12}{13}\\cdot\\frac{3}{5} - \\frac{5}{13}\\cdot\\frac{4}{5}$$\n\n$$= \\frac{36}{65} - \\frac{20}{65} = \\boxed{\\dfrac{16}{65}}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:24:33.306Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "16/65",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "16/65",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-005"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the $x$-coordinate of the first positive maximum (for $x > 0$) of $$y = 3\\cos\\!\\left(2x + \\frac{\\pi}{2}\\right).$$",
+      "answer": "3*pi/4",
+      "solution": "A maximum of cosine occurs when its argument equals $2k\\pi$ for any integer $k$.\n\nSet the argument equal to $2k\\pi$: $$2x + \\frac{\\pi}{2} = 2k\\pi.$$\n\nSolve for $x$: $$x = k\\pi - \\frac{\\pi}{4}.$$\n\nFor $k = 0$: $x = -\\dfrac{\\pi}{4}$ (negative — discard).\n\nFor $k = 1$: $x = \\pi - \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$ ✓\n\nThe first positive maximum occurs at $x = \\dfrac{3\\pi}{4}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:24:47.339Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3*pi/4",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3*pi/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-006"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with the right angle at $C$, angle $A = 60^\\circ$ and the side opposite $A$ is $BC = 9$. Find the length of the hypotenuse $AB$.",
+      "answer": "6*sqrt(3)",
+      "solution": "1. Identify sides relative to angle $A$: opposite $= BC = 9$, hypotenuse $= AB$.\n\n2. Apply the sine ratio: $$\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{BC}{AB}$$\n\n3. Substitute $A = 60^\\circ$ and $BC = 9$: $$\\sin 60^\\circ = \\frac{9}{AB}$$\n\n4. Use the exact value $\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$: $$\\frac{\\sqrt{3}}{2} = \\frac{9}{AB}$$\n\n5. Solve for $AB$: $$AB = \\frac{18}{\\sqrt{3}} = \\frac{18\\sqrt{3}}{3} = 6\\sqrt{3}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:24:51.852Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6*sqrt(3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6*sqrt(3)",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-007"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\sin\\theta = -\\dfrac{5}{13}$ and $\\theta$ is an angle in standard position whose terminal side lies in Quadrant III, find the exact value of $\\tan\\theta$.",
+      "answer": "5/12",
+      "solution": "1. Since $\\sin\\theta = -\\dfrac{5}{13}$, we have opposite $= -5$ and hypotenuse $= 13$ in the reference triangle.\n\n2. Find the adjacent side using the Pythagorean theorem: $$|\\text{adjacent}| = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$$\n\n3. In Quadrant III both $x$ and $y$ coordinates are negative, so the adjacent side is $-12$, giving $\\cos\\theta = -\\dfrac{12}{13}$.\n\n4. Apply the quotient identity: $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-5/13}{-12/13} = \\frac{5}{12}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:25:20.292Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5/12",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5/12",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-008"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with the right angle at $C$, $\\angle A = 60°$ and $BC = 7\\sqrt{3}$. Find the exact length of the hypotenuse $AB$.",
+      "answer": "14",
+      "solution": "1. Side $BC$ is opposite $\\angle A$, and $AB$ is the hypotenuse.\n\n2. Apply the sine ratio: $$\\sin(60°) = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{BC}{AB} = \\frac{7\\sqrt{3}}{AB}$$\n\n3. Substitute the exact value $\\sin(60°) = \\dfrac{\\sqrt{3}}{2}$: $$\\frac{\\sqrt{3}}{2} = \\frac{7\\sqrt{3}}{AB}$$\n\n4. Cross-multiply and simplify: $$AB = \\frac{2 \\cdot 7\\sqrt{3}}{\\sqrt{3}} = \\frac{14\\sqrt{3}}{\\sqrt{3}} = 14$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:25:24.527Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "14",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "14",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-009"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Suppose $\\cos(t) = -\\dfrac{5}{13}$ and $\\sin(t) = \\dfrac{12}{13}$. Using the even and odd properties of trigonometric functions, find $\\sin(-t) - \\cos(-t)$.",
+      "answer": "-7/13",
+      "solution": "**Step 1.** Sine is an odd function, so $\\sin(-t) = -\\sin(t) = -\\dfrac{12}{13}$.\n**Step 2.** Cosine is an even function, so $\\cos(-t) = \\cos(t) = -\\dfrac{5}{13}$.\n**Step 3.** Subtract: $$\\sin(-t) - \\cos(-t) = -\\frac{12}{13} - \\!\\left(-\\frac{5}{13}\\right) = -\\frac{12}{13} + \\frac{5}{13} = -\\frac{7}{13}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:25:41.705Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-7/13",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-7/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-010"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\sin^{-1}\\!\\left(\\dfrac{5}{13}\\right)\\right)$.",
+      "answer": "12/13",
+      "solution": "Let $\\theta = \\sin^{-1}\\!\\left(\\dfrac{5}{13}\\right)$, so $\\sin\\theta = \\dfrac{5}{13}$ with $\\theta \\in \\left[-\\dfrac{\\pi}{2},\\, \\dfrac{\\pi}{2}\\right]$.\n\nApply the Pythagorean identity: $$\\cos^2\\theta = 1 - \\sin^2\\theta = 1 - \\frac{25}{169} = \\frac{144}{169}$$\n\nSince $\\theta \\in \\left[-\\dfrac{\\pi}{2},\\, \\dfrac{\\pi}{2}\\right]$, cosine is non-negative, so $$\\cos\\theta = \\frac{12}{13}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:25:48.066Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-011"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A Ferris wheel has a radius of $25$ feet and completes one full revolution every $40$ seconds. Find the linear speed of a passenger in feet per second.",
+      "answer": "5*pi/4",
+      "solution": "**Step 1: Find the angular speed $\\omega$.**\n\nOne full revolution = $2\\pi$ radians completed in $40$ seconds:\n$$\\omega = \\frac{2\\pi}{40} = \\frac{\\pi}{20} \\text{ rad/sec}$$\n\n**Step 2: Apply the linear speed formula $v = r\\omega$.**\n\n$$v = 25 \\cdot \\frac{\\pi}{20} = \\frac{25\\pi}{20} = \\frac{5\\pi}{4} \\text{ ft/sec}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:25:50.935Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "5*pi/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "5*pi/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-012"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with the right angle at $C$, leg $AC = 7$ and hypotenuse $AB = 25$. Find $\\tan A$.",
+      "answer": "24/7",
+      "solution": "1. Find the missing leg $BC$ using the Pythagorean Theorem: $$BC = \\sqrt{AB^2 - AC^2} = \\sqrt{25^2 - 7^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24$$\n2. Identify the sides relative to angle $A$: the opposite side is $BC = 24$ and the adjacent side is $AC = 7$.\n3. Apply the definition of tangent: $$\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{BC}{AC} = \\frac{24}{7}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:26:24.619Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "24/7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "24/7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-013"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\sin\\theta = -\\dfrac{3}{5}$ and $\\theta$ lies in Quadrant IV, find $\\tan\\theta$.",
+      "answer": "-3/4",
+      "solution": "1. In Quadrant IV, $x > 0$ and $y < 0$, so cosine is positive while sine is negative.\n\n2. Apply the Pythagorean identity to find $\\cos\\theta$: $$\\cos^2\\theta = 1 - \\sin^2\\theta = 1 - \\left(-\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$$\n\n3. Since $\\cos\\theta > 0$ in Quadrant IV: $$\\cos\\theta = \\frac{4}{5}$$\n\n4. Use the quotient identity: $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\dfrac{3}{5}}{\\dfrac{4}{5}} = -\\frac{3}{4}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:26:29.170Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-014"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the $x$-coordinate of the first positive maximum of $$y = 3\\cos\\!\\left(2x - \\frac{\\pi}{3}\\right) + 1.$$",
+      "answer": "pi/6",
+      "solution": "**1. Identify parameters.** The function has the form $y = A\\cos(Bx - C) + D$ with $A = 3$, $B = 2$, $C = \\dfrac{\\pi}{3}$, $D = 1$.\n\n**2. Locate maxima.** A cosine function reaches its maximum when its argument equals $0$ (plus any multiple of $2\\pi$). The first positive maximum occurs when the argument first equals $0$: $$2x - \\frac{\\pi}{3} = 0$$\n\n**3. Solve for $x$.** $$2x = \\frac{\\pi}{3} \\implies x = \\frac{\\pi}{6}$$\n\n**4. Verify.** Since $\\dfrac{\\pi}{6} > 0$ and $$y\\!\\left(\\frac{\\pi}{6}\\right) = 3\\cos\\!\\left(2\\cdot\\frac{\\pi}{6} - \\frac{\\pi}{3}\\right) + 1 = 3\\cos(0) + 1 = 3(1) + 1 = 4 = A + D \\checkmark$$ this is the maximum value, confirming the answer.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:26:33.181Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/6",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/6",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-015"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Use the periodic property of the cosine function to find the exact value of $$\\cos\\!\\left(\\frac{29\\pi}{6}\\right)$$",
+      "answer": "-sqrt(3)/2",
+      "solution": "**Step 1.** The cosine function has period $2\\pi$, so $\\cos(t + 2\\pi k) = \\cos(t)$ for every integer $k$.\n\n**Step 2.** Subtract two full periods to reduce the argument:\n$$\\frac{29\\pi}{6} - 2(2\\pi) = \\frac{29\\pi}{6} - \\frac{24\\pi}{6} = \\frac{5\\pi}{6}$$\n\n**Step 3.** Apply the periodic property:\n$$\\cos\\!\\left(\\frac{29\\pi}{6}\\right) = \\cos\\!\\left(\\frac{5\\pi}{6}\\right)$$\n\n**Step 4.** Locate $\\dfrac{5\\pi}{6}$ on the unit circle. Its reference angle is $\\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6}$, and $\\dfrac{5\\pi}{6}$ lies in Quadrant II where cosine is negative:\n$$\\cos\\!\\left(\\frac{5\\pi}{6}\\right) = -\\cos\\!\\left(\\frac{\\pi}{6}\\right) = -\\frac{\\sqrt{3}}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:26:35.245Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-sqrt(3)/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-sqrt(3)/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-016"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A central angle of $135°$ is drawn in a circle with radius $8$ cm. Find the exact length of the arc intercepted by this angle.",
+      "answer": "6*pi",
+      "solution": "**Step 1.** Convert the central angle from degrees to radians: $$135° \\cdot \\frac{\\pi}{180°} = \\frac{3\\pi}{4} \\text{ radians}$$\n**Step 2.** Apply the arc length formula $s = r\\theta$ with $r = 8$ and $\\theta = \\dfrac{3\\pi}{4}$: $$s = 8 \\cdot \\frac{3\\pi}{4} = 6\\pi \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:00.704Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-017"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\sin^{-1}\\!\\left(\\dfrac{5}{13}\\right)\\right)$.",
+      "answer": "12/13",
+      "solution": "**Step 1.** Let $\\theta = \\sin^{-1}\\!\\left(\\dfrac{5}{13}\\right)$, so $\\sin\\theta = \\dfrac{5}{13}$ with $\\theta\\in\\left[-\\dfrac{\\pi}{2},\\,\\dfrac{\\pi}{2}\\right]$.\n\n**Step 2.** Since $\\sin\\theta > 0$, angle $\\theta$ lies in Quadrant I, so $\\cos\\theta > 0$.\n\n**Step 3.** Apply the Pythagorean identity: $$\\cos\\theta = \\sqrt{1 - \\sin^2\\theta} = \\sqrt{1 - \\left(\\frac{5}{13}\\right)^2} = \\sqrt{1 - \\frac{25}{169}} = \\sqrt{\\frac{144}{169}} = \\frac{12}{13}$$\n\nTherefore $\\cos\\!\\left(\\sin^{-1}\\!\\left(\\dfrac{5}{13}\\right)\\right) = \\dfrac{12}{13}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:01.544Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-018"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "A surveyor stands $50$ feet from the base of a vertical tower and measures the angle of elevation to the top as $60^\\circ$. Find the exact height of the tower.",
+      "answer": "50*sqrt(3)",
+      "solution": "Label the right triangle: the horizontal leg (adjacent to the $60^\\circ$ angle) is $50$ ft, and the vertical leg (opposite the $60^\\circ$ angle) is $h$.\n\nApply the tangent ratio: $$\\tan(60^\\circ) = \\frac{h}{50}$$\n\nSince $\\tan(60^\\circ) = \\sqrt{3}$: $$h = 50\\sqrt{3} \\approx 86.6 \\text{ ft}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:21.913Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "50*sqrt(3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "50*sqrt(3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-019"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the $x$-coordinate of the leftmost maximum of $$y = 2\\sin(3x - \\pi)$$ on the interval $[0,\\, 2\\pi]$.",
+      "answer": "pi/2",
+      "solution": "The function has the form $y = A\\sin(Bx + C)$ with $A = 2$, $B = 3$, $C = -\\pi$.\n\nSine attains its maximum value of $1$ when its argument equals $\\dfrac{\\pi}{2} + 2k\\pi$ for integer $k$.\n\nSet the argument equal to $\\dfrac{\\pi}{2} + 2k\\pi$: $$3x - \\pi = \\frac{\\pi}{2} + 2k\\pi$$\n\nAdd $\\pi$ to both sides: $$3x = \\frac{3\\pi}{2} + 2k\\pi$$\n\nDivide by $3$: $$x = \\frac{\\pi}{2} + \\frac{2k\\pi}{3}$$\n\nCheck $k = 0$: $x = \\dfrac{\\pi}{2} \\in [0,\\, 2\\pi]$ ✓\n\nCheck $k = -1$: $x = \\dfrac{\\pi}{2} - \\dfrac{2\\pi}{3} = -\\dfrac{\\pi}{6} \\notin [0,\\, 2\\pi]$ ✗\n\nThe leftmost maximum on $[0,\\, 2\\pi]$ occurs at $x = \\dfrac{\\pi}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:24.324Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-020"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $\\sin\\!\\left(-\\dfrac{13\\pi}{6}\\right)$ by applying the odd-function property of sine and the periodicity of the sine function.",
+      "answer": "-1/2",
+      "solution": "**Step 1 — Apply the odd-function property.**\nBecause sine is an odd function, $\\sin(-\\theta) = -\\sin(\\theta)$:\n$$\\sin\\!\\left(-\\frac{13\\pi}{6}\\right) = -\\sin\\!\\left(\\frac{13\\pi}{6}\\right)$$\n\n**Step 2 — Reduce using periodicity (period $= 2\\pi$).**\nSubtract one full period to find a coterminal angle:\n$$\\frac{13\\pi}{6} - 2\\pi = \\frac{13\\pi}{6} - \\frac{12\\pi}{6} = \\frac{\\pi}{6}$$\nSo $\\sin\\!\\left(\\dfrac{13\\pi}{6}\\right) = \\sin\\!\\left(\\dfrac{\\pi}{6}\\right)$.\n\n**Step 3 — Read the unit-circle value.**\n$$\\sin\\!\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$$\n\n**Step 4 — Combine.**\n$$\\sin\\!\\left(-\\frac{13\\pi}{6}\\right) = -\\sin\\!\\left(\\frac{13\\pi}{6}\\right) = -\\frac{1}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:32.044Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-021"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Find the exact value of $\\csc\\!\\left(\\dfrac{7\\pi}{4}\\right)$.",
+      "answer": "-sqrt(2)",
+      "solution": "**Step 1: Identify the quadrant.**\n$\\dfrac{7\\pi}{4}$ lies between $\\dfrac{3\\pi}{2}$ and $2\\pi$, so its terminal side is in **Quadrant IV**.\n\n**Step 2: Find the reference angle.** $$\\bar{\\theta} = 2\\pi - \\frac{7\\pi}{4} = \\frac{\\pi}{4}$$\n\n**Step 3: Determine the sign.**\nIn Quadrant IV, $y < 0$, so $\\sin\\theta < 0$ and therefore $\\csc\\theta < 0$.\n\n**Step 4: Evaluate using the reference angle.** $$\\csc\\frac{\\pi}{4} = \\frac{1}{\\sin(\\pi/4)} = \\frac{1}{\\sqrt{2}/2} = \\sqrt{2}$$\n\n**Step 5: Apply the sign.** $$\\csc\\frac{7\\pi}{4} = -\\sqrt{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:50.403Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-sqrt(2)",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-sqrt(2)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-022"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\arcsin\\dfrac{5}{13}\\right)$.",
+      "answer": "12/13",
+      "solution": "1. Let $\\theta = \\arcsin\\dfrac{5}{13}$, so $\\sin\\theta = \\dfrac{5}{13}$ with $\\theta \\in \\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$, placing $\\theta$ in Quadrant I.\n2. Sketch a right triangle with opposite side $= 5$ and hypotenuse $= 13$. By the Pythagorean theorem: $$\\text{adjacent} = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$$\n3. Read cosine from the triangle: $$\\cos\\!\\left(\\arcsin\\dfrac{5}{13}\\right) = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}} = \\dfrac{12}{13}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:27:53.477Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-023"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$, angle $C$ is the right angle. If $\\tan A = \\dfrac{5}{12}$, find the exact value of $\\sec A$.",
+      "answer": "13/12",
+      "solution": "**1.** Label the sides using $\\tan A = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{5}{12}$, so set opposite $= 5$ and adjacent $= 12$.\n\n**2.** Find the hypotenuse with the Pythagorean theorem: $$c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$$\n\n**3.** Apply the definition of secant: $$\\sec A = \\frac{\\text{hypotenuse}}{\\text{adjacent}} = \\frac{13}{12}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:28:30.319Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "13/12",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "13/12",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-024"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has radius $8$ cm. Find the length of the arc intercepted by a central angle of $\\dfrac{5\\pi}{6}$ radians.",
+      "answer": "20*pi/3",
+      "solution": "Use the arc length formula $s = r\\theta$, where $r$ is the radius and $\\theta$ is the central angle in radians.\n\nSubstitute $r = 8$ and $\\theta = \\dfrac{5\\pi}{6}$: $$s = 8 \\cdot \\dfrac{5\\pi}{6} = \\dfrac{40\\pi}{6} = \\dfrac{20\\pi}{3}$$\n\nThe arc length is $\\dfrac{20\\pi}{3}$ cm.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:28:36.104Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "20*pi/3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "20pi/3",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-025"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Find the exact value of $\\tan(300°)$.",
+      "answer": "-sqrt(3)",
+      "solution": "**Step 1: Identify the quadrant.**\n$300°$ lies between $270°$ and $360°$, so the terminal side is in Quadrant IV.\n\n**Step 2: Find the reference angle.**\n$$\\theta' = 360° - 300° = 60°$$\n\n**Step 3: Evaluate tangent at the reference angle.**\n$$\\tan 60° = \\sqrt{3}$$\n\n**Step 4: Apply the correct sign.**\nIn Quadrant IV, $x > 0$ and $y < 0$, so $\\tan\\theta = \\dfrac{y}{x} < 0$.\n$$\\tan(300°) = -\\sqrt{3}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:28:40.321Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-sqrt(3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-sqrt(3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-026"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\arctan\\dfrac{5}{12}\\right)$.",
+      "answer": "12/13",
+      "solution": "Let $\\theta = \\arctan\\dfrac{5}{12}$, so $\\tan\\theta = \\dfrac{5}{12}$ with $\\theta \\in \\left(-\\dfrac{\\pi}{2},\\,\\dfrac{\\pi}{2}\\right)$. Since $\\dfrac{5}{12}>0$, $\\theta$ lies in Quadrant I.\n\nDraw a reference right triangle with opposite side $5$ and adjacent side $12$. By the Pythagorean theorem, the hypotenuse is $$\\sqrt{5^2+12^2}=\\sqrt{25+144}=\\sqrt{169}=13.$$\n\nTherefore $$\\cos\\!\\left(\\arctan\\dfrac{5}{12}\\right)=\\cos\\theta=\\frac{\\text{adjacent}}{\\text{hypotenuse}}=\\frac{12}{13}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:29:11.833Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-027"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Use the periodic properties of the sine function to find the exact value of $$\\sin\\!\\left(\\frac{17\\pi}{6}\\right)$$",
+      "answer": "1/2",
+      "solution": "1. Recall that $\\sin$ has period $2\\pi$, so $\\sin(t + 2\\pi) = \\sin(t)$ for all real $t$.\n2. Rewrite the angle: $$\\frac{17\\pi}{6} = \\frac{12\\pi}{6} + \\frac{5\\pi}{6} = 2\\pi + \\frac{5\\pi}{6}$$\n3. Apply periodicity: $$\\sin\\!\\left(\\frac{17\\pi}{6}\\right) = \\sin\\!\\left(\\frac{5\\pi}{6}\\right)$$\n4. Identify the reference angle. Since $\\frac{5\\pi}{6}$ lies in quadrant II, its reference angle is $\\pi - \\frac{5\\pi}{6} = \\frac{\\pi}{6}$, and sine is positive in quadrant II: $$\\sin\\!\\left(\\frac{5\\pi}{6}\\right) = \\sin\\!\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:29:14.418Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-028"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "Find the arc length $s$ intercepted by a central angle of $135°$ on a circle with radius $8$ cm.",
+      "answer": "6*pi",
+      "solution": "**Step 1.** Convert the central angle from degrees to radians.\n$$135° \\cdot \\frac{\\pi}{180°} = \\frac{135\\pi}{180} = \\frac{3\\pi}{4} \\text{ rad}$$\n\n**Step 2.** Apply the arc length formula $s = r\\theta$, where $\\theta$ must be in radians.\n$$s = 8 \\cdot \\frac{3\\pi}{4} = \\frac{24\\pi}{4} = 6\\pi \\approx 18.85 \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:00.677Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-029"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $\\tan\\!\\left(-\\dfrac{13\\pi}{4}\\right)$.",
+      "answer": "-1",
+      "solution": "1. Tangent is an **odd** function, so $\\tan(-t) = -\\tan(t)$: $$\\tan\\!\\left(-\\frac{13\\pi}{4}\\right) = -\\tan\\!\\left(\\frac{13\\pi}{4}\\right)$$\n2. The period of tangent is $\\pi$. Subtract multiples of $\\pi$ to reduce $\\frac{13\\pi}{4}$: $$\\frac{13\\pi}{4} - 3\\pi = \\frac{13\\pi}{4} - \\frac{12\\pi}{4} = \\frac{\\pi}{4}$$\n3. So $\\tan\\!\\left(\\frac{13\\pi}{4}\\right) = \\tan\\!\\left(\\frac{\\pi}{4}\\right) = 1$.\n4. Combining steps 1 and 3: $\\tan\\!\\left(-\\dfrac{13\\pi}{4}\\right) = -1$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:05.405Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-1",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-1",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-030"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In a right triangle, $\\sin\\theta = \\dfrac{7}{25}$ where $\\theta$ is an acute angle. Find the exact value of $\\tan\\theta$.",
+      "answer": "7/24",
+      "solution": "Label the sides using the definition of sine: opposite $= 7$, hypotenuse $= 25$.\n\nApply the Pythagorean theorem to find the adjacent side: $$\\text{adjacent} = \\sqrt{25^2 - 7^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24.$$\n\nApply the definition of tangent: $$\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{7}{24}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:08.645Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7/24",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7/24",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-031"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\tan\\theta = -\\dfrac{3}{4}$ and $\\sin\\theta > 0$, find the exact value of $\\cos\\theta$.",
+      "answer": "-4/5",
+      "solution": "**Step 1 — Identify the quadrant.**\nSince $\\sin\\theta > 0$, the angle is in Quadrant I or II. Since $\\tan\\theta < 0$, it must be in **Quadrant II** (where sine is positive and tangent is negative).\n\n**Step 2 — Assign coordinates.**\nWrite $\\tan\\theta = \\dfrac{y}{x} = -\\dfrac{3}{4}$. In Quadrant II, $x < 0$ and $y > 0$, so let $x = -4$ and $y = 3$.\n\n**Step 3 — Find $r$.**\n$$r = \\sqrt{x^2 + y^2} = \\sqrt{(-4)^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$$\n\n**Step 4 — Evaluate $\\cos\\theta$.**\n$$\\cos\\theta = \\frac{x}{r} = \\frac{-4}{5}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:12.502Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-4/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-4/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-032"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\tan\\!\\left(\\arccos\\dfrac{5}{13}\\right)$.",
+      "answer": "12/5",
+      "solution": "Let $\\theta = \\arccos\\!\\dfrac{5}{13}$, so $\\cos\\theta = \\dfrac{5}{13}$ with $\\theta \\in [0,\\pi]$.\n\nSince $\\cos\\theta > 0$, the angle $\\theta$ lies in quadrant I, so $\\sin\\theta > 0$.\n\nApply the Pythagorean identity: $$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\frac{25}{169}} = \\sqrt{\\frac{144}{169}} = \\frac{12}{13}$$\n\nCompute the tangent: $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{12/13}{5/13} = \\frac{12}{5}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:42.502Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-033"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A sector of a circle has a radius of $10$ cm and an arc length of $15$ cm. Find the area of the sector.",
+      "answer": "75",
+      "solution": "**Step 1 — Find the central angle using the arc-length formula** $s = r\\theta$:\n$$\\theta = \\frac{s}{r} = \\frac{15}{10} = \\frac{3}{2} \\text{ radians}$$\n\n**Step 2 — Apply the sector-area formula** $A = \\tfrac{1}{2}r^{2}\\theta$:\n$$A = \\frac{1}{2}(10)^{2}\\!\\left(\\frac{3}{2}\\right) = \\frac{1}{2}(100)\\!\\left(\\frac{3}{2}\\right) = \\frac{300}{4} = 75 \\text{ cm}^{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:43.045Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "75",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "75",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-034"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "A sinusoidal function has the form $y = A\\sin(Bx - C)$ with $A > 0$ and $B > 0$. Its amplitude is $5$, its period is $\\dfrac{2\\pi}{3}$, and its phase shift is $\\dfrac{\\pi}{6}$ to the right. Find the value of $C$.",
+      "answer": "pi/2",
+      "solution": "**Step 1 — Amplitude.** The amplitude of $y = A\\sin(Bx - C)$ is $|A|$, so $A = 5$.\n\n**Step 2 — Period.** The period equals $\\dfrac{2\\pi}{B}$. Setting this equal to $\\dfrac{2\\pi}{3}$: $$\\frac{2\\pi}{B} = \\frac{2\\pi}{3} \\implies B = 3$$\n\n**Step 3 — Phase shift.** The phase shift of $y = A\\sin(Bx - C)$ is $\\dfrac{C}{B}$, shifted right when $C > 0$. Setting $\\dfrac{C}{B} = \\dfrac{\\pi}{6}$: $$\\frac{C}{3} = \\frac{\\pi}{6}$$\n\n**Step 4 — Solve for $C$.** $$C = 3 \\cdot \\frac{\\pi}{6} = \\frac{\\pi}{2}$$\n\nThe equation of the function is $y = 5\\sin\\!\\left(3x - \\dfrac{\\pi}{2}\\right)$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:37:44.524Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-035"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\cos\\theta = -\\dfrac{5}{13}$ and $\\tan\\theta > 0$, find $\\sin\\theta$.",
+      "answer": "-12/13",
+      "solution": "**Step 1.** Determine the quadrant. $\\cos\\theta < 0$ places $\\theta$ in Quadrant II or III. $\\tan\\theta > 0$ requires sine and cosine to have the same sign, which occurs only in **Quadrant III**.\n\n**Step 2.** Apply the Pythagorean identity: $$\\sin^2\\theta + \\cos^2\\theta = 1$$ $$\\sin^2\\theta = 1 - \\left(-\\frac{5}{13}\\right)^2 = 1 - \\frac{25}{169} = \\frac{144}{169}$$\n\n**Step 3.** Solve: $\\sin\\theta = \\pm\\dfrac{12}{13}$. Since $\\theta$ is in Quadrant III, sine is negative. $$\\sin\\theta = -\\frac{12}{13}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:38:21.442Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-12/13",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-036"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(-\\dfrac{19\\pi}{4}\\right)$.",
+      "answer": "-sqrt(2)/2",
+      "solution": "**Step 1 — Apply the even-function property.**\nCosine is an even function, so $\\cos(-\\theta) = \\cos(\\theta)$:\n$$\\cos\\!\\left(-\\frac{19\\pi}{4}\\right) = \\cos\\!\\left(\\frac{19\\pi}{4}\\right)$$\n\n**Step 2 — Use the period $2\\pi$ to find a coterminal angle in $[0,2\\pi)$.**\nSubtract $2\\pi$ twice (since $2\\pi = \\tfrac{8\\pi}{4}$):\n$$\\frac{19\\pi}{4} - \\frac{8\\pi}{4} = \\frac{11\\pi}{4}, \\qquad \\frac{11\\pi}{4} - \\frac{8\\pi}{4} = \\frac{3\\pi}{4}$$\nSo $\\cos\\!\\left(\\dfrac{19\\pi}{4}\\right) = \\cos\\!\\left(\\dfrac{3\\pi}{4}\\right)$.\n\n**Step 3 — Evaluate using the unit circle.**\nThe angle $\\dfrac{3\\pi}{4}$ lies in Quadrant II with reference angle $\\dfrac{\\pi}{4}$. The cosine is negative in QII:\n$$\\cos\\!\\left(\\frac{3\\pi}{4}\\right) = -\\cos\\!\\left(\\frac{\\pi}{4}\\right) = -\\frac{\\sqrt{2}}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:38:21.652Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-sqrt(2)/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-sqrt(2)/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-037"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the $x$-coordinate of the first maximum of $$y = 3\\cos\\!\\left(2x - \\frac{\\pi}{4}\\right) - 1$$ for $x \\geq 0$.",
+      "answer": "pi/8",
+      "solution": "The cosine function achieves its maximum of $1$ when its argument equals $2\\pi k$ for any integer $k$.\n\nSet the argument equal to $2\\pi k$: $$2x - \\frac{\\pi}{4} = 2\\pi k$$\n\nSolve for $x$: $$2x = \\frac{\\pi}{4} + 2\\pi k \\implies x = \\frac{\\pi}{8} + \\pi k$$\n\nFor $k = 0$: $x = \\dfrac{\\pi}{8} > 0$, so the first non-negative maximum occurs at $x = \\dfrac{\\pi}{8}$.\n\nAt this point the maximum value is $y = 3(1) - 1 = 2$, confirming amplitude $3$ and vertical shift $-1$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:38:41.735Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/8",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/8",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-038"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with right angle at $C$, it is given that $\\tan A = \\dfrac{7}{24}$. Find the exact value of $\\sin A + \\cos A$.",
+      "answer": "31/25",
+      "solution": "**Step 1:** From $\\tan A = \\dfrac{7}{24}$, label the legs of the reference triangle: opposite $= 7$, adjacent $= 24$.\n\n**Step 2:** Find the hypotenuse via the Pythagorean theorem: $$c = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$$\n\n**Step 3:** Apply the definitions of sine and cosine: $$\\sin A = \\frac{\\text{opp}}{\\text{hyp}} = \\frac{7}{25}, \\qquad \\cos A = \\frac{\\text{adj}}{\\text{hyp}} = \\frac{24}{25}$$\n\n**Step 4:** Compute the sum: $$\\sin A + \\cos A = \\frac{7}{25} + \\frac{24}{25} = \\frac{31}{25}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:38:42.560Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "31/25",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "31/25",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-039"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\sin\\!\\left(\\cos^{-1}\\!\\!\\left(\\dfrac{5}{13}\\right)\\right)$.",
+      "answer": "12/13",
+      "solution": "Let $\\theta = \\cos^{-1}\\!\\!\\left(\\dfrac{5}{13}\\right)$, so $\\cos\\theta = \\dfrac{5}{13}$ with $\\theta \\in [0,\\,\\pi]$.\n\nBecause $\\theta \\in [0,\\pi]$, we know $\\sin\\theta \\ge 0$.\n\nApply the Pythagorean identity: $$\\sin^2\\theta = 1 - \\cos^2\\theta = 1 - \\left(\\frac{5}{13}\\right)^{\\!2} = 1 - \\frac{25}{169} = \\frac{144}{169}$$\n\nTaking the positive square root: $$\\sin\\theta = \\frac{12}{13}$$\n\nTherefore $\\sin\\!\\left(\\cos^{-1}\\!\\!\\left(\\dfrac{5}{13}\\right)\\right) = \\dfrac{12}{13}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:38:48.144Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-040"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has a radius of $12$ inches. Find the length of the arc intercepted by a central angle of $\\dfrac{5\\pi}{6}$ radians.",
+      "answer": "10*pi",
+      "solution": "Use the arc length formula $s = r\\theta$, where $r$ is the radius and $\\theta$ is the central angle in radians.\n\n$$s = 12 \\cdot \\frac{5\\pi}{6} = \\frac{60\\pi}{6} = 10\\pi \\text{ inches}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:38:55.091Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-041"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Find the exact value of $\\csc\\!\\left(\\dfrac{7\\pi}{6}\\right)$.",
+      "answer": "-2",
+      "solution": "1. Identify the quadrant: $\\pi < \\dfrac{7\\pi}{6} < \\dfrac{3\\pi}{2}$, so the angle lies in **Quadrant III**.\n\n2. Find the reference angle: $$\\hat{\\theta} = \\frac{7\\pi}{6} - \\pi = \\frac{\\pi}{6}$$\n\n3. Evaluate sine at the reference angle and apply the quadrant sign (sine is negative in QIII): $$\\sin\\!\\left(\\frac{7\\pi}{6}\\right) = -\\sin\\!\\left(\\frac{\\pi}{6}\\right) = -\\frac{1}{2}$$\n\n4. Apply the reciprocal identity: $$\\csc\\!\\left(\\frac{7\\pi}{6}\\right) = \\frac{1}{\\sin(7\\pi/6)} = \\frac{1}{-1/2} = -2$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:39:24.136Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-042"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Use the even-odd properties of trigonometric functions and the period of cosine to find the exact value of $$\\cos\\!\\left(-\\frac{25\\pi}{3}\\right)$$",
+      "answer": "1/2",
+      "solution": "**Step 1 — Apply the even-function property of cosine** ($\\cos(-t)=\\cos t$): $$\\cos\\!\\left(-\\frac{25\\pi}{3}\\right)=\\cos\\!\\left(\\frac{25\\pi}{3}\\right)$$\n\n**Step 2 — Reduce using the period $2\\pi$.**  Divide to find how many full periods fit: $$\\frac{25\\pi/3}{2\\pi}=\\frac{25}{6}=4\\tfrac{1}{6}$$ so subtract 4 complete periods: $$\\frac{25\\pi}{3}-4(2\\pi)=\\frac{25\\pi}{3}-\\frac{24\\pi}{3}=\\frac{\\pi}{3}$$\n\n**Step 3 — Evaluate at the coterminal angle using the unit circle:** $$\\cos\\!\\left(\\frac{\\pi}{3}\\right)=\\frac{1}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:39:24.312Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-043"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$, the right angle is at $C$. Given that $\\sin A = \\dfrac{7}{25}$, find $\\tan B$.",
+      "answer": "24/7",
+      "solution": "**Step 1.** Interpret $\\sin A$. Since $\\sin A = \\dfrac{\\text{opposite}}{\\text{hypotenuse}} = \\dfrac{7}{25}$, the side opposite $A$ is $a = 7$ and the hypotenuse is $c = 25$.\n\n**Step 2.** Find the remaining leg with the Pythagorean theorem: $$b = \\sqrt{c^2 - a^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24.$$\n\n**Step 3.** Identify sides relative to angle $B$. Because $A + B = 90°$, the side *opposite* $B$ is $b = 24$ and the side *adjacent* to $B$ is $a = 7$.\n\n**Step 4.** Compute: $$\\tan B = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{24}{7}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:39:46.941Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "24/7",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "24/7",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-044"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\arctan\\dfrac{3}{4}\\right)$.",
+      "answer": "4/5",
+      "solution": "**Step 1.** Let $\\theta = \\arctan\\dfrac{3}{4}$, so $\\tan\\theta = \\dfrac{3}{4}$ with $\\theta \\in \\left(-\\dfrac{\\pi}{2},\\, \\dfrac{\\pi}{2}\\right)$.\n\n**Step 2.** Sketch a right triangle where the side opposite $\\theta$ is $3$ and the side adjacent to $\\theta$ is $4$.\n\n**Step 3.** Find the hypotenuse: $$h = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5.$$\n\n**Step 4.** Read off the cosine: $$\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{4}{5}.$$\n\n**Step 5.** Since $\\theta \\in \\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$, we have $\\cos\\theta > 0$, so no sign adjustment is needed. $$\\cos\\!\\left(\\arctan\\frac{3}{4}\\right) = \\frac{4}{5}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:39:54.344Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-045"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the smallest positive value of $x$ at which $y = -2\\sin(3x - \\pi) + 4$ attains its minimum value.",
+      "answer": "pi/2",
+      "solution": "**Step 1.** Identify the range. With $A = -2$ and vertical shift $D = 4$, the range is $[4-|A|,\\; 4+|A|] = [2, 6]$. The minimum value is $2$.\n\n**Step 2.** Because $A = -2 < 0$, the minimum of $y$ occurs when $\\sin(3x-\\pi)$ is at its **maximum** of $1$:\n$$y_{\\min} = -2(1)+4 = 2. \\checkmark$$\n\n**Step 3.** Set the argument equal to $\\dfrac{\\pi}{2}$ and solve:\n$$3x - \\pi = \\frac{\\pi}{2} \\implies 3x = \\pi + \\frac{\\pi}{2} = \\frac{3\\pi}{2} \\implies x = \\frac{\\pi}{2}.$$\n\n**Step 4.** Verify this is the smallest positive solution. The general solution is\n$$3x - \\pi = \\frac{\\pi}{2} + 2\\pi k \\implies x = \\frac{\\pi}{2} + \\frac{2\\pi k}{3}, \\quad k \\in \\mathbb{Z}.$$\nFor $k = -1$: $x = \\dfrac{\\pi}{2} - \\dfrac{2\\pi}{3} = -\\dfrac{\\pi}{6} < 0$. For $k = 0$: $x = \\dfrac{\\pi}{2} > 0$.\n\nThe smallest positive value is $x = \\dfrac{\\pi}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:39:54.565Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-046"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A central angle of $135°$ is formed in a circle with radius $4$ feet. Find the length of the arc intercepted by the angle. Express your answer in terms of $\\pi$.",
+      "answer": "3*pi",
+      "solution": "Step 1: Convert the central angle to radians. $$135° \\cdot \\frac{\\pi}{180°} = \\frac{135\\pi}{180} = \\frac{3\\pi}{4} \\text{ radians}$$\nStep 2: Apply the arc length formula $s = r\\theta$ with $r = 4$ ft and $\\theta = \\dfrac{3\\pi}{4}$. $$s = 4 \\cdot \\frac{3\\pi}{4} = 3\\pi \\text{ feet}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:40:05.227Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3*pi",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-047"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Use the odd-function property and the periodic property of tangent to find the exact value of $$\\tan\\!\\left(-\\dfrac{17\\pi}{6}\\right).$$",
+      "answer": "sqrt(3)/3",
+      "solution": "**Step 1 — Apply the odd-function property.**\nBecause $\\tan(-t) = -\\tan(t)$:\n$$\\tan\\!\\left(-\\frac{17\\pi}{6}\\right) = -\\tan\\!\\left(\\frac{17\\pi}{6}\\right).$$\n\n**Step 2 — Reduce using the period $\\pi$.**\nSubtract two full periods ($2\\pi$) to bring the angle into $[0, 2\\pi)$:\n$$\\frac{17\\pi}{6} - 2\\pi = \\frac{17\\pi}{6} - \\frac{12\\pi}{6} = \\frac{5\\pi}{6}.$$\nSo $\\tan\\!\\left(\\dfrac{17\\pi}{6}\\right) = \\tan\\!\\left(\\dfrac{5\\pi}{6}\\right)$.\n\n**Step 3 — Evaluate $\\tan\\!\\left(\\dfrac{5\\pi}{6}\\right)$.**\nThe reference angle is $\\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6}$, and $\\dfrac{5\\pi}{6}$ lies in quadrant II where tangent is negative:\n$$\\tan\\!\\left(\\frac{5\\pi}{6}\\right) = -\\tan\\!\\left(\\frac{\\pi}{6}\\right) = -\\frac{1}{\\sqrt{3}} = -\\frac{\\sqrt{3}}{3}.$$\n\n**Step 4 — Combine.**\n$$\\tan\\!\\left(-\\frac{17\\pi}{6}\\right) = -\\!\\left(-\\frac{\\sqrt{3}}{3}\\right) = \\frac{\\sqrt{3}}{3}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:40:31.806Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "sqrt(3)/3",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "sqrt(3)/3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-048"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "A surveyor stands 120 feet from the base of a vertical cliff and measures the angle of elevation to the top of the cliff as $60°$. Find the exact height of the cliff.",
+      "answer": "120*sqrt(3)",
+      "solution": "Sketch the scenario as a right triangle: the horizontal leg (ground distance) is 120 ft, the acute angle at the surveyor's position is $60°$, and the unknown vertical leg is the height $h$.\n\nThe tangent ratio relates the opposite and adjacent sides: $$\\tan 60° = \\frac{h}{120}$$\n\nSince $\\tan 60° = \\sqrt{3}$, solve for $h$: $$h = 120\\sqrt{3} \\approx 207.8 \\text{ ft}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:40:41.341Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "120*sqrt(3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "120*sqrt(3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-049"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\cos\\theta = -\\dfrac{5}{13}$ and $\\tan\\theta > 0$, find the exact value of $\\sin\\theta$.",
+      "answer": "-12/13",
+      "solution": "1. Determine the quadrant. Since $\\cos\\theta < 0$, the angle lies in Q II or Q III. Since $\\tan\\theta > 0$, sine and cosine must share the same sign, placing $\\theta$ in **Quadrant III** (both negative).\n\n2. Apply the Pythagorean identity: $$\\sin^2\\theta + \\cos^2\\theta = 1$$\n\n3. Substitute $\\cos\\theta = -\\dfrac{5}{13}$: $$\\sin^2\\theta = 1 - \\left(-\\frac{5}{13}\\right)^2 = 1 - \\frac{25}{169} = \\frac{144}{169}$$\n\n4. Take the square root. Choose the **negative** root because $\\sin\\theta < 0$ in Q III: $$\\sin\\theta = -\\frac{12}{13}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:40:41.830Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-12/13",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-050"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\arctan 2\\right)$.",
+      "answer": "sqrt(5)/5",
+      "solution": "Let $\\theta = \\arctan 2$, so $\\tan\\theta = 2$ with $\\theta \\in \\left(-\\dfrac{\\pi}{2},\\,\\dfrac{\\pi}{2}\\right)$.\n\nDraw a right triangle with opposite side $= 2$ and adjacent side $= 1$. By the Pythagorean theorem the hypotenuse is $$r = \\sqrt{1^2 + 2^2} = \\sqrt{5}.$$\n\nSince $\\theta$ is in Quadrant I, all sides are positive, so $$\\cos(\\arctan 2) = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:41:02.498Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "sqrt(5)/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/sqrt(5)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-051"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A wheel has a radius of $8$ inches. A point on the rim travels along an arc intercepted by a central angle of $225°$. Find the exact arc length, in inches.",
+      "answer": "10*pi",
+      "solution": "**Step 1 — Convert the central angle to radians.**\n\n$$225° \\times \\frac{\\pi}{180°} = \\frac{225\\pi}{180} = \\frac{5\\pi}{4} \\text{ radians}$$\n\n**Step 2 — Apply the arc-length formula** $s = r\\theta$, where $r$ is the radius and $\\theta$ is in radians.\n\n$$s = 8 \\cdot \\frac{5\\pi}{4} = \\frac{40\\pi}{4} = 10\\pi \\text{ inches}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:41:06.983Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-052"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with the right angle at $C$, suppose $\\cos A = \\dfrac{8}{17}$. Find $\\tan A$.",
+      "answer": "15/8",
+      "solution": "**Step 1 — Label the sides from the given ratio.**\n\n$$\\cos A = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{8}{17}$$\n\nSo label the side adjacent to $A$ as $8$ and the hypotenuse as $17$.\n\n**Step 2 — Find the opposite side with the Pythagorean Theorem.**\n\n$$a^2 + 8^2 = 17^2 \\implies a^2 = 289 - 64 = 225 \\implies a = 15$$\n\n**Step 3 — Read off $\\tan A$.**\n\n$$\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:41:27.543Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "15/8",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "15/8",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-053"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(-\\dfrac{7\\pi}{3}\\right)$ by using (a) the even-function property of cosine and (b) the periodicity of cosine.",
+      "answer": "1/2",
+      "solution": "**Step 1 — Apply the even-function property.**  Cosine is an even function, so $\\cos(-t)=\\cos(t)$: $$\\cos\\!\\left(-\\frac{7\\pi}{3}\\right)=\\cos\\!\\left(\\frac{7\\pi}{3}\\right)$$\n\n**Step 2 — Reduce using the period $2\\pi$.**  Because $\\cos(t+2\\pi)=\\cos(t)$, subtract one full period: $$\\frac{7\\pi}{3}-2\\pi=\\frac{7\\pi}{3}-\\frac{6\\pi}{3}=\\frac{\\pi}{3}$$\n\nSo $\\cos\\!\\left(\\dfrac{7\\pi}{3}\\right)=\\cos\\!\\left(\\dfrac{\\pi}{3}\\right)$.\n\n**Step 3 — Evaluate at the standard angle.** The point on the unit circle at $t=\\dfrac{\\pi}{3}$ is $\\!\\left(\\dfrac{1}{2},\\dfrac{\\sqrt{3}}{2}\\right)$, so the $x$-coordinate gives $$\\cos\\!\\left(\\frac{\\pi}{3}\\right)=\\frac{1}{2}$$\n\n**Conclusion:** $\\cos\\!\\left(-\\dfrac{7\\pi}{3}\\right)=\\dfrac{1}{2}$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:41:46.467Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-054"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the $x$-coordinate of the first maximum of $$y = 2\\sin\\!\\left(3x - \\frac{\\pi}{2}\\right)$$ for $x \\geq 0$.",
+      "answer": "pi/3",
+      "solution": "Identify the parameters from $y = A\\sin(Bx - C)$: $A = 2$, $B = 3$, $C = \\dfrac{\\pi}{2}$.\n\nA maximum of $y = 2\\sin(u)$ occurs when $\\sin(u) = 1$, i.e., when $u = \\dfrac{\\pi}{2} + 2k\\pi$ for any integer $k$.\n\nSet the argument equal to $\\dfrac{\\pi}{2} + 2k\\pi$: $$3x - \\frac{\\pi}{2} = \\frac{\\pi}{2} + 2k\\pi$$\n\nSolve for $x$: $$3x = \\pi + 2k\\pi \\implies x = \\frac{\\pi}{3} + \\frac{2k\\pi}{3}$$\n\nFor the smallest non-negative value, take $k = 0$: $$x = \\frac{\\pi}{3}$$\n\nVerify: $y = 2\\sin\\!\\left(3 \\cdot \\dfrac{\\pi}{3} - \\dfrac{\\pi}{2}\\right) = 2\\sin\\!\\left(\\dfrac{\\pi}{2}\\right) = 2$ $\\checkmark$ (equals the amplitude, confirming a maximum).",
+      "meta": {
+        "generatedAt": "2026-05-12T03:41:46.884Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-055"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\sin\\!\\left(\\cos^{-1}\\!\\left(\\dfrac{5}{13}\\right)\\right)$.",
+      "answer": "12/13",
+      "solution": "1. Let $\\theta = \\cos^{-1}\\!\\left(\\dfrac{5}{13}\\right)$, so $\\cos\\theta = \\dfrac{5}{13}$ with $\\theta \\in [0,\\pi]$.\n\n2. Sketch a reference right triangle with adjacent side $= 5$ and hypotenuse $= 13$.\n\n3. By the Pythagorean theorem, the opposite side $= \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$.\n\n4. Because $\\cos\\theta > 0$ and $\\theta \\in [0,\\pi]$, we know $\\theta \\in \\left[0,\\dfrac{\\pi}{2}\\right)$, so $\\sin\\theta > 0$.\n\n5. Therefore $$\\sin\\!\\left(\\cos^{-1}\\!\\left(\\frac{5}{13}\\right)\\right) = \\sin\\theta = \\frac{12}{13}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:42:27.332Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-056"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "An angle $\\theta$ in standard position has its terminal side in Quadrant IV, and $\\sin\\theta = -\\dfrac{3}{5}$. Find $\\tan\\theta$.",
+      "answer": "-3/4",
+      "solution": "Step 1: Apply the Pythagorean identity to find $\\cos\\theta$. $$\\cos^2\\theta = 1 - \\sin^2\\theta = 1 - \\frac{9}{25} = \\frac{16}{25}$$\nStep 2: In Quadrant IV, cosine is positive, so $$\\cos\\theta = \\frac{4}{5}$$\nStep 3: Use the quotient identity. $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-3/5}{4/5} = -\\frac{3}{4}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T03:42:30.137Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3/4",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-057"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "A sinusoidal function of the form $y = A\\cos(Bx - C) + D$ has amplitude $3$, period $\\pi$, a phase shift of $\\dfrac{\\pi}{4}$ to the right, and a vertical shift of $1$ unit upward. Find the value of $C$.",
+      "answer": "pi/2",
+      "solution": "**Step 1 — Find $B$ from the period.**\n$$\\frac{2\\pi}{B} = \\pi \\implies B = 2$$\n\n**Step 2 — Apply the phase-shift formula.**\n$$\\text{Phase shift} = \\frac{C}{B} = \\frac{\\pi}{4}$$\n\n**Step 3 — Solve for $C$.**\n$$C = B \\cdot \\frac{\\pi}{4} = 2 \\cdot \\frac{\\pi}{4} = \\frac{\\pi}{2}$$\n\nThe complete equation is $y = 3\\cos\\!\\left(2x - \\dfrac{\\pi}{2}\\right) + 1$, confirming $C = \\dfrac{\\pi}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T03:43:20.958Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/2",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-058"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has a radius of $8$ cm. Find the exact length of the arc intercepted by a central angle of $135°$.",
+      "answer": "6*pi",
+      "solution": "**Step 1 — Convert the central angle to radians.**\n\n$$135° \\cdot \\frac{\\pi}{180°} = \\frac{135\\pi}{180} = \\frac{3\\pi}{4} \\text{ radians}$$\n\n**Step 2 — Apply the arc length formula** $s = r\\theta$ (with $\\theta$ in radians).\n\n$$s = 8 \\cdot \\frac{3\\pi}{4} = \\frac{24\\pi}{4} = 6\\pi \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:19:49.084Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-059"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "The point $P = \\left(-\\dfrac{5}{13},\\; \\dfrac{12}{13}\\right)$ is on the unit circle and corresponds to a real number $t$. Find the exact value of $\\tan t + \\sec t$.",
+      "answer": "-5",
+      "solution": "**1. Read off $\\cos t$ and $\\sin t$ directly from the unit-circle point** $(x, y)$:\n$$\\cos t = -\\frac{5}{13}, \\qquad \\sin t = \\frac{12}{13}$$\n\n**2. Compute $\\tan t$:**\n$$\\tan t = \\frac{\\sin t}{\\cos t} = \\frac{\\tfrac{12}{13}}{-\\tfrac{5}{13}} = -\\frac{12}{5}$$\n\n**3. Compute $\\sec t$:**\n$$\\sec t = \\frac{1}{\\cos t} = \\frac{1}{-\\tfrac{5}{13}} = -\\frac{13}{5}$$\n\n**4. Add:**\n$$\\tan t + \\sec t = -\\frac{12}{5} + \\left(-\\frac{13}{5}\\right) = -\\frac{25}{5} = -5$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:19:59.848Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-060"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(\\sin^{-1}\\!\\dfrac{3}{5}\\right)$.",
+      "answer": "4/5",
+      "solution": "**Step 1.** Let $\\theta = \\sin^{-1}\\!\\dfrac{3}{5}$, so $\\sin\\theta = \\dfrac{3}{5}$ with $\\theta \\in \\left[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right]$.\n\n**Step 2.** Because $\\sin\\theta > 0$, the angle $\\theta$ lies in Quadrant I, so $\\cos\\theta > 0$.\n\n**Step 3.** Apply the Pythagorean identity: $$\\cos\\theta = \\sqrt{1 - \\sin^2\\theta} = \\sqrt{1 - \\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac{4}{5}.$$\n\n**Step 4.** Therefore $\\cos\\!\\left(\\sin^{-1}\\!\\dfrac{3}{5}\\right) = \\dfrac{4}{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:20:29.529Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-061"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "If $\\tan\\theta = \\dfrac{5}{12}$ and $\\sin\\theta < 0$, find the exact value of $\\cos\\theta$.",
+      "answer": "-12/13",
+      "solution": "**Step 1 — Determine the quadrant.**\n$\\tan\\theta > 0$ means $x$ and $y$ have the same sign. $\\sin\\theta < 0$ means $y < 0$. Together, both $x < 0$ and $y < 0$, so $\\theta$ lies in **Quadrant III**.\n\n**Step 2 — Assign coordinates.**\nUse $\\tan\\theta = \\dfrac{y}{x} = \\dfrac{5}{12}$ with both components negative:\n$$x = -12,\\quad y = -5.$$\n\n**Step 3 — Find $r$.**\n$$r = \\sqrt{x^2 + y^2} = \\sqrt{(-12)^2 + (-5)^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.$$\n\n**Step 4 — Evaluate $\\cos\\theta$.**\n$$\\cos\\theta = \\frac{x}{r} = \\frac{-12}{13}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:20:52.168Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-12/13",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-062"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "Find a positive acute angle $\\theta$ (in degrees) satisfying $$\\sin(2\\theta + 10^\\circ) = \\cos(3\\theta - 20^\\circ)$$",
+      "answer": "20",
+      "solution": "The cofunction identity states $\\sin\\alpha = \\cos\\beta$ whenever $\\alpha + \\beta = 90^\\circ$.\n\nSet the two arguments summing to $90^\\circ$:\n$$(2\\theta + 10^\\circ) + (3\\theta - 20^\\circ) = 90^\\circ$$\n$$5\\theta - 10^\\circ = 90^\\circ$$\n$$5\\theta = 100^\\circ$$\n$$\\theta = 20^\\circ$$\n\nVerify: $\\sin\\!\\bigl(2(20^\\circ)+10^\\circ\\bigr) = \\sin 50^\\circ$ and $\\cos\\!\\bigl(3(20^\\circ)-20^\\circ\\bigr) = \\cos 40^\\circ$. Since $50^\\circ + 40^\\circ = 90^\\circ$, we have $\\sin 50^\\circ = \\cos 40^\\circ$. ✓",
+      "meta": {
+        "generatedAt": "2026-05-12T05:22:00.806Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "20",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "20",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-063"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find all values of $x$ in $[0, 2\\pi]$ at which the graph of $y = \\cos(2x)$ crosses the $x$-axis.",
+      "answer": "pi/4, 3*pi/4, 5*pi/4, 7*pi/4",
+      "solution": "Set $\\cos(2x) = 0$ and solve for $x$.\n\n$$2x = \\frac{\\pi}{2} + k\\pi, \\quad k \\in \\mathbb{Z}$$\n\n$$x = \\frac{\\pi}{4} + \\frac{k\\pi}{2}$$\n\nThe period of $y = \\cos(2x)$ is $\\dfrac{2\\pi}{2} = \\pi$, so there are two $x$-intercepts per period and four in $[0, 2\\pi]$.\n\nSubstituting $k = 0, 1, 2, 3$:\n\n$$x = \\frac{\\pi}{4},\\quad \\frac{3\\pi}{4},\\quad \\frac{5\\pi}{4},\\quad \\frac{7\\pi}{4}$$\n\n($k = 4$ gives $x = \\dfrac{9\\pi}{4} > 2\\pi$, which is outside the interval.)",
+      "meta": {
+        "generatedAt": "2026-05-12T05:22:01.894Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/4, 3pi/4, 5pi/4, 7pi/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/4, 3*pi/4, 5*pi/4, 7*pi/4",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-064"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Let $\\theta$ be an angle in standard position whose terminal side passes through the point $(-3,\\, 4)$. Find the exact value of $\\cos\\theta$.",
+      "answer": "-3/5",
+      "solution": "**Step 1 — Find $r$.**\n\n$$r = \\sqrt{x^2 + y^2} = \\sqrt{(-3)^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\n**Step 2 — Apply the definition of cosine.**\n\n$$\\cos\\theta = \\frac{x}{r} = \\frac{-3}{5}$$\n\nThe point $(-3, 4)$ lies in Quadrant II, where cosine is negative, which is consistent with the result.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:22:19.543Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3/5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-065"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has radius $r = 8$ cm. A central angle of $\\dfrac{5\\pi}{6}$ radians intercepts an arc. Find the length of the arc.",
+      "answer": "20*pi/3",
+      "solution": "Use the arc length formula $s = r\\theta$, where $r$ is the radius and $\\theta$ is the central angle in radians.\n\nSubstitute $r = 8$ and $\\theta = \\dfrac{5\\pi}{6}$: $$s = 8 \\cdot \\frac{5\\pi}{6}$$\n\nMultiply and simplify: $$s = \\frac{40\\pi}{6} = \\frac{20\\pi}{3} \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:22:32.742Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "20*pi/3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "20*pi/3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-066"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(-\\dfrac{13\\pi}{6}\\right)$.",
+      "answer": "sqrt(3)/2",
+      "solution": "Step 1: Apply the even-function identity. Because cosine is an even function, $\\cos(-\\theta) = \\cos(\\theta)$: $$\\cos\\!\\left(-\\frac{13\\pi}{6}\\right) = \\cos\\!\\left(\\frac{13\\pi}{6}\\right)$$\nStep 2: Use the period $2\\pi$ to find a coterminal value in $[0, 2\\pi)$: $$\\frac{13\\pi}{6} - 2\\pi = \\frac{13\\pi}{6} - \\frac{12\\pi}{6} = \\frac{\\pi}{6}$$\nStep 3: Read the unit-circle value: $$\\cos\\!\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:22:48.323Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "sqrt(3)/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "sqrt(3)/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-067"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\tan\\!\\left(\\sin^{-1}\\!\\left(-\\dfrac{5}{13}\\right)\\right)$.",
+      "answer": "-5/12",
+      "solution": "**1.** Let $\\theta = \\sin^{-1}\\!\\left(-\\dfrac{5}{13}\\right)$, so $\\sin\\theta = -\\dfrac{5}{13}$ with $\\theta \\in \\left[-\\dfrac{\\pi}{2},\\, \\dfrac{\\pi}{2}\\right]$.\n\n**2.** Since $\\sin\\theta < 0$, angle $\\theta$ lies in the fourth quadrant, so $\\cos\\theta > 0$.\n\n**3.** Use the Pythagorean identity to find $\\cos\\theta$: $$\\cos\\theta = \\sqrt{1 - \\sin^2\\!\\theta} = \\sqrt{1 - \\frac{25}{169}} = \\sqrt{\\frac{144}{169}} = \\frac{12}{13}$$\n\n**4.** Compute the tangent: $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-5/13}{\\phantom{-}12/13} = -\\frac{5}{12}$$\n\nTherefore $\\tan\\!\\left(\\sin^{-1}\\!\\left(-\\dfrac{5}{13}\\right)\\right) = -\\dfrac{5}{12}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:22:56.760Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-5/12",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-5/12",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-068"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has radius $9$ cm. Find the length of the arc intercepted by a central angle of $120°$. Express your answer in terms of $\\pi$.",
+      "answer": "6*pi",
+      "solution": "1. Convert $120°$ to radians: $$120° \\cdot \\frac{\\pi}{180°} = \\frac{2\\pi}{3} \\text{ rad}$$\n2. Apply the arc length formula $s = r\\theta$ with $r = 9$ cm and $\\theta = \\dfrac{2\\pi}{3}$: $$s = 9 \\cdot \\frac{2\\pi}{3} = \\frac{18\\pi}{3} = 6\\pi \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:23:05.854Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "6*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-069"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find all values of $x$ in $[0,\\, 2\\pi]$ at which $$y = 4\\sin\\!\\left(2x - \\frac{\\pi}{6}\\right)$$ attains its maximum value.",
+      "answer": "pi/3, 4*pi/3",
+      "solution": "**Step 1. Identify the maximum value.**\nThe amplitude is $|4| = 4$, so the maximum of $y$ is $4$, reached whenever $$\\sin\\!\\left(2x - \\frac{\\pi}{6}\\right) = 1.$$\n\n**Step 2. Write the general solution.**\n$\\sin\\theta = 1$ exactly when $\\theta = \\dfrac{\\pi}{2} + 2\\pi k$, $k \\in \\mathbb{Z}$, giving $$2x - \\frac{\\pi}{6} = \\frac{\\pi}{2} + 2\\pi k.$$\n\n**Step 3. Solve for $x$.**\n$$2x = \\frac{\\pi}{2} + \\frac{\\pi}{6} + 2\\pi k = \\frac{3\\pi}{6} + \\frac{\\pi}{6} + 2\\pi k = \\frac{2\\pi}{3} + 2\\pi k,$$\n$$x = \\frac{\\pi}{3} + \\pi k.$$\n\n**Step 4. Select solutions in $[0,\\, 2\\pi]$.**\n- $k = 0$: $x = \\dfrac{\\pi}{3}$ ✓\n- $k = 1$: $x = \\dfrac{\\pi}{3} + \\pi = \\dfrac{4\\pi}{3}$ ✓\n- $k = 2$: $x = \\dfrac{\\pi}{3} + 2\\pi > 2\\pi$ ✗\n\nThe maximum value $y = 4$ occurs at $x = \\dfrac{\\pi}{3}$ and $x = \\dfrac{4\\pi}{3}$.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:23:19.519Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/3, 4*pi/3",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/3, 4*pi/3",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-070"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "A ladder 20 feet long leans against a vertical wall. The base of the ladder makes a $60°$ angle with the ground. How high up the wall does the ladder reach? Give an exact answer.",
+      "answer": "10*sqrt(3)",
+      "solution": "Let $h$ = the height the ladder reaches on the wall.\n\nThe ladder is the hypotenuse (20 ft), and $h$ is the side **opposite** the $60°$ angle, so use sine:\n\n$$\\sin 60° = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{h}{20}$$\n\nSolve for $h$:\n\n$$h = 20\\sin 60° = 20 \\cdot \\frac{\\sqrt{3}}{2} = 10\\sqrt{3}$$\n\nThe ladder reaches $10\\sqrt{3} \\approx 17.3$ feet up the wall.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:23:28.848Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10*sqrt(3)",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10*sqrt(3)",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-071"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\tan\\theta = -\\dfrac{3}{4}$ and $\\sin\\theta > 0$, find $\\cos\\theta$.",
+      "answer": "-4/5",
+      "solution": "**Step 1 — Identify the quadrant.**\nSince $\\sin\\theta > 0$, the terminal side lies in Quadrant I or II. Since $\\tan\\theta < 0$, it lies in Quadrant II (where $x < 0$, $y > 0$). \n\n**Step 2 — Assign coordinates.**\nUsing $\\tan\\theta = \\dfrac{y}{x} = -\\dfrac{3}{4}$, choose $y = 3$ and $x = -4$ (consistent with Quadrant II). \n\n**Step 3 — Find $r$.**\n$$r = \\sqrt{x^2 + y^2} = \\sqrt{(-4)^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$$\n\n**Step 4 — Evaluate $\\cos\\theta$.**\n$$\\cos\\theta = \\frac{x}{r} = \\frac{-4}{5}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:23:29.269Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-4/5",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-4/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-072"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $$\\cos\\!\\left(\\frac{17\\pi}{6}\\right)$$",
+      "answer": "-sqrt(3)/2",
+      "solution": "**Step 1.** Use the periodic property of cosine, $\\cos(t + 2\\pi) = \\cos(t)$, to reduce the angle. Subtract one full period: $$\\frac{17\\pi}{6} - 2\\pi = \\frac{17\\pi}{6} - \\frac{12\\pi}{6} = \\frac{5\\pi}{6}$$ so $\\cos\\!\\left(\\dfrac{17\\pi}{6}\\right) = \\cos\\!\\left(\\dfrac{5\\pi}{6}\\right)$.\n\n**Step 2.** Locate $\\dfrac{5\\pi}{6}$ on the unit circle. It lies in Quadrant II, so its reference angle is $$\\pi - \\frac{5\\pi}{6} = \\frac{\\pi}{6}.$$\n\n**Step 3.** Apply the reference-angle rule. Cosine is negative in Quadrant II: $$\\cos\\!\\left(\\frac{5\\pi}{6}\\right) = -\\cos\\!\\left(\\frac{\\pi}{6}\\right) = -\\frac{\\sqrt{3}}{2}.$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:23:55.657Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-sqrt(3)/2",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-sqrt(3)/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-073"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has a radius of $8$ inches. Find the length of the arc intercepted by a central angle of $\\dfrac{5\\pi}{4}$ radians.",
+      "answer": "10*pi",
+      "solution": "Apply the arc length formula $s = r\\theta$, where $\\theta$ must be in radians.\n\nSubstitute $r = 8$ and $\\theta = \\dfrac{5\\pi}{4}$: $$s = 8 \\cdot \\frac{5\\pi}{4} = \\frac{40\\pi}{4} = 10\\pi$$\n\nThe arc length is $10\\pi$ inches.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:24:03.313Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-074"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value: $$\\sin\\!\\left(\\cos^{-1}\\!\\left(\\frac{5}{13}\\right)\\right)$$",
+      "answer": "12/13",
+      "solution": "1. Let $\\theta = \\cos^{-1}\\!\\left(\\dfrac{5}{13}\\right)$, so $\\cos\\theta = \\dfrac{5}{13}$ with $\\theta \\in [0,\\,\\pi]$.\n2. Sketch a reference right triangle with adjacent $= 5$ and hypotenuse $= 13$. The opposite side is $\\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$.\n3. Because $\\cos\\theta > 0$, the angle $\\theta$ lies in the first quadrant, so $\\sin\\theta > 0$.\n4. Read off the sine ratio: $$\\sin\\!\\left(\\cos^{-1}\\!\\left(\\frac{5}{13}\\right)\\right) = \\frac{12}{13}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:24:05.168Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12/13",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-075"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with the right angle at $C$, suppose $\\sin A = \\dfrac{7}{25}$. Find $\\tan A$.",
+      "answer": "7/24",
+      "solution": "**Given:** $\\sin A = \\dfrac{7}{25}$, so label the side opposite $A$ as $7$ and the hypotenuse as $25$.\n\n**Step 1:** Use the Pythagorean theorem to find the adjacent side $b$: $$b = \\sqrt{25^2 - 7^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24$$\n\n**Step 2:** Apply the ratio definition: $$\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{7}{24}$$",
+      "meta": {
+        "generatedAt": "2026-05-12T05:24:34.632Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "7/24",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "7/24",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-076"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "Find the smallest positive $x$-value at which the graph of $$y = -2\\cos\\!\\left(\\frac{\\pi}{2}x - \\pi\\right) + 3$$ reaches its maximum value.",
+      "answer": "4",
+      "solution": "**Step 1 — Identify when the maximum occurs.**\nThe leading coefficient is $-2$, so $y$ is maximized when $\\cos(\\cdot)$ is minimized, i.e., when $\\cos(\\cdot) = -1$:\n$$y_{\\max} = (-2)(-1) + 3 = 5.$$\n\n**Step 2 — Set up the equation.**\n$\\cos(u) = -1$ exactly when $u = (2k+1)\\pi$ for any integer $k$. Setting the argument equal to these values:\n$$\\frac{\\pi}{2}x - \\pi = (2k+1)\\pi.$$\n\n**Step 3 — Solve for $x$.**\n$$\\frac{\\pi}{2}x = (2k+2)\\pi = 2(k+1)\\pi \\implies x = 4(k+1).$$\n\n**Step 4 — Select the smallest positive solution.**\nThe solutions are $\\ldots,\\, -4,\\, 0,\\, 4,\\, 8,\\, \\ldots\\;$ The smallest positive value is $x = 4$.",
+      "meta": {
+        "generatedAt": "2026-05-12T05:25:48.821Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-077"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has a radius of $12$ cm. Find the length of the arc intercepted by a central angle of $150°$.",
+      "answer": "10*pi",
+      "solution": "**Step 1 — Convert the central angle to radians.**\n$$150° \\cdot \\frac{\\pi}{180°} = \\frac{150\\pi}{180} = \\frac{5\\pi}{6} \\text{ radians}$$\n\n**Step 2 — Apply the arc-length formula** $s = r\\theta$, where $r$ is the radius and $\\theta$ is the central angle in radians.\n$$s = 12 \\cdot \\frac{5\\pi}{6} = \\frac{60\\pi}{6} = 10\\pi \\text{ cm}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T03:54:02.665Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "10*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "10*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-078"
+    },
+    {
+      "topic": "5.4 Trigonometric Functions Of Real Numbers; Periodic Functions",
+      "problem": "Find the exact value of $\\cos\\!\\left(-\\dfrac{17\\pi}{3}\\right)$.",
+      "answer": "1/2",
+      "solution": "**Step 1: Apply the even-function identity.**\n\nCosine is an even function, so $$\\cos\\!\\left(-\\frac{17\\pi}{3}\\right) = \\cos\\!\\left(\\frac{17\\pi}{3}\\right).$$\n\n**Step 2: Reduce using the period $2\\pi$.**\n\nFind how many full periods fit: $\\dfrac{17\\pi/3}{2\\pi} = \\dfrac{17}{6} = 2\\tfrac{5}{6}$, so subtract $2 \\cdot 2\\pi = 4\\pi$: $$\\frac{17\\pi}{3} - 4\\pi = \\frac{17\\pi}{3} - \\frac{12\\pi}{3} = \\frac{5\\pi}{3}.$$\n\n**Step 3: Evaluate at the coterminal angle.**\n\n$\\dfrac{5\\pi}{3}$ is in Quadrant IV with reference angle $\\dfrac{\\pi}{3}$. Cosine is positive in QIV, so $$\\cos\\!\\left(\\frac{5\\pi}{3}\\right) = \\cos\\!\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}.$$",
+      "meta": {
+        "generatedAt": "2026-05-13T03:54:05.152Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "1/2",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "1/2",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-079"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "Given that $\\cos\\theta = -\\dfrac{4}{5}$ and $\\sin\\theta < 0$, find the exact value of $\\tan\\theta$.",
+      "answer": "3/4",
+      "solution": "1. Since $\\cos\\theta < 0$ and $\\sin\\theta < 0$, angle $\\theta$ lies in **Quadrant III**.\n2. Apply the Pythagorean identity: $$\\sin^2\\theta = 1 - \\cos^2\\theta = 1 - \\left(\\frac{4}{5}\\right)^2 = 1 - \\frac{16}{25} = \\frac{9}{25}$$\n3. Since $\\sin\\theta < 0$, take the negative square root: $$\\sin\\theta = -\\frac{3}{5}$$\n4. Compute the tangent using its quotient identity: $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\dfrac{3}{5}}{-\\dfrac{4}{5}} = \\frac{3}{4}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T03:54:23.123Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "3/4",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "3/4",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-080"
+    },
+    {
+      "topic": "5.7 Inverse Trigonometric Functions",
+      "problem": "Find the exact value of $\\sin\\!\\left(\\cos^{-1}\\!\\left(\\dfrac{3}{5}\\right)\\right)$.",
+      "answer": "4/5",
+      "solution": "Let $\\theta = \\cos^{-1}\\!\\left(\\dfrac{3}{5}\\right)$, so $\\cos\\theta = \\dfrac{3}{5}$ with $\\theta \\in [0, \\pi]$.\n\nSince $\\cos\\theta > 0$, the angle $\\theta$ lies in the first quadrant, so $\\sin\\theta > 0$.\n\nApply the Pythagorean identity: $$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac{4}{5}$$\n\nTherefore $\\sin\\!\\left(\\cos^{-1}\\!\\left(\\dfrac{3}{5}\\right)\\right) = \\dfrac{4}{5}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T03:54:36.537Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "4/5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "4/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-081"
+    },
+    {
+      "topic": "5.1 Angles and Radian Measure",
+      "problem": "A circle has a radius of $6$ inches. Find the length of the arc intercepted by a central angle of $240°$.",
+      "answer": "8*pi",
+      "solution": "Step 1: Convert the central angle from degrees to radians. $$240° \\cdot \\frac{\\pi}{180°} = \\frac{4\\pi}{3} \\text{ radians}$$\nStep 2: Apply the arc length formula $s = r\\theta$. $$s = 6 \\cdot \\frac{4\\pi}{3} = 8\\pi \\text{ inches}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T03:55:16.815Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "8*pi",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "8*pi",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-082"
+    },
+    {
+      "topic": "5.3 Trigonometric Functions Of Any Angle",
+      "problem": "The point $(-3, 4)$ lies on the terminal side of angle $\\theta$ in standard position. Find $\\cos\\theta$.",
+      "answer": "-3/5",
+      "solution": "**Step 1.** Identify the coordinates: $x = -3$, $y = 4$.\n\n**Step 2.** Compute the radius $r$: $$r = \\sqrt{x^2 + y^2} = \\sqrt{(-3)^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\n**Step 3.** Apply the definition of cosine for any angle: $$\\cos\\theta = \\frac{x}{r} = \\frac{-3}{5}$$\n\nSince the point is in Quadrant II ($x < 0$, $y > 0$), cosine is negative — consistent with the result.",
+      "meta": {
+        "generatedAt": "2026-05-13T03:56:04.338Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "-3/5",
+          "confidence": 1
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "-3/5",
+          "confidence": 1
+        },
+        "attempts": 1
+      },
+      "id": "ch5-083"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$ with the right angle at $C$, leg $BC = 8$ and hypotenuse $AB = 17$. Find $\\csc A$.",
+      "answer": "17/8",
+      "solution": "**Step 1.** Find the missing leg $AC$ using the Pythagorean theorem: $$AC^2 + BC^2 = AB^2 \\implies AC^2 + 64 = 289 \\implies AC^2 = 225 \\implies AC = 15$$\n\n**Step 2.** Identify the sides relative to angle $A$. The side opposite $A$ is $BC = 8$, the side adjacent to $A$ is $AC = 15$, and the hypotenuse is $AB = 17$.\n\n**Step 3.** Compute $\\sin A$: $$\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{8}{17}$$\n\n**Step 4.** Apply the reciprocal identity: $$\\csc A = \\frac{1}{\\sin A} = \\frac{17}{8}$$",
+      "meta": {
+        "generatedAt": "2026-05-13T03:56:14.952Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "17/8",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "17/8",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-084"
+    },
+    {
+      "topic": "5.5 Graphs Of Sine and Cosine Functions",
+      "problem": "The graph of $y = A\\sin(Bx - C)$ has amplitude $4$, period $\\dfrac{2\\pi}{3}$, and phase shift $\\dfrac{\\pi}{6}$ to the right, where $A > 0$, $B > 0$, and $C > 0$. Find the value of $C$.",
+      "answer": "pi/2",
+      "solution": "**Step 1 — Find $A$.**\nAmplitude $= |A| = 4$, so $A = 4$.\n\n**Step 2 — Find $B$.**\nUse the period formula: $$\\frac{2\\pi}{B} = \\frac{2\\pi}{3} \\implies B = 3$$\n\n**Step 3 — Find $C$.**\nPhase shift $= \\dfrac{C}{B}$. Set equal to $\\dfrac{\\pi}{6}$: $$\\frac{C}{3} = \\frac{\\pi}{6} \\implies C = \\frac{\\pi}{2}$$\n\nThe equation is $y = 4\\sin\\!\\left(3x - \\dfrac{\\pi}{2}\\right)$, and $C = \\dfrac{\\pi}{2}$.",
+      "meta": {
+        "generatedAt": "2026-05-13T03:56:23.109Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "pi/2",
+          "confidence": 0.98
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "pi/2",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-085"
+    },
+    {
+      "topic": "5.2 Right Triangle Trigonometry",
+      "problem": "In right triangle $ABC$, angle $C = 90°$, angle $B = 60°$, and the side opposite angle $B$ has length $b = 6\\sqrt{3}$. Find the length of the hypotenuse $c$.",
+      "answer": "12",
+      "solution": "**1. Identify the sine ratio.** In a right triangle, $$\\sin B = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{b}{c}$$\n\n**2. Substitute known values.** $$\\sin 60° = \\frac{6\\sqrt{3}}{c}$$\n\n**3. Recall the exact value** $\\sin 60° = \\dfrac{\\sqrt{3}}{2}$, so $$\\frac{\\sqrt{3}}{2} = \\frac{6\\sqrt{3}}{c}$$\n\n**4. Solve for $c$.** $$c = \\frac{6\\sqrt{3}}{\\dfrac{\\sqrt{3}}{2}} = 6\\sqrt{3} \\cdot \\frac{2}{\\sqrt{3}} = 12$$",
+      "meta": {
+        "generatedAt": "2026-05-13T03:56:25.432Z",
+        "generator": {
+          "cli": "claude",
+          "model": null
+        },
+        "reviewerA": {
+          "cli": "claude",
+          "model": "claude-opus-4-7",
+          "effort": "high",
+          "answer": "12",
+          "confidence": 0.99
+        },
+        "reviewerB": {
+          "cli": "gemini",
+          "model": null,
+          "answer": "12",
+          "confidence": 1
+        },
+        "attempts": 2
+      },
+      "id": "ch5-086"
+    }
+  ]
+}
